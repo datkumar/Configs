@@ -1,9 +1,3 @@
-<style>
-code{
-    font-weight: bold;
-}
-</style>
-
 # Anaconda, Python 🐍
 
 > Always see the documentation page for installation commands
