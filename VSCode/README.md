@@ -1,4 +1,4 @@
-# VS Code
+# VS Code 📝
 
 **List VSCode Extensions:** `code --list-extensions`
 
