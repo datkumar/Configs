@@ -1,8 +1,3 @@
-<style>
-    code{
-        font-style: italic;
-    }
-</style>
 
 # Linux Commands 🐧
 
@@ -27,8 +22,8 @@
 
 ## Network Commands 🌐
 
-**Check/Configure network interface: `ifconfig`**
+**Check/Configure network interfaces: `ifconfig`**
 
-**Network exploration/scanner: `nmap`**
+**Network exploration/scan: `nmap`**
 
 ---
