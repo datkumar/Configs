@@ -6,7 +6,7 @@
 
 ---
 
-**Setttings:** [settings.json](./settings.json)
+**Settings:** [settings.json](./settings.json)
 
 **Snippets:** [cpp.json](cpp.json) , [javascript.json](./javascript.json)
 
