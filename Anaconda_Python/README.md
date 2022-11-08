@@ -36,7 +36,7 @@ Get out of current environment: `conda deactivate`
 
 ---
 
-### List or Search Packages :mag:
+### List or Search Packages 🔍
 
 `conda list | grep -i urllib`
 
