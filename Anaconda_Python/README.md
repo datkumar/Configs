@@ -1,0 +1,164 @@
+<style>
+code{
+    font-weight: bold;
+}
+</style>
+
+# Anaconda, Python 🐍
+
+> Always see the documentation page for installation commands
+
+`-c` flag is for the **channel** from which package is to be installed (For example, anaconda, conda-forge, pytorch)
+
+---
+
+### Launching Jupyter 🪐
+
+1. Open terminal in current folder
+1. Switch to or Create required conda environment: `conda activate devenv`
+1. Start `jupyter notebook`
+
+**OR**
+
+1. Open Anconda Navigator
+1. Change environment
+1. Launch Jupyter (install first if not already installed in environment)
+
+---
+
+### **Update Conda: ⬆️**
+
+`conda update conda`
+
+### **Update All Packages: ⬆️**
+
+`conda update --all`
+
+### **Update Anaconda Navigator: ⬆️**
+
+Get out of current environment: `conda deactivate`
+
+`conda update anaconda-navigator`
+
+---
+
+### List or Search Packages
+
+`conda list | grep -i urllib`
+
+---
+
+### Check Environments
+
+`conda env list`
+
+```bash
+# conda environments:
+#
+base                  *  /home/kumar/anaconda3
+mypipenv_tf              /home/kumar/anaconda3/envs/mypipenv_tf
+r-essentials             /home/kumar/anaconda3/envs/r-essentials
+r_env                    /home/kumar/anaconda3/envs/r_env
+```
+
+### Create New Environment
+
+`conda install -c anaconda tensorflow myenv`
+
+### Create an environment with a specific package
+
+`conda create -n myenv scipy`
+
+Extra options: `conda create -n myenv python=3.9 scipy=0.17.3 astroid babel`
+
+### Create new Clone Environment
+
+`conda create -n myclone --clone myenv`
+
+### Switch/Load Environment
+
+`conda activate mypipenv_tf`
+
+### Delete Environment
+
+First `conda deactivate`
+
+`conda env remove -n corrupted_env`
+
+---
+
+### Install packages INSIDE Jupyter Notebook
+
+Check [here for more info](https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-from-jupyter/)
+
+```jupyter
+    import sys
+    !conda install --yes --prefix {sys.prefix} pytorch torchvision torchaudio cpuonly -c pytorch
+```
+
+`!conda install pytorch torchvision torchaudio cpuonly -c pytorch`
+
+`!pip install <package_name>`
+
+`%conda install <package_name>`
+
+---
+
+## Remove Anaconda Completely
+
+[https://stackoverflow.com/questions/22585235/python-anaconda-how-to-safely-uninstall](https://stackoverflow.com/questions/22585235/python-anaconda-how-to-safely-uninstall)
+
+# Linux Setup 🐧
+
+Follow the [instructions on the official page](https://docs.anaconda.com/anaconda/install/linux/)
+
+Installation location `PREFIX=/home/kumar/anaconda3`
+
+(base) environment location: `/home/kumar/anaconda3`
+
+To avoid conda activating “**base”** env. on startup `conda config --set auto_activate_base false`
+
+```bash
+# The base environment is activated by default
+conda config --set auto_activate_base True
+
+# The base environment is not activated by default
+conda config --set auto_activate_base False
+
+# The above commands only work if conda init has been run first
+# conda init is available in conda versions 4.6.12 and later
+```
+
+---
+
+**ZSH**
+
+Current conda environment to display or not option located in file `~/.p10k.zsh`
+
+---
+
+# Windows Setup 🪟
+
+1. Download [Anaconda Distribution](https://www.anaconda.com/products/distribution) (.exe) installer. Install for **current User** only.
+2. Do **NOT** Select **_Add to PATH_** option.
+3. After Installation, open Anaconda Prompt from Start Menu. Locate `where conda` and `where python` (.exe) files and add it to **User’s PATH**
+4. Create _`devenv`_ environment initialized with [`tensorflow`](https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/)
+
+```bash
+conda create -n devenv tensorflow
+conda activate devenv
+```
+
+Install packages: [`jupyter`](<https://anaconda.org/anaconda/jupyter>) , [`keras`](https://anaconda.org/anaconda/keras) , [`theano`](<https://anaconda.org/anaconda/theano>) , [`pytorch`](https://anaconda.org/pytorch/pytorch)
+
+`conda install pytorch torchvision torchaudio cpuonly -c pytorch`
+
+Jupyter Notebook **[Extensions](https://docs.continuum.io/anaconda/user-guide/tasks/use-jupyter-notebook-extensions/#obtaining-the-extensions)**
+
+---
+
+**Convert  `.ipynb` to `html` :**  [here](https://htmtopdf.herokuapp.com/ipynbviewer/)
+
+**Convert  `html` to `PDF` :** [html2pdf](https://html2pdf.com/)
+
+---

@@ -1,0 +1,146 @@
+{
+    "workbench.startupEditor": "none",
+    "editor.fontFamily": "'Fira Code', 'Monaco' ,  'MesloLGS NF'",
+    "editor.fontSize": 17,
+    "editor.mouseWheelZoom": true,
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.sortImports": true
+    },
+    "prettier.useTabs": true,
+    "prettier.tabWidth": 4,
+    "reactSnippets.settings.prettierEnabled": true,
+    "bracketPairColorizer.depreciation-notice": false,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[cpp]": {
+        "editor.fontLigatures": false
+    },
+    "[html]": {
+        "editor.defaultFormatter": "HookyQR.beautify",
+        "editor.fontLigatures": true
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.fontLigatures": true
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.fontLigatures": true
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.fontLigatures": true
+    },
+    "terminal.integrated.fontSize": 13,
+    "markdown.preview.fontSize": 16,
+    "workbench.iconTheme": "material-icon-theme",
+    "vsicons.dontShowNewVersionMessage": true,
+    "code-runner.runInTerminal": true,
+    "python.formatting.provider": "black",
+    "php.suggest.basic": false,
+    "php.validate.enable": false,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "emmet.excludeLanguages": [
+        "php"
+    ],
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    },
+    "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
+    "code-runner.clearPreviousOutput": true,
+    "python.condaPath": "'/home/kumar/anaconda3/bin/conda', '/home/kumar/anaconda3/condabin/conda'",
+    "python.formatting.autopep8Path": "black",
+    "python.formatting.blackPath": "/home/kumar/anaconda3/bin/black",
+    "python.terminal.activateEnvironment": false,
+    "python.defaultInterpreterPath": "python3",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "terminal.integrated.inheritEnv": false,
+    "workbench.editorAssociations": {
+        "*.json": "default"
+    },
+    "thunder-client.codeSnippetLanguage": "cs-httpclient",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "vite.browserType": "system",
+    "npm.keybindingsChangedWarningShown": true,
+    "tabnine.experimentalAutoImports": true,
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "markdown-preview-github-styles.colorTheme": "light",
+    "window.zoomLevel": 2,
+    "emojisense.languages": {
+        "plaintext": {
+            "markupCompletionsEnabled": true,
+            "emojiDecoratorsEnabled": true
+        },
+        "javascript.validate.enable": false,
+        "abap": true,
+        "bat": true,
+        "bibtex": true,
+        "clojure": true,
+        "coffeescript": true,
+        "c": true,
+        "cpp": true,
+        "csharp": true,
+        "css": true,
+        "diff": true,
+        "dockerfile": true,
+        "fsharp": true,
+        "git-commit": true,
+        "git-rebase": true,
+        "go": true,
+        "groovy": true,
+        "handlebars": true,
+        "html": true,
+        "ini": true,
+        "java": true,
+        "javascript": true,
+        "javascriptreact": true,
+        "json": true,
+        "jsonc": true,
+        "latex": true,
+        "less": true,
+        "lua": true,
+        "makefile": true,
+        "markdown": true,
+        "objective-c": true,
+        "objective-cpp": true,
+        "perl6": true,
+        "php": true,
+        "powershell": true,
+        "jade": true,
+        "python": true,
+        "r": true,
+        "razor": true,
+        "ruby": true,
+        "rust": true,
+        "scss": true,
+        "sass": true,
+        "shaderlab": true,
+        "shellscript": true,
+        "sql": true,
+        "swift": true,
+        "typescript": true,
+        "typescriptreact": true,
+        "tex": true,
+        "vb": true,
+        "xml": true,
+        "xsl": true,
+        "yaml": true
+    }
+}

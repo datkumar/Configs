@@ -1,0 +1,25 @@
+{
+    "Print to console": {
+        "prefix": "log",
+        "body": [
+            "console.log('$1');",
+            "$2"
+        ],
+        "description": "Log output to console"
+    },
+    "Create Express App": {
+        "prefix": "express-app",
+        "body": [
+            "const express = require('express');",
+            "\nconst app = express();",
+            "\nconst PORT = process.env.PORT || 3000;",
+            "\napp.get('/', (req, resp) => {",
+            "\t$1",
+            "});",
+            "\napp.listen(PORT, () => {",
+            "\tconsole.log('Server is up on port',PORT);",
+            "});"
+        ],
+        "description": "Create Server for Express App"
+    }
+}
