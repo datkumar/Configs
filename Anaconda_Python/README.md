@@ -36,7 +36,7 @@ Get out of current environment: `conda deactivate`
 
 ---
 
-### List or Search Packages
+### List or Search Packages :mag:
 
 `conda list | grep -i urllib`
 
@@ -100,7 +100,9 @@ Check [here for more info](https://jakevdp.github.io/blog/2017/12/05/installing-
 
 ## Remove Anaconda Completely
 
-[https://stackoverflow.com/questions/22585235/python-anaconda-how-to-safely-uninstall](https://stackoverflow.com/questions/22585235/python-anaconda-how-to-safely-uninstall)
+[Python Anaconda - How to Safely Uninstall](https://stackoverflow.com/questions/22585235/python-anaconda-how-to-safely-uninstall)
+
+---
 
 # Linux Setup 🐧
 
@@ -143,7 +145,7 @@ conda create -n devenv tensorflow
 conda activate devenv
 ```
 
-Install packages: [`jupyter`](<https://anaconda.org/anaconda/jupyter>) , [`keras`](https://anaconda.org/anaconda/keras) , [`theano`](<https://anaconda.org/anaconda/theano>) , [`pytorch`](https://anaconda.org/pytorch/pytorch)
+Install packages: [`jupyter`](<https://anaconda.org/anaconda/jupyter>) , [`keras`](https://anaconda.org/anaconda/keras) , [`theano`](<https://anaconda.org/anaconda/theano>) , [`pytorch`](https://pytorch.org)
 
 `conda install pytorch torchvision torchaudio cpuonly -c pytorch`
 
@@ -151,7 +153,7 @@ Jupyter Notebook **[Extensions](https://docs.continuum.io/anaconda/user-guide/ta
 
 ---
 
-**Convert  `.ipynb` to `html` :**  [here](https://htmtopdf.herokuapp.com/ipynbviewer/)
+**Convert  `.ipynb` to `html` :**  [Jupyter Notebooks(ipynb) Viewer and Converter](https://htmtopdf.herokuapp.com/ipynbviewer/)
 
 **Convert  `html` to `PDF` :** [html2pdf](https://html2pdf.com/)
 
