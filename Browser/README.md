@@ -1,3 +1,3 @@
-# Browser Setup 💻
+# Browser Setup :desktop_computer
 
-**Tabliss:** [linux](./Tabliss/tabliss_linux.json) , [windows](./Tabliss/tabliss_linux.json)
+**Tabliss:** [`Linux`](./Tabliss/tabliss_linux.json) , [`Windows`](./Tabliss/tabliss_windows.json)
