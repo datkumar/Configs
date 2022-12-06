@@ -2,7 +2,7 @@
 
 ## Linux 🐧
 
-Follow [Download instructions](https://www.postgresql.org/download/linux/ubuntu/)
+Follow the [Download instructions on official page](https://www.postgresql.org/download/linux/ubuntu/)
 
 ---
 
@@ -10,7 +10,8 @@ Follow [Download instructions](https://www.postgresql.org/download/linux/ubuntu/
 
 Download the [EDB Installation Wizard (.zip) file](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 
->Use **PORT** `5433` as **default PORT** `5432` is in use by Postgres version **9**)
+Default port is 5432
+>Set **PORT** `5433` as **default PORT** (`5432` is in use by Postgres version **9** present in Windows itself)
 
 **Start Postgres as Root i.e. `postgres` User (DB is `postgres`):**
 
