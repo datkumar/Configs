@@ -6,13 +6,13 @@
 
 ---
 
-### Launching Jupyter 🪐
+## Launching Jupyter 🪐
 
 1. Open terminal in current folder
 1. Switch to or Create required conda environment: `conda activate devenv`
 1. Start `jupyter notebook`
 
-**OR**
+_**OR**_
 
 1. Open Anconda Navigator
 1. Change environment
@@ -36,7 +36,7 @@ Get out of current environment: `conda deactivate`
 
 ---
 
-### List or Search Packages :mag:
+### List or Search Packages 🔍
 
 `conda list | grep -i urllib`
 

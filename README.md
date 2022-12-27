@@ -3,6 +3,7 @@
 - [VSCode 📝](./VSCode/README.md)
 - [Browser 🧭](./Browser/README.md)
 - [Anaconda, Python 🐍](./Anaconda_Python/README.md)
+- [PostgreSQL 🐘](./Postgres/README.md)
 
 ---
 
