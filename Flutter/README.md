@@ -35,7 +35,7 @@
 - Add `flutter` to `PATH` in `~/.zshrc` (or your respective shell profile file like `~/.bashrc`):
 
   ```shell
-  export PATH=$PATH:/home/kumar/flutter_stable/flutter/bin`
+  export PATH=$PATH:/home/kumar/flutter_stable/flutter/bin
   ```
   
 - Flutter isn't completely set up yet
