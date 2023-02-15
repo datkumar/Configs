@@ -102,6 +102,26 @@ Check [here for more info](https://jakevdp.github.io/blog/2017/12/05/installing-
 
 [Python Anaconda - How to Safely Uninstall](https://stackoverflow.com/questions/22585235/python-anaconda-how-to-safely-uninstall)
 
+[Installing conda-clean](https://anaconda.org/anaconda/anaconda-clean)
+
+```shell
+> conda install -c anaconda anaconda-clean 
+
+> conda activate base
+
+> anaconda-clean --yes
+Backup directory: /home/kumar/.anaconda_backup/2023-02-15T114707
+
+> sudo rm -rf ~/anaconda3
+
+> sudo rm -rf ~/.anaconda_backup
+
+> zshconfig
+# Remove conda setup from PATH that was set by 'conda init'
+
+> source ~/.zshrc
+```
+
 ---
 
 # Linux Setup 🐧
