@@ -93,3 +93,8 @@
 
   • No issues found!
   ```
+  
+  ---
+  
+  > Also, install **Flutter** & **Dart** plugins in Android Studio
+  
