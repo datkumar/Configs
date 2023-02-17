@@ -2,13 +2,45 @@
 
 > Assuming Linux Machine
 
-## Check Java Installed version (if present)
+---
 
-```shell
-> java --version
-```
+**Check Java Installed version (if present)**: $`java --version`
 
-## Uninstall Java
+---
+
+## Install Java:
+
+- Download  latest .deb package from [Official Oracele SE Downloads Page](https://www.oracle.com/java/technologies/downloads/)
+- Double click on the downloaded `jdk-19_linux-x64_bin` file and click Install.
+- Now `jdk` is installed in `jvm` folder somewhere
+- You can search `jvm` as:
+  ```shell
+  > whereis jvm
+  jvm: /usr/lib/jvm
+  ```
+- Set Environment Variables in  `$SHELL`  Config file (i.e. `~/.zshrc`, `~/.bashrc` etc.)
+  ```shell
+  # Set `JAVA_HOME` environment variable to the jdk folder path
+  export JAVA_HOME=/usr/lib/jvm/jdk-19
+  # Add java to PATH
+  export PATH=$PATH:$JAVA_HOME/bin
+  ```
+- Reload environment & restart `SHELL` :
+  ```shell
+  source ~/.zshrc
+  exec $SHELL
+  ````
+- Check if java installed
+  ```shell
+  > java --version
+  java 19.0.2 2023-01-17
+  Java(TM) SE Runtime Environment (build 19.0.2+7-44)
+  Java HotSpot(TM) 64-Bit Server VM (build 19.0.2+7-44, mixed mode, sharing)
+  ```
+
+---
+
+## Uninstall Java:
 
 ```shell
 # See Installed location & version
@@ -21,7 +53,7 @@ jdk-17
 > sudo update-alternatives --remove "javaws" "/usr/lib/jvm/jdk-17/bin/javaws"
 > sudo rm -r /usr/lib/jvm/jdk-17
 > gedit ~/.zshrc
-# Remove `JAVA_HOME` and java `PATH` from Shell Config file i.e. `~/.zshrc`, `~/.bashrc` etc.
+# Remove JAVA_HOME and java PATH from Shell Config file i.e. ~/.zshrc, ~/.bashrc etc.
 > sudo rm -rf /usr/lib/jvm  # Optionally, (if no other Java versions present)
 > exec $SHELL
 ```
