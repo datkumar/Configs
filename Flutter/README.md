@@ -6,11 +6,17 @@
 
 - Install additional required Linux 64-bit binaries by running [these commands](https://developer.android.com/studio/install#64bit-libs)
 - Download [zip file from here](https://developer.android.com/studio) and follow [these instructions](https://developer.android.com/studio/install#linux)
-- Extract it to `/usr/local/` 
+- Extract it & move the extracted `android-studio` folder to `/opt/`
+```shell
+> cd ~/Downloads
+> tar xvf android-studio-2022.1.1.20-linux.tar.gz # Replace with your respective downloaded tarball name
+> sudo mv ./android-studio /opt/
+```
+
 - Now, you can run Android Studio via 
   
   ```shell
-  > sh /usr/local/android-studio/bin/studio.sh
+  > sh /opt/android-studio/bin/studio.sh
   ```
 
 - Create Desktop Entry via `Tools > Create Desktop Entry`
@@ -69,7 +75,7 @@
 - Link your installed Java version to Android Studio 
 
   ```shell
-  > cd /usr/local/android-studio && ln -s jbr jre
+  > cd /opt/android-studio && ln -s jbr jre
   ```
 
 - To accept licenses, run `flutter doctor --android-licenses`
