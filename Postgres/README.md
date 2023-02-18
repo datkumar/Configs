@@ -10,7 +10,7 @@ Also refer this [Digital Ocean Article](https://www.digitalocean.com/community/t
 
 ## Windows 🪟
 
-Download the [EDB Installation Wizard (.zip) file](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
+Download the [EDB Installation Wizard **zip file**](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 
 Default port is 5432
 >Set **PORT** `5433` as **default PORT** (`5432` is in use by Postgres version **9** present in Windows itself)
