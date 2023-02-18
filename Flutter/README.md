@@ -1,31 +1,45 @@
 # Flutter & Android Studio :iphone: 
 
-> Assuming Linux Machine with Java installed
+---
+
+> Assuming Linux Machine with Java installed. Refer [here](../Java/README.md) for Java Setup 
+
+> Also, `git` , `curl` must be installed. Dell Laptops can give `curl: symbol lookup error`. Refer [this question](https://askubuntu.com/questions/1358184/ubuntu-20-04-curl-symbol-lookup-error). So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
+
+ Whenever you edit your `$SHELL` 's config file (like `~/.zshrc` , `~/.bashrc`),  Import those changes and reload your `$SHELL` via:
+
+  ```shell
+  source ~/.zshrc  # or ~/.bashrc
+  exec $SHELL
+  ```
+
+---
 
 ## Install Android Studio:
 
-- Install additional required Linux 64-bit binaries by running [these commands](https://developer.android.com/studio/install#64bit-libs)
-- Download [zip file from here](https://developer.android.com/studio) and follow [these instructions](https://developer.android.com/studio/install#linux)
+- Install additional required **Linux 64-bit binaries** by running [these commands](https://developer.android.com/studio/install#64bit-libs)
+- Download [**zip file** from here](https://developer.android.com/studio) and follow [these instructions](https://developer.android.com/studio/install#linux)
 - Extract it & move the extracted `android-studio` folder to `/opt/`
-```shell
-> cd ~/Downloads
-> tar xvf android-studio-2022.1.1.20-linux.tar.gz # Replace with your respective downloaded tarball name
-> sudo mv ./android-studio /opt/
-```
-
+  ```shell
+  > cd ~/Downloads
+    # Replace with your respective downloaded tarball name
+  > tar xvf android-studio-2022.1.1.20-linux.tar.gz
+  > sudo mv ./android-studio /opt/
+  ```
 - Now, you can run Android Studio via 
   
   ```shell
   > sh /opt/android-studio/bin/studio.sh
   ```
-
 - Create Desktop Entry via `Tools > Create Desktop Entry`
-- Add Android SDK to `PATH` in `~/.zshrc` (or your respective shell profile file like `~/.bashrc`):
-
+- Add Android SDK to `PATH` in `~/.zshrc` (or your respective shell profile file like `~/.bashrc`)
   ```shell
   export ANDROID_HOME=$HOME/Android/Sdk
   export PATH=$PATH:$ANDROID_HOME/platform-tools
+  # Optionally,
+  # export PATH=$PATH:$ANDROID_HOME/build-tools/33.0.2
   ```
+- Source & Reload `$SHELL`
 
 ---
 
@@ -33,17 +47,45 @@
 
 - Create folder `~/flutter_stable`
 - Inside folder, clone latest `stable` branch of [official flutter repo](https://github.com/flutter/flutter):
-
   ```shell
   > git clone https://github.com/flutter/flutter.git -b stable
   ```
-
 - Add `flutter` to `PATH` in `~/.zshrc` (or your respective shell profile file like `~/.bashrc`):
-
   ```shell
   export PATH=$PATH:/home/kumar/flutter_stable/flutter/bin
   ```
-  
+- Source & Reload `$SHELL`
+- Check if everything required for Flutter is installed:
+  ```shell
+  [✓] Flutter (Channel stable, 3.7.3, on Ubuntu 20.04.5 LTS 5.14.0-1057-oem, locale en_IN)
+  [!] Android toolchain - develop for Android devices (Android SDK version 33.0.2)
+      ✗ cmdline-tools component is missing
+        Run `path/to/sdkmanager --install "cmdline-tools;latest"`
+        See https://developer.android.com/studio/command-line for more details.
+      ✗ Android license status unknown.
+        Run `flutter doctor --android-licenses` to accept the SDK licenses.
+        See https://flutter.dev/docs/get-started/install/linux#android-setup for more details.
+  [✓] Chrome - develop for the web
+  [✗] Linux toolchain - develop for Linux desktop
+      ✗ clang++ is required for Linux development.
+        It is likely available from your distribution (e.g.: apt install clang), or can be downloaded from https://releases.llvm.org/
+      ✗ CMake is required for Linux development.
+        It is likely available from your distribution (e.g.: apt install cmake), or can be downloaded from https://cmake.org/download/
+      ✗ ninja is required for Linux development.
+        It is likely available from your distribution (e.g.: apt install ninja-build), or can be downloaded from https://github.com/ninja-build/ninja/releases
+      ✗ GTK 3.0 development libraries are required for Linux development.
+        They are likely available from your distribution (e.g.: apt install libgtk-3-dev)
+  [!] Android Studio (version 2022.1)
+      ✗ Unable to find bundled Java version.
+  [✓] Connected device (2 available)
+  [✓] HTTP Host Availability
+
+  ! Doctor found issues in 2 categories.
+  ```
+- Install the programs mentioned for Linux toolchain
+  ```shell
+  > sudo apt install clang cmake ninja-build libgtk-3-dev -y
+  ```
 - Flutter isn't completely set up yet
   ```shell
   > flutter doctor
@@ -67,23 +109,16 @@
 
   ! Doctor found issues in 2 categories.
   ```
-
-- Install Android Command-line Tools from Android Studio: 
-
-  `File > Settings > System Settings > SDK Tools > Android SDK Command-line Tools (latest)` 
-
-- Link your installed Java version to Android Studio 
-
+- Install Android **Command-line Tools** from Android Studio: `File > Settings > Appearance & Behaviour > System Settings > SDK Tools > Android SDK Command-line Tools (latest)` 
+- **Link** your installed Java version to Android Studio 
   ```shell
   > cd /opt/android-studio && ln -s jbr jre
   ```
-
-- To accept licenses, run `flutter doctor --android-licenses`
-
----
-
-**Now everything should work 👍🏻**
-
+- Accept licenses: 
+  ```shell
+  > flutter doctor --android-licenses
+  ```
+- **Now everything should work 👍🏻**
   ```shell
   > flutter doctor
   Doctor summary (to see all details, run flutter doctor -v):
@@ -99,8 +134,14 @@
 
   • No issues found!
   ```
+- Open Android Studio. Install **Flutter** & **Dart** plugins in Android Studio
+- When creating `New Flutter Project` in Android Studio, you need to specify path to Flutter SDK. To locate it, check first few lines in output of:
+  ```shell
+  > flutter doctor -v
+  [✓] Flutter (Channel stable, 3.7.3, on Ubuntu 20.04.5 LTS 5.14.0-1057-oem, locale en_IN)
+      • Flutter version 3.7.3 on channel stable at /home/kumar/flutter_stable/flutter
+  ```
+  So, Flutter SDK path is: `/home/kumar/flutter_stable/flutter`
   
-  ---
-  
-  > Also, install **Flutter** & **Dart** plugins in Android Studio
+  --- 
   
