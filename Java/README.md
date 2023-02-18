@@ -10,7 +10,7 @@
 
 ## Install Java
 
-- Download  latest `.deb` package from [Official Oracele SE Downloads Page](https://www.oracle.com/java/technologies/downloads/)
+- Download  latest `.deb` package from [Official Oracle SE Downloads Page](https://www.oracle.com/java/technologies/downloads/)
 - Double click on the downloaded `jdk-19_linux-x64_bin.deb` (or respective name) file and click `Install`
 - Now `jdk` is installed in `jvm` folder somewhere
 - You can search for `jvm` as:
