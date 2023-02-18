@@ -65,6 +65,7 @@
   ```
 - Check if everything required for Flutter is installed:
   ```shell
+  > flutter doctor
   [✓] Flutter (Channel stable, 3.7.3, on Ubuntu 20.04.5 LTS 5.14.0-1057-oem, locale en_IN)
   [!] Android toolchain - develop for Android devices (Android SDK version 33.0.2)
       ✗ cmdline-tools component is missing
@@ -117,7 +118,7 @@
 
   ! Doctor found issues in 2 categories.
   ```
-- Install Android **Command-line Tools** from Android Studio: `File > Settings > Appearance & Behaviour > System Settings > SDK Tools > Android SDK Command-line Tools (latest)` 
+- Install Android **Command-line Tools** from Android Studio: ` File > Settings > Appearance & Behaviour > System Settings > SDK Tools > Android SDK Command-line Tools (latest)` 
 - **Link** your installed Java version to Android Studio 
   ```shell
   > cd /opt/android-studio && ln -s jbr jre
