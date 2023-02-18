@@ -55,6 +55,14 @@
   export PATH=$PATH:/home/kumar/flutter_stable/flutter/bin
   ```
 - Source & Reload `$SHELL`
+- Now, `flutter` command will be recognised:
+  ```shell
+  > flutter --version
+  Flutter 3.7.2 • channel stable • https://github.com/flutter/flutter.git
+  Framework • revision 32fb2f948e (10 days ago) • 2023-02-08 07:30:10 -0800
+  Engine • revision f40b73f8a4
+  Tools • Dart 2.19.2 • DevTools 2.20.1
+  ```
 - Check if everything required for Flutter is installed:
   ```shell
   [✓] Flutter (Channel stable, 3.7.3, on Ubuntu 20.04.5 LTS 5.14.0-1057-oem, locale en_IN)
