@@ -1,4 +1,5 @@
 {
+    "widget/BBRMoCv00-d6": null,
     "data/fab43533-33b9-4387-878e-3294ac776133": {
         "searchEngine": "duckduckgo",
         "suggestionsQuantity": 4
@@ -26,7 +27,38 @@
     "widget/default-time": null,
     "widget/q45a-p5wGMMv": null,
     "focus": false,
-    "timeZone": null,
+    "data/3a1e58f2-63a2-4a01-b98f-a67c85df0ac8": {
+        "showDetails": false,
+        "units": "si",
+        "latitude": 18.4885,
+        "longitude": 73.8158,
+        "name": "Pune"
+    },
+    "widget/fab43533-33b9-4387-878e-3294ac776133": {
+        "id": "fab43533-33b9-4387-878e-3294ac776133",
+        "key": "widget/search",
+        "active": true,
+        "display": {
+            "position": "middleCentre",
+            "colour": "#f6d32d",
+            "fontFamily": "Roboto Slab",
+            "fontWeight": 400
+        },
+        "order": 1
+    },
+    "widget/M8cTrj-m44nV": null,
+    "widget/3a1e58f2-63a2-4a01-b98f-a67c85df0ac8": {
+        "id": "3a1e58f2-63a2-4a01-b98f-a67c85df0ac8",
+        "key": "widget/weather",
+        "active": true,
+        "display": {
+            "position": "bottomCentre",
+            "fontFamily": "Monaco",
+            "fontWeight": 500,
+            "colour": "#ffffff"
+        },
+        "order": 3
+    },
     "widget/72ac8e6c-5168-46a1-9122-d574adbbe5a0": {
         "id": "72ac8e6c-5168-46a1-9122-d574adbbe5a0",
         "key": "widget/time",
@@ -39,18 +71,7 @@
         },
         "order": 0
     },
-    "widget/fab43533-33b9-4387-878e-3294ac776133": {
-        "id": "fab43533-33b9-4387-878e-3294ac776133",
-        "key": "widget/search",
-        "active": true,
-        "display": {
-            "position": "middleCentre",
-            "colour": "#f9f06b",
-            "fontFamily": "DejaVu Sans",
-            "fontWeight": 400
-        },
-        "order": 1
-    },
+    "widget/Psv512WQNtWG": null,
     "widget/288d4825-abb3-44ff-964c-1d59ab32eccb": {
         "id": "288d4825-abb3-44ff-964c-1d59ab32eccb",
         "key": "widget/links",
@@ -63,36 +84,24 @@
         },
         "order": 2
     },
-    "data/3a1e58f2-63a2-4a01-b98f-a67c85df0ac8": {
-        "showDetails": false,
-        "units": "si",
-        "latitude": 18.5196,
-        "longitude": 73.8554
-    },
-    "widget/Psv512WQNtWG": null,
-    "widget/3a1e58f2-63a2-4a01-b98f-a67c85df0ac8": {
-        "id": "3a1e58f2-63a2-4a01-b98f-a67c85df0ac8",
-        "key": "widget/weather",
-        "active": true,
-        "display": {
-            "position": "bottomCentre",
-            "fontFamily": "HELVETICA",
-            "fontWeight": 500
-        },
-        "order": 3
-    },
     "data/44c4d1f5-a2a9-42cc-942d-b3eb93ded71b": {
         "colour": "#123b2d"
     },
     "widget/default-greeting": null,
     "locale": "en",
-    "widget/M8cTrj-m44nV": null,
+    "timeZone": null,
+    "widget/tlTzm7nrtrNd": null,
     "data/288d4825-abb3-44ff-964c-1d59ab32eccb": {
         "columns": 5,
         "links": [
             {
                 "url": "https://news.ycombinator.com/",
                 "name": "HackerNews",
+                "icon": "_favicon"
+            },
+            {
+                "url": "https://twitter.com/home",
+                "name": "Twitter",
                 "icon": "_favicon"
             },
             {
@@ -106,43 +115,13 @@
                 "icon": "_favicon"
             },
             {
-                "url": "https://mail.google.com/mail/u/0/#inbox",
-                "name": "Gmail",
-                "icon": "mail"
-            },
-            {
                 "url": "https://github.com/login",
                 "name": "GitHub",
                 "icon": "github"
             },
             {
-                "url": "https://www.imdb.com/",
-                "name": "IMDb",
-                "icon": "_favicon"
-            },
-            {
-                "url": "https://www.reddit.com/",
-                "name": "Reddit",
-                "icon": "_favicon"
-            },
-            {
-                "url": "https://todoist.com",
-                "name": "Todoist",
-                "icon": "_favicon"
-            },
-            {
-                "url": "https://web.whatsapp.com/",
-                "name": "WhatsApp",
-                "icon": "_favicon"
-            },
-            {
-                "url": "https://www.udemy.com/",
-                "name": "Udemy",
-                "icon": "_favicon"
-            },
-            {
-                "url": "https://www.amazon.in/",
-                "name": "Amazon",
+                "url": "https://www.linkedin.com",
+                "name": "LinkedIn",
                 "icon": "_favicon"
             },
             {
@@ -151,13 +130,28 @@
                 "icon": "_favicon"
             },
             {
-                "url": "https://open.spotify.com",
-                "name": "Spotify",
+                "url": "https://www.udemy.com/",
+                "name": "Udemy",
                 "icon": "_favicon"
             },
             {
-                "url": "https://www.linkedin.com",
-                "name": "LinkedIn",
+                "url": "https://music.youtube.com/",
+                "name": "YT Music",
+                "icon": "_favicon"
+            },
+            {
+                "url": "https://mail.google.com/mail/u/0/#inbox",
+                "name": "Gmail",
+                "icon": "mail"
+            },
+            {
+                "url": "https://angel.co/jobs",
+                "name": "Angelist",
+                "icon": "_favicon"
+            },
+            {
+                "url": "https://www.reddit.com/",
+                "name": "Reddit",
                 "icon": "_favicon"
             },
             {
@@ -166,35 +160,43 @@
                 "icon": "_favicon"
             },
             {
-                "url": "https://www.flipkart.com/",
-                "name": "Flipkart",
-                "icon": "_favicon"
-            },
-            {
-                "url": "https://twitter.com/home",
-                "name": "Twitter",
-                "icon": "_favicon"
-            },
-            {
-                "url": "https://canva.com",
+                "url": "https://www.canva.com/",
                 "name": "Canva",
-                "icon": "pen-tool"
+                "icon": "_favicon"
+            },
+            {
+                "url": "https://web.whatsapp.com/",
+                "name": "WhatsApp",
+                "icon": "phone-call"
+            },
+            {
+                "url": "https://www.glassdoor.co.in",
+                "name": "Glassdoor",
+                "icon": "_favicon"
+            },
+            {
+                "url": "https://letterboxd.com/films/",
+                "name": "Letterboxd",
+                "icon": "_favicon"
+            },
+            {
+                "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+                "name": "TuF",
+                "icon": "_favicon"
+            },
+            {
+                "url": "https://todoist.com",
+                "name": "Todoist",
+                "icon": "_favicon"
             },
             {
                 "url": "https://drive.google.com/drive/my-drive",
                 "name": "Drive",
                 "icon": "hard-drive"
-            },
-            {
-                "url": "https://codeforces.com/",
-                "name": "CodeForces",
-                "icon": "_favicon"
             }
         ],
         "visible": true,
         "linkOpenStyle": false
     },
-    "widget/BBRMoCv00-d6": null,
-    "widget/tlTzm7nrtrNd": null,
     "version": 3
 }
