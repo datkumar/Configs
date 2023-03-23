@@ -8,6 +8,7 @@
 - [PostgreSQL 🐘](./Postgres/README.md)
 - [NodeJS](./NodeJs/README.md)
 - [Go 🦫](./Go/README.md)
+- [Rust 🦀](./Rust/README.md)
 
 ---
 
