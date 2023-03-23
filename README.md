@@ -6,6 +6,8 @@
 - [Browser 🧭](./Browser/README.md)
 - [Anaconda, Python 🐍](./Anaconda_Python/README.md)
 - [PostgreSQL 🐘](./Postgres/README.md)
+- [NodeJS](./NodeJs/README.md)
+- [Go 🦫](./Go/README.md)
 
 ---
 

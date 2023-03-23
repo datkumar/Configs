@@ -23,6 +23,8 @@ wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/insta
 ## Export & Install Extensions: 
 [Check this post](https://stackoverflow.com/questions/35773299/how-can-you-export-the-visual-studio-code-extension-list)
 
+
+
 ---
 
 ## Snippets:
