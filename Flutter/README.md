@@ -165,7 +165,7 @@ So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
   ```shell
   > mkdir ~/flutter_3_3_10
   > cd ~/flutter_3_3_10
-  > tar xvf ~/Downloads/flutter_linux_3.3.10-stable.tar.xz
+  > tar xf ~/Downloads/flutter_linux_3.3.10-stable.tar.xz
   ```
  
 - Add `flutter` binary location to `PATH` variable inside your shell profile file (`~/.zshrc` , `~/.bashrc`)
@@ -175,4 +175,4 @@ So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
   ```
 
 - Source `SHELL` profile file & Reload `SHELL`
- 
+- Follow next steps similar as previous method. 
