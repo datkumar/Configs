@@ -4,9 +4,13 @@
 
 > Assuming Linux Machine with Java installed. Refer [here](../Java/README.md) for Java Setup 
 
-> Also, `git` , `curl` must be installed. Dell Laptops can give `curl: symbol lookup error`. Refer [this question](https://askubuntu.com/questions/1358184/ubuntu-20-04-curl-symbol-lookup-error). So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
+> Also, `git` , `curl` must be installed. 
 
- Whenever you edit your `$SHELL` 's config file (like `~/.zshrc` , `~/.bashrc`),  Import those changes and reload your `$SHELL` via:
+Dell Laptops can give `curl: symbol lookup error`. Refer [this question](https://askubuntu.com/questions/1358184/ubuntu-20-04-curl-symbol-lookup-error). 
+
+So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
+
+> Whenever you edit your `SHELL` 's profile (like `~/.zshrc` , `~/.bashrc`),  Import i.e. source those changes and reload your `$SHELL` via:
 
   ```shell
   source ~/.zshrc  # or ~/.bashrc
@@ -39,11 +43,11 @@
   # Optionally,
   # export PATH=$PATH:$ANDROID_HOME/build-tools/33.0.2
   ```
-- Source & Reload `$SHELL`
+- Source `SHELL` profile file & Reload `SHELL`
 
 ---
 
-## Install Flutter:
+## Install Flutter (latest stable version):
 
 - Create folder `~/flutter_stable`
 - Inside folder, clone latest `stable` branch of [official flutter repo](https://github.com/flutter/flutter):
@@ -54,7 +58,7 @@
   ```shell
   export PATH=$PATH:/home/kumar/flutter_stable/flutter/bin
   ```
-- Source & Reload `$SHELL`
+- Source `SHELL` profile file & Reload `SHELL`
 - Now, `flutter` command will be recognised:
   ```shell
   > flutter --version
@@ -152,5 +156,23 @@
   ```
   So, Flutter SDK path is: `/home/kumar/flutter_stable/flutter`
   
-  --- 
+--- 
   
+## Install Flutter (specific version):
+
+- Download Flutter SDK tarball (or zip file) of that version from [here](https://docs.flutter.dev/release/archive?tab=linux)
+- Create folder and extract the Flutter SDK there
+  ```shell
+  > mkdir ~/flutter_3_3_10
+  > cd ~/flutter_3_3_10
+  > tar xvf ~/Downloads/flutter_linux_3.3.10-stable.tar.xz
+  ```
+ 
+- Add `flutter` binary location to `PATH` variable inside your shell profile file (`~/.zshrc` , `~/.bashrc`)
+  
+  ```shell
+  export PATH=$PATH:$HOME/flutter_3_3_10/flutter/bin
+  ```
+
+- Source `SHELL` profile file & Reload `SHELL`
+ 
