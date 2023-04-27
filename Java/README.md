@@ -64,3 +64,12 @@ jdk-17
 > sudo rm -rf /usr/lib/jvm  # Optionally, (if no other Java versions present)
 > exec $SHELL
 ```
+
+---
+
+## Java 8 Installation: 
+
+- Install the Java 8 SE `8u371` version x86 Compressed Archive from [the Oracle Page](https://www.oracle.com/java/technologies/downloads/)
+- Follow instructions on [this article](https://docs.datastax.com/en/jdk-install/doc/jdk-install/installOracleJdkDeb.html)
+- Set the `JAVA_HOME` and add `java` to `PATH` in the `SHELL` config file (`~/.zshrc` or `~/.bashrc`)
+- Source that config file and restart `SHELL` 
