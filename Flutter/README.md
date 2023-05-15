@@ -47,6 +47,12 @@ So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
 
 ---
 
+## Uninstall Android Studio
+
+- Refer [these instructions](https://askubuntu.com/questions/546723/uninstall-android-studio-completely)
+
+---
+
 ## Install Flutter (latest stable version):
 
 - Create folder `~/flutter_stable`
@@ -176,3 +182,13 @@ So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
 
 - Source `SHELL` profile file & Reload `SHELL`
 - Follow next steps similar as previous method. 
+
+---
+
+## Uninstall Flutter:
+
+- Delete the `flutter` git repo folder
+- Delete configs in `~/.config` 
+- Remove PATH settings in SHELL config file
+
+---
