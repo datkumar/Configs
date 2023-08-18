@@ -1,7 +1,13 @@
 # VS Code 📝
 
+## Install VSCode on Linux 
+https://code.visualstudio.com/docs/setup/linux 
+
+Set `window.titleBarStyle` option to `Custom` in settings
+
 ---
-## Add the right click option *`Open in Code`*  :
+
+## Add  "`Open in Code`" right-click option:
 
 Execute the bash script from [this repo](https://github.com/harry-cpp/code-nautilus) 
 
@@ -16,7 +22,7 @@ wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/insta
 ---
 
 ## List VSCode Extensions:  
-`code --list-extensions`
+    `code --list-extensions`
 
 ---
 
@@ -33,3 +39,4 @@ wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/insta
 - [JavaScript](./javascript.json)
 
 ---
+
