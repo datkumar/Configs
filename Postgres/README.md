@@ -2,9 +2,15 @@
 
 ## Linux 🐧
 
-Follow the [Download instructions on official page](https://www.postgresql.org/download/linux/ubuntu/)
+[Postgres Linux Downloads Page](https://www.postgresql.org/download/linux)
 
-Also refer this [Digital Ocean Article](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04)
+Instructions: [Ubuntu](https://www.postgresql.org/download/linux/ubuntu/) | [RedHat/Fedora/CentOS](https://www.postgresql.org/download/linux/redhat/)
+
+[Digital Ocean article (Ubuntu 20.04)](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04)
+
+[Fedora Quick Docs](https://docs.fedoraproject.org/en-US/quick-docs/postgresql/)
+
+[YT vid](https://www.youtube.com/watch?v=Nt1BjoULGWg)
 
 ---
 
@@ -13,7 +19,8 @@ Also refer this [Digital Ocean Article](https://www.digitalocean.com/community/t
 Download the [EDB Installation Wizard **zip file**](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 
 Default port is 5432
->Set **PORT** `5433` as **default PORT** (`5432` is in use by Postgres version **9** present in Windows itself)
+
+> Set **PORT** `5433` as **default PORT** (`5432` is in use by Postgres version **9** present in Windows itself)
 
 **Start Postgres as Root i.e. `postgres` User (DB is `postgres`):**
 
