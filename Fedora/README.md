@@ -2,3 +2,5 @@
 
 - Text Editor is `gnome-text-editor` instead of `gedit`
 - Python (`python3`, `python`) is already installed; but NOT pip (`python3-pip`).
+- Searching which package provides given command (like `g++`): [this post](https://unix.stackexchange.com/questions/701583/what-is-the-link-between-g-and-gcc-c-in-fedoras-dnf-repositories)
+- GCC isn't installed. Refer [their guide](https://developer.fedoraproject.org/tech/languages/c/cpp_installation.html) & [this post](https://stackoverflow.com/questions/12952913/how-do-i-install-g-for-fedora): `sudo dnf install gcc-c++`
