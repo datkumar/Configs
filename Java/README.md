@@ -47,6 +47,18 @@
 
 ---
 
+# Switch Java Version
+
+Refer [this StackOverflow post](https://askubuntu.com/questions/740757/switch-between-multiple-java-versions)
+
+```sh
+sudo update-alternatives --config java
+
+# Update JAVA_HOME
+export JAVA_HOME="$(jrunscript -e 'java.lang.System.out.println(java.lang.System.getProperty("java.home"));')"
+```
+---
+
 ## Uninstall Java
 
 ```shell
