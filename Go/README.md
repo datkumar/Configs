@@ -2,7 +2,9 @@
 
 ## Install:
 
-- Download tarball from [Official Install Page](https://go.dev/doc/install). Open Terminal in your download location & follow their instructions
+- Download tarball from [their releases page](https://go.dev/dl/)
+- Follow [their installation instructions](https://go.dev/doc/install) 
+- Open Terminal in your download location
 - Remove old Go installation (if exists):
   ```bash
   sudo rm -rf /usr/local/go
