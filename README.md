@@ -8,7 +8,7 @@
 - [NeoVim 🖋️ ](./NeoVim/README.md)
 - [PostgreSQL 🐘](./Postgres/README.md)
 - [MongoDB 🔑](./MongoDB/README.md)
-- [NodeJS 🟢](./NodeJs/README.md)
+- [NodeJS](./NodeJs/README.md) <img src='https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png' width=10>
 - [Flutter, Android Studio 📱 ](./Flutter/README.md)
 - [Go 🦫](./Go/README.md)
 - [Rust 🦀](./Rust/README.md)
@@ -21,3 +21,5 @@
 - [Windows Commands 🪟](./Windows/README.md)
 
 ---
+
+## NodeJS
