@@ -1,6 +1,6 @@
-# PostgreSQL 🐘
+# PostgreSQL <img src='https://cdn-icons-png.flaticon.com/512/5968/5968342.png' width="17">
 
-## Linux 🐧
+## Linux <img src='https://cdn-icons-png.flaticon.com/512/6124/6124995.png' width="17">
 
 [Postgres Linux Downloads Page](https://www.postgresql.org/download/linux)
 
@@ -14,7 +14,7 @@ Instructions: [Ubuntu](https://www.postgresql.org/download/linux/ubuntu/) | [Red
 
 ---
 
-## Windows 🪟
+## Windows <img src='https://seeklogo.com/images/W/windows-11-icon-logo-6C39629E45-seeklogo.com.png' width="17">
 
 Download the [EDB Installation Wizard **zip file**](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 

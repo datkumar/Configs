@@ -1,21 +1,21 @@
-# Flutter & Android Studio :iphone: 
+# Flutter, Android Studio&ensp;<img src='https://static-00.iconduck.com/assets.00/flutter-icon-1651x2048-ojswpayr.png' width="18">
 
 ---
 
-> Assuming Linux Machine with Java installed. Refer [here](../Java/README.md) for Java Setup 
+> Assuming Linux Machine with Java installed. Refer [here](../Java/README.md) for Java Setup
 
-> Also, `git` , `curl` must be installed. 
+> Also, `git` , `curl` must be installed.
 
-Dell Laptops can give `curl: symbol lookup error`. Refer [this question](https://askubuntu.com/questions/1358184/ubuntu-20-04-curl-symbol-lookup-error). 
+Dell Laptops can give `curl: symbol lookup error`. Refer [this question](https://askubuntu.com/questions/1358184/ubuntu-20-04-curl-symbol-lookup-error).
 
 So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
 
-> Whenever you edit your `SHELL` 's profile (like `~/.zshrc` , `~/.bashrc`),  Import i.e. source those changes and reload your `$SHELL` via:
+> Whenever you edit your `SHELL` 's profile (like `~/.zshrc` , `~/.bashrc`), Import i.e. source those changes and reload your `$SHELL` via:
 
-  ```shell
-  source ~/.zshrc  # or ~/.bashrc
-  exec $SHELL
-  ```
+```shell
+source ~/.zshrc  # or ~/.bashrc
+exec $SHELL
+```
 
 ---
 
@@ -30,11 +30,12 @@ So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
   > tar xvf android-studio-2022.1.1.20-linux.tar.gz
   > sudo mv ./android-studio /opt/
   ```
-- Now, you can run Android Studio via 
-  
+- Now, you can run Android Studio via
+
   ```shell
   > sh /opt/android-studio/bin/studio.sh
   ```
+
 - Create Desktop Entry via `Tools > Create Desktop Entry`
 - Add Android SDK to `PATH` in `~/.zshrc` (or your respective shell profile file like `~/.bashrc`)
   ```shell
@@ -74,6 +75,7 @@ So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
   Tools • Dart 2.19.2 • DevTools 2.20.1
   ```
 - Check if everything required for Flutter is installed:
+
   ```shell
   > flutter doctor
   [✓] Flutter (Channel stable, 3.7.3, on Ubuntu 20.04.5 LTS 5.14.0-1057-oem, locale en_IN)
@@ -101,11 +103,13 @@ So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
 
   ! Doctor found issues in 2 categories.
   ```
+
 - Install the programs mentioned for Linux toolchain
   ```shell
   > sudo apt install clang cmake ninja-build libgtk-3-dev -y
   ```
 - Flutter isn't completely set up yet
+
   ```shell
   > flutter doctor
   Doctor summary (to see all details, run flutter doctor -v):
@@ -128,16 +132,18 @@ So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
 
   ! Doctor found issues in 2 categories.
   ```
-- Install Android **Command-line Tools** from Android Studio: ` File > Settings > Appearance & Behaviour > System Settings > SDK Tools > Android SDK Command-line Tools (latest)` 
-- **Link** your installed Java version to Android Studio 
+
+- Install Android **Command-line Tools** from Android Studio: ` File > Settings > Appearance & Behaviour > System Settings > SDK Tools > Android SDK Command-line Tools (latest)`
+- **Link** your installed Java version to Android Studio
   ```shell
   > cd /opt/android-studio && ln -s jbr jre
   ```
-- Accept licenses: 
+- Accept licenses:
   ```shell
   > flutter doctor --android-licenses
   ```
 - **Now everything should work 👍🏻**
+
   ```shell
   > flutter doctor
   Doctor summary (to see all details, run flutter doctor -v):
@@ -153,6 +159,7 @@ So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
 
   • No issues found!
   ```
+
 - Open Android Studio. Install **Flutter** & **Dart** plugins in Android Studio
 - When creating `New Flutter Project` in Android Studio, you need to specify path to Flutter SDK. To locate it, check first few lines in output of:
   ```shell
@@ -161,34 +168,35 @@ So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
       • Flutter version 3.7.3 on channel stable at /home/kumar/flutter_stable/flutter
   ```
   So, Flutter SDK path is: `/home/kumar/flutter_stable/flutter`
-  
---- 
-  
+
+---
+
 ## Install Flutter (specific version):
 
 - Download Flutter SDK tarball (or zip file) of that version from [here](https://docs.flutter.dev/release/archive?tab=linux)
 - Create folder and extract the Flutter SDK there
+
   ```shell
   > mkdir ~/flutter_3_3_10
   > cd ~/flutter_3_3_10
   > tar xf ~/Downloads/flutter_linux_3.3.10-stable.tar.xz
   ```
- 
+
 - Add `flutter` binary location to `PATH` variable inside your shell profile file (`~/.zshrc` , `~/.bashrc`)
-  
+
   ```shell
   export PATH=$PATH:$HOME/flutter_3_3_10/flutter/bin
   ```
 
 - Source `SHELL` profile file & Reload `SHELL`
-- Follow next steps similar as previous method. 
+- Follow next steps similar as previous method.
 
 ---
 
 ## Uninstall Flutter:
 
 - Delete the `flutter` git repo folder
-- Delete configs in `~/.config` 
+- Delete configs in `~/.config`
 - Remove PATH settings in SHELL config file
 
 ---

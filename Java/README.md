@@ -1,4 +1,4 @@
-# Java Setup: 🍵
+# Java <img src='https://cdn-icons-png.flaticon.com/512/5968/5968282.png' width="25">
 
 > Assuming Linux Machine
 
@@ -10,7 +10,7 @@
 
 ## Install Java
 
-- Download  latest `.deb` package from [Official Oracle SE Downloads Page](https://www.oracle.com/java/technologies/downloads/)
+- Download latest `.deb` package from [Official Oracle SE Downloads Page](https://www.oracle.com/java/technologies/downloads/)
 - Double click on the downloaded `jdk-19_linux-x64_bin.deb` (or respective name) file and click `Install`
 - Now `jdk` is installed in `jvm` folder somewhere
 - You can search for `jvm` as:
@@ -20,7 +20,7 @@
   jvm: /usr/lib/jvm
   ```
 
-- Set Environment Variables in  `$SHELL`  Config file (i.e. `~/.zshrc`, `~/.bashrc` etc.)
+- Set Environment Variables in `$SHELL` Config file (i.e. `~/.zshrc`, `~/.bashrc` etc.)
 
   ```shell
   # Set "JAVA_HOME" environment variable to the jdk folder path
@@ -34,7 +34,7 @@
   ```shell
   source ~/.zshrc  # or ~/.bashrc
   exec $SHELL
-  ````
+  ```
 
 - Now, `java` should be installed successfully :thumbsup:
 
@@ -53,7 +53,7 @@
 # See Installed location & version
 > dpkg --list | grep jdk
 ii    jdk-17    17.0.2-ga    amd64    Java Platform Standard Edition Development Kit
-> ls /usr/lib/jvm                                                              
+> ls /usr/lib/jvm
 jdk-17
 > sudo update-alternatives --remove "java" "/usr/lib/jvm/jdk-17/bin/java"
 > sudo update-alternatives --remove "javac" "/usr/lib/jvm/jdk-17/bin/javac"
@@ -67,9 +67,9 @@ jdk-17
 
 ---
 
-## Java 8 Installation: 
+## Java 8 Installation:
 
 - Install the Java 8 SE `8u371` version x86 Compressed Archive from [the Oracle Page](https://www.oracle.com/java/technologies/downloads/)
 - Follow instructions on [this article](https://docs.datastax.com/en/jdk-install/doc/jdk-install/installOracleJdkDeb.html)
 - Set the `JAVA_HOME` and add `java` to `PATH` in the `SHELL` config file (`~/.zshrc` or `~/.bashrc`)
-- Source that config file and restart `SHELL` 
+- Source that config file and restart `SHELL`

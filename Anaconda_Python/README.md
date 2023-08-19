@@ -1,4 +1,4 @@
-# Anaconda, Python 🐍
+# Anaconda, Python <img src='https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png' width="22">
 
 > Always see the documentation page for installation commands
 
@@ -105,7 +105,7 @@ Check [here for more info](https://jakevdp.github.io/blog/2017/12/05/installing-
 [Installing conda-clean](https://anaconda.org/anaconda/anaconda-clean)
 
 ```shell
-> conda install -c anaconda anaconda-clean 
+> conda install -c anaconda anaconda-clean
 
 > conda activate base
 
@@ -124,7 +124,7 @@ Backup directory: /home/kumar/.anaconda_backup/2023-02-15T114707
 
 ---
 
-# Linux Setup 🐧
+## Linux <img src='https://cdn-icons-png.flaticon.com/512/6124/6124995.png' width="17">
 
 Follow the [instructions on the official page](https://docs.anaconda.com/anaconda/install/linux/)
 
@@ -153,7 +153,7 @@ Current conda environment to display or not option located in file `~/.p10k.zsh`
 
 ---
 
-# Windows Setup 🪟
+## Windows <img src='https://seeklogo.com/images/W/windows-11-icon-logo-6C39629E45-seeklogo.com.png' width="17">
 
 1. Download [Anaconda Distribution](https://www.anaconda.com/products/distribution) (.exe) installer. Install for **current User** only.
 2. Do **NOT** Select **_Add to PATH_** option.
@@ -165,7 +165,7 @@ conda create -n devenv tensorflow
 conda activate devenv
 ```
 
-Install packages: [`jupyter`](<https://anaconda.org/anaconda/jupyter>) , [`keras`](https://anaconda.org/anaconda/keras) , [`theano`](<https://anaconda.org/anaconda/theano>) , [`pytorch`](https://pytorch.org)
+Install packages: [`jupyter`](https://anaconda.org/anaconda/jupyter) , [`keras`](https://anaconda.org/anaconda/keras) , [`theano`](https://anaconda.org/anaconda/theano) , [`pytorch`](https://pytorch.org)
 
 `conda install pytorch torchvision torchaudio cpuonly -c pytorch`
 
@@ -173,8 +173,8 @@ Jupyter Notebook **[Extensions](https://docs.continuum.io/anaconda/user-guide/ta
 
 ---
 
-**Convert  `.ipynb` to `html` :**  [Jupyter Notebooks(ipynb) Viewer and Converter](https://htmtopdf.herokuapp.com/ipynbviewer/)
+**Convert `.ipynb` to `html` :** [Jupyter Notebooks(ipynb) Viewer and Converter](https://htmtopdf.herokuapp.com/ipynbviewer/)
 
-**Convert  `html` to `PDF` :** [html2pdf](https://html2pdf.com/)
+**Convert `html` to `PDF` :** [html2pdf](https://html2pdf.com/)
 
 ---
