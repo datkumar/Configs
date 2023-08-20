@@ -24,4 +24,13 @@ Update font-cache: `sudo fc-cache -f -v`
 
 ---
 
-[My List of Installed Fonts](./FontsLinux.txt)
+- Store all font downloads in `~/Downloads/NerdFonts`
+- Then, move all those fonts to the system fonts location:
+
+  `sudo mv ~/Downloads/NerdFonts/* /usr/local/share/fonts/`
+
+---
+
+[Fonts in fresh installation of Fedora](./FedoraInstalledFonts.txt)
+
+[Current list of installed fonts](./FontsLinux.txt)
