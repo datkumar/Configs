@@ -12,8 +12,6 @@ System Fonts located in `/usr/local/share/fonts/`
 
 Update font-cache: `sudo fc-cache -f -v`
 
-[List all installed fonts](https://www.cyberciti.biz/tips/quickly-list-all-available-fonts.html): `fc-list | sort -f`
-
 ---
 
 ## NerdFonts:
@@ -30,6 +28,8 @@ Update font-cache: `sudo fc-cache -f -v`
   `sudo mv ~/Downloads/NerdFonts/* /usr/local/share/fonts/`
 
 ---
+
+[List all installed fonts](https://www.cyberciti.biz/tips/quickly-list-all-available-fonts.html): `fc-list | sort -f`
 
 [Fonts in fresh installation of Fedora](./FedoraInstalledFonts.txt)
 
