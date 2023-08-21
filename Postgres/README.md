@@ -1,4 +1,4 @@
-# PostgreSQL <img src='https://cdn-icons-png.flaticon.com/512/5968/5968342.png' width="17">
+# PostgreSQL <img src='https://cdn-icons-png.flaticon.com/512/5968/5968342.png' height="25">
 
 ## Linux <img src='https://cdn-icons-png.flaticon.com/512/6124/6124995.png' width="17">
 

@@ -1,4 +1,4 @@
-# Java <img src='https://cdn-icons-png.flaticon.com/512/5968/5968282.png' width="25">
+# Java <img src='https://cdn-icons-png.flaticon.com/512/5968/5968282.png' width="34">
 
 > Assuming Linux Machine
 
@@ -57,6 +57,7 @@ sudo update-alternatives --config java
 # Update JAVA_HOME
 export JAVA_HOME="$(jrunscript -e 'java.lang.System.out.println(java.lang.System.getProperty("java.home"));')"
 ```
+
 ---
 
 ## Uninstall Java

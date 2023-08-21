@@ -1,4 +1,4 @@
-# Anaconda, Python <img src='https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png' width="22">
+# Anaconda, Python <img src='https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png' width="30">
 
 > Always see the documentation page for installation commands
 

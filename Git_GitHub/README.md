@@ -1,4 +1,4 @@
-# Git_GitHub <img src='https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png' width="20">
+# Git_GitHub <img src='https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png' width="28">
 
 Install Git: https://git-scm.com/download/linux
 
