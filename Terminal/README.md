@@ -45,6 +45,7 @@ Articles: [BytesBuzz](https://www.bytesbuzz.com/best-ubuntu-terminal-themes-and-
 > Basic Profile:
 
 - Size: `120` col x `35` row
+- Font: `CodeNewRoman`
 - Color: `Gnome dark`
 - Palette: `Tango`
 

@@ -9,4 +9,6 @@
 
 [DNF Configuration Guide](https://dnf.readthedocs.io/en/latest/conf_ref.html)
 
+[DNF Quick Docs](https://docs.fedoraproject.org/en-US/quick-docs/dnf/)
+
 Clear DNF cache: `sudo dnf clean dbcache` or `sudo dnf clean all`

@@ -4,13 +4,21 @@
 
 [Postgres Linux Downloads Page](https://www.postgresql.org/download/linux)
 
-Instructions: [Ubuntu](https://www.postgresql.org/download/linux/ubuntu/) | [RedHat/Fedora/CentOS](https://www.postgresql.org/download/linux/redhat/)
+Installation commands: [Ubuntu](https://www.postgresql.org/download/linux/ubuntu/) | [RedHat/Fedora/CentOS](https://www.postgresql.org/download/linux/redhat/)
 
 [Digital Ocean article (Ubuntu 20.04)](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04)
 
 [Fedora Quick Docs](https://docs.fedoraproject.org/en-US/quick-docs/postgresql/)
 
+[Postgres Wiki](https://wiki.postgresql.org/wiki/Detailed_installation_guides)
+
 [YT vid](https://www.youtube.com/watch?v=Nt1BjoULGWg)
+
+---
+
+### Upgrading Postgres Version:
+
+[Postgres Docs](https://www.postgresql.org/docs/9.0/install-upgrading.html)
 
 ---
 
