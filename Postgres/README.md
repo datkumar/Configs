@@ -1,5 +1,11 @@
 # PostgreSQL <img src='https://cdn-icons-png.flaticon.com/512/5968/5968342.png' height="25">
 
+---
+
+## [Fedora Postgres Setup](./Fedora_Postgres.md) <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fedora_icon_%282021%29.svg/2089px-Fedora_icon_%282021%29.svg.png' width="24">
+
+---
+
 ## Linux <img src='https://cdn-icons-png.flaticon.com/512/6124/6124995.png' width="17">
 
 [Postgres Linux Downloads Page](https://www.postgresql.org/download/linux)
@@ -14,11 +20,7 @@ Installation commands: [Ubuntu](https://www.postgresql.org/download/linux/ubuntu
 
 [YT vid](https://www.youtube.com/watch?v=Nt1BjoULGWg)
 
----
-
-### Upgrading Postgres Version:
-
-[Postgres Docs](https://www.postgresql.org/docs/9.0/install-upgrading.html)
+Upgrading Postgres Version: [Postgres Docs](https://www.postgresql.org/docs/9.0/install-upgrading.html)
 
 ---
 
