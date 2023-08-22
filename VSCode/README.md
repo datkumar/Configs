@@ -20,6 +20,10 @@ wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/insta
 
 ## Settings: [settings.json](./settings.json)
 
+Settings stored in `~/.config/Code/User/settings.json`
+
+Refer [this post](https://stackoverflow.com/questions/53840644/location-of-vs-code-preferences)
+
 ## List VSCode Extensions:
 
     `code --list-extensions`

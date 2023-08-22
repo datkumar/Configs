@@ -12,3 +12,7 @@ Linux Vendor Firmware Service (LVFS) has been put together by device vendors & O
   - `get-updates` : searches for available firmware updates for devices connected to the system
   - `update` : to update the firmware of all devices
   - `update [DEVICE-ID|GUID]` : to update the firmware of a specific device
+
+More References:
+
+[article](https://itsfoss.com/update-firmware-ubuntu/)
