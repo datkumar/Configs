@@ -33,7 +33,7 @@ To add and enable that repository run: (refered from [Fedora docs](https://docs.
 
 ```sh
 sudo dnf config-manager --add-repo /etc/yum.repos.d/mongodb-org-7.0.repo
-sudo dnf config-manager --set-enabledmongodb-org-7.0
+sudo dnf config-manager --set-enabled mongodb-org-7.0
 ```
 
 ## Install the MongoDB packages
