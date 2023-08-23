@@ -14,6 +14,12 @@ MongoDB Installation Docs : [Red Hat](https://www.mongodb.com/docs/manual/tutori
 
 Create a `/etc/yum.repos.d/mongodb-org-7.0.repo` file so that you can install MongoDB directly using `yum` :
 
+```sh
+sudo nano /etc/yum.repos.d/mongodb-org-7.0.repo
+```
+
+Paste these lines inside and save the file.
+
 ```profile
 [mongodb-org-7.0]
 name=MongoDB Repository
@@ -21,6 +27,13 @@ baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/7.0/x86_64/
 gpgcheck=1
 enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-7.0.asc
+```
+
+To add and enable that repository run: (refered from [Fedora docs](https://docs.fedoraproject.org/en-US/quick-docs/adding-or-removing-software-repositories-in-fedora/))
+
+```sh
+sudo dnf config-manager --add-repo /etc/yum.repos.d/mongodb-org-7.0.repo
+sudo dnf config-manager --set-enabledmongodb-org-7.0
 ```
 
 ## Install the MongoDB packages
