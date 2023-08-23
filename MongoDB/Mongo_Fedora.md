@@ -184,6 +184,28 @@ To run and manage your mongod process, you will be using your operating system's
 
 ---
 
+## Install MongoDB Compass
+
+From [MongoDB guide](https://www.mongodb.com/docs/compass/current/install/). The current stable version may be different so replace below commands accordingly
+
+- Download MongoDB Compass
+
+```sh
+wget https://downloads.mongodb.com/compass/mongodb-compass-1.39.0.x86_64.rpm
+```
+
+- Install MongoDB Compass
+
+```sh
+sudo yum install -y mongodb-compass-1.39.0.x86_64.rpm
+```
+
+- Launch MongoDB Compass
+
+```sh
+mongodb-compass
+```
+
 ## Uninstalling MongoDB Community Edition:
 
 - Refer [Uninstall guide](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/#uninstall-mongodb-community-edition)
