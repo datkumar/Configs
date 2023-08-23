@@ -2,11 +2,11 @@
 
 > ## MongoDB _officialy_ supports RHEL, CentOS but **NOT** Fedora as mentioned [here](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/#install-mongodb-community-edition-on-red-hat-or-centos)
 
-> Following the [MongoDB manual](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat) and [Fedora guide](https://developer.fedoraproject.org/tech/database/mongodb/about.html)
+> We are following the [MongoDB manual](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat) and [Fedora guide](https://developer.fedoraproject.org/tech/database/mongodb/about.html)
 
 ---
 
-## Configure `yum`
+## Configure `yum` repository
 
 Create a `/etc/yum.repos.d/mongodb-org-7.0.repo` file so that you can install MongoDB directly using `yum` :
 
@@ -30,7 +30,7 @@ gpgkey=https://www.mongodb.org/static/pgp/server-7.0.asc
 
 > ## Note
 
-The upper commented line is the one [as specified by MongoDB](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/#configure-the-package-management-system-yum). It uses the $`releasever` variable as parameter in url. But we explicitly specify as given in the [Fedora guide](https://developer.fedoraproject.org/tech/database/mongodb/about.html)
+The upper commented line is the one [as specified by MongoDB](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/#configure-the-package-management-system-yum). It uses the $`releasever` variable as parameter in url. But we explicitly specify it as given in the [this Fedora guide](https://developer.fedoraproject.org/tech/database/mongodb/about.html)
 
 Since we are on Fedora, our `releasever` value would be the version number of Fedora (like `38` for me). To check your release version you can run below line: (referred from [here](https://unix.stackexchange.com/questions/19701/yum-how-can-i-view-variables-like-releasever-basearch-yum0))
 
@@ -48,11 +48,11 @@ It gives output as:
 }
 ```
 
-Since MongoDB supports RHEL, we need to replace `releasever` parameter with the latest available RHEL version. Refer [these Fedora Docs](https://docs.fedoraproject.org/en-US/quick-docs/fedora-and-red-hat-enterprise-linux/index.html) for substituting the appropriate RHEL version for your Fedora version. Also, you can pick the latest RHEL version shown at `https://repo.mongodb.org/yum/redhat/`
+Since MongoDB supports RHEL, we need to replace `releasever` parameter with the latest available RHEL version. Refer [these Fedora Docs](https://docs.fedoraproject.org/en-US/quick-docs/fedora-and-red-hat-enterprise-linux/index.html) for substituting the appropriate RHEL version for your Fedora version. Also, you can pick the suitable RHEL versions among the ones shown at `https://repo.mongodb.org/yum/redhat/`
 
 ---
 
-To add and enable that repository run: (refered from [Fedora docs](https://docs.fedoraproject.org/en-US/quick-docs/adding-or-removing-software-repositories-in-fedora/))
+To add & enable the `yum` repository run: (refered from [Fedora docs](https://docs.fedoraproject.org/en-US/quick-docs/adding-or-removing-software-repositories-in-fedora/))
 
 ```sh
 sudo dnf config-manager --add-repo /etc/yum.repos.d/mongodb-org-7.0.repo
@@ -172,7 +172,7 @@ To run and manage your mongod process, you will be using your operating system's
   sudo systemctl enable mongod
   ```
 
-- You can Stop MongoDB via `sudo systemctl stop mongod`
+- You can Stop MongoDB server via `sudo systemctl stop mongod`
 
   and Restart it via `sudo systemctl restart mongod`
 
@@ -190,6 +190,6 @@ To run and manage your mongod process, you will be using your operating system's
 
 - Remove the SELinux policy as instructed [here](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/#selinux-policy-considerations)
 
-- Diable and remove the YUM repository you added. Refer [these Fedora docs](https://docs.fedoraproject.org/en-US/quick-docs/adding-or-removing-software-repositories-in-fedora/)
+- Disable and remove the `yum` repository you added. Refer [these Fedora docs](https://docs.fedoraproject.org/en-US/quick-docs/adding-or-removing-software-repositories-in-fedora/)
 
 ---
