@@ -114,7 +114,7 @@ Fedora\*
 > Install current available version in your distro:
 
 ```sh
-sudo dnf install postgresql-server postgresql-contrib
+sudo dnf install -y postgresql-server postgresql-contrib
 ```
 
 **_OR_**

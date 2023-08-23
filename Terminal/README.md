@@ -4,14 +4,14 @@
 
 ```sh
 sudo dnf update
-sudo dnf install zsh
+sudo dnf install -y zsh
 
 # Running zsh opens the first run wizard
 zsh
 # Select your sutiable options in that wizard to save
 
 # If 'chsh' not installed, run below line
-sudo dnf install util-linux-user
+sudo dnf install -y util-linux-user
 # View all available SHELLs
 chsh -l
 # Make 'zsh' the default SHELL
