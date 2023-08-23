@@ -216,13 +216,13 @@ sudo dnf install -y postgresql15-server postgresql15-contrib
 
 - Add **password** for the `postgres` user
 
-  ```sql
+  ```txt
   postgres=# \password postgres
   ```
 
 - Create a postgres user and a database.
 
-  ```sql
+  ```txt
   postgres=# CREATE USER kumar WITH PASSWORD 'SecretPassword';
   postgres=# ALTER USER kumar Superuser;
   postgres=# CREATE DATABASE my_db OWNER kumar;
@@ -260,6 +260,8 @@ This should allow most applications to connect with username/password.
 
 ## Additional Configuration
 
+[Postgres Server Configuration](https://www.postgresql.org/docs/current/runtime-config.html)
+
 > ### SELinux
 
 SELinux (Security Enhacned Linux) is a security architecture for Linux systems that allows administrators to have more control over who can access the system. It was originally developed by the United States National Security Agency (NSA) as a series of patches to the Linux kernel using Linux Security Modules (LSM).
@@ -286,10 +288,50 @@ States and Modes: [Intro](https://docs.fedoraproject.org/en-US/quick-docs/selinu
 
 [Fedora Postgres docs](https://docs.fedoraproject.org/en-US/quick-docs/postgresql/#configuration) , [Fedora `systemd` docs](https://docs.fedoraproject.org/en-US/quick-docs/systemd-understanding-and-administering/) ,
 
-[Postgres Client Auth config in `pg_hba.conf`](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html)
+[Postgres Client Auth config in `pg_hba.conf`](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html) (HBA is Host-based Authentication)
 
 ---
 
-[Postgres Server Configuration](https://www.postgresql.org/docs/current/runtime-config.html)
+## Install `pdAdmin4`
+
+Following [their download page instructions](https://www.pgadmin.org/download/pgadmin-4-rpm/)
+
+- First, uninstall any pgAdmin repo packages that you may already have installed
+
+  ```sh
+  sudo rpm -e pgadmin4-fedora-repo
+  ```
+
+- To setup the repository for this set of builds on Fedora:
+
+  ```sh
+  sudo rpm -i https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-fedora-repo-2-1.noarch.rpm
+  ```
+
+- To install pdAdmin, run **one** of these commands:
+
+  ```sh
+  sudo yum install pgadmin4           # both web and desktop
+  sudo yum install pgadmin4-desktop   # ONLY desktop
+  sudo yum install pgadmin4-web       # ONLY web
+  ```
+
+- The web mode requires an additional step:
+
+  ```sh
+  sudo /usr/pgadmin4/bin/setup-web.sh
+  ```
+
+  It will prompt you to provide an email & password. Then you can start using pgAdmin 4 in web mode at `http://127.0.0.1/pgadmin4`
 
 ---
+
+### Upgrading pdAdmin4
+
+```sh
+sudo yum upgrade pgadmin4
+```
+
+---
+
+[Other Postgres Clients](https://wiki.postgresql.org/wiki/PostgreSQL_Clients)

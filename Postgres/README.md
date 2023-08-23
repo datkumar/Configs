@@ -20,6 +20,8 @@ Commands: [Ubuntu](https://www.postgresql.org/download/linux/ubuntu/) | [RedHat/
 
 [Digital Ocean article (Ubuntu 20.04)](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04)
 
+[`pdAdmin` Download page](https://www.pgadmin.org/download/)
+
 [Upgrading Postgres Version](https://www.postgresql.org/docs/current/pgupgrade.html)
 
 ---
