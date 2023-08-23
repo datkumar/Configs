@@ -8,8 +8,6 @@
 
 ## [Fedora MongoDB Setup](./Mongo_Fedora.md) <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fedora_icon_%282021%29.svg/2089px-Fedora_icon_%282021%29.svg.png' width="17">
 
----
-
-MongoDB Install Docs: [Ubuntu](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/#std-label-install-mdb-community-redhat-centos), [RedHat](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/#std-label-install-mdb-community-redhat-centos)
-
 MongoDB Installation Docs : [Red Hat](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/) , [Ubuntu](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)
+
+---
