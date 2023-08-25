@@ -155,6 +155,9 @@ plugins=(
 # Load OMZ into ZSH
 source $ZSH/oh-my-zsh.sh
 
+# Initialise zoxide in zsh
+eval "$(zoxide init zsh)"
+
 # Custom aliases, that override omz, plugins etc
 alias cls="clear"
 alias gedit="gnome-text-editor"
