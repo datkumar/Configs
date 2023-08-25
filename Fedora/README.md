@@ -11,4 +11,29 @@
 
 [DNF Quick Docs](https://docs.fedoraproject.org/en-US/quick-docs/dnf/)
 
+[Fedora docs package management guide](https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/package-management/DNF/)
+
+[Fedora third-part repos](https://docs.fedoraproject.org/en-US/workstation-working-group/third-party-repos)
+
 Clear DNF cache: `sudo dnf clean dbcache` or `sudo dnf clean all`
+
+```sh
+# Find package
+dnf search
+dnf list
+dnf group list
+dnf list all
+dnf info
+dnf repoquery
+
+# Install / Uninstall
+dnf install
+dnf remove
+dnf autoremove
+dnf erase
+
+# Update
+dnf update
+dnf check-update
+dnf upgrade
+```

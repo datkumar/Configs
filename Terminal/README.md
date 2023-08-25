@@ -20,7 +20,9 @@ chsh -s $(which zsh)
 
 ---
 
-### Oh-My-Zsh:
+# Oh-My-Zsh (OMZ)
+
+It provides plugin manager, SHELL prompt
 
 Themes: [OMZ-Included](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes) , [Extended](https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes), [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
@@ -36,9 +38,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 > Ensure at least one powerline/nerd font is installed to support special oh-my-zsh themes like 'agnoster' . Refer [Fonts Guide](../Fonts/README.md)
 
----
+> [**Starship**](https://starship.rs/) Shell Prompt instead of OMZ: [YT_vid](https://www.youtube.com/watch?v=VgTu1_92U0U) , [Sample_config](https://github.com/andrew8088/dotfiles/blob/main/starship/starship.toml)
 
-### Gnome-Terminal Color Schemes:
+## Gnome-Terminal Color Schemes:
 
 Articles: [BytesBuzz](https://www.bytesbuzz.com/best-ubuntu-terminal-themes-and-color-schemes/) , [FreeCodeCamp](https://www.freecodecamp.org/news/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38/)
 
@@ -46,7 +48,130 @@ Articles: [BytesBuzz](https://www.bytesbuzz.com/best-ubuntu-terminal-themes-and-
 
 - Size: `120` col x `35` row
 - Font: `CodeNewRoman`
-- Color: `Gnome dark`
-- Palette: `Tango`
+- Theme: `Gnome dark`
+- Colors: `Tango`
 
-Themes: [hyper-snazzy (creates separate profile)](https://github.com/tobark/hyper-snazzy-gnome-terminal) , [Gogh](https://gogh-co.github.io/Gogh/)
+Themes: [hyper-snazzy (creates new profile)](https://github.com/tobark/hyper-snazzy-gnome-terminal) , [Gogh](https://gogh-co.github.io/Gogh/)
+
+---
+
+## CLI Utilities
+
+| _Package_                                                   | _Description_ |
+| ----------------------------------------------------------- | ------------- |
+| [**fzf**](https://github.com/junegunn/fzf)                  | Fuzzy finder  |
+| [**bat**](https://github.com/sharkdp/bat)                   | Colored `cat` |
+| [**exa**](https://github.com/ogham/exa)                     | Colored `ls`  |
+| [**ripgrep**](https://github.com/BurntSushi/ripgrep) (`rg`) | Regex `grep`  |
+| [**zoxide**](https://github.com/ajeetdsouza/zoxide) (`z`)   | Smarter `cd`  |
+
+To install all of the above at one in Fedora:
+
+```sh
+sudo dnf install -y fzf bat exa ripgrep zoxide
+```
+
+Using these utils: [YT vid](https://youtu.be/2OHrTQVlRMg?si=KrgRvyDCGMuHHEJc)
+
+More optional utils:
+
+`dnf install fd-find`
+
+- Fast, user-friendly `find` : [**fd**](https://github.com/sharkdp/fd)
+- Multiple Runtime version manager : [**asdf**](https://asdf-vm.com/)
+- Fix previous command : [**thefuck**](https://github.com/nvbn/thefuck)
+
+---
+
+### ZSH Plugins
+
+- First see if it's present in the [List of plugins available for OMZ](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
+
+- Else, you'll need to put them inside in the `$ZSH_CUSTOM/plugins` folder. The `ZSH_CUSTOM` variable is by deafult `~/.oh-my-zsh/custom`
+
+- Finally specify your plugins for zsh to load as `plugins=(git dnf ...)` in the `~/.zshrc` file
+
+OMZ plugin guides: [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git) , [dnf](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dnf) , [flutter](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/flutter) , [history](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history)
+
+> To view all set aliases at one just enter `alias` in terminal
+
+More ZSH utils: [blog](https://safjan.com/top-popular-zsh-plugins-on-github-2023/)
+
+### ZSH Auto-suggestions & Syntax Highlighting
+
+> These are't included by OMZ
+
+Installation instructions: [**zsh-autosuggestions**](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh) , [**zsh-syntax-highlighting**](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
+
+Below commands clone the two repos into `$ZSH_CUSTOM/plugins/`
+
+```sh
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+Make sure to include them in the `plugins=(...)` array inside `~/.zshrc` file
+
+---
+
+### Final ZSH Profile
+
+The starting OMZ profile upon first install is available as `~/.oh-my-zsh/templates/zshrc.zsh-template`
+
+```sh
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="agnoster"
+
+# --------------------------------------------------------
+# NVM setup (Automatically done during installation)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# --------------------------------------------------------
+# Add binary executable locations of programs to PATH:
+# Python3 👉️ Already present at /usr/bin/python3
+# Go 👇️
+export PATH=$PATH:/usr/local/go/bin
+# Rust 👇️
+export PATH=$PATH:$HOME/.cargo/bin
+# --------------------------------------------------------
+
+zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+# ENABLE_CORRECTION="true"
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Plugins to load:
+# Standard from $ZSH/plugins/ & Custom from $ZSH_CUSTOM/plugins/
+plugins=(
+    git
+    dnf
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
+
+# Load OMZ into ZSH
+source $ZSH/oh-my-zsh.sh
+
+# Custom aliases, that override omz, plugins etc
+alias cls="clear"
+alias gedit="gnome-text-editor"
+alias zshconfig="gedit ~/.zshrc"
+
+# Make outputs more colorful:
+alias ls="exa"
+alias la="exa -a"
+alias ll="exa -alh"
+alias tree="exa --tree"
+alias cat=bat
+# colorizing pager for man
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
+# bat as a previewer for fzf
+alias fzf="fzf --preview 'bat --color=always --line-range=:500 {}' --preview-window '~3'"
+# fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"
+```
+
+---
