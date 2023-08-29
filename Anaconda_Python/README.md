@@ -119,7 +119,7 @@ Backup directory: /home/kumar/.anaconda_backup/2023-02-15T114707
 > zshconfig
 # Remove conda setup from PATH that was set by 'conda init'
 
-> source ~/.zshrc
+> exec $(which $SHELL)
 ```
 
 ---

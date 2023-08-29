@@ -14,6 +14,8 @@
 
 ## [NeoVim ](./NeoVim/README.md)&ensp;<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Neovim-mark.svg/1680px-Neovim-mark.svg.png' width="17">
 
+## [IntelliJ](./IntelliJ/README.md)&ensp;<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/1200px-IntelliJ_IDEA_Icon.svg.png' width="17">
+
 ## [PostgreSQL](./Postgres/README.md)&ensp;<img src='https://cdn-icons-png.flaticon.com/512/5968/5968342.png' width="17">
 
 ## [MongoDB](./MongoDB/README.md)&ensp;<img src='https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_logo_icon_146424.png' width="20">

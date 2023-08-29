@@ -132,9 +132,20 @@ export NVM_DIR="$HOME/.nvm"
 
 # --------------------------------------------------------
 # Add binary executable locations of programs to PATH:
+
 # Python3 👉️ Already present at /usr/bin/python3
+
+# Java 👇️ (OpenJDK Java 20 installed via IntelliJ)
+export JAVA_HOME=$PATH:$HOME/.jdks/openjdk-20.0.2
+export PATH=$PATH:$JAVA_HOME/bin
+
+# Flutter 👇️
+export PATH=$PATH:$HOME/FlutterSdks/flutter/bin
+export CHROME_EXECUTABLE=$(which firefox)
+
 # Go 👇️
 export PATH=$PATH:/usr/local/go/bin
+
 # Rust 👇️
 export PATH=$PATH:$HOME/.cargo/bin
 # --------------------------------------------------------
@@ -160,6 +171,7 @@ eval "$(zoxide init zsh)"
 
 # Custom aliases, that override omz, plugins etc
 alias cls="clear"
+alias refreshenv="exec $(which $SHELL)"
 alias gedit="gnome-text-editor"
 alias zshconfig="gedit ~/.zshrc"
 
