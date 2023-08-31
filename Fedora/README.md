@@ -22,6 +22,8 @@
 
 [DNF Quick Docs](https://docs.fedoraproject.org/en-US/quick-docs/dnf/)
 
+Development variants of packages have `-devel` suffix for RedHat-based distributions (Debian-based distros have `-dev` suffix). Refer [this post](https://stackoverflow.com/a/55579478)
+
 [APT-like commands for DNF](https://docs.fedoraproject.org/en-US/quick-docs/dnf-vs-apt/)
 
 [Fedora docs package management guide](https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/package-management/DNF/)

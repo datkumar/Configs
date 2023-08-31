@@ -22,6 +22,12 @@ exec $(which $SHELL)
 
 ---
 
+[VSCode Flutter Setup](https://docs.flutter.dev/tools/vs-code)
+
+[Android Studio & IntelliJ Setup](https://docs.flutter.dev/tools/android-studio)
+
+---
+
 ## Install Android Studio:
 
 - Install additional required **Linux 64-bit binaries** by running [these commands](https://developer.android.com/studio/install#64bit-libs)
@@ -58,6 +64,8 @@ exec $(which $SHELL)
 - Refer [these instructions](https://askubuntu.com/questions/546723/uninstall-android-studio-completely)
 
 ---
+
+> [Upgrading Flutter version](https://docs.flutter.dev/release/upgrade)
 
 ## Install Flutter (latest stable version via `git`):
 

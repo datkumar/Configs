@@ -73,13 +73,13 @@ sudo dnf install -y fzf bat exa ripgrep zoxide
 
 Using these utils: [YT vid](https://youtu.be/2OHrTQVlRMg?si=KrgRvyDCGMuHHEJc)
 
-More optional utils:
+> More optional utils:
 
-`dnf install fd-find`
-
-- Fast, user-friendly `find` : [**fd**](https://github.com/sharkdp/fd)
-- Multiple Runtime version manager : [**asdf**](https://asdf-vm.com/)
+- Fast, user-friendly `find` : [**`fd`**](https://github.com/sharkdp/fd)
+- Multiple Runtime version manager : [**`asdf`**](https://asdf-vm.com/)
 - Fix previous command : [**thefuck**](https://github.com/nvbn/thefuck)
+- Run arbitrary commands when files change : [**`entr`**](https://github.com/clibs/entr)
+- Midnight Commander, a visual file manager : [**`mc`**](https://github.com/MidnightCommander/mc)
 
 ---
 

@@ -1,5 +1,7 @@
 # [IntelliJ](./IntelliJ/README.md)&ensp;<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/1200px-IntelliJ_IDEA_Icon.svg.png' width="25">
 
+> [Article for IntelliJ on Ubuntu](https://medium.com/geekculture/install-intellij-idea-android-sdk-flutter-sdk-on-ubuntu-20-04-108a14068668)
+
 Download IntelliJ IDEA **_Community Edition_** `tar.gz` from [their download page](https://www.jetbrains.com/idea/download/?section=linux)
 
 Extract the tarball to `/opt/` (Delete previous installations before this step)
@@ -65,17 +67,17 @@ If JDK is not detected by IntelliJ, you'll need to install it or provide it's pa
 
 > Note that your Java folders might be JREs and not JDKs so you'll need to install required extra libraries such as the **_development_** variants.
 
-A better option is to Install **`OpenJDK from Oracle`** through **IntelliJ** itself. The JDK is installed in the `~/.jdks` folder such as `~/.jdks/openjdk-20.0.2`
+A better option is to Install **`OpenJDK from Oracle`** through **IntelliJ** itself. The JDK is installed in the `~/.jdks` folder (like `~/.jdks/openjdk-20.0.2`)
 
 ## Android
 
-Install the Android SDK and the Android plugin via **IntelliJ** itself. You'll need to accept the licenses.
+Install the **`Android SDK`** and the **`Android` plugin** via **IntelliJ** itself. You'll need to accept the licenses during that wizard.
 
 The Android SDK is installed in the `~/Android/Sdk` folder
 
 ## Flutter
 
-- Download the Flutter SDK from [Install instructions page](https://docs.flutter.dev/get-started/install/linux#install-flutter-manually)
+- Download the Flutter SDK from [their install instructions page](https://docs.flutter.dev/get-started/install/linux#install-flutter-manually)
 
 - Extract the downloaded Flutter SDK archive into a folder:
 
@@ -94,7 +96,13 @@ The Android SDK is installed in the `~/Android/Sdk` folder
   export PATH=$PATH:$HOME/FlutterSdks/flutter/bin
   ```
 
-- Verify `flutter` command by running `flutter doctor -v`. The output should contain something like:
+- Check `flutter` & `dart` commands
+
+  ```sh
+  which flutter dart
+  ```
+
+- Verify by running `flutter doctor -v`. The output should contain something like:
 
   ```sh
   [✓] Flutter (Channel stable, 3.13.1, on Fedora Linux 38 (Workstation Edition) 6.2.9-300.fc38.x86_64, locale en_US.UTF-8)
@@ -157,9 +165,9 @@ The Android SDK is installed in the `~/Android/Sdk` folder
         They are likely available from your distribution (e.g.: apt install libgtk-3-dev)
   ```
 
-  Run this:
+  Run this: (Refer [Linux prerequisites](https://docs.flutter.dev/get-started/install/linux#linux-prerequisites))
 
-  > Note: The **gtk3** development package is named as `libgtk-3-dev` for **Debain-based** & `gtk3-devel` for **RedHat-based** distributions
+  > Note: The **gtk3** development package is `libgtk-3-dev` for **Debian-based** & `gtk3-devel` for **RedHat-based** distributions
 
   ```sh
   sudo dnf install -y clang cmake ninja-build gtk3-devel
@@ -180,3 +188,5 @@ The Android SDK is installed in the `~/Android/Sdk` folder
   # Set this variable to location of your browser binary executable
   export CHROME_EXECUTABLE=$(which firefox)
   ```
+
+---
