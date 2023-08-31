@@ -135,9 +135,12 @@ export NVM_DIR="$HOME/.nvm"
 
 # Python3 👉️ Already present at /usr/bin/python3
 
-# Java 👇️ (OpenJDK Java 20 installed via IntelliJ)
-export JAVA_HOME=$PATH:$HOME/.jdks/openjdk-20.0.2
-export PATH=$PATH:$JAVA_HOME/bin
+# If multiple Java installations on system, use the 'alternatives'
+# directives of Linux to manage, add & switch versions
+# If single installation, set environment variables as done below:
+# OpenJDK Java 20 👇️ (installed via IntelliJ)
+# export JAVA_HOME=$PATH:$HOME/.jdks/openjdk-20.0.2
+# export PATH=$PATH:$JAVA_HOME/bin
 
 # Flutter 👇️
 export PATH=$PATH:$HOME/FlutterSdks/flutter/bin
@@ -172,7 +175,7 @@ eval "$(zoxide init zsh)"
 # Custom aliases, that override omz, plugins etc
 alias cls="clear"
 alias refreshenv="exec $(which $SHELL)"
-alias gedit="gnome-text-editor"
+alias gedit="gnome-text-editor" # For Fedora only
 alias zshconfig="gedit ~/.zshrc"
 
 # Make outputs more colorful:
@@ -186,7 +189,6 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 # bat as a previewer for fzf
 alias fzf="fzf --preview 'bat --color=always --line-range=:500 {}' --preview-window '~3'"
-# fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"
 ```
 
 ---

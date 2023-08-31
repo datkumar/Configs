@@ -67,7 +67,9 @@ If JDK is not detected by IntelliJ, you'll need to install it or provide it's pa
 
 > Note that your Java folders might be JREs and not JDKs so you'll need to install required extra libraries such as the **_development_** variants.
 
-A better option is to Install **`OpenJDK from Oracle`** through **IntelliJ** itself. The JDK is installed in the `~/.jdks` folder (like `~/.jdks/openjdk-20.0.2`)
+> For example, Fedora 38 comes with just the **JRE** of OpenJDK as the package `java-17-openjdk-headless.x86_64` . To install the full JDK with all the development tools, run `sudo dnf install -y java-devel`. (Referred from [their developer docs](https://developer.fedoraproject.org/tech/languages/java/java-installation.html))
+
+Another option is to Install **`OpenJDK from Oracle`** through **IntelliJ** itself. The JDK is installed in the `~/.jdks` folder (like `~/.jdks/openjdk-20.0.2`)
 
 ## Android
 
@@ -173,7 +175,7 @@ The Android SDK is installed in the `~/Android/Sdk` folder
   sudo dnf install -y clang cmake ninja-build gtk3-devel
   ```
 
-- Flutter apps can run on most browsers but Flutter only supports Chrome & Edge for Debugging. Refer [their Web FAQ](https://docs.flutter.dev/platform-integration/web/faq#which-web-browsers-are-supported-by-flutter)
+- Flutter apps can run on most browsers but Flutter only supports `Chrome` & `Edge` browsers for debugging. Refer [their Web FAQ](https://docs.flutter.dev/platform-integration/web/faq#which-web-browsers-are-supported-by-flutter)
 
   When `flutter doctor -v` output contains:
 
