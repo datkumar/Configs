@@ -1,12 +1,12 @@
 # Fedora <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fedora_icon_%282021%29.svg/2089px-Fedora_icon_%282021%29.svg.png' width="30">
 
-- Run `sudo dnf update -y` before installing new packages
+- Fedora developer guides: [Languages & Databases](https://developer.fedoraproject.org/tech.html) , [Tools](https://developer.fedoraproject.org/tools.html)
 
 - Text Editor is `gnome-text-editor` instead of `gedit`
 
 - Java is already installed as `openjdk-17`. But it has **JREs** NOT **JDKs** (`java` command works but `javac` doesn't)
 
-- Python (`python3`, `python`) is already installed; but NOT pip (`python3-pip`)
+- Python (`python3`, `python`) is already installed; but NOT pip (install `python3-pip` package)
 
 - Neither GCC nor CLang comes installed with Fedora. For C++ on Fedora, follow [their guide](https://developer.fedoraproject.org/tech/languages/c/cpp_installation.html). Use `g++` and `clang++` while compiling.
 
@@ -17,6 +17,8 @@
 - Picture-in-Picture mode doesn't work on Firefox in Fedora as Wayland doesn't support it. Use the [PiP on Top](https://extensions.gnome.org/extension/4691/pip-on-top/) GNOME extension to overcome it
 
 ## DNF
+
+Run `sudo dnf update -y` before installing new packages
 
 [DNF Configuration Guide](https://dnf.readthedocs.io/en/latest/conf_ref.html)
 

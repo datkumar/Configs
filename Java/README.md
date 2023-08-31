@@ -52,7 +52,9 @@
 
 ## Working with multiple Java installations
 
-It is possible for several programs fulfilling the same or similar functions to be installed on a single system at the same time. The `alternatives` system is intended to be a drop in replacement for Debian's `update-dependencies` script. It **creates, removes, maintains and displays information about the symbolic links** comprising the alternatives system
+[DEV.to article](https://dev.to/thegroo/install-and-manage-multiple-java-versions-on-linux-using-alternatives-5e93)
+
+It is possible for several programs fulfilling the same or similar functions to be installed on a single system at the same time. The `alternatives` system is intended to be a drop in replacement for Debian's `update-dependencies` script. It **creates, removes, maintains and displays information about the symbolic links** comprising the alternatives system. Refer [Red Hat article](https://www.redhat.com/sysadmin/alternatives-command), [post](https://www.baeldung.com/linux/update-alternatives-command) , [blog](https://www.studytonight.com/linux-guide/update-alternatives-command-in-linux)
 
 > ### Adding your Java installation to alternatives
 
@@ -63,6 +65,8 @@ Syntax and example are given below:
 ```sh
 sudo update-alternatives --install "/usr/bin/java" java "/home/kumar/.jdks/openjdk-20.0.2/bin/java" 5
 ```
+
+Similarly, add alternatives for `javac`, `jar` etc. commands as applicable
 
 You can also add follower links as:
 
