@@ -8,6 +8,6 @@
 - [**uBlock Origin**](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
 - [**Dark Reader**](https://addons.mozilla.org/en-US/firefox/addon/darkreader/)
 - [**Bitwarden**](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/)
-- [**Simple Tab Groups**](https://addons.mozilla.org/en-US/firefox/addon/simple-tab-groups/)
+- Managing Tabs: [**Simple Tab Groups**](https://addons.mozilla.org/en-US/firefox/addon/simple-tab-groups/) / [**Tree-Style Tabs**](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/) / [**OneTab**](https://addons.mozilla.org/en-US/firefox/addon/onetab/)
 - [**Tabliss**](https://addons.mozilla.org/en-US/firefox/addon/tabliss/) : [Linux_Config](./Tabliss/tabliss_linux.json) , [Windows_Config](./Tabliss/tabliss_windows.json)
 - [**WhatFont**](https://addons.mozilla.org/en-US/firefox/addon/zjm-whatfont/)
