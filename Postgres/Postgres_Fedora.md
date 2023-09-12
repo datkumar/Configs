@@ -1,6 +1,6 @@
 # Postgres on Fedora:-
 
-> Following the [Fedora docs](https://docs.fedoraproject.org/en-US/quick-docs/postgresql/) and [Postgres docs](https://www.postgresql.org/download/linux/redhat/)
+> Following the [Fedora docs](https://docs.fedoraproject.org/en-US/quick-docs/postgresql/) and [Postgres RedHat Download docs](https://www.postgresql.org/download/linux/redhat/)
 
 ---
 

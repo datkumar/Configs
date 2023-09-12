@@ -8,11 +8,13 @@
 
 ## Linux <img src='https://cdn-icons-png.flaticon.com/512/6124/6124995.png' width="17">
 
-## [Fedora Postgres Setup](./Postgres_Fedora.md) <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fedora_icon_%282021%29.svg/2089px-Fedora_icon_%282021%29.svg.png' width="17">
+## [Fedora Postgres Setup](./Postgres_Fedora.md) <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fedora_icon_%282021%29.svg/2089px-Fedora_icon_%282021%29.svg.png' width="19">
+
+## [Ubuntu Postgres Setup](./Postgres_Ubuntu.md) <img src='https://cdn.freebiesupply.com/logos/large/2x/ubuntu-4-logo-png-transparent.png' width="19">
 
 [Postgres Linux Downloads Page](https://www.postgresql.org/download/linux)
 
-Commands: [Ubuntu](https://www.postgresql.org/download/linux/ubuntu/) | [RedHat/Fedora/CentOS](https://www.postgresql.org/download/linux/redhat/)
+Install Commands: [Ubuntu](https://www.postgresql.org/download/linux/ubuntu/) , [RedHat/Fedora/CentOS](https://www.postgresql.org/download/linux/redhat/)
 
 [Fedora Quick Docs](https://docs.fedoraproject.org/en-US/quick-docs/postgresql/)
 
