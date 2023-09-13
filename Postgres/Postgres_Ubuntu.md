@@ -165,7 +165,7 @@ external_pid_file = '/var/run/postgresql/15-main.pid'			# write an extra PID fil
 
 The `pg_hba.conf` file contains client (host) based authentication rules as:
 
-```profile
+```sh
 # Database administrative login by Unix domain socket
 local   all             postgres                                peer
 
