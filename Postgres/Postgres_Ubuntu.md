@@ -58,6 +58,70 @@ Sep 12 12:22:11 kumar-Latitude-3420 systemd[1]: Starting PostgreSQL RDBMS...
 Sep 12 12:22:11 kumar-Latitude-3420 systemd[1]: Finished PostgreSQL RDBMS.
 ```
 
+To view all your Postgres clusters:
+
+```sh
+pg_lsclusters
+```
+
+Output:
+
+```sh
+Ver Cluster Port Status Owner    Data directory              Log file
+15  main    5432 online postgres /var/lib/postgresql/15/main /var/log/postgresql/postgresql-15-main.log
+```
+
+If you want to see it in pretty JSON format (ensure `jq` command is installed)
+
+```sh
+pg_lsclusters  -j | jq .
+```
+
+Output:
+
+```json
+[
+  {
+    "version": "15",
+    "ownergid": 133,
+    "configuid": 127,
+    "running": 1,
+    "owneruid": 127,
+    "port": "5432",
+    "start": "auto",
+    "configdir": "/etc/postgresql/15/main",
+    "cluster": "main",
+    "logfile": "/var/log/postgresql/postgresql-15-main.log",
+    "socketdir": "/var/run/postgresql",
+    "pgdata": "/var/lib/postgresql/15/main",
+    "config": {
+      "ident_file": "/etc/postgresql/15/main/pg_ident.conf",
+      "port": "5432",
+      "external_pid_file": "/var/run/postgresql/15-main.pid",
+      "log_timezone": "Asia/Kolkata",
+      "default_text_search_config": "pg_catalog.english",
+      "shared_buffers": "128MB",
+      "max_connections": "100",
+      "datestyle": "iso, dmy",
+      "max_wal_size": "1GB",
+      "cluster_name": "15/main",
+      "unix_socket_directories": "/var/run/postgresql",
+      "lc_monetary": "en_IN",
+      "timezone": "Asia/Kolkata",
+      "hba_file": "/etc/postgresql/15/main/pg_hba.conf",
+      "lc_messages": "en_IN",
+      "min_wal_size": "80MB",
+      "log_line_prefix": "%m [%p] %q%u@%d ",
+      "data_directory": "/var/lib/postgresql/15/main",
+      "lc_numeric": "en_IN",
+      "dynamic_shared_memory_type": "posix",
+      "lc_time": "en_IN"
+    }
+  }
+]
+```
+
+
 By default, Postgres uses a concept called **roles** to handle authentication and authorization. These are, in some ways, similar to regular Unix-style accounts, but Postgres does not distinguish between users and groups and instead prefers the more flexible term “role”.
 
 Upon installation, Postgres is set up to use `peer` authentication, meaning that it associates Postgres roles with a matching Unix/Linux system account. If a role exists within Postgres, a Unix/Linux username with the same name is able to sign in as that role. The installation procedure created a user account called `postgres` that is associated with the default Postgres role.
