@@ -74,7 +74,7 @@ Ver Cluster Port Status Owner    Data directory              Log file
 If you want to see it in pretty JSON format (ensure `jq` command is installed)
 
 ```sh
-pg_lsclusters  -j | jq .
+pg_lsclusters  -j | jq
 ```
 
 Output:

@@ -46,10 +46,10 @@ Articles: [BytesBuzz](https://www.bytesbuzz.com/best-ubuntu-terminal-themes-and-
 
 > Basic Profile:
 
-- Size: `120` col x `35` row
-- Font: `CodeNewRoman`
-- Theme: `Gnome dark`
-- Colors: `Tango`
+-   Size: `120` col x `35` row
+-   Font: `CodeNewRoman`
+-   Theme: `Gnome dark`
+-   Colors: `Tango`
 
 Themes: [hyper-snazzy (creates new profile)](https://github.com/tobark/hyper-snazzy-gnome-terminal) , [Gogh](https://gogh-co.github.io/Gogh/)
 
@@ -57,39 +57,40 @@ Themes: [hyper-snazzy (creates new profile)](https://github.com/tobark/hyper-sna
 
 ## CLI Utilities
 
-| _Package_                                                   | _Description_ |
-| ----------------------------------------------------------- | ------------- |
-| [**fzf**](https://github.com/junegunn/fzf)                  | Fuzzy finder  |
-| [**bat**](https://github.com/sharkdp/bat)                   | Colored `cat` |
-| [**exa**](https://github.com/ogham/exa)                     | Colored `ls`  |
-| [**ripgrep**](https://github.com/BurntSushi/ripgrep) (`rg`) | Regex `grep`  |
-| [**zoxide**](https://github.com/ajeetdsouza/zoxide) (`z`)   | Smarter `cd`  |
+| _Package_                                                       | _Description_ |
+| --------------------------------------------------------------- | ------------- |
+| [**`fzf`**](https://github.com/junegunn/fzf)                    | Fuzzy finder  |
+| [**`bat`**](https://github.com/sharkdp/bat)                     | Colored `cat` |
+| [**`exa`**](https://github.com/ogham/exa)                       | Colored `ls`  |
+| [**`jq`**](https://github.com/jqlang/jq)                        | Pretty JSON   |
+| [**ripgrep**](https://github.com/BurntSushi/ripgrep) (**`rg`**) | Regex `grep`  |
+| [**zoxide**](https://github.com/ajeetdsouza/zoxide) (**`z`**)   | Smarter `cd`  |
 
 To install all of the above at one in Fedora:
 
 ```sh
-sudo dnf install -y fzf bat exa ripgrep zoxide
+sudo dnf install -y fzf bat exa jq ripgrep zoxide
 ```
 
 Using these utils: [YT vid](https://youtu.be/2OHrTQVlRMg?si=KrgRvyDCGMuHHEJc)
 
 > More optional utils:
 
-- Fast, user-friendly `find` : [**`fd`**](https://github.com/sharkdp/fd)
-- Multiple Runtime version manager : [**`asdf`**](https://asdf-vm.com/)
-- Fix previous command : [**thefuck**](https://github.com/nvbn/thefuck)
-- Run arbitrary commands when files change : [**`entr`**](https://github.com/clibs/entr)
-- Midnight Commander, a visual file manager : [**`mc`**](https://github.com/MidnightCommander/mc)
+-   Fast, user-friendly `find` : [**`fd`**](https://github.com/sharkdp/fd)
+-   Multiple Runtime version manager : [**`asdf`**](https://asdf-vm.com/)
+-   Fix previous command : [**thefuck**](https://github.com/nvbn/thefuck)
+-   Run arbitrary commands on file change : [**`entr`**](https://github.com/clibs/entr)
+-   Midnight Commander, a visual file manager : [**`mc`**](https://github.com/MidnightCommander/mc)
 
 ---
 
 ### ZSH Plugins
 
-- First see if it's present in the [List of plugins available for OMZ](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
+-   First see if it's present in the [List of plugins available for OMZ](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
 
-- Else, you'll need to put them inside in the `$ZSH_CUSTOM/plugins` folder. The `ZSH_CUSTOM` variable is by deafult `~/.oh-my-zsh/custom`
+-   Else, you'll need to put them inside in the `$ZSH_CUSTOM/plugins` folder. The `ZSH_CUSTOM` variable is by deafult `~/.oh-my-zsh/custom`
 
-- Finally specify your plugins for zsh to load as `plugins=(git dnf ...)` in the `~/.zshrc` file
+-   Finally specify your plugins for zsh to load as `plugins=(git dnf ...)` in the `~/.zshrc` file
 
 OMZ plugin guides: [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git) , [dnf](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dnf) , [flutter](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/flutter) , [history](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history)
 
