@@ -5,7 +5,9 @@
 
 ---
 
-## Installing Postgres
+## Installing PostgreSQL server and utils
+
+The PostgreSQL Global Development Group (PGDG) maintains an APT repository of PostgreSQL packages for Debian and Ubuntu located at https://apt.postgresql.org/pub/repos/apt
 
 
 ```sh
@@ -127,6 +129,105 @@ Type "help" for help.
 
 my_test_db=# 
 ```
+
+To see config file location, enter `SHOW config_file;` inside a `psql` session:
+
+```sql
+my_test_db=# SHOW config_file ;
+               config_file               
+-----------------------------------------
+ /etc/postgresql/15/main/postgresql.conf
+(1 row)
+```
+
+When you view that `postgresql.conf` file, you'll see a section as:
+
+```sh
+#------------------------------------------------------------------------------
+# FILE LOCATIONS
+#------------------------------------------------------------------------------
+
+# The default values of these variables are driven from the -D command-line
+# option or PGDATA environment variable, represented here as ConfigDir.
+
+data_directory = '/var/lib/postgresql/15/main'		# use data in another directory
+					# (change requires restart)
+hba_file = '/etc/postgresql/15/main/pg_hba.conf'	# host-based authentication file
+					# (change requires restart)
+ident_file = '/etc/postgresql/15/main/pg_ident.conf'	# ident configuration file
+					# (change requires restart)
+
+# If external_pid_file is not explicitly set, no extra PID file is written.
+external_pid_file = '/var/run/postgresql/15-main.pid'			# write an extra PID file
+					# (change requires restart)
+```
+
+
+The `pg_hba.conf` file contains client (host) based authentication rules as:
+
+```profile
+# Database administrative login by Unix domain socket
+local   all             postgres                                peer
+
+# TYPE  DATABASE        USER            ADDRESS                 METHOD
+
+# "local" is for Unix domain socket connections only
+local   all             all                                     peer
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            scram-sha-256
+# IPv6 local connections:
+host    all             all             ::1/128                 scram-sha-256
+# Allow replication connections from localhost, by a user with the
+# replication privilege.
+local   replication     all                                     peer
+host    replication     all             127.0.0.1/32            scram-sha-256
+host    replication     all             ::1/128                 scram-sha-256
+```
+
+
+## Installing `pgAdmin4`
+
+Referred from [pdAdmin4 APT download page](https://www.pgadmin.org/download/pgadmin-4-apt/)
+
+```sh
+# Install the public key for the repository (if not done previously):
+curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
+
+# Create the repository configuration file:
+sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+
+# Install pgAdmin:
+sudo apt install pgadmin4           # for BOTH web and desktop
+sudo apt install pgadmin4-desktop   # for ONLY desktop
+sudo apt install pgadmin4-web       # for ONLY web
+
+# Configure the webserver (if you installed pgadmin for web)
+sudo /usr/pgadmin4/bin/setup-web.sh
+```
+
+Web Setup Output:
+
+```txt
+Setting up pgAdmin 4 in web mode on a Debian based platform...
+Creating configuration database...
+NOTE: Configuring authentication for SERVER mode.
+
+Enter the email address and password to use for the initial pgAdmin user account:
+
+Email address: myemail@example.com
+Password: 
+Retype password:
+
+pgAdmin 4 - Application Initialisation
+======================================
+
+Creating storage and log directories...
+We can now configure the Apache Web server for you. This involves enabling the wsgi module and configuring the pgAdmin 4 application to mount at /pgadmin4. Do you wish to continue (y/n)? y
+The Apache web server is running and must be restarted for the pgAdmin 4 installation to complete. Continue (y/n)? y
+Apache successfully restarted. You can now start using pgAdmin 4 in web mode at http://127.0.0.1/pgadmin4
+```
+
+You can now visit `http://127.0.0.1/pgadmin4` to log-in to pgAdmin Web
 
 
 ---
