@@ -16,6 +16,8 @@
 
 - Picture-in-Picture mode doesn't work on Firefox in Fedora as Wayland doesn't support it. Use the [PiP on Top](https://extensions.gnome.org/extension/4691/pip-on-top/) GNOME extension to overcome it
 
+- [Changing `hostname`](https://docs.fedoraproject.org/en-US/quick-docs/changing-hostname/)
+
 ## DNF
 
 Run `sudo dnf update -y` before installing new packages

@@ -4,11 +4,9 @@
 
 https://code.visualstudio.com/docs/setup/linux
 
-Set `window.titleBarStyle` option to `Custom` in settings
-
 ---
 
-## Add "`Open in Code`" right-click option:
+## Add `Open in Code` right-click option
 
 Execute the bash script from [this repo](https://github.com/harry-cpp/code-nautilus)
 
@@ -18,21 +16,80 @@ wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/insta
 
 ---
 
-## Settings: [settings.json](./settings.json)
+## Settings
 
-Settings stored in `~/.config/Code/User/settings.json`
+My Settings: [`settings.json`](./settings.json)
 
-Refer [this post](https://stackoverflow.com/questions/53840644/location-of-vs-code-preferences)
+```json
+{
+  "workbench.startupEditor": "none",
+  "window.titleBarStyle": "custom",
+  "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
+  "editor.mouseWheelZoom": true,
+  "git.autofetch": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "database-client.telemetry.usesOnlineServices": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "window.zoomLevel": 1,
+  "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'Noto Color Emoji', 'monospace', monospace",
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "'CodeNewRoman Nerd Font Mono', 'Noto Color Emoji'",
+  "markdownlint.config": {
+    "no-inline-html": false
+  }
+}
+```
 
-## List VSCode Extensions:
+Set `window.titleBarStyle` option to `custom` in settings
 
-    `code --list-extensions`
+VSCode Settings are stored in `~/.config/Code/User/settings.json` . Refer [this post](https://stackoverflow.com/questions/53840644/location-of-vs-code-preferences)
 
----
+## Extensions
 
-## Export & Install Extensions:
+List VSCode Extensions: `code --list-extensions`
 
-[Check this post](https://stackoverflow.com/questions/35773299/how-can-you-export-the-visual-studio-code-extension-list)
+### My Extensions
+
+> **Utils:**
+
+- Path Intellisense
+- Prettier
+- ESLint
+- Auto Close Tag
+- Auto Rename Tag
+- :emojisense:
+
+> **Git & Markdown:**
+
+- Git Extension Pack
+- GitHub Markdown Preview
+- Markdownlint
+
+> **Dev:**
+
+- ES7+ React/Redux/React-Native snippets
+- C/C++
+- MySQL (Weijan Chen)
+- Tailwind CSS IntelliSense
+- Astro
+- Pretty TypeScript Errors
+- pgFormatter
+- node-snippets
+- Go
+
+> **Themes:**
+
+- Community Material Theme
+- Material Icon Theme
+- Atom One Dark Theme
+
+Export & Install Extensions: [Check this post](https://stackoverflow.com/questions/35773299/how-can-you-export-the-visual-studio-code-extension-list)
 
 ---
 
