@@ -71,12 +71,6 @@ If JDK is not detected by IntelliJ, you'll need to install it or provide it's pa
 
 Another option is to Install **`OpenJDK from Oracle`** through **IntelliJ** itself. The JDK is installed in the `~/.jdks` folder (like `~/.jdks/openjdk-20.0.2`)
 
-## Android
-
-Install the **`Android SDK`** and the **`Android` plugin** via **IntelliJ** itself. You'll need to accept the licenses during that wizard.
-
-The Android SDK is installed in the `~/Android/Sdk` folder
-
 ## Flutter
 
 - Download the Flutter SDK from [their install instructions page](https://docs.flutter.dev/get-started/install/linux#install-flutter-manually)
@@ -121,74 +115,3 @@ The Android SDK is installed in the `~/Android/Sdk` folder
   ```sh
   flutter config --no-analytics --disable-telemetry
   ```
-
-- Accepting Android licenses & Installing Android SDK Tools:
-
-  When `flutter doctor -v` output contains:
-
-  ```sh
-  [!] Android toolchain - develop for Android devices (Android SDK version 33.0.2)
-      ✗ cmdline-tools component is missing
-        Run `path/to/sdkmanager --install "cmdline-tools;latest"`
-        See https://developer.android.com/studio/command-line for more details.
-      ✗ Android license status unknown.
-        Run `flutter doctor --android-licenses` to accept the SDK licenses.
-        See https://flutter.dev/docs/get-started/install/linux#android-setup for more details.
-  ```
-
-  Run this:
-
-  ```sh
-  # Accept Android Licenses
-  flutter doctor --android-licenses
-
-  # Install latest Android Command-line tools (can also do this via IDE)
-  ~/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --install "cmdline-tools;latest"
-  ```
-
-  > Alternatively, go to `Settings` > `Languages and Frameworks` > `Android SDK` > `SDK Tools`
-
-  > Tick `Android SDK Command-Line Tools (latest)` and click **Apply** to install it
-
-- Installing libraries for Flutter Linux toolchain:
-
-  When `flutter doctor -v` output contains:
-
-  ```sh
-  [✗] Linux toolchain - develop for Linux desktop
-      ✗ clang++ is required for Linux development.
-        It is likely available from your distribution (e.g.: apt install clang), or can be downloaded from https://releases.llvm.org/
-      ✗ CMake is required for Linux development.
-        It is likely available from your distribution (e.g.: apt install cmake), or can be downloaded from https://cmake.org/download/
-      ✗ ninja is required for Linux development.
-        It is likely available from your distribution (e.g.: apt install ninja-build), or can be downloaded from https://github.com/ninja-build/ninja/releases
-      • pkg-config version 1.8.0
-      ✗ GTK 3.0 development libraries are required for Linux development.
-        They are likely available from your distribution (e.g.: apt install libgtk-3-dev)
-  ```
-
-  Run this: (Refer [Linux prerequisites](https://docs.flutter.dev/get-started/install/linux#linux-prerequisites))
-
-  > Note: The **gtk3** development package is `libgtk-3-dev` for **Debian-based** & `gtk3-devel` for **RedHat-based** distributions
-
-  ```sh
-  sudo dnf install -y clang cmake ninja-build gtk3-devel
-  ```
-
-- Flutter apps can run on most browsers but Flutter only supports `Chrome` & `Edge` browsers for debugging. Refer [their Web FAQ](https://docs.flutter.dev/platform-integration/web/faq#which-web-browsers-are-supported-by-flutter)
-
-  When `flutter doctor -v` output contains:
-
-  ```sh
-  [✗] Chrome - develop for the web (Cannot find Chrome executable at .\Google\Chrome\Application\chrome.exe)
-      ! Cannot find Chrome. Try setting CHROME_EXECUTABLE to a Chrome executable.
-  ```
-
-  Put this line inside your SHELL config file (`~/.zshrc` or `~/.bashrc`)
-
-  ```sh
-  # Set this variable to location of your browser binary executable
-  export CHROME_EXECUTABLE=$(which firefox)
-  ```
-
----

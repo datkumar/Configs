@@ -1,20 +1,20 @@
 # Flutter, Android Studio&ensp;<img src='https://static-00.iconduck.com/assets.00/flutter-icon-1651x2048-ojswpayr.png' width="25">
 
----
+## Sections
 
-> Assuming Linux Machine with Java installed.
+1. [Installing Android Studio](./README.md#installing-android-studio)
+2. [Installing Flutter](./README.md)
 
-> Refer [here](../Java/README.md) for Java Setup or Install JDK via the IDE itself
+> **More**:
 
-> Also, `git` , `curl` must be installed.
-
----
-
-**Dell** Laptops can give `curl: symbol lookup error`. Refer [this question](https://askubuntu.com/questions/1358184/ubuntu-20-04-curl-symbol-lookup-error).
-
-So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
+- [Updating Android Studio](./README.md#updating-android-studio)
+- [Upgrading Flutter version](./README.md#upgrading-flutter-version)
+- [Uninstalling Android Studio](./README.md#uninstalling-android-studio)
+- [Uninstalling Flutter](./README.md#uninstalling-flutter)
 
 ---
+
+> **For other Code Editors**:
 
 [VSCode Flutter Setup](https://docs.flutter.dev/tools/vs-code)
 
@@ -22,138 +22,151 @@ So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
 
 ---
 
-## Install Android Studio
+> Assuming Linux Machine with Java installed.<br>
+> Refer [here](../Java/README.md) for Java Setup or Install JDK via the IDE itself
+> <br>Also, `git` , `curl` must be installed.
 
-- Install additional required **Linux 64-bit binaries** by running [these commands](https://developer.android.com/studio/install#64bit-libs)
-- Download **Android Studio** zip file [from their page](https://developer.android.com/studio) and follow [these instructions](https://developer.android.com/studio/install#linux)
-- Extract it & move the extracted `android-studio` folder to `/opt/` for all users (or `/usr/local/` for only the current user)
+**Dell** Laptops can give `curl: symbol lookup error`. Refer [this question](https://askubuntu.com/questions/1358184/ubuntu-20-04-curl-symbol-lookup-error).
 
-    ```sh
-    cd ~/Downloads
-    # Replace with your tarball name
-    tar xvf android-studio-2022.1.1.20-linux.tar.gz
-    sudo mv ./android-studio /opt/
-    ```
+So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
 
-- You should go through the installation script `android-studio/bin/studio.sh` as well as read the Installation instructions in `android-studio/Install-Linux-tar.txt`
+---
+
+## Installing Android Studio
+
+- Install additional required **Linux 64-bit binaries** by running [these commands](https://developer.android.com/studio/install#64bit-libs):
+
+  ```sh
+  # For Ubuntu
+  sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+
+  # For Fedora
+  sudo yum install zlib.i686 ncurses-libs.i686 bzip2-libs.i686
+  ```
+
+- Download **Android Studio** zip file [from their page](https://developer.android.com/studio) and then follow [their instructions](https://developer.android.com/studio/install#linux) as given below:
+
+- Extract it & move the extracted `android-studio` folder to `/opt/` for all users (**OR** to `/usr/local/` for only the current user):
+
+  ```sh
+  cd ~/Downloads
+  # Replace with your respective tarball name
+  tar xvf ./android-studio-2023.1.1.26-linux.tar.gz
+  sudo mv ./android-studio /opt/
+  ```
+
+- In the extracted folder, browse through the the installation instructions in `android-studio/Install-Linux-tar.txt` as well as the installation script `android-studio/bin/studio.sh`
 
 - To run Android Studio first time,
 
-    ```sh
-    sh /opt/android-studio/bin/studio.sh
-    ```
+  ```sh
+  sh /opt/android-studio/bin/studio.sh
+  ```
 
-- Create Desktop Entry via `Tools` > `Create Desktop Entry`
+  - If installating first-time, select `Do not import settings`
 
-- Add Android Studio and Android SDK to `PATH` in  your shell profile file (`~/.zshrc` , `~/.bashrc` etc.)
+  - If your system supports VM acceleration, check the hardware accelaration docs: [Ubuntu](https://developer.android.com/studio/run/emulator-acceleration#vm-linux), [Fedora](https://docs.fedoraproject.org/en-US/quick-docs/virtualization-getting-started/#_enabling_hardware_virtualization_support)
 
-    ```sh
-    export PATH=$PATH:/opt/android-studio/bin
-    export ANDROID_HOME=$HOME/Android/Sdk
-    export PATH=$PATH:$ANDROID_HOME/platform-tools
-    ```
+- After the installation wizard completes, a Welcome window will open. Click the bottom left settings icon `⚙️` > `Create Desktop Entry`
 
-- Reload SHELL
+- Add `android-studio` and **Android SDK** to `PATH` in your shell profile file (`~/.zshrc` , `~/.bashrc` etc.)
 
-    ```sh
-    exec $(which $SHELL)
-    ```
-
----
-
-## Updating Android Studio
-
-- Open `Settings` > `Appearance & Behavior` > `System Settings` > `Updates` and click on **Check for Updates** button
-- If new Android Studio version available, it will redirect you to their page. Download tarball file from that page and follow these steps:
-
-    Extract the downloaded tarball
-
-    ```sh
-    tar xvf ~/Downloads/android-studio-2022.3.1.19-linux.tar.gz
-    ```
-
-    Run the installation script from the extracted folder
-
-    ```sh
-    ~/Downloads/android-studio/bin/studio.sh
-    ```
-
-    If your old installation's settings aren't imported by the install script, go to `File` > `Manage IDE Settings` > `Import Setttings` and select old config folder, for example: `~/.config/Google/AndroidStudio2022.3`
-
-    Delete old installation folder and move the new installation folder into that location
-
-    ```sh
-    # Delete old installation folder
-    sudo rm -rf /opt/android-studio
-
-    # Move current installation folder to that location
-    sudo mv ~/Downloads/android-studio /opt/
-    ```
-
-    Open Android Studio from the new location
-
-    `/opt/android-studio/bin/studio.sh`
-
-    Create a replacement Desktop Entry via `Tools` > `Create Desktop Entry`
-
----
-
-> [Upgrading Flutter version](https://docs.flutter.dev/release/upgrade)
-
-## Install Flutter (latest stable version via `git`)
-
-- Create folder `~/flutter_stable`
-- Inside folder, clone latest `stable` branch of [official flutter repo](https://github.com/flutter/flutter):
-
-    ```sh
-    git clone https://github.com/flutter/flutter.git -b stable
-    ```
-
-- Add `flutter` to `PATH` in `~/.zshrc` (or your respective shell profile file like `~/.bashrc`):
-
-    ```sh
-    export PATH=$PATH:$HOME/flutter_stable/flutter/bin
-    ```
+  ```sh
+  export ANDROID_HOME=$HOME/Android/Sdk
+  export PATH=$PATH:/opt/android-studio/bin
+  ```
 
 - Reload SHELL
 
-    ```sh
-    exec $(which $SHELL)
-    ```
+  ```sh
+  exec $(which $SHELL)
+  ```
 
-- Now, `flutter` command will be recognised:
+---
 
-    ```sh
-    flutter --version
-    ```
+## Installing Flutter
 
-    Output:
+Following the [official flutter installation docs](https://docs.flutter.dev/get-started/install/linux):
+
+- The recommended method is via `snapd` . Ubuntu `>=18.04` comes with `snapd`, but for other distros, follow [instructions on their page for your distro](https://snapcraft.io/docs/installing-snapd) to install `snapd`
+
+- Install Flutter via `snapd`:
+
+  ```sh
+  sudo snap install flutter --classic
+  ```
+
+- See your Flutter SDK path via:
+
+  ```sh
+  flutter sdk-path
+  ```
+
+- Disabling analytics (Optional):
+
+  ```sh
+  flutter config --no-analytics
+  dart --disable-analytics
+  ```
+
+- Verify your installation (can use `-v` flag for verbose output):
+
+  ```sh
+  flutter doctor
+  ```
+
+- For installing Android's latest command-line tools, open Andoid Studio Settings from the Welcome Screen via:
+  `Customize` > `All Settings` > `Languages & Frameworks` > `Android SDK` > `SDK Tools` > select `Android SDK Command-line Tools (latest)` & hit **Apply**
+
+- To accept licenses, run: `flutter doctor --android-licenses` and enter `y` for each
+
+- Final expected ideal output of `flutter doctor` is:
+
+  ```txt
+  Doctor summary (to see all details, run flutter doctor -v):
+  [✓] Flutter (Channel stable, 3.16.5, on Fedora Linux 39 (Workstation Edition) 6.2.9-300.fc38.x86_64, locale en_US.UTF-8)
+  [✓] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+  [✓] Chrome - develop for the web
+  [✓] Linux toolchain - develop for Linux desktop
+  [✓] Android Studio (version 2023.1)
+  [✓] IntelliJ IDEA Community Edition (version 2023.2)
+  [✓] VS Code (version 1.85.1)
+  [✓] Connected device (2 available)
+  [✓] Network resources
+
+  • No issues found!
+  ```
+
+- Install `Flutter` & `Dart` plugins in Android Studio
+
+- Add `flutter` and it's bundled `dart` to `PATH` in your shell profile file (`~/.zshrc` , `~/.bashrc` etc.)
+
+  The Flutter SDK path is `$HOME/snap/flutter/common/flutter/` which can be seen as the output of running: `flutter sdk-path`
+
+  ```sh
+  export PATH=$PATH:$HOME/snap/flutter/common/flutter/bin
+  ```
+
+- Trouble-shooting the `flutter doctor` output:
+
+  - Java installed but not detected:
 
     ```txt
-    Flutter 3.7.2 • channel stable • https://github.com/flutter/flutter.git
-    Framework • revision 32fb2f948e (10 days ago) • 2023-02-08 07:30:10 -0800
-    Engine • revision f40b73f8a4
-    Tools • Dart 2.19.2 • DevTools 2.20.1
+    [!] Android Studio (version 2022.1)
+      ✗ Unable to find bundled Java version.
     ```
 
-- Check if everything required for Flutter is installed:
+    The bundled `jre` directory in the Android Studio installation location (`/opt/android-studio`) has been named to `jbr`. Refer [this answer](https://stackoverflow.com/a/75119315)
+
+    To resolve this, just create a **symbolic link**: `jre` -> `jbr`
 
     ```sh
-    flutter doctor
+    ln -s /opt/android-studio/jbr /opt/android-studio/jre
     ```
 
-    Output:
+  - Linux toolchain not installed:
 
     ```txt
-    [✓] Flutter (Channel stable, 3.7.3, on Ubuntu 20.04.5 LTS 5.14.0-1057-oem, locale en_IN)
-    [!] Android toolchain - develop for Android devices (Android SDK version 33.0.2)
-        ✗ cmdline-tools component is missing
-          Run `path/to/sdkmanager --install "cmdline-tools;latest"`
-          See https://developer.android.com/studio/command-line for more details.
-        ✗ Android license status unknown.
-          Run `flutter doctor --android-licenses` to accept the SDK licenses.
-          See https://flutter.dev/docs/get-started/install/linux#android-setup for more details.
-    [✓] Chrome - develop for the web
     [✗] Linux toolchain - develop for Linux desktop
         ✗ clang++ is required for Linux development.
           It is likely available from your distribution (e.g.: apt install clang), or can be downloaded from https://releases.llvm.org/
@@ -163,137 +176,81 @@ So, run `sudo apt-get purge --autoremove dca-enabler-packages dca-enabler`
           It is likely available from your distribution (e.g.: apt install ninja-build), or can be downloaded from https://github.com/ninja-build/ninja/releases
         ✗ GTK 3.0 development libraries are required for Linux development.
           They are likely available from your distribution (e.g.: apt install libgtk-3-dev)
-    [!] Android Studio (version 2022.1)
-        ✗ Unable to find bundled Java version.
-    [✓] Connected device (2 available)
-    [✓] HTTP Host Availability
-
-    ! Doctor found issues in 2 categories.
     ```
 
-- Install the programs mentioned for Linux toolchain
+    Refer [Linux prerequisites](https://docs.flutter.dev/get-started/install/linux#linux-prerequisites)
 
     ```sh
-    sudo apt install clang cmake ninja-build libgtk-3-dev -y
+    # For Ubuntu
+    sudo apt-get install clang cmake ninja-build libgtk-3-dev pkg-config liblzma-dev libstdc++-12-dev
+
+    # For Fedora
+    sudo dnf install -y clang cmake ninja-build gtk3-devel
     ```
 
-- Flutter isn't completely set up yet
+  - Google Chrome not installed
 
     ```sh
-    flutter doctor
+    [✗] Chrome - develop for the web (Cannot find Chrome executable at .\Google\Chrome\Application\chrome.exe)
+        ! Cannot find Chrome. Try setting CHROME_EXECUTABLE to a Chrome executable.
     ```
 
-    Output:
+    Flutter apps can run on most browsers but Flutter only supports **Chrome** & **Edge** browsers for debugging. Refer [their Web FAQ](https://docs.flutter.dev/platform-integration/web/faq#which-web-browsers-are-supported-by-flutter).
 
-    ```txt
-    Doctor summary (to see all details, run flutter doctor -v):
-    [✓] Flutter (Channel stable, 3.7.2, on Pop!_OS 22.04 LTS 6.0.12-76060006-generic, locale
-        en_US.UTF-8)
-    [!] Android toolchain - develop for Android devices (Android SDK version 33.0.2)
-        ✗ cmdline-tools component is missing
-          Run `path/to/sdkmanager --install "cmdline-tools;latest"`
-          See https://developer.android.com/studio/command-line for more details.
-        ✗ Android license status unknown.
-          Run `flutter doctor --android-licenses` to accept the SDK licenses.
-          See https://flutter.dev/docs/get-started/install/linux#android-setup for more details.
-    [✓] Chrome - develop for the web
-    [✓] Linux toolchain - develop for Linux desktop
-    [!] Android Studio (version 2022.1)
-        ✗ Unable to find bundled Java version.
-    [✓] VS Code (version 1.67.2)
-    [✓] Connected device (2 available)
-    [✓] HTTP Host Availability
-
-    ! Doctor found issues in 2 categories.
-    ```
-
-- Install Android **Command-line Tools** from Android Studio: `File > Settings > Appearance & Behaviour > System Settings > SDK Tools > Android SDK Command-line Tools (latest)`
-
-- The bundled `jre` directory in the Android Studio installation folder has been named to `jbr` . To resolve this, just create a **symbolic link** `jre` -> `jbr` . Refer [this answer](https://stackoverflow.com/a/75119315)
+    IF you intend on developing Flutter Web Apps, it's better to install Google Chrome. Else, set `CHROME_EXECUTABLE` inside your SHELL config file (`~/.zshrc` or `~/.bashrc`) to your web browser's path
 
     ```sh
-    ln -s /opt/android-studio/jbr /opt/android-studio/jre
+    export CHROME_EXECUTABLE=$(which firefox)
     ```
-
-- To add your **`JDK`**  (assuming Java installed properly) to Android Studio, go to `File` > `Project Structure` > `SDKs`. Click on `+` icon and select `Add JDK`
-  
-- Accept licenses:
-
-    ```sh
-    flutter doctor --android-licenses
-    ```
-
-- **Now everything should work 👍🏻**
-
-    ```sh
-    flutter doctor
-    ```
-
-    Output:
-
-    ```txt
-    Doctor summary (to see all details, run flutter doctor -v):
-    [✓] Flutter (Channel stable, 3.7.2, on Pop!_OS 22.04 LTS 6.0.12-76060006-generic, locale
-        en_US.UTF-8)
-    [✓] Android toolchain - develop for Android devices (Android SDK version 33.0.2)
-    [✓] Chrome - develop for the web
-    [✓] Linux toolchain - develop for Linux desktop
-    [✓] Android Studio (version 2022.1)
-    [✓] VS Code (version 1.67.2)
-    [✓] Connected device (2 available)
-    [✓] HTTP Host Availability
-
-    • No issues found!
-    ```
-
-- Open Android Studio. Install **Flutter** & **Dart** plugins in Android Studio
-- When creating `New Flutter Project` in Android Studio, you need to specify path to Flutter SDK. To locate it, check first few lines in output of:
-
-    ```dart
-    flutter doctor -v
-    ```
-
-    Output:
-
-    ```txt
-    [✓] Flutter (Channel stable, 3.7.3, on Ubuntu 20.04.5 LTS 5.14.0-1057-oem, locale en_IN)
-        • Flutter version 3.7.3 on channel stable at /home/kumar/flutter_stable/flutter
-    ```
-
-    So, Flutter SDK path is: `/home/kumar/flutter_stable/flutter`
 
 ---
 
-## Install specific Flutter version
+## Updating Android Studio
 
-- Download Flutter SDK tarball (or zip file) of that version from [Flutter SDK Archive](https://docs.flutter.dev/release/archive?tab=linux)
-- Create folder and extract the Flutter SDK there
+- Open `Settings` > `Appearance & Behavior` > `System Settings` > `Updates` and click on **Check for Updates** button
+- If new Android Studio version available, it will redirect you to their page. Download tarball file from that page and follow these steps:
 
-    ```sh
-    mkdir ~/flutter_3_3_10
-    cd ~/flutter_3_3_10
-    tar xf ~/Downloads/flutter_linux_3.3.10-stable.tar.xz
-    ```
+  Extract the downloaded tarball
 
-- Add `flutter` binary location to `PATH` variable inside your shell profile file (`~/.zshrc` , `~/.bashrc`)
+  ```sh
+  tar xvf ~/Downloads/android-studio-2022.3.1.19-linux.tar.gz
+  ```
 
-    ```sh
-    export PATH=$PATH:$HOME/flutter_3_3_10/flutter/bin
-    ```
+  Run the installation script from the extracted folder
 
-- Reload SHELL
+  ```sh
+  ~/Downloads/android-studio/bin/studio.sh
+  ```
 
-    ```sh
-    exec $(which $SHELL)
-    ```
+  If your old installation's settings aren't imported by the install script, go to `File` > `Manage IDE Settings` > `Import Setttings` and select old config folder, for example: `~/.config/Google/AndroidStudio2022.3`
 
-- Follow next steps similar as previous method.
+  Delete old installation folder and move the new installation folder into that location
+
+  ```sh
+  # Delete old installation folder
+  sudo rm -rf /opt/android-studio
+
+  # Move current installation folder to that location
+  sudo mv ~/Downloads/android-studio /opt/
+  ```
+
+  Open Android Studio from the new location
+
+  `/opt/android-studio/bin/studio.sh`
+
+  Create a replacement Desktop Entry via `Tools` > `Create Desktop Entry`
 
 ---
 
-## Uninstall Android Studio
+## Upgrading Flutter version
 
-- Refer [these instructions](https://askubuntu.com/questions/546723/uninstall-android-studio-completely)
+Refer [their docs](https://docs.flutter.dev/release/upgrade)
+
+---
+
+## Uninstalling Android Studio
+
+Refer [these instructions](https://askubuntu.com/questions/546723/uninstall-android-studio-completely)
 
 ```sh
 # Remove the Android SDK and other folders
@@ -303,10 +260,10 @@ sudo rm -rf ~/Android ~/.android
 sudo rm -rf /opt/android-studio
 
 # Remove cache
-sudo rm -rf ~/.cache/Google/AndroidStudio2022.1
-sudo rm -rf ~/.cache/Android\ Open\ Source\ Project
+rm -rf ~/.cache/Google/AndroidStudio2022.1
+rm -rf ~/.cache/Android\ Open\ Source\ Project
 
-# Remove Android Studio settings from your SHELL profile 
+# Remove Android Studio settings from your SHELL profile
 gedit ~/.bashrc
 
 # Remove your settings (optional)
@@ -319,9 +276,10 @@ sudo rm -rf ~/StudioProjects
 
 ---
 
-## Uninstall Flutter
+## Uninstalling Flutter
 
 - Delete the `flutter` SDK folder
+- Delete caches: `rm -rf ~/.pub-cache ~/.dartServer`
 - Delete flutter configs from `~/.config`
 - Remove flutter PATH settings from SHELL config file (`~/.zshrc` or `~/.bashrc`)
 
