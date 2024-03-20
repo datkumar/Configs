@@ -3,7 +3,7 @@
 ## Sections
 
 1. [Installing Android Studio](./README.md#installing-android-studio)
-2. [Installing Flutter](./README.md)
+2. [Installing Flutter](./README.md#installing-flutter)
 
 > **More**:
 
