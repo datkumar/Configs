@@ -24,6 +24,8 @@
   jvm: /usr/lib/jvm
   ```
 
+  > If working with IDE like **IntelliJ**, you can add the installed folder location like `/usr/lib/jvm/jdk-11-oracle-x64` under configured JDKs
+
 - Set Environment Variables in `$SHELL` Config file (i.e. `~/.zshrc`, `~/.bashrc` etc.)
 
   ```sh

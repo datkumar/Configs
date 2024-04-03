@@ -96,6 +96,8 @@ Following the [official flutter installation docs](https://docs.flutter.dev/get-
   sudo snap install flutter --classic
   ```
 
+  You can verify the package is installed via snap using `snap list` or `snap info flutter` for more details
+
 - See your Flutter SDK path via:
 
   ```sh
@@ -254,29 +256,37 @@ Refer [these instructions](https://askubuntu.com/questions/546723/uninstall-andr
 
 ```sh
 # Remove the Android SDK and other folders
-sudo rm -rf ~/Android ~/.android
+rm -rf ~/Android ~/.android
 
 # Remove your 'android-studio' installation folder (wherever you installed from)
 sudo rm -rf /opt/android-studio
 
 # Remove cache
-rm -rf ~/.cache/Google/AndroidStudio2022.1
+rm -rf ~/.cache/Google/AndroidStudio*
 rm -rf ~/.cache/Android\ Open\ Source\ Project
 
 # Remove Android Studio settings from your SHELL profile
 gedit ~/.bashrc
 
 # Remove your settings (optional)
-sudo rm -rf ~/.config/Google/AndroidStudio2022.1
-sudo rm -rf ~/.config/Android\ Open\ Source\ Project
+rm -rf ~/.config/Google/AndroidStudio2022.1
+rm -rf ~/.config/Android\ Open\ Source\ Project
 
 # Remove your Projects (optional)
-sudo rm -rf ~/StudioProjects
+rm -rf ~/StudioProjects
 ```
 
 ---
 
 ## Uninstalling Flutter
+
+If installed via `snap`, you can just remove as:
+
+```sh
+snap remove flutter
+```
+
+Else:
 
 - Delete the `flutter` SDK folder
 - Delete caches: `rm -rf ~/.pub-cache ~/.dartServer`

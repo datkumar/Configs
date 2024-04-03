@@ -43,3 +43,7 @@
    ```sh
    chmod +x ~/.local/share/applications/firefox_dev.desktop
    ```
+
+1. To enable automatic updates, change owner of `/opt/firefoc-dev`. Refer [this](https://dev.to/pikapool/firefox-dev-edition-could-not-update-automatically-issue-when-manually-installed-in-linux-fedora-solved-3ia1) post
+
+   ![changing owner of directory](firefox-dev-updates.png)

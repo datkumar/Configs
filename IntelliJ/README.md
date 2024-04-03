@@ -57,6 +57,14 @@ Next, you can follow the installation instructions as given in `Install-Linux-ta
 ~/.cache/JetBrains/IntelliJIdea2022.2/log   # idea.log.path
 ```
 
+## Automatic updates
+
+Change owner of your `idea` installation directory to allow automatic updates. Refer [this answer](https://askubuntu.com/questions/346936/can-not-update-intellij-because-of-error-permission-denied)
+
+```sh
+sudo chown -R $(whoami) /opt/idea-IC-232.9559.62
+```
+
 ---
 
 ## Java
