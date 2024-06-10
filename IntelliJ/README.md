@@ -69,15 +69,7 @@ sudo chown -R $(whoami) /opt/idea-IC-232.9559.62
 
 ## Java
 
-Select `New Project` or `Start Tour`
-
-If JDK is not detected by IntelliJ, you'll need to install it or provide it's path if installed.
-
-> Note that your Java folders might be JREs and not JDKs so you'll need to install required extra libraries such as the **_development_** variants.
-
-> For example, Fedora 38 comes with just the **JRE** of OpenJDK as the package `java-17-openjdk-headless.x86_64` . To install the full JDK with all the development tools, run `sudo dnf install -y java-devel`. (Referred from [their developer docs](https://developer.fedoraproject.org/tech/languages/java/java-installation.html))
-
-Another option is to Install **`OpenJDK from Oracle`** through **IntelliJ** itself. The JDK is installed in the `~/.jdks` folder (like `~/.jdks/openjdk-20.0.2`)
+See [Java installation](../Java/README.md#)
 
 ## Flutter
 
