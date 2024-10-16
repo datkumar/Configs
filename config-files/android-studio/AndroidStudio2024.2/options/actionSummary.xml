@@ -1,0 +1,85 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$Copy">
+      <i c="1" l="1728207468600" />
+    </e>
+    <e n="$Undo">
+      <i c="5" l="1728206427277" />
+    </e>
+    <e n="Android.RunAndroidSdkManager">
+      <i c="3" l="1728211104240" />
+    </e>
+    <e n="EditCustomProperties">
+      <i c="1" l="1728205354092" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="21" l="1728206431388" />
+    </e>
+    <e n="EditorDeleteToWordEnd">
+      <i c="2" l="1728206422365" />
+    </e>
+    <e n="EditorDown">
+      <i c="2" l="1728206423453" />
+    </e>
+    <e n="EditorLeft">
+      <i c="1" l="1728206417280" />
+    </e>
+    <e n="EditorSelectWord">
+      <i c="1" l="1728206378624" />
+    </e>
+    <e n="EditorUp">
+      <i c="2" l="1728206419374" />
+    </e>
+    <e n="Run">
+      <i c="4" l="1728211080705" />
+    </e>
+    <e n="SaveAll">
+      <i c="4" l="1728206427748" />
+    </e>
+    <e n="SettingsEntryPoint">
+      <i c="6" l="1728211108200" />
+    </e>
+    <e n="ShowProjectStructureSettings">
+      <i c="3" l="1728211109008" />
+    </e>
+    <e n="Stop">
+      <i c="1" l="1728211123905" />
+    </e>
+    <e n="WelcomeScreen.CreateNewProject">
+      <i c="1" l="1728205279543" />
+    </e>
+    <e n="WelcomeScreen.RunAndroidSdkManager">
+      <i c="1" l="1728205697078" />
+    </e>
+    <e n="com.android.tools.idea.devicemanagerv2.EditDeviceAction">
+      <i c="1" l="1728206446084" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="1" l="1728206436399" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="1" l="1728195727616" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.SquareAnActionButton">
+      <i c="2" l="1728211065180" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenComponentFactory$4">
+      <i c="2" l="1728205638141" />
+    </e>
+    <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
+      <i c="1" l="1728206382663" />
+    </e>
+    <e n="flutter.NewProject.welcome">
+      <i c="3" l="1728206196761" />
+    </e>
+    <e n="io.flutter.FlutterInitializer$3">
+      <i c="1" l="1728206370387" />
+    </e>
+    <e n="io.flutter.actions.OpenEmulatorAction">
+      <i c="1" l="1728211070923" />
+    </e>
+    <e n="io.flutter.actions.RestartFlutterDaemonAction">
+      <i c="2" l="1728211062441" />
+    </e>
+  </component>
+</application>

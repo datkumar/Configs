@@ -1,0 +1,209 @@
+
+[env]
+TERM = "alacritty"
+
+[window]
+decorations     = "Full"
+dynamic_padding = false
+dynamic_title   = true
+opacity         = 0.95
+startup_mode    = "Windowed"
+title           = "Alacritty"
+
+[window.dimensions]
+columns = 170
+lines   = 40
+
+[window.padding]
+x = 8
+y = 10
+
+[scrolling]
+history = 12000
+multiplier = 5
+
+[font]
+builtin_box_drawing = false
+size                = 11
+
+[font.normal]
+family = "CodeNewRoman Nerd Font Mono"
+style  = "Regular"
+
+[font.bold]
+family = "CodeNewRoman Nerd Font Mono"
+style  = "Bold"
+
+[font.italic]
+family = "CodeNewRoman Nerd Font Mono"
+style  = "Italic"
+
+# [font.glyph_offset]
+# x = 0
+# y = 0
+
+# [font.bold_italic]
+# family = "..."
+# style  = "..."
+
+[font.offset]
+x = 0   # letter-spacing
+y = 1   # line-spacing
+
+
+# Browse themes from: 
+# https://github.com/alacritty/alacritty-theme
+# Catppuccin: https://github.com/catppuccin/alacritty/tree/main
+# Currently using Catppuccin Macchiato with background made darker
+
+# Default colors
+[colors.primary]
+background = "#191b27"
+foreground = "#cad3f5"
+dim_foreground = "#8087a2"
+bright_foreground = "#cad3f5"
+
+# Cursor colors
+[colors.cursor]
+text = "#24273a"
+cursor = "#f4dbd6"
+
+# Normal colors
+[colors.normal]
+black = "#494d64"
+red = "#ed8796"
+green="#41b064"
+yellow = "#eed49f"
+blue = "#8aadf4"
+magenta = "#f5bde6"
+cyan = "#1ecfeb"
+white = "#d3dbd5"
+
+# Bright colors
+[colors.bright]
+black = "#191b28"
+red = "#dc6275"
+green = "#07e60e"
+yellow = "#e2dc33"
+blue = "#1c88cf"
+magenta = "#c00a7a"
+cyan = "#3cede4"
+white = "#ffffff"
+
+
+[colors.dim]
+black = "#494d64"
+red = "#ed8796"
+green = "#a6da95"
+yellow = "#eed49f"
+blue = "#8aadf4"
+magenta = "#f5bde6"
+cyan = "#8bd5ca"
+white = "#b8c0e0"
+
+
+[colors.vi_mode_cursor]
+text = "#24273a"
+cursor = "#b7bdf8"
+
+
+[colors.search.matches]
+foreground = "#24273a"
+background = "#a5adcb"
+
+[colors.search.focused_match]
+foreground = "#24273a"
+background = "#a6da95"
+
+
+[colors.footer_bar]
+foreground = "#24273a"
+background = "#a5adcb"
+
+
+[colors.hints.start]
+foreground = "#24273a"
+background = "#eed49f"
+
+[colors.hints.end]
+foreground = "#24273a"
+background = "#a5adcb"
+
+
+[colors.selection]
+text = "#24273a"
+background = "#f4dbd6"
+
+
+[[colors.indexed_colors]]
+index = 16
+color = "#f5a97f"
+
+[[colors.indexed_colors]]
+index = 17
+color = "#f4dbd6"
+
+
+# [colors.line_indicator]
+# background = "None"
+# foreground = "None"
+
+
+[bell]
+animation = "EaseOutExpo"
+color     = "#C0C5CE"
+command   = "None"
+duration  = 0
+
+[selection]
+save_to_clipboard     = false
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[cursor]
+unfocused_hollow = true
+vi_mode_style    = "None"
+
+[[keyboard.bindings]]
+action = "Paste"
+key    = "V"
+mods   = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key    = "C"
+mods   = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ScrollPageUp"
+key    = "PageUp"
+mods   = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollPageDown"
+key    = "PageDown"
+mods   = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollToTop"
+key    = "Home"
+mods   = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollToBottom"
+key    = "End"
+mods   = "Shift"
+
+# [mouse]
+# hide_when_typing = true
+
+[debug]
+highlight_damage   = false
+log_level          = "Warn"
+persistent_logging = false
+print_events       = false
+render_timer       = false
+
+# [general]
+# alacritty.toml
+
+# live_config_reload = true

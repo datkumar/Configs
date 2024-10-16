@@ -1,0 +1,103 @@
+{
+  "dart.flutterSdkPath": "/home/kumar/FlutterSdk/flutter",
+  "telemetry.telemetryLevel": "error",
+  // Workbench
+  "window.titleBarStyle": "custom",
+  "window.customTitleBarVisibility": "auto",
+  "workbench.startupEditor": "none",
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "default",
+  "workbench.colorTheme": "Bearded Theme HC Midnight Void",
+  "workbench.iconTheme": "vscode-icons",
+  // Editor
+  "editor.mouseWheelZoom": true,
+  "editor.fontFamily": "0xProto Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  // Terminal
+  "terminal.integrated.fontFamily": "Geist Mono",
+  "terminal.integrated.fontSize": 12,
+  "terminal.external.linuxExec": "alacritty",
+  "terminal.integrated.drawBoldTextInBrightColors": true,
+  // Formatting
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.useEditorConfig": true,
+  "prettier.trailingComma": "es5",
+  "editor.detectIndentation": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.comments.insertSpace": true,
+  "cSpell.diagnosticLevel": "Hint",
+  "[c][cpp][makefile]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  // Change this based on whether Tailwind/Vanilla-CSS is being used
+  "files.associations": {
+    "*.css": "postcss"
+  },
+  "[shellscript][ignore][dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "redhat.telemetry.enabled": false,
+  // Markdown
+  "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "markdownlint.config": {
+    "no-inline-html": false
+  },
+  // Projects
+  "projectManager.git.baseFolders": ["~/Desktop/Dev"],
+  "git.autofetch": true,
+  "git.autorefresh": true,
+  // Custom labels for project files
+  "workbench.editor.customLabels.enabled": true,
+  "workbench.editor.customLabels.patterns": {
+    // NextJs project
+    "**/app/**/page.tsx": "${dirname} - Page",
+    "**/app/**/route.ts": "${dirname} - Endpoint",
+    "**/app/**/layout.tsx": "${dirname} - Layout",
+    "**/app/**/loading.tsx": "${dirname} - Skeleton",
+    // Astro project
+    "**/pages/**/index.astro": "${dirname} - Page"
+  },
+  // Integrated Terminal's color customization (same colors as alacritty config)
+  "workbench.colorCustomizations": {
+    "terminal.background": "#191b27",
+    "terminal.foreground": "#cad3f5",
+    "terminalCursor.background": "#5c9bcf",
+    "terminalCursor.foreground": "#f4dbd6",
+    // Normal ANSI 8 colors
+    "terminal.ansiBlack": "#494d64",
+    "terminal.ansiRed": "#ed8796",
+    "terminal.ansiGreen": "#a6da95",
+    "terminal.ansiYellow": "#eed49f",
+    "terminal.ansiBlue": "#8aadf4",
+    "terminal.ansiMagenta": "#f5bde6",
+    "terminal.ansiCyan": "#8bd5ca",
+    "terminal.ansiWhite": "#b8c0e0",
+    // Bright ANSI 8 colors
+    "terminal.ansiBrightBlack": "#191b28",
+    "terminal.ansiBrightRed": "#f04949",
+    "terminal.ansiBrightGreen": "#34af34",
+    "terminal.ansiBrightYellow": "#e2dc33",
+    "terminal.ansiBrightBlue": "#1c88cf",
+    "terminal.ansiBrightMagenta": "#c00a7a",
+    "terminal.ansiBrightCyan": "#3cede4",
+    "terminal.ansiBrightWhite": "#ffffff"
+  }
+}

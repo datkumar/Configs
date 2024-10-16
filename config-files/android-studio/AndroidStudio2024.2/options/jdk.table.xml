@@ -1,0 +1,31 @@
+<application>
+  <component name="ProjectJdkTable">
+    <jdk version="2">
+      <name value="Android API 34, extension level 7 Platform" />
+      <type value="Android SDK" />
+      <homePath value="$USER_HOME$/Android/Sdk" />
+      <roots>
+        <annotationsPath>
+          <root type="composite">
+            <root url="jar://$USER_HOME$/Android/Sdk/platforms/android-34/data/annotations.zip!/" type="simple" />
+          </root>
+        </annotationsPath>
+        <classPath>
+          <root type="composite">
+            <root url="jar://$USER_HOME$/Android/Sdk/platforms/android-34/android.jar!/" type="simple" />
+            <root url="file://$USER_HOME$/Android/Sdk/platforms/android-34/data/res" type="simple" />
+          </root>
+        </classPath>
+        <javadocPath>
+          <root type="composite" />
+        </javadocPath>
+        <sourcePath>
+          <root type="composite">
+            <root url="file://$USER_HOME$/Android/Sdk/sources/android-34" type="simple" />
+          </root>
+        </sourcePath>
+      </roots>
+      <additional sdk="android-34" />
+    </jdk>
+  </component>
+</application>
