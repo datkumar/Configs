@@ -4,23 +4,50 @@
       <map>
         <entry key="$USER_HOME$/StudioProjects/hello_world">
           <value>
-            <RecentProjectMetaInfo opened="true" projectWorkspaceId="2n3enIBuyRwTOkKnfikKClr4U6m">
-              <option name="activationTimestamp" value="1728212489711" />
+            <RecentProjectMetaInfo frameTitle="hello_world – main.dart [hello_world]" projectWorkspaceId="2n3enIBuyRwTOkKnfikKClr4U6m">
+              <option name="activationTimestamp" value="1729443710814" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="AI-242.21829.142.2421.12409432" />
-              <option name="buildTimestamp" value="1727206200000" />
+              <option name="build" value="AI-242.23339.11.2421.12483815" />
+              <option name="buildTimestamp" value="1728590040000" />
               <option name="colorInfo">
                 <RecentProjectColorInfo associatedIndex="8" />
               </option>
               <frame x="0" y="32" width="1920" height="1048" extendedState="6" />
               <option name="productionCode" value="AI" />
-              <option name="projectOpenTimestamp" value="1728206353447" />
+              <option name="projectOpenTimestamp" value="1729443497346" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/StudioProjects/assignment/android">
+          <value>
+            <RecentProjectMetaInfo frameTitle="android" projectWorkspaceId="2njoPTJEKTZvBu01PbyW3zER6JU">
+              <option name="activationTimestamp" value="1729495858309" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="AI-242.23339.11.2421.12483815" />
+              <option name="buildTimestamp" value="1728590040000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="4" />
+              </option>
+              <frame x="260" y="56" width="1400" height="1000" extendedState="6" />
+              <option name="productionCode" value="AI" />
+              <option name="projectOpenTimestamp" value="1729495821621" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/StudioProjects/assignment">
+          <value>
+            <RecentProjectMetaInfo frameTitle="assignment – cart_page.dart [assignment]" opened="true" projectWorkspaceId="2ni6m1VV3Xf4VkWkWz4csJdw7jH">
+              <option name="activationTimestamp" value="1729510870412" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="3" />
+              </option>
+              <frame x="0" y="32" width="1920" height="1048" extendedState="2" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
       </map>
     </option>
-    <option name="lastOpenedProject" value="$USER_HOME$/StudioProjects/hello_world" />
+    <option name="lastOpenedProject" value="$USER_HOME$/StudioProjects/assignment" />
     <option name="lastProjectLocation" value="$USER_HOME$/StudioProjects" />
   </component>
 </application>

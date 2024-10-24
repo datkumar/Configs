@@ -1,0 +1,442 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="assignment" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="FileEditorManager">
+    <leaf ideFingerprint="qdjk6onopcm2" SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/main.dart">
+          <provider editor-type-id="text-editor" selected="true">
+            <state relative-caret-position="357">
+              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+        <tab>{&quot;tabTitle&quot;:&quot;main.dart&quot;,&quot;foregroundColor&quot;:-2104859,&quot;textAttributes&quot;:{&quot;name&quot;:&quot;a&quot;},&quot;icon&quot;:[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,57,10,19,105,99,111,110,115,47,100,97,114,116,95,102,105,108,101,46,115,118,103,18,20,105,99,111,110,115,47,101,120,112,117,105,47,100,97,114,116,46,115,118,103,26,4,68,97,114,116,40,-114,-74,-27,-124,3,48,2]}</tab>
+      </file>
+      <file>
+        <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+          <provider editor-type-id="text-editor" selected="true">
+            <state relative-caret-position="1407">
+              <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+        <tab>{&quot;tabTitle&quot;:&quot;pubspec.yaml&quot;,&quot;foregroundColor&quot;:-2104859,&quot;textAttributes&quot;:{&quot;name&quot;:&quot;a&quot;},&quot;icon&quot;:[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,67,10,18,102,105,108,101,84,121,112,101,115,47,121,97,109,108,46,115,118,103,18,24,101,120,112,117,105,47,102,105,108,101,84,121,112,101,115,47,121,97,109,108,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-72,-60,-59,56,48,0]}</tab>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary"><![CDATA[{
+  "data": {
+    "Markdown": {
+      "usageCount": 1,
+      "lastUsed": 1729439023488
+    },
+    "YAML": {
+      "usageCount": 4,
+      "lastUsed": 1729443470198
+    },
+    "Dart": {
+      "usageCount": 5,
+      "lastUsed": 1729443470310
+    },
+    "Gradle": {
+      "usageCount": 2,
+      "lastUsed": 1729441242068
+    },
+    "XML": {
+      "usageCount": 1,
+      "lastUsed": 1729441914630
+    },
+    "Properties": {
+      "usageCount": 1,
+      "lastUsed": 1729441940261
+    },
+    "Shell Script": {
+      "usageCount": 2,
+      "lastUsed": 1729443420308
+    }
+  }
+}]]></component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find />
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/lib</dir>
+    </dirStrings>
+  </component>
+  <component name="FindInProjectScope">
+    <option name="isProjectScope" value="true" />
+  </component>
+  <component name="GitSEFilterConfiguration">{}</component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/pubspec.yaml" />
+      <option value="$PROJECT_DIR$/android/app/build.gradle" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LanguageUsageStatistics">
+    <language id="Dart">
+      <summary usageCount="5" lastUsage="1729443470310" />
+    </language>
+    <language id="Groovy">
+      <summary usageCount="2" lastUsage="1729441242068" />
+    </language>
+    <language id="Markdown">
+      <summary usageCount="1" lastUsage="1729439023488" />
+    </language>
+    <language id="Properties">
+      <summary usageCount="1" lastUsage="1729441940261" />
+    </language>
+    <language id="Shell Script">
+      <summary usageCount="2" lastUsage="1729443420308" />
+    </language>
+    <language id="XML">
+      <summary usageCount="1" lastUsage="1729441914630" />
+    </language>
+    <language id="yaml">
+      <summary usageCount="4" lastUsage="1729443470199" />
+    </language>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/kumar/StudioProjects/assignment/android}" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+          <presentation>
+            <attributes />
+            <data iconPath="expui/toolwindows/project.svg" iconPlugin="com.intellij" isLeaf="false" text="assignment" />
+            <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
+            <presentation>
+              <attributes>
+                <map>
+                  <entry key="filePath" value="$PROJECT_DIR$/android" />
+                </map>
+              </attributes>
+              <data iconPath="expui/nodes/module.svg" iconPlugin="com.intellij" isLeaf="false" text="android" />
+              <item name="dir{file:///home/kumar/StudioProjects/assignment/android}" type="462c0819:PsiDirectoryNode" />
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/android/.gradle" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text=".gradle" />
+                <item name="dir{file:///home/kumar/StudioProjects/assignment/android/.gradle}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/android/app" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="app" />
+                <item name="dir{file:///home/kumar/StudioProjects/assignment/android/app}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/android/gradle" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="gradle" />
+                <item name="dir{file:///home/kumar/StudioProjects/assignment/android/gradle}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/android/.gitignore" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/ignored.svg" iconPlugin="com.intellij" isLeaf="true" text=".gitignore" />
+                <item name=".gitignore" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/android/assignment_android.iml" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/ideaModule.svg" iconPlugin="com.intellij" isLeaf="true" text="assignment_android.iml" />
+                <item name="assignment_android.iml" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/android/build.gradle" />
+                  </map>
+                </attributes>
+                <data iconPath="icons/expui/gradle.svg" iconPlugin="com.intellij.gradle" isLeaf="true" text="build.gradle" />
+                <item name="build.gradle" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/android/gradle.properties" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/properties.svg" iconPlugin="com.intellij" isLeaf="true" text="gradle.properties" />
+                <item name="gradle.properties" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/android/gradlew" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/shell.svg" iconPlugin="com.intellij" isLeaf="true" text="gradlew" />
+                <item name="gradlew" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/android/gradlew.bat" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/text.svg" iconPlugin="com.intellij" isLeaf="true" text="gradlew.bat" />
+                <item name="gradlew.bat" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/android/local.properties" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/properties.svg" iconPlugin="com.intellij" isLeaf="true" text="local.properties" />
+                <item name="local.properties" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/android/settings.gradle" />
+                  </map>
+                </attributes>
+                <data iconPath="icons/expui/gradle.svg" iconPlugin="com.intellij.gradle" isLeaf="true" text="settings.gradle" />
+                <item name="settings.gradle" type="ab9368bb:PsiFileNode" />
+              </presentation>
+            </presentation>
+            <presentation>
+              <attributes>
+                <map>
+                  <entry key="filePath" value="$PROJECT_DIR$/.gitignore" />
+                </map>
+              </attributes>
+              <data iconPath="expui/fileTypes/ignored.svg" iconPlugin="com.intellij" isLeaf="true" text=".gitignore" />
+              <item name=".gitignore" type="ab9368bb:PsiFileNode" />
+            </presentation>
+            <presentation>
+              <attributes>
+                <map>
+                  <entry key="filePath" value="$PROJECT_DIR$/.metadata" />
+                </map>
+              </attributes>
+              <data iconPath="expui/fileTypes/text.svg" iconPlugin="com.intellij" isLeaf="true" text=".metadata" />
+              <item name=".metadata" type="ab9368bb:PsiFileNode" />
+            </presentation>
+            <presentation>
+              <attributes>
+                <map>
+                  <entry key="filePath" value="$PROJECT_DIR$/analysis_options.yaml" />
+                </map>
+              </attributes>
+              <data iconPath="expui/fileTypes/yaml.svg" iconPlugin="com.intellij" isLeaf="true" text="analysis_options.yaml" />
+              <item name="analysis_options.yaml" type="ab9368bb:PsiFileNode" />
+            </presentation>
+            <presentation>
+              <attributes>
+                <map>
+                  <entry key="filePath" value="$PROJECT_DIR$/pubspec.yaml" />
+                </map>
+              </attributes>
+              <data iconPath="expui/fileTypes/yaml.svg" iconPlugin="com.intellij" isLeaf="true" text="pubspec.yaml" />
+              <item name="pubspec.yaml" type="ab9368bb:PsiFileNode" />
+            </presentation>
+            <presentation>
+              <attributes>
+                <map>
+                  <entry key="filePath" value="$PROJECT_DIR$/README.md" />
+                </map>
+              </attributes>
+              <data iconPath="icons/expui/markdown.svg" iconPlugin="org.intellij.plugins.markdown" isLeaf="true" text="README.md" />
+              <item name="README.md" type="ab9368bb:PsiFileNode" />
+            </presentation>
+            <presentation>
+              <attributes />
+              <data iconPath="expui/nodes/library.svg" iconPlugin="com.intellij" isLeaf="false" text="External Libraries" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </presentation>
+            <presentation>
+              <attributes />
+              <data iconPath="expui/fileTypes/scratches.svg" iconPlugin="com.intellij" isLeaf="false" text="Scratches and Consoles" />
+              <item name="Scratches and Consoles" type="b85a3e1f:ScratchTreeStructureProvider$MyProjectNode" />
+            </presentation>
+          </presentation>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="enableVisualFormatting" value="false" />
+  </component>
+  <component name="RunConfigurationStartHistory">
+    <history>
+      <element setting="Flutter.main.dart" />
+    </history>
+  </component>
+  <component name="TerminalArrangementManager">
+    <option name="myTabStates">
+      <TerminalTabState tabName="Local" currentWorkingDirectory="$PROJECT_DIR$">
+        <shellCommand>
+          <arg value="/usr/bin/zsh" />
+          <arg value="-i" />
+        </shellCommand>
+      </TerminalTabState>
+    </option>
+  </component>
+  <component name="ToolWindowManager">
+    <layoutV2>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27265626" />
+      <window_info id="Commit" order="1" weight="0.25" />
+      <window_info id="Resources Explorer" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.23330152" />
+      <window_info anchor="bottom" id="Problems" order="2" />
+      <window_info anchor="bottom" id="Problems View" order="3" />
+      <window_info anchor="bottom" id="Logcat" order="4" />
+      <window_info anchor="bottom" id="App Quality Insights" order="5" />
+      <window_info anchor="bottom" id="Messages" order="6" weight="0.18559161" />
+      <window_info anchor="bottom" id="Run" order="7" show_stripe_button="false" weight="0.23330152" />
+      <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.25906488" />
+      <window_info anchor="bottom" id="Build" order="9" />
+      <window_info anchor="right" id="Notifications" order="0" weight="0.36328125" />
+      <window_info anchor="right" id="Gradle" order="1" weight="0.2502604" />
+      <window_info anchor="right" id="Device Manager" order="2" weight="0.25" />
+      <window_info anchor="right" id="Device Manager 2" order="3" weight="0.25" />
+      <window_info active="true" anchor="right" id="Running Devices" order="4" visible="true" weight="0.2502604" />
+      <window_info anchor="right" id="StudioBot" order="5" weight="0.25" />
+      <window_info anchor="right" id="Flutter DevTools" order="6" />
+      <window_info anchor="right" id="Flutter DevTools Extensions" order="7" />
+      <window_info anchor="right" id="Flutter Deep Links" order="8" />
+      <unified_weights bottom="0.23330152" left="0.27265626" right="0.2502604" />
+    </layoutV2>
+    <recentWindows>
+      <value>Project</value>
+      <value>Run</value>
+      <value>Running Devices</value>
+      <value>Terminal</value>
+      <value>Gradle</value>
+      <value>Dart Analysis</value>
+      <value>Notifications</value>
+      <value>Messages</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1173" y="303" width="524" height="512" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1729443441139">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="1173" y="303" width="524" height="512" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.32.1920.1048@0.32.1920.1048" timestamp="1729443441139" />
+    <state width="1836" height="201" key="GridCell.Tab.0.bottom" timestamp="1729443458463">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1836" height="201" key="GridCell.Tab.0.bottom/0.32.1920.1048@0.32.1920.1048" timestamp="1729443458463" />
+    <state width="1836" height="201" key="GridCell.Tab.0.center" timestamp="1729443458463">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1836" height="201" key="GridCell.Tab.0.center/0.32.1920.1048@0.32.1920.1048" timestamp="1729443458463" />
+    <state width="1836" height="201" key="GridCell.Tab.0.left" timestamp="1729443458463">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1836" height="201" key="GridCell.Tab.0.left/0.32.1920.1048@0.32.1920.1048" timestamp="1729443458463" />
+    <state width="1836" height="201" key="GridCell.Tab.0.right" timestamp="1729443458463">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1836" height="201" key="GridCell.Tab.0.right/0.32.1920.1048@0.32.1920.1048" timestamp="1729443458463" />
+    <state x="421" y="144" width="992" height="737" key="SettingsEditor" timestamp="1729443273945">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="421" y="144" width="992" height="737" key="SettingsEditor/0.32.1920.1048@0.32.1920.1048" timestamp="1729443273945" />
+    <state x="724" y="167" width="649" height="576" key="find.popup" timestamp="1729441216877">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="724" y="167" width="649" height="576" key="find.popup/0.32.1920.1048@0.32.1920.1048" timestamp="1729441216877" />
+    <state x="1103" y="252" width="672" height="696" key="search.everywhere.popup" timestamp="1729441242043">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="1103" y="252" width="672" height="696" key="search.everywhere.popup/0.32.1920.1048@0.32.1920.1048" timestamp="1729441242043" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/gradlew">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="44" column="25" lean-forward="true" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew" />
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1407">
+          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

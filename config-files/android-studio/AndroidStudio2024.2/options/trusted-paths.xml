@@ -2,7 +2,10 @@
   <component name="Trusted.Paths">
     <option name="TRUSTED_PROJECT_PATHS">
       <map>
+        <entry key="$USER_HOME$/StudioProjects/assignment" value="true" />
+        <entry key="$USER_HOME$/StudioProjects/assignment/android" value="true" />
         <entry key="$USER_HOME$/StudioProjects/hello_world" value="true" />
+        <entry key="/run/media/kumar/Crucial X6/BACKUPS/Laptop_BW/StudioProjects/bw-ayuvi" value="true" />
       </map>
     </option>
   </component>

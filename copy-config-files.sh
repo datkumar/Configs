@@ -24,6 +24,13 @@ cp ~/.alacritty.toml $DEST
 # Git global config (global in "~/.gitconfig" and local in ".git/config")
 cp ~/.gitconfig $DEST
 
+# GNOME Shell Extensions
+# ls ~/.local/share/gnome-shell/extensions >$DEST/gnome-shell-extensions.txt
+gnome-extensions list --enabled >$DEST/gnome-shell-extensions.txt
+
+# VLC settings
+cp ~/.config/vlc/vlcrc $DEST
+
 # Fonts
 mkdir -p $DEST/fonts
 ls ~/.fonts >$DEST/fonts/font-names.txt
@@ -50,6 +57,9 @@ mkdir -p $DEST/firefox
 # Firefox profile folder (replace with your own resepective profile folder)
 firefoxProfileFolder=$HOME/.mozilla/firefox/40rdv56b.default-release-1728120512299
 
+# Firefox extensions i.e add-ons:
+jq -r '.addons[] | select(.defaultLocale != null) | "\(.defaultLocale.name) by \(.defaultLocale.creator)"' $firefoxProfileFolder/extensions.json >$DEST/firefox/extensions.txt
+
 # Firefox Bookmarks:
 # Bookmarks backup (assuming non-empty)
 bookmarkBackups=$firefoxProfileFolder/bookmarkbackups
@@ -67,10 +77,10 @@ SELECT origin FROM moz_perms WHERE type='cookie';
 EOF
 # DB is locked when browser is open. So it would error
 if [[ $? -ne 0 ]]; then
-  echo "Failed to save cookie exceptions. Make sure Firefox is closed before you run the script"
+  echo "Failed to save cookie exceptions. Ensure Firefox is closed before running this script"
 fi
 
-# Simple Tab Groups (backup of latest open tabs):
+# Simple Tab Groups (latest backup of open tabs):
 latestStgFolder=$(ls -d ~/Downloads/STG-backups-* | sort -V | tail -n 1)
 latestStgBackup=$(ls "$latestStgFolder"/auto-stg-backup-day-of-month-*@drive4ik.json | sort -V | tail -n 1)
 cp $latestStgBackup $DEST/firefox/
@@ -78,3 +88,8 @@ cp $latestStgBackup $DEST/firefox/
 # -------------- Android Studio --------------
 mkdir -p $DEST/android-studio
 cp -r ~/.config/Google/AndroidStudio* $DEST/android-studio/
+
+# -------------- Manually export --------------
+echo "Need to manually export these configs:"
+echo "  - Tabliss settings"
+echo "  - UBlock filters"

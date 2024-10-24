@@ -1,49 +1,268 @@
 <application>
   <component name="ActionsLocalSummary">
     <e n="$Copy">
-      <i c="1" l="1728207468600" />
+      <i c="4" l="1729507088169" />
+    </e>
+    <e n="$Delete">
+      <i c="11" l="1729444494906" />
+    </e>
+    <e n="$Redo">
+      <i c="1" l="1729368244071" />
+    </e>
+    <e n="$SelectAll">
+      <i c="13" l="1729507880028" />
     </e>
     <e n="$Undo">
-      <i c="5" l="1728206427277" />
+      <i c="428" l="1729508218788" />
+    </e>
+    <e n="ActivateTODOToolWindow">
+      <i c="1" l="1729453093325" />
+    </e>
+    <e n="ActivateTerminalToolWindow">
+      <i c="17" l="1729508770876" />
     </e>
     <e n="Android.RunAndroidSdkManager">
-      <i c="3" l="1728211104240" />
+      <i c="7" l="1729438266551" />
+    </e>
+    <e n="Back">
+      <i c="2" l="1729507546403" />
+    </e>
+    <e n="ChooseRuntime">
+      <i c="2" d="2" l="1729453922090" k="1729453922090" />
+    </e>
+    <e n="CodeCompletion">
+      <i c="168" l="1729504450833" />
+    </e>
+    <e n="ColoredHeaderAction">
+      <i c="2" l="1729431734222" />
+    </e>
+    <e n="CommentByLineComment">
+      <i c="135" l="1729507760219" />
+    </e>
+    <e n="Dart.DartStyle">
+      <i c="7" l="1729494809344" />
+    </e>
+    <e n="Dart.NewDartFile">
+      <i c="3" l="1729433502531" />
     </e>
     <e n="EditCustomProperties">
       <i c="1" l="1728205354092" />
     </e>
     <e n="EditorBackSpace">
-      <i c="21" l="1728206431388" />
+      <i c="1455" l="1729510504397" />
+    </e>
+    <e n="EditorChooseLookupItem">
+      <i c="670" l="1729508269476" />
+    </e>
+    <e n="EditorCopy">
+      <i c="146" l="1729507880684" />
+    </e>
+    <e n="EditorCut">
+      <i c="80" l="1729507674563" />
+    </e>
+    <e n="EditorDelete">
+      <i c="51" l="1729505431593" />
     </e>
     <e n="EditorDeleteToWordEnd">
-      <i c="2" l="1728206422365" />
+      <i c="38" l="1729507632956" />
+    </e>
+    <e n="EditorDeleteToWordStart">
+      <i c="189" l="1729510378149" />
     </e>
     <e n="EditorDown">
-      <i c="2" l="1728206423453" />
+      <i c="917" l="1729508274644" />
+    </e>
+    <e n="EditorDownWithSelection">
+      <i c="2" l="1729445456010" />
+    </e>
+    <e n="EditorEnter">
+      <i c="455" l="1729508765212" />
+    </e>
+    <e n="EditorEscape">
+      <i c="5" l="1729505427740" />
     </e>
     <e n="EditorLeft">
-      <i c="1" l="1728206417280" />
+      <i c="270" l="1729508257260" />
+    </e>
+    <e n="EditorLeftWithSelection">
+      <i c="4" l="1729452073886" />
+    </e>
+    <e n="EditorNextWord">
+      <i c="291" l="1729510379357" />
+    </e>
+    <e n="EditorNextWordWithSelection">
+      <i c="13" l="1729508212156" />
+    </e>
+    <e n="EditorPaste">
+      <i c="215" l="1729508756483" />
+    </e>
+    <e n="EditorPreviousWord">
+      <i c="221" l="1729510377629" />
+    </e>
+    <e n="EditorPreviousWordWithSelection">
+      <i c="30" l="1729508211684" />
+    </e>
+    <e n="EditorRight">
+      <i c="476" l="1729508276060" />
     </e>
     <e n="EditorSelectWord">
       <i c="1" l="1728206378624" />
     </e>
+    <e n="EditorStartNewLine">
+      <i c="1" l="1729355062296" />
+    </e>
+    <e n="EditorTab">
+      <i c="28" l="1729508273868" />
+    </e>
+    <e n="EditorTabsEntryPoint">
+      <i c="2" l="1729365798263" />
+    </e>
+    <e n="EditorToggleInsertState">
+      <i c="2" l="1729269766700" />
+    </e>
     <e n="EditorUp">
-      <i c="2" l="1728206419374" />
+      <i c="370" l="1729508275020" />
+    </e>
+    <e n="Find">
+      <i c="4" l="1729505424474" />
+    </e>
+    <e n="FindInPath">
+      <i c="10" l="1729495344362" />
+    </e>
+    <e n="Flutter.Toolbar.ReloadAction">
+      <i c="395" l="1729453036559" />
+    </e>
+    <e n="Flutter.Toolbar.RestartAction">
+      <i c="21" l="1729446406187" />
+    </e>
+    <e n="Git.Commit.And.Push.Executor">
+      <i c="2" l="1729510508197" />
+    </e>
+    <e n="Git.Init">
+      <i c="1" l="1729453068504" />
+    </e>
+    <e n="GotoAction">
+      <i c="2" l="1729453920488" />
+    </e>
+    <e n="GotoDeclaration">
+      <i c="30" l="1729507826674" />
+    </e>
+    <e n="GotoFile">
+      <i c="4" l="1729508697260" />
+    </e>
+    <e n="HideSideWindows">
+      <i c="1" l="1729445699043" />
+    </e>
+    <e n="MaterialLiteTheme.Menu">
+      <i c="2" l="1729431750154" />
+    </e>
+    <e n="MoreRunToolbarActions">
+      <i c="1" l="1729354944815" />
+    </e>
+    <e n="MoveLineDown">
+      <i c="7" l="1729507550739" />
+    </e>
+    <e n="MoveLineUp">
+      <i c="18" l="1729507551660" />
+    </e>
+    <e n="NewDir">
+      <i c="8" l="1729444605501" />
+    </e>
+    <e n="NewFile">
+      <i c="2" l="1729282917870" />
+    </e>
+    <e n="NextTemplateVariable">
+      <i c="6" l="1729494664362" />
+    </e>
+    <e n="OpenFile">
+      <i c="2" l="1729495812408" />
+    </e>
+    <e n="QuickDocCopy">
+      <i c="1" l="1729431952406" />
+    </e>
+    <e n="QuickJavaDoc">
+      <i c="1" l="1729228009359" />
+    </e>
+    <e n="RedesignedRunConfigurationSelector">
+      <i c="4" l="1729443393953" />
+    </e>
+    <e n="RenameElement">
+      <i c="20" l="1729505405683" />
+    </e>
+    <e n="ReopenClosedTab">
+      <i c="2" l="1729452133143" />
+    </e>
+    <e n="RevealIn">
+      <i c="2" l="1729498888090" />
     </e>
     <e n="Run">
-      <i c="4" l="1728211080705" />
+      <i c="98" l="1729508295529" />
+    </e>
+    <e n="RunAnything">
+      <i c="2" l="1729452475655" />
     </e>
     <e n="SaveAll">
-      <i c="4" l="1728206427748" />
+      <i c="9" l="1729266460722" />
+    </e>
+    <e n="SaveDocument">
+      <i c="627" l="1729510413093" />
+    </e>
+    <e n="ScrollPane-unitScrollUp">
+      <i c="1" l="1729452100655" />
+    </e>
+    <e n="SearchEverywhere">
+      <i c="1" l="1729452236982" />
+    </e>
+    <e n="SelectNextOccurrence">
+      <i c="1" l="1729410463348" />
     </e>
     <e n="SettingsEntryPoint">
-      <i c="6" l="1728211108200" />
+      <i c="21" l="1729495647959" />
+    </e>
+    <e n="ShowIntentionActions">
+      <i c="95" l="1729508279486" />
+    </e>
+    <e n="ShowPopupMenu">
+      <i c="6" l="1729510376118" />
     </e>
     <e n="ShowProjectStructureSettings">
-      <i c="3" l="1728211109008" />
+      <i c="9" l="1729438273881" />
+    </e>
+    <e n="ShowSettings">
+      <i c="47" l="1729502497272" />
     </e>
     <e n="Stop">
-      <i c="1" l="1728211123905" />
+      <i c="48" l="1729508283633" />
+    </e>
+    <e n="Switcher">
+      <i c="6" l="1729284093598" />
+    </e>
+    <e n="TabList">
+      <i c="1" l="1729358815634" />
+    </e>
+    <e n="TextEditorWithPreview.Layout.PreviewOnly">
+      <i c="2" l="1729453712872" />
+    </e>
+    <e n="ToggleLineBreakpoint">
+      <i c="2" l="1729357378371" />
+    </e>
+    <e n="Tree-selectNext">
+      <i c="1" l="1729438609068" />
+    </e>
+    <e n="Tree-selectNextExtendSelection">
+      <i c="10" l="1729438610932" />
+    </e>
+    <e n="Tree-selectPreviousExtendSelection">
+      <i c="1" l="1729438608453" />
+    </e>
+    <e n="Vcs.Log.ShowSettingsAction">
+      <i c="1" l="1729453180392" />
+    </e>
+    <e n="Vcs.Log.ToolWindow.TabActions.DropDown">
+      <i c="1" l="1729453178315" />
+    </e>
+    <e n="Vcs.Push">
+      <i c="2" l="1729510450421" />
     </e>
     <e n="WelcomeScreen.CreateNewProject">
       <i c="1" l="1728205279543" />
@@ -51,35 +270,122 @@
     <e n="WelcomeScreen.RunAndroidSdkManager">
       <i c="1" l="1728205697078" />
     </e>
+    <e n="com.android.build.output.LongDownloadsNotifier$notifyIfTimeElapsed$1$1">
+      <i c="1" l="1729495873121" />
+    </e>
+    <e n="com.android.tools.adtui.actions.DropDownAction">
+      <i c="1" l="1729436444256" />
+    </e>
+    <e n="com.android.tools.idea.devicemanagerv2.DeleteAction">
+      <i c="1" l="1729436435006" />
+    </e>
+    <e n="com.android.tools.idea.devicemanagerv2.DeviceManagerPanel$toAnAction$2">
+      <i c="1" l="1729436446098" />
+    </e>
     <e n="com.android.tools.idea.devicemanagerv2.EditDeviceAction">
-      <i c="1" l="1728206446084" />
+      <i c="2" l="1729266781764" />
+    </e>
+    <e n="com.android.tools.idea.devicemanagerv2.ViewDetailsAction">
+      <i c="1" l="1729436428660" />
+    </e>
+    <e n="com.android.tools.idea.gradle.project.upgrade.ProjectUpgradeNotification$1">
+      <i c="1" l="1729495985941" />
+    </e>
+    <e n="com.intellij.codeInsight.daemon.NavigateAction">
+      <i c="1" l="1729368884870" />
+    </e>
+    <e n="com.intellij.codeInsight.daemon.impl.DaemonTooltipWithActionRenderer$addActionsRow$2">
+      <i c="5" l="1729452347112" />
+    </e>
+    <e n="com.intellij.find.SearchReplaceComponent$CloseAction">
+      <i c="2" l="1729409183908" />
+    </e>
+    <e n="com.intellij.find.impl.FindPopupPanel$MyEnterAction">
+      <i c="3" l="1729495346274" />
+    </e>
+    <e n="com.intellij.ide.plugins.PluginManagerConfigurable$MarketplaceSortByAction">
+      <i c="1" l="1729365368922" />
+    </e>
+    <e n="com.intellij.ide.plugins.PluginManagerMain$3">
+      <i c="1" l="1729184846154" />
+    </e>
+    <e n="com.intellij.ide.plugins.newui.TabbedPaneHeaderComponent$3">
+      <i c="1" l="1729453817215" />
+    </e>
+    <e n="com.intellij.notification.NotificationAction$Simple">
+      <i c="14" l="1729510521526" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.EmptyAction">
+      <i c="5" l="1729284093662" />
     </e>
     <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
-      <i c="1" l="1728206436399" />
+      <i c="33" l="1729507133926" />
+    </e>
+    <e n="com.intellij.openapi.keymap.impl.ui.KeymapPanel$AddKeyboardShortcutAction">
+      <i c="1" l="1729266549280" />
+    </e>
+    <e n="com.intellij.openapi.keymap.impl.ui.KeymapPanel$FindByShortcutAction">
+      <i c="3" l="1729266717984" />
+    </e>
+    <e n="com.intellij.openapi.keymap.impl.ui.KeymapPanel$RemoveShortcutAction">
+      <i c="4" l="1729266724710" />
     </e>
     <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
-      <i c="1" l="1728195727616" />
+      <i c="5" l="1729452476711" />
+    </e>
+    <e n="com.intellij.openapi.roots.ui.configuration.projectRoot.JdkListConfigurable$AddSdkAction">
+      <i c="1" l="1729438276045" />
+    </e>
+    <e n="com.intellij.openapi.ui.DialogWrapper$5">
+      <i c="2" l="1729228013907" />
+    </e>
+    <e n="com.intellij.openapi.updateSettings.impl.UpdateSettingsEntryPointActionProvider$3">
+      <i c="1" l="1729184838216" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.DockToolWindowAction">
+      <i c="2" l="1729507293013" />
     </e>
     <e n="com.intellij.openapi.wm.impl.SquareAnActionButton">
-      <i c="2" l="1728211065180" />
+      <i c="117" l="1729510489769" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.customFrameDecorations.header.toolbar.MainMenuButton$ShowMenuAction">
+      <i c="10" l="1729495811268" />
     </e>
     <e n="com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenComponentFactory$4">
       <i c="2" l="1728205638141" />
     </e>
+    <e n="com.intellij.openapi.wm.impl.welcomeScreen.projectActions.ChangeProjectColorAction">
+      <i c="2" l="1729431758668" />
+    </e>
+    <e n="com.intellij.toolWindow.ShowMoreToolWindowsAction">
+      <i c="3" l="1729453717857" />
+    </e>
     <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
-      <i c="1" l="1728206382663" />
+      <i c="30" l="1729508741169" />
+    </e>
+    <e n="com.intellij.ui.ScrollingUtil$ListMoveDownAction">
+      <i c="1" l="1729441241642" />
+    </e>
+    <e n="editRunConfigurations">
+      <i c="1" l="1729435982411" />
+    </e>
+    <e n="flutter.NewProject">
+      <i c="2" l="1729443663647" />
     </e>
     <e n="flutter.NewProject.welcome">
-      <i c="3" l="1728206196761" />
+      <i c="6" l="1729438737017" />
     </e>
     <e n="io.flutter.FlutterInitializer$3">
       <i c="1" l="1728206370387" />
     </e>
+    <e n="io.flutter.actions.DeviceSelectorAction$SelectDeviceAction">
+      <i c="2" l="1729436804947" />
+    </e>
     <e n="io.flutter.actions.OpenEmulatorAction">
-      <i c="1" l="1728211070923" />
+      <i c="15" l="1729502545807" />
     </e>
     <e n="io.flutter.actions.RestartFlutterDaemonAction">
-      <i c="2" l="1728211062441" />
+      <i c="15" l="1729502433167" />
     </e>
   </component>
 </application>

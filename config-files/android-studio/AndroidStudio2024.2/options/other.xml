@@ -1,46 +1,73 @@
 <application>
-  <component name="FileEditorProviderManager"><![CDATA[{}]]></component>
+  <component name="ActionHistoryManager">
+    <ids>
+      <option value="ChooseRuntime" />
+    </ids>
+  </component>
+  <component name="FileEditorProviderManager">{}</component>
   <component name="NotRoamableUiSettings">
-    <option name="fontSize" value="15.0" />
+    <option name="fontFace" value="Inter" />
+    <option name="fontSize" value="13.0" />
     <option name="presentationModeIdeScale" value="1.75" />
+    <option name="overrideLafFonts" value="true" />
   </component>
   <component name="PropertyService"><![CDATA[{
   "keyToString": {
-    "FLUTTER_LAST_SURVEY_CONTENT_CHECK_KEY": "1728206355053",
-    "LAST_CALCULATED_COLOR_INDEX_KEY": "8",
+    "ColorChooser.RecentColors": "169-190-212-171",
+    "FLUTTER_LAST_SURVEY_CONTENT_CHECK_KEY": "1729498741649",
+    "IdeErrorsDialog.LAST_OK_ACTION": "REPORT_AND_CLEAR_ALL",
+    "InstalledPluginsSearchHistory": "cons\nconsi\nmarkd\nmarkdw\nmarkdwo",
+    "KEYMAP": "markdown\nnew file",
+    "LAST_CALCULATED_COLOR_INDEX_KEY": "4",
+    "MarketplacePluginsSearchHistory": "todo\n/tag:Theme\n/tag:Theme /sortBy:downloads\n/tag:Keymap",
+    "PluginConfigurable.selectionTab": "1",
+    "ProjectStructure.SecondLevelElements": "0.2931483",
     "RunOnceActivity.VFSInitializationConditionsToFusReporter": "true",
     "RunOnceActivity.cidr.test.framework.showIndexingAsTask": "true",
     "RunOnceActivity.cidr.test.roots.only": "true",
     "SAVED_ANDROID_NPW_LANGUAGE": "Kotlin",
+    "SettingsSearchHistory": "mark modified\nasterisk\nupdate\nconsole font\nfont",
     "android.sdk.path": "/home/kumar/Android/Sdk",
     "ask.about.ctrl.y.shortcut.v2": "true",
+    "build.toolwindow.Sync.selection.state": "com.intellij.build.BuildTreeConsoleView",
     "com.intellij.ide.projectWizard.generators.JavaNewProjectWizard$Step.selectedStep": "IntelliJ",
+    "com.intellij.openapi.roots.ui.configuration.TabbedModuleEditor.selectedEditor": "Sources",
     "defaultJdkConfigured": "true",
-    "experimental.ui.used.version": "242.21829.142.2421.12409432",
+    "enter_selection_count": "5",
+    "experimental.ui.used.version": "242.23339.11.2421.12483815",
     "fileTypeChangedCounter": "1",
-    "fontSizeToResetConsole": "13.0",
-    "fontSizeToResetEditor": "13.0",
+    "fontSizeToResetConsole": "12.0",
+    "fontSizeToResetEditor": "12.0",
+    "got.it.tooltip.new.terminal.promotion.242": "1",
     "ide.memory.adjusted": "true",
     "input.method.disabler.auto": "true",
     "input.method.disabler.muted": "true",
-    "installed.kotlin.plugin.version": "242.21829.142.2421.12409432-AS",
+    "installed.kotlin.plugin.version": "242.23339.11.2421.12483815-AS",
     "io.flutter.analytics.clientId": "17e7dec7-44c1-42ee-9da6-3cf0d485d007",
     "io.flutter.analytics.optOut": "true",
     "io.flutter.analytics.toastShown": "true",
     "io.flutter.console.preferencesSet": "true",
     "jdk.selected.JAVA_MODULE": "Android API 34, extension level 7 Platform",
+    "kotlin.updates.whats.new.shown.for": "1.9.24",
     "last_opened_file_path": "/home/kumar/FlutterSdk/flutter",
     "migrated.non.roamable.values.from.general.settings": "true",
-    "previousColorScheme": "_@user_Dark",
+    "newly.installed.api.level": "35",
+    "previousColorScheme": "_@user_Material Deep Ocean",
     "project.wizard.group": "JAVA_MODULE_io.flutter.module.FlutterModuleBuilder",
-    "registry.to.advanced.settings.migration.build": "AI-242.21829.142.2421.12409432"
+    "registry.to.advanced.settings.migration.build": "AI-242.23339.11.2421.12483815",
+    "selected.color.option.type": "org.gradle.declarative.NULL",
+    "settings.code.style.selected.tab.JAVA": "Wrapping and Braces"
   },
   "keyToStringList": {
     "FLUTTER_SDK_KNOWN_PATHS": [
-      "/home/kumar/FlutterSdk/flutter"
+      "/home/kumar/FlutterSdk/flutter",
+      "/home/kumar/flutter_3_3_10/flutter"
     ],
     "file.chooser.recent.files": [
-      "/home/kumar/FlutterSdk/flutter"
+      "/home/kumar/StudioProjects/assignment/android",
+      "/home/kumar/StudioProjects/assignment",
+      "/home/kumar/FlutterSdk/flutter",
+      "/run/media/kumar/Crucial X6/BACKUPS/Laptop_BW/StudioProjects/bw-ayuvi"
     ],
     "fileTypeDetectors": [
       "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",

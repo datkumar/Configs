@@ -7,12 +7,12 @@
     </option>
   </component>
   <component name="FileEditorManager">
-    <leaf ideFingerprint="3bsp5jkjco8db" SIDE_TABS_SIZE_LIMIT_KEY="-1">
+    <leaf ideFingerprint="qdjk6onopcm2" SIDE_TABS_SIZE_LIMIT_KEY="-1">
       <file current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider editor-type-id="text-editor" selected="true">
-            <state relative-caret-position="716">
-              <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
+            <state relative-caret-position="222">
+              <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -23,18 +23,23 @@
   <component name="FileTypeUsageLocalSummary"><![CDATA[{
   "data": {
     "Markdown": {
-      "usageCount": 1,
-      "lastUsed": 1728206354295
+      "usageCount": 3,
+      "lastUsed": 1729443581477
     },
     "Dart": {
-      "usageCount": 5,
-      "lastUsed": 1728840630143
+      "usageCount": 13,
+      "lastUsed": 1729443659775
+    },
+    "YAML": {
+      "usageCount": 6,
+      "lastUsed": 1729265936079
     }
   }
 }]]></component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/lib/main.dart" />
+      <option value="$PROJECT_DIR$/pubspec.yaml" />
     </changedPaths>
   </component>
   <component name="IgnoredFileRootStore">
@@ -46,10 +51,13 @@
   </component>
   <component name="LanguageUsageStatistics">
     <language id="Dart">
-      <summary usageCount="5" lastUsage="1728840630145" />
+      <summary usageCount="13" lastUsage="1729443659777" />
     </language>
     <language id="Markdown">
-      <summary usageCount="1" lastUsage="1728206354295" />
+      <summary usageCount="3" lastUsage="1729443581479" />
+    </language>
+    <language id="yaml">
+      <summary usageCount="6" lastUsage="1729265936079" />
     </language>
   </component>
   <component name="ProjectView">
@@ -220,7 +228,7 @@
             </presentation>
             <presentation>
               <attributes />
-              <data iconPath="expui/fileTypes/scratches.svg" iconPlugin="com.intellij" isLeaf="true" text="Scratches and Consoles" />
+              <data iconPath="expui/fileTypes/scratches.svg" iconPlugin="com.intellij" isLeaf="false" text="Scratches and Consoles" />
               <item name="Scratches and Consoles" type="b85a3e1f:ScratchTreeStructureProvider$MyProjectNode" />
             </presentation>
           </presentation>
@@ -249,62 +257,96 @@
       <window_info anchor="bottom" id="Problems View" order="3" />
       <window_info anchor="bottom" id="Logcat" order="4" />
       <window_info anchor="bottom" id="App Quality Insights" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" show_stripe_button="false" weight="0.33540076" />
-      <window_info anchor="bottom" id="Build" order="7" />
+      <window_info anchor="bottom" id="Run" order="6" show_stripe_button="false" weight="0.23234734" />
+      <window_info anchor="bottom" id="Messages" order="7" show_stripe_button="false" weight="0.26383588" />
+      <window_info anchor="bottom" id="Build" order="8" />
       <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
       <window_info anchor="right" id="Gradle" order="1" weight="0.25" />
       <window_info anchor="right" id="Device Manager" order="2" weight="0.25" />
       <window_info anchor="right" id="Device Manager 2" order="3" weight="0.33359376" />
-      <window_info anchor="right" id="Running Devices" order="4" visible="true" weight="0.33359376" />
+      <window_info anchor="right" id="Running Devices" order="4" visible="true" weight="0.27578124" />
       <window_info anchor="right" id="StudioBot" order="5" weight="0.25" />
       <window_info anchor="right" id="Flutter DevTools" order="6" />
-      <window_info anchor="right" id="Assistant" order="7" weight="0.2705729" />
+      <window_info anchor="right" id="Assistant" order="7" weight="0.33359376" />
       <window_info anchor="right" id="Flutter DevTools Extensions" order="8" />
       <window_info anchor="right" id="Flutter Deep Links" order="9" />
-      <unified_weights bottom="0.33540076" left="0.18567708" right="0.33359376" />
+      <unified_weights bottom="0.23234734" left="0.18567708" right="0.27578124" />
     </layoutV2>
     <recentWindows>
       <value>Running Devices</value>
       <value>Run</value>
+      <value>Messages</value>
       <value>Project</value>
-      <value>Device Manager 2</value>
       <value>Assistant</value>
+      <value>Device Manager 2</value>
     </recentWindows>
   </component>
   <component name="WindowStateProjectService">
-    <state x="743" y="312" width="424" height="495" key="FileChooserDialogImpl" timestamp="1728211122284">
+    <state x="555" y="241" width="800" height="637" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1729184840844">
       <screen x="0" y="32" width="1920" height="1048" />
     </state>
-    <state x="743" y="312" width="424" height="495" key="FileChooserDialogImpl/0.32.1920.1048@0.32.1920.1048" timestamp="1728211122284" />
-    <state width="1838" height="308" key="GridCell.Tab.0.bottom" timestamp="1728211131237">
+    <state x="555" y="241" width="800" height="637" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.32.1920.1048@0.32.1920.1048" timestamp="1729184840844" />
+    <state x="743" y="312" width="424" height="495" key="FileChooserDialogImpl" timestamp="1729443692742">
       <screen x="0" y="32" width="1920" height="1048" />
     </state>
-    <state width="1838" height="308" key="GridCell.Tab.0.bottom/0.32.1920.1048@0.32.1920.1048" timestamp="1728211131237" />
-    <state width="1838" height="308" key="GridCell.Tab.0.center" timestamp="1728211131237">
+    <state x="743" y="312" width="424" height="495" key="FileChooserDialogImpl/0.32.1920.1048@0.32.1920.1048" timestamp="1729443692742" />
+    <state width="1838" height="200" key="GridCell.Tab.0.bottom" timestamp="1729443655096">
       <screen x="0" y="32" width="1920" height="1048" />
     </state>
-    <state width="1838" height="308" key="GridCell.Tab.0.center/0.32.1920.1048@0.32.1920.1048" timestamp="1728211131237" />
-    <state width="1838" height="308" key="GridCell.Tab.0.left" timestamp="1728211131237">
+    <state width="1838" height="200" key="GridCell.Tab.0.bottom/0.32.1920.1048@0.32.1920.1048" timestamp="1729443655096" />
+    <state width="1838" height="200" key="GridCell.Tab.0.center" timestamp="1729443655096">
       <screen x="0" y="32" width="1920" height="1048" />
     </state>
-    <state width="1838" height="308" key="GridCell.Tab.0.left/0.32.1920.1048@0.32.1920.1048" timestamp="1728211131237" />
-    <state width="1838" height="308" key="GridCell.Tab.0.right" timestamp="1728211131237">
+    <state width="1838" height="200" key="GridCell.Tab.0.center/0.32.1920.1048@0.32.1920.1048" timestamp="1729443655096" />
+    <state width="1838" height="200" key="GridCell.Tab.0.left" timestamp="1729443655096">
       <screen x="0" y="32" width="1920" height="1048" />
     </state>
-    <state width="1838" height="308" key="GridCell.Tab.0.right/0.32.1920.1048@0.32.1920.1048" timestamp="1728211131237" />
+    <state width="1838" height="200" key="GridCell.Tab.0.left/0.32.1920.1048@0.32.1920.1048" timestamp="1729443655096" />
+    <state width="1838" height="200" key="GridCell.Tab.0.right" timestamp="1729443655096">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1838" height="200" key="GridCell.Tab.0.right/0.32.1920.1048@0.32.1920.1048" timestamp="1729443655096" />
+    <state x="195" y="98" width="1483" height="727" key="IDE.errors.dialog" timestamp="1729443534559">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="195" y="98" width="1483" height="727" key="IDE.errors.dialog/0.32.1920.1048@0.32.1920.1048" timestamp="1729443534559" />
     <state x="464" y="191" width="992" height="737" key="SettingsEditor" timestamp="1728211123231">
       <screen x="0" y="32" width="1920" height="1048" />
     </state>
     <state x="464" y="191" width="992" height="737" key="SettingsEditor/0.32.1920.1048@0.32.1920.1048" timestamp="1728211123231" />
+    <state x="387" y="178" width="800" height="713" key="new project wizard" timestamp="1729443704595">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="387" y="178" width="800" height="713" key="new project wizard/0.32.1920.1048@0.32.1920.1048" timestamp="1729443704595" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$USER_HOME$/FlutterSdk/flutter/packages/flutter/lib/src/widgets/binding.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="1396" column="5" selection-start-line="1396" selection-start-column="5" selection-end-line="1396" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analysis_options.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/bug-report_1.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
+        <state relative-caret-position="222">
+          <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
         </state>
       </provider>
     </entry>

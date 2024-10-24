@@ -31,6 +31,7 @@
   "editor.comments.insertSpace": true,
   "cSpell.diagnosticLevel": "Hint",
   "[c][cpp][makefile]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
     "editor.insertSpaces": false,
     "editor.tabSize": 4
   },
@@ -51,12 +52,10 @@
     "editor.defaultFormatter": "redhat.java"
   },
   "redhat.telemetry.enabled": false,
-  // Markdown
-  "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
-  "markdown-preview-enhanced.previewTheme": "github-dark.css",
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
   "markdownlint.config": {
     "no-inline-html": false
   },
@@ -99,5 +98,7 @@
     "terminal.ansiBrightMagenta": "#c00a7a",
     "terminal.ansiBrightCyan": "#3cede4",
     "terminal.ansiBrightWhite": "#ffffff"
-  }
+  },
+  "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
+  "markdown-preview-enhanced.mermaidTheme": "dark"
 }

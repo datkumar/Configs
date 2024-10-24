@@ -2,6 +2,8 @@ i18n.locale
 
 ide.experimental.ui
 true
+ide.experimental.ui.inter.font
+false
 idea.plugins.compatible.build
 
 moved.to.new.ui

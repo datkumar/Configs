@@ -1,17 +1,26 @@
 # GNOME 👣
 
-- GNOME Tweaks:
-  > `sudo dnf install gnome-tweaks`
-- Extensions => From the Software store
-- [GNOME Shell Extensions](https://extensions.gnome.org/)
-- [Gnome-look](https://www.gnome-look.org/s/Gnome/browse/)
+## GNOME Shell Extensions
 
-## GNOME Extensions List:
+- Visit [their site](https://extensions.gnome.org/). Install and enable the GNOME Shell integration from your browser
+- You can view [my list of installed extensions](../config-files/gnome-shell-extensions.txt)
+- Also install [Extension Manager](https://flathub.org/apps/com.mattjakeman.ExtensionManager) from Flathub to manage these
 
-- [**Dash to Dock**](https://extensions.gnome.org/extension/307/dash-to-dock/)
-- [**Net Speed Simplified**](https://extensions.gnome.org/extension/3724/net-speed-simplified/)
-- [**Vitals**](https://extensions.gnome.org/extension/1460/vitals/)
-- [**Desktop Icons NG**](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)
-- [**Bluetooth Quick Connect**](https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/)
+## GNOME Tweaks
 
-> Set Legacy window theme as Adwaita Dark
+```sh
+sudo dnf install gnome-tweaks
+```
+
+### Adwaita Theme port for GTK3
+
+- Clone the repo [adw-gtk3](https://github.com/lassekongo83/adw-gtk3)
+- Extract the two folders `adw-gtk3`, `adw-gtk3-dark` into `~/.local/share/themes`
+- Also recommended to install the flatpak themes
+  ```sh
+  flatpak install org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
+  ```
+
+## GNOME-Look
+
+Visit [gnome-look.org](https://www.gnome-look.org/browse/) to browse system themes, icon-packs, cursors, GRUB themes etc. (might have to debug to get it working)

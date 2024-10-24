@@ -21,3 +21,7 @@ https://cloud.mongodb.com
 https://drive.google.com   
 https://hashnode.com       
 https://hackernoon.com     
+https://dart.dev           
+https://nextjs.org         
+https://pub.dev            
+https://api.flutter.dev    

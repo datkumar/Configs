@@ -1,0 +1,218 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="android" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="AndroidView" proportions="" version="1" />
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="android" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/kumar/StudioProjects/assignment/android}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+          <presentation>
+            <attributes />
+            <data iconPath="expui/toolwindows/project.svg" iconPlugin="com.intellij" isLeaf="false" text="android" />
+            <item name="android" type="b2602c69:ProjectViewProjectNode" />
+            <presentation>
+              <attributes />
+              <data iconPath="expui/nodes/moduleGroup.svg" iconPlugin="com.intellij" isLeaf="false" text="android" />
+              <item name="android" type="9c53a853:ProjectViewModuleGroupNode" />
+            </presentation>
+            <presentation>
+              <attributes>
+                <map>
+                  <entry key="filePath" value="$PROJECT_DIR$" />
+                </map>
+              </attributes>
+              <data iconPath="expui/nodes/module.svg" iconPlugin="com.intellij" isLeaf="false" text="android" />
+              <item name="dir{file:///home/kumar/StudioProjects/assignment/android}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.gradle" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/excludeRoot.svg" iconPlugin="com.intellij" isLeaf="false" text=".gradle" />
+                <item name="dir{file:///home/kumar/StudioProjects/assignment/android/.gradle}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.idea" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text=".idea" />
+                <item name="dir{file:///home/kumar/StudioProjects/assignment/android/.idea}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/app" />
+                  </map>
+                </attributes>
+                <data iconPath="intui/icons/shell/filetree/android-module.svg" iconPlugin="org.jetbrains.android" isLeaf="false" text="app" />
+                <item name="dir{file:///home/kumar/StudioProjects/assignment/android/app}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/gradle" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="gradle" />
+                <item name="dir{file:///home/kumar/StudioProjects/assignment/android/gradle}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.gitignore" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/ignored.svg" iconPlugin="com.intellij" isLeaf="true" text=".gitignore" />
+                <item name=".gitignore" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/assignment_android.iml" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/ideaModule.svg" iconPlugin="com.intellij" isLeaf="true" text="assignment_android.iml" />
+                <item name="assignment_android.iml" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/build.gradle" />
+                  </map>
+                </attributes>
+                <data iconPath="icons/expui/gradle.svg" iconPlugin="com.intellij.gradle" isLeaf="true" text="build.gradle" />
+                <item name="build.gradle" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/gradle.properties" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/properties.svg" iconPlugin="com.intellij" isLeaf="true" text="gradle.properties" />
+                <item name="gradle.properties" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/gradlew" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/shell.svg" iconPlugin="com.intellij" isLeaf="true" text="gradlew" />
+                <item name="gradlew" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/gradlew.bat" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/text.svg" iconPlugin="com.intellij" isLeaf="true" text="gradlew.bat" />
+                <item name="gradlew.bat" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/local.properties" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/properties.svg" iconPlugin="com.intellij" isLeaf="true" text="local.properties" />
+                <item name="local.properties" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/settings.gradle" />
+                  </map>
+                </attributes>
+                <data iconPath="icons/expui/gradle.svg" iconPlugin="com.intellij.gradle" isLeaf="true" text="settings.gradle" />
+                <item name="settings.gradle" type="ab9368bb:PsiFileNode" />
+              </presentation>
+            </presentation>
+            <presentation>
+              <attributes>
+                <map>
+                  <entry key="filePath" value="$USER_HOME$/FlutterSdk/flutter/packages/flutter_tools/gradle" />
+                </map>
+              </attributes>
+              <data iconPath="expui/nodes/module.svg" iconPlugin="com.intellij" isLeaf="false" text="gradle" />
+              <item name="dir{file:///home/kumar/FlutterSdk/flutter/packages/flutter_tools/gradle}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </presentation>
+            <presentation>
+              <attributes />
+              <data iconPath="expui/nodes/library.svg" iconPlugin="com.intellij" isLeaf="false" text="External Libraries" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </presentation>
+            <presentation>
+              <attributes />
+              <data iconPath="expui/fileTypes/scratches.svg" iconPlugin="com.intellij" isLeaf="false" text="Scratches and Consoles" />
+              <item name="Scratches and Consoles" type="b85a3e1f:ScratchTreeStructureProvider$MyProjectNode" />
+            </presentation>
+          </presentation>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="enableVisualFormatting" value="false" />
+  </component>
+  <component name="ToolWindowManager">
+    <layoutV2>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2408854" />
+      <window_info id="Commit" order="1" weight="0.25" />
+      <window_info id="Resources Explorer" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Problems" order="2" />
+      <window_info anchor="bottom" id="Problems View" order="3" />
+      <window_info anchor="bottom" id="Logcat" order="4" />
+      <window_info anchor="bottom" id="App Quality Insights" order="5" />
+      <window_info anchor="bottom" id="Build" order="6" weight="0.74475193" />
+      <window_info anchor="bottom" id="Upgrade Assistant" order="6" visible="true" weight="0.32967556" />
+      <window_info active="true" anchor="right" id="Notifications" order="0" visible="true" weight="0.32994792" />
+      <window_info anchor="right" id="Gradle" order="1" weight="0.25" />
+      <window_info anchor="right" id="Device Manager" order="2" weight="0.25" />
+      <window_info anchor="right" id="Device Manager 2" order="3" weight="0.25" />
+      <window_info anchor="right" id="Running Devices" order="4" weight="0.25" />
+      <window_info anchor="right" id="StudioBot" order="5" weight="0.25" />
+      <unified_weights bottom="0.32967556" left="0.2408854" right="0.32994792" />
+    </layoutV2>
+    <recentWindows>
+      <value>Notifications</value>
+      <value>Upgrade Assistant</value>
+      <value>Build</value>
+      <value>Project</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1419" y="900" width="480" height="139" key="ProcessPopupWindow" timestamp="1729496120184">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="1419" y="900" width="480" height="139" key="ProcessPopupWindow/0.32.1920.1048@0.32.1920.1048" timestamp="1729496120184" />
+  </component>
+</project>

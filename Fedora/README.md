@@ -1,64 +1,158 @@
 # Fedora <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fedora_icon_%282021%29.svg/2089px-Fedora_icon_%282021%29.svg.png' width="30">
 
-- Fedora developer guides: [Languages & Databases](https://developer.fedoraproject.org/tech.html) , [Tools](https://developer.fedoraproject.org/tools.html)
+## Post-Install steps for Fedora
 
-- Text Editor is `gnome-text-editor` instead of `gedit`
+Refer below TechHut video:
 
+<iframe width="480" height="270" src="https://www.youtube.com/embed/RrRpXs2pkzg?si=yburF7eFUNdkZRwx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### DNF
+
+- `dnf` is the package manager for Fedora. On a fresh install, DNF might seem slow
+- Edit options in the `/etc/dnf/dnf.conf` file to make it faster. You can refer [my DNF config](../config-files/dnf.conf) file as well as the [DNF Configuration docs](https://dnf.readthedocs.io/en/latest/conf_ref.html) to see all available options
+
+### RPM Fusion
+
+Follow the instructions on [RPM Fusion Configuration page](https://rpmfusion.org/Configuration#Important_notes) to enable RPM Fusion repositories on Fedora
+
+```sh
+# Enable access to both the free and the nonfree repository
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+# On Fedora, the default is openh264, so we have to explicitly enable
+sudo dnf config-manager --enable fedora-cisco-openh264
+
+sudo dnf group update core
+```
+
+### Multimedia codecs
+
+- You may need to install few media codecs that weren't present in the minimal free and open sources codecs in the fresh installation
+- Refer the [Fedora docs](https://docs.fedoraproject.org/en-US/quick-docs/installing-plugins-for-playing-movies-and-music/) as well as the [RPMFusion docs](https://rpmfusion.org/Howto/Multimedia) and only install what's **relevant to your machine** specifications. Avoid the firmware commands. Mine is an AMD system so I do:
+
+```sh
+# Install additional multimedia plugins
+sudo dnf group install Multimedia
+
+# FFMPEG full
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+
+# Hardware codecs with AMD (mesa)
+sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld
+sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+```
+
+### Flathub
+
+Flatpak is installed by default on Fedora, but you need to Enable **Flathub** for accessing a wider range of flatpaks. Refer [Flatpak](https://flatpak.org/setup/Fedora) and [Flathub](https://flathub.org/setup/Fedora) instructions
+
+```sh
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+```
+
+> Also refer [GNOME-specific setup](../GNOME/README.md)
+
+## Some Fedora quirks
+
+- The **Text Editor** is `gnome-text-editor` instead of `gedit`
+- The **Picture-in-Picture** mode doesn't work on Firefox in Fedora as Wayland doesn't support it. Use the [PiP on Top](https://extensions.gnome.org/extension/4691/pip-on-top/) GNOME Shell extension to overcome it
 - Use two fingers on touchpad for [Right-click](https://discussion.fedoraproject.org/t/right-click-of-touchpad-does-not-working/70181)
-
-- Java is already installed as `openjdk-17`. But it has **JREs** NOT **JDKs** (`java` command works but `javac` doesn't)
-
-- Python (`python3`, `python`) is already installed; but NOT pip (install `python3-pip` package)
-
-- Neither GCC nor CLang comes installed with Fedora. For C++ on Fedora, follow [their guide](https://developer.fedoraproject.org/tech/languages/c/cpp_installation.html). Use `g++` and `clang++` while compiling.
+- For C++, neither **GCC** nor **Clang** comes installed with Fedora. Follow [Fedora developer docs](https://developer.fedoraproject.org/tech/languages/c/cpp_installation.html) to install. Use `g++` and `clang++` while compiling
 
   ```sh
   sudo dnf install -y gcc-c++   # or clang
   ```
 
-- Picture-in-Picture mode doesn't work on Firefox in Fedora as Wayland doesn't support it. Use the [PiP on Top](https://extensions.gnome.org/extension/4691/pip-on-top/) GNOME extension to overcome it
+- Java comes installed as `openjdk-17`. Not that it has **JRE** NOT **JDK** (`java` command works but `javac` isn't found)
+- Python (`python3`, `python`) is already installed; but NOT `pip`. You can install as `python3-pip` package
 
-- [Changing `hostname`](https://docs.fedoraproject.org/en-US/quick-docs/changing-hostname/)
+> Development variants of packages have `-devel` suffix for RedHat-based distributions and `-dev` suffix for Debian-based distributions. Refer [this post](https://stackoverflow.com/a/55579478)
 
-## DNF
+## Common DNF commands
 
-Run `sudo dnf update -y` before installing new packages
-
-[DNF Configuration Guide](https://dnf.readthedocs.io/en/latest/conf_ref.html)
-
-[DNF Quick Docs](https://docs.fedoraproject.org/en-US/quick-docs/dnf/)
-
-Development variants of packages have `-devel` suffix for RedHat-based distributions (Debian-based distros have `-dev` suffix). Refer [this post](https://stackoverflow.com/a/55579478)
-
-[APT-like commands for DNF](https://docs.fedoraproject.org/en-US/quick-docs/dnf-vs-apt/)
-
-[Fedora docs package management guide](https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/package-management/DNF/)
-
-[Fedora third-part repos](https://docs.fedoraproject.org/en-US/workstation-working-group/third-party-repos)
-
-Searching which package provides given command (like `g++`): [this post](https://unix.stackexchange.com/questions/701583/what-is-the-link-between-g-and-gcc-c-in-fedoras-dnf-repositories)
-
-Clear DNF cache: `sudo dnf clean dbcache` or `sudo dnf clean all`
+Enter `dnf -h` for all available commands
 
 ```sh
-# Find package
-dnf search
-dnf list
-dnf group list
-dnf list all
-dnf info
-dnf repoquery
+# Install package(s)
+sudo dnf install package1 package2
 
-# Install / Uninstall
-dnf install
-dnf remove
-dnf autoremove
-dnf erase
+# Update all packages (also select best mirror and `yes` for prompts)
+sudo dnf up --best -y
 
-# Update
-dnf update
-dnf check-update
-dnf upgrade
+# List all installed packages (grep over it to search something specific)
+dnf list installed
+# List all manually-installed packages
+dnf history userinstalled
+
+# Search over available packages
+dnf search jdk
+
+# Get details about a package
+dnf info java-17-openjdk-fastdebug
+
+# Remove package(s)
+sudo dnf remove package1 package2
+
+# Clear DNF cache (any of these two below)
+sudo dnf clean dbcache
 ```
 
-[List installed packages on Fedora](https://linuxopsys.com/topics/list-installed-packages-fedora)
+### DNF repositories
+
+Your repositories are stored in `/etc/yum.repos.d/` as `.repo` files. Run `dnf repolist` to get list of your repositories
+
+## Common Flatpak commands
+
+Enter `flatpak -h` for all available commands
+
+```sh
+# Install a flatpak package
+flatpak install md.obsidian.Obsidian
+
+# Update all flatpak packages
+flatpak update -y
+
+# List all installed flatpak packages
+flatpak list
+
+# Search for a flatpak package
+flatpak search obsidian
+
+# Get details about a flatpak package
+flatpak info md.obsidian.Obsidian
+
+# Remove flatpak package
+flatpak uninstall package1
+```
+
+## My packages to install
+
+```sh
+sudo dnf install -y \
+wget curl git gcc-c++ make cmake openssl \
+gnome-tweaks grub-customizer \
+tmux zsh lua lua-devel neovim  \
+fastfetch btop htop nmap ddcutil dmidecode piper hwinfo info \
+fzf bat jq eza ripgrep zoxide \
+google-chrome-stable vlc
+```
+
+### My Flatpak apps
+
+```sh
+flatpak install \
+org.gnome.FontManager \
+com.mattjakeman.ExtensionManager \
+md.obsidian.Obsidian \
+com.discordapp.Discord \
+com.jgraph.drawio.desktop
+```
+
+## Fedora Resources
+
+- [DNF command reference](https://dnf.readthedocs.io/en/stable/index.html)
+- [**Fedora Quick Docs**](https://docs.fedoraproject.org/en-US/quick-docs/)
+  - [Using the DNF software package manager](https://docs.fedoraproject.org/en-US/quick-docs/dnf/)
+  - [APT-like commands for DNF](https://docs.fedoraproject.org/en-US/quick-docs/dnf-vs-apt/)
+  - [Package management guide](https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/package-management/DNF/)
+- **Fedora Developer Docs**: [Languages & Databases](https://developer.fedoraproject.org/tech.html) , [Tools](https://developer.fedoraproject.org/tools.html)
