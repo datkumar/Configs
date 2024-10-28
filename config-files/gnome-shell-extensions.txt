@@ -4,7 +4,7 @@ gsconnect@andyholmes.github.io
 appindicatorsupport@rgcjonas.gmail.com
 bluetooth-quick-connect@bjarosze.gmail.com
 just-perfection-desktop@just-perfection
-ding@rastersoft.com
 pip-on-top@rafostar.github.com
 netspeed@alynx.one
+ding@rastersoft.com
 background-logo@fedorahosted.org

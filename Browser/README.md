@@ -1,4 +1,4 @@
-# Firefox <img alt="Firefox icon" src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/1200px-Firefox_logo%2C_2019.svg.png' width="25">
+# Firefox <img alt="Firefox" src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/1200px-Firefox_logo%2C_2019.svg.png' width="27">
 
 ## Firefox browser settings
 
@@ -54,7 +54,7 @@ I've stored [my list of Firefox extensions](../config-files/firefox/extensions.t
 
 #### Bookmarks
 
-I've exported [my list of bookamrks](../config-files/firefox/bookmarks.html) as an HTML file. To enable bookmarks being saved as HTML file, visit `about:config` in search bar and set the `browser.bookmarks.autoExportHTML` property to `true`
+I've exported [my list of bookmarks](../config-files/firefox/bookmarks.html) as an HTML file. To enable bookmarks being saved as HTML file, visit `about:config` in search bar and set the `browser.bookmarks.autoExportHTML` property to `true`
 
 #### Tabs
 
@@ -68,7 +68,7 @@ I've stored [my list of cookie-exceptions](../config-files/firefox/cookie-except
 
 Some settings have to be manually export such as you can see:
 
-- [My UBlock Origin filters](../config-files/firefox/)
+- [My UBlock Origin filters](../config-files/firefox/ublock-filters.txt)
 - [Tabliss settings](../config-files/firefox/tabliss.json)
 
 #### Shortcuts
@@ -77,7 +77,7 @@ It's handy to know a few of the Firefox [Keyboard shortcuts](https://support.moz
 
 ---
 
-## Firefox Developer Edition <img alt="Firefox Developer Edition icon" src='https://www.mozilla.org/media/img/favicons/firefox/browser/developer/favicon-196x196.b8d17dd1dda2.png' width="25">
+## Firefox Developer Edition <img alt="Firefox Developer Edition" src='https://upload.wikimedia.org/wikipedia/commons/3/30/Firefox_Developer_Edition_logo%2C_2019.svg' width="27">
 
 - Download Tarball from [their site](https://www.mozilla.org/en-US/firefox/developer/)
 
@@ -126,7 +126,7 @@ It's handy to know a few of the Firefox [Keyboard shortcuts](https://support.moz
 
 ---
 
-## Tor Browser <img  alt="Firefox icon" src='https://styleguide.torproject.org/static/images/tor-browser/stable/stable.svg' width="25">
+## Tor Browser <img  alt="Tor browser" src='https://styleguide.torproject.org/static/images/tor-browser/stable/stable.svg' width="27">
 
 - Download tarball from [their site](https://www.torproject.org/download/)
 

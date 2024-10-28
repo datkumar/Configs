@@ -78,7 +78,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-
 # Flutter, Android
 export PATH=$PATH:$HOME/FlutterSdk/flutter/bin
 # maybe needed?
@@ -86,11 +85,13 @@ export PATH=$PATH:$HOME/FlutterSdk/flutter/bin
 #export PATH=$PATH:$HOME/Android/Sdk/platform-tools
 #export JAVA_HOME=/usr/lib/jvm/java-23-openjdk-23.0.0.0.37-1.rolling.fc40.x86_64-fastdebug
 
+# Golang
+export PATH=$PATH:/usr/local/go/bin
+
 # Lua, LuaRocks
 export PATH=$PATH:'/home/kumar/.luarocks/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin'
 export LUA_PATH='/usr/local/share/lua/5.4/?.lua;/usr/share/lua/5.4/?.lua;/usr/share/lua/5.4/?/init.lua;/usr/lib64/lua/5.4/?.lua;/usr/lib64/lua/5.4/?/init.lua;./?.lua;./?/init.lua;/home/kumar/.luarocks/share/lua/5.4/?.lua;/home/kumar/.luarocks/share/lua/5.4/?/init.lua;/usr/local/share/lua/5.4/?/init.lua'
 export LUA_CPATH='/usr/lib64/lua/5.4/?.so;/usr/lib64/lua/5.4/loadall.so;./?.so;/home/kumar/.luarocks/lib/lua/5.4/?.so;/usr/local/lib/lua/5.4/?.so'
-
 
 # ----------------------- User config --------------
 
@@ -104,8 +105,7 @@ alias cls="clear"
 alias refreshenv="exec $(which $SHELL)"
 alias gedit="gnome-text-editor" # Fedora has gnome-text editor instead of Gedit
 alias zshconfig="gedit ~/.zshrc"
-alias get-brightness="ddcutil getvcp 10"
-alias set-brightness="ddcutil setvcp 10"
+
 alias cat="bat"
 alias ls="eza"
 alias la="eza -a"
@@ -118,7 +118,6 @@ export MANROFFOPT="-c"
 
 # bat as a previewer for fzf
 alias fzf="fzf --preview 'bat --color=always --line-range=:500 {}' --preview-window '~3'"
-
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -136,6 +135,10 @@ else
 fi
 
 
+alias get-brightness="ddcutil getvcp 10"
+alias set-brightness="ddcutil setvcp 10"
+alias bright++="ddcutil setvcp 10 + 5"
+alias bright--="ddcutil setvcp 10 - 5"
 # Set brightness to zero after 7PM
 if [[ $(date +"%H") -ge 19 ]] then
     set-brightness 0

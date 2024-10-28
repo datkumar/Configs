@@ -1,4 +1,4 @@
-# GNOME 👣
+# GNOME <img alt="GNOME" src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Gnomelogo-footprint.svg/833px-Gnomelogo-footprint.svg.png' width="27">
 
 ## GNOME Shell Extensions
 
@@ -17,6 +17,7 @@ sudo dnf install gnome-tweaks
 - Clone the repo [adw-gtk3](https://github.com/lassekongo83/adw-gtk3)
 - Extract the two folders `adw-gtk3`, `adw-gtk3-dark` into `~/.local/share/themes`
 - Also recommended to install the flatpak themes
+
   ```sh
   flatpak install org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
   ```

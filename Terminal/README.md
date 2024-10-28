@@ -1,48 +1,57 @@
-# ZSH <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG6kvdvxprAVso5OdcNtmyB5r1-CugXKHvDoHZD1POf8Oc0ZlghezIMxPBlABG21VxTT8&usqp=CAU' width="20">
+# Terminal setup <img alt="Terminal" src='https://upload.wikimedia.org/wikipedia/commons/d/da/GNOME_Terminal_icon_2019.svg' width="27">
 
-[OMZ GitHub guide](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) , [Fedora Magazine page](https://fedoramagazine.org/set-zsh-fedora-system/) , [Tecmint article](https://www.tecmint.com/install-zsh-shell-in-fedora/)
+The default shell is `sh` that is symlinked to `bash` in most Linux systems
+
+## The Z Shell (ZSH) <img alt="ZSH" src="https://raw.githubusercontent.com/Zsh-art/logo/refs/heads/main/svg/color_logomark.svg" width="25" >
+
+Referred from: [OMZ GitHub guide](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) , [Fedora Magazine page](https://fedoramagazine.org/set-zsh-fedora-system/) , [Tecmint article](https://www.tecmint.com/install-zsh-shell-in-fedora/)
+
+- Install the `zsh` shell via your package manager
+
+  ```sh
+  sudo dnf update
+  sudo dnf install -y zsh
+  ```
+
+- Make `zsh` as your default shell (If the `chsh` command isn't found, run `sudo dnf install -y util-linux-user`)
+
+  ```sh
+  # List all available shells
+  chsh -l
+  # Make 'zsh' the default shell
+  chsh -s $(which zsh)
+  ```
+
+- Reboot the system. Open the terminal, it will it opens the **setup wizard** asking for multiple options to configure ZSH. In the wizard, select options as per your preference. These will be saved in your Shell config file i.e. `~/.zshrc`
+
+- Ensure your shell being loaded is zsh whenever you open terminal
+
+  ```sh
+  echo $SHELL
+  # The output should be: /usr/bin/zsh
+  ```
+
+## Oh-My-Zsh (OMZ) <img alt="Oh-My-ZSH" src="https://ohmyz.sh/img/ohmyzsh-original-logo.svg" width="25">
+
+It provides many plugins, themes etc for ZSH
+
+**OMZ Install**:
+
+As per the [OMZ Website](https://ohmyz.sh/) and [OMZ GitHub](https://github.com/ohmyzsh/ohmyzsh/)
 
 ```sh
-sudo dnf update
-sudo dnf install -y zsh
-
-# Running zsh opens the first run wizard
-zsh
-# Select your sutiable options in that wizard to save
-
-# If 'chsh' not installed, run below line
-sudo dnf install -y util-linux-user
-# View all available SHELLs
-chsh -l
-# Make 'zsh' the default SHELL
-chsh -s $(which zsh)
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
 
----
+Themes: [OMZ themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes) , [Extended themes](https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes), [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
-# Oh-My-Zsh (OMZ)
+> Ensure at least one **powerline or nerd font** is installed to support special characters or glyphs in your theme. Refer my [Fonts Guide](../Fonts/README.md)
 
-It provides plugin manager, SHELL prompt
+<!-- [Irenapova blogpost (zsh,omz,powerlevel10k)](https://irenapopova.com/blog/zsh%20shell-post/) -->
 
-Themes: [OMZ-Included](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes) , [Extended](https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes), [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+Another new shell prompt alternative is [**Starship**](https://starship.rs/)
 
-[Irenapova blogpost (zsh,omz,powerlevel10k)](https://irenapopova.com/blog/zsh%20shell-post/)
-
-[Website](https://ohmyz.sh/), [GitHub](https://github.com/ohmyzsh/ohmyzsh/)
-
-```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
----
-
-> Ensure at least one powerline/nerd font is installed to support special oh-my-zsh themes like 'agnoster' . Refer [Fonts Guide](../Fonts/README.md)
-
-> [**Starship**](https://starship.rs/) Shell Prompt instead of OMZ: [YT_vid](https://www.youtube.com/watch?v=VgTu1_92U0U) , [Sample_config](https://github.com/andrew8088/dotfiles/blob/main/starship/starship.toml)
-
-## Gnome-Terminal Color Schemes:
-
-Articles: [BytesBuzz](https://www.bytesbuzz.com/best-ubuntu-terminal-themes-and-color-schemes/) , [FreeCodeCamp](https://www.freecodecamp.org/news/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38/)
+<!-- ## Gnome-Terminal Color Schemes
 
 > Basic Profile:
 
@@ -51,54 +60,21 @@ Articles: [BytesBuzz](https://www.bytesbuzz.com/best-ubuntu-terminal-themes-and-
 - Theme: `Gnome dark`
 - Colors: `Tango`
 
-Themes: [hyper-snazzy (creates new profile)](https://github.com/tobark/hyper-snazzy-gnome-terminal) , [Gogh](https://gogh-co.github.io/Gogh/)
+Themes: [hyper-snazzy (creates new profile)](https://github.com/tobark/hyper-snazzy-gnome-terminal) , [Gogh](https://gogh-co.github.io/Gogh/) -->
 
 ---
 
-## CLI Utilities
+## OMZ Plugins
 
-| _Package_                                                       | _Description_ |
-| --------------------------------------------------------------- | ------------- |
-| [**`fzf`**](https://github.com/junegunn/fzf)                    | Fuzzy finder  |
-| [**`bat`**](https://github.com/sharkdp/bat)                     | Colored `cat` |
-| [**`exa`**](https://github.com/ogham/exa)                       | Colored `ls`  |
-| [**`jq`**](https://github.com/jqlang/jq)                        | Pretty JSON   |
-| [**ripgrep**](https://github.com/BurntSushi/ripgrep) (**`rg`**) | Regex `grep`  |
-| [**zoxide**](https://github.com/ajeetdsouza/zoxide) (**`z`**)   | Smarter `cd`  |
-
-To install all of the above at one in Fedora:
-
-```sh
-sudo dnf install -y fzf bat exa jq ripgrep zoxide
-```
-
-Using these utils: [YT vid](https://youtu.be/2OHrTQVlRMg?si=KrgRvyDCGMuHHEJc)
-
-> More optional utils:
-
-- Fast, user-friendly `find` : [**`fd`**](https://github.com/sharkdp/fd)
-- Multiple Runtime version manager : [**`asdf`**](https://asdf-vm.com/)
-- Fix previous command : [**thefuck**](https://github.com/nvbn/thefuck)
-- Run arbitrary commands on file change : [**`entr`**](https://github.com/clibs/entr)
-- Midnight Commander, a visual file manager : [**`mc`**](https://github.com/MidnightCommander/mc)
-
----
-
-### ZSH Plugins
-
-- First see if it's present in the [List of plugins available for OMZ](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
-
+- First see if that plugin is present in the [list of plugins available for OMZ](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
 - Else, you'll need to put them inside in the `$ZSH_CUSTOM/plugins` folder. The `ZSH_CUSTOM` variable is by deafult `~/.oh-my-zsh/custom`
-
 - Finally specify your plugins for zsh to load as `plugins=(git dnf ...)` in the `~/.zshrc` file
 
-OMZ plugin guides: [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git) , [dnf](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dnf) , [flutter](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/flutter) , [history](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history)
-
-> To view all set aliases at one just enter `alias` in terminal
+To view all set aliases at once just enter `alias` in terminal
 
 More ZSH utils: [blog](https://safjan.com/top-popular-zsh-plugins-on-github-2023/)
 
-### ZSH Auto-suggestions & Syntax Highlighting
+### ZSH Auto-suggestions and Syntax-highlighting
 
 > These are't included by OMZ
 
@@ -113,93 +89,118 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 Make sure to include them in the `plugins=(...)` array inside `~/.zshrc` file
 
----
-
 ### Final ZSH Profile
 
-The starting OMZ profile upon first install is available as `~/.oh-my-zsh/templates/zshrc.zsh-template`
+The starting default OMZ profile is available at `~/.oh-my-zsh/templates/zshrc.zsh-template`
+
+You can refer [my `~/.zshrc` shell config file](../config-files/.zshrc)
+
+---
+
+## Alacritty <img alt="Alacritty" src='https://upload.wikimedia.org/wikipedia/commons/9/90/Alacritty_logo.svg' width="25">
+
+It is a modern cross-platform terminal emulator written in Rust that utilizes your GPU
+
+Referring from the [build instructions for Linux](https://github.com/alacritty/alacritty/blob/master/INSTALL.md) from [their site](https://alacritty.org/)
+
+- Make sure Rust is installed. Refer [my Rust installation page](../Rust/README.md). Then, update `rustup` to latest stable version:
+
+  ```sh
+  rustup override set stable
+  rustup update stable
+  ```
+
+- Clone the Alacritty source code:
+
+  ```sh
+  git clone git@github.com:alacritty/alacritty.git
+  ```
+
+- Install the required dependencies as per your distro. Mine is Fedora(`dnf`) but you can refer their [Dependencies](https://github.com/alacritty/alacritty/blob/master/INSTALL.md#dependencies) section for your respective distro
+
+  ```sh
+  sudo dnf install cmake freetype-devel fontconfig-devel libxcb-devel libxkbcommon-devel g++ scdoc
+  ```
+
+- Build application from the source code. The built binary should be at `target/release/alacritty`
+
+  ```sh
+  cd alacritty
+  cargo build --release
+  ```
+
+- Create desktop entry for the application:
+
+  ```sh
+  sudo cp target/release/alacritty /usr/local/bin
+  sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
+  sudo desktop-file-install extra/linux/Alacritty.desktop
+  sudo update-desktop-database
+  ```
+
+- Add manuals i.e. `man` pages:
+
+  ```sh
+  sudo mkdir -p /usr/local/share/man/man1
+  sudo mkdir -p /usr/local/share/man/man5
+  scdoc < extra/man/alacritty.1.scd | gzip -c | sudo tee /usr/local/share/man/man1/alacritty.1.gz > /dev/null
+  scdoc < extra/man/alacritty-msg.1.scd | gzip -c | sudo tee /usr/local/share/man/man1/alacritty-msg.1.gz > /dev/null
+  scdoc < extra/man/alacritty.5.scd | gzip -c | sudo tee /usr/local/share/man/man5/alacritty.5.gz > /dev/null
+  scdoc < extra/man/alacritty-bindings.5.scd | gzip -c | sudo tee /usr/local/share/man/man5/alacritty-bindings.5.gz > /dev/null
+  ```
+
+- Add completions for your shell. Mine is `zsh` but you can refer their [Shell completions](https://github.com/alacritty/alacritty/blob/master/INSTALL.md#shell-completions) section for your respective shell
+
+  ```sh
+  mkdir -p ~/.zsh_functions
+  cp extra/completions/_alacritty ~/.zsh_functions/_alacritty
+  ```
+
+  Then, add this line at the end of your shell config file (`~/.zshrc`):
+
+  ```sh
+  fpath+=~/.zsh_functions
+  ```
+
+- Reload shell:
+
+  ```sh
+  exec $(which $SHELL)
+  ```
+
+- Add a keyboard shortcut to launch `alacritty` command instead of your usual terminal. My default terminal for Fedora was `gnome-terminal` command
+
+- Your Alacritty settings are kept in `~/.alacritty.toml` config file (create one if it doesn't exist) so edit it to personalize your terminal. You can refer [my `.alacritty.toml` file](../config-files/.alacritty.toml) as well as their [Configuration page](https://alacritty.org/config-alacritty.html) for more options
+
+---
+
+## CLI Utilities
+
+| _Package_                                                       | _Description_ |
+| --------------------------------------------------------------- | ------------- |
+| [**`fzf`**](https://github.com/junegunn/fzf)                    | Fuzzy finder  |
+| [**`bat`**](https://github.com/sharkdp/bat)                     | Colored `cat` |
+| [**`eza`**](https://github.com/eza-community/eza)               | Colored `ls`  |
+| [**`jq`**](https://github.com/jqlang/jq)                        | Pretty JSON   |
+| [**ripgrep**](https://github.com/BurntSushi/ripgrep) (**`rg`**) | Regex `grep`  |
+| [**zoxide**](https://github.com/ajeetdsouza/zoxide) (**`z`**)   | Smarter `cd`  |
+
+Install those utils via your package manager (For Fedora, it's `dnf`)
 
 ```sh
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="agnoster"
-
-# --------------------------------------------------------
-# NVM setup (Automatically done during installation)
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-# pnpm setup (Automatically done during installation)
-# pnpm
-export PNPM_HOME="/home/kumar/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-# --------------------------------------------------------
-# Add binary executable locations of programs to PATH:
-
-# Python3 👉️ Already present at /usr/bin/python3
-
-# If multiple Java installations on system, use the 'alternatives'
-# directives of Linux to manage, add & switch versions
-# If single installation, set environment variables as done below:
-# OpenJDK Java 20 👇️ (installed via IntelliJ)
-# export JAVA_HOME=$PATH:$HOME/.jdks/openjdk-20.0.2
-# export PATH=$PATH:$JAVA_HOME/bin
-
-# Flutter 👇️
-export PATH=$PATH:$HOME/FlutterSdks/flutter/bin
-export CHROME_EXECUTABLE=$(which firefox)
-
-# Go 👇️
-export PATH=$PATH:/usr/local/go/bin
-
-# Rust 👇️
-export PATH=$PATH:$HOME/.cargo/bin
-# --------------------------------------------------------
-
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-# ENABLE_CORRECTION="true"
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Plugins to load:
-# Standard from $ZSH/plugins/ & Custom from $ZSH_CUSTOM/plugins/
-plugins=(
-    git
-    dnf
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-)
-
-# Load OMZ into ZSH
-source $ZSH/oh-my-zsh.sh
-
-# Initialise zoxide in zsh
-eval "$(zoxide init zsh)"
-
-# Custom aliases, that override omz, plugins etc
-alias cls="clear"
-alias refreshenv="exec $(which $SHELL)"
-alias gedit="gnome-text-editor" # For Fedora only
-alias zshconfig="gedit ~/.zshrc"
-
-# Make outputs more colorful:
-alias ls="exa"
-alias la="exa -a"
-alias ll="exa -alh"
-alias tree="exa --tree"
-alias cat=bat
-# colorizing pager for man
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export MANROFFOPT="-c"
-# bat as a previewer for fzf
-alias fzf="fzf --preview 'bat --color=always --line-range=:500 {}' --preview-window '~3'"
+sudo dnf install -y fzf bat jq eza ripgrep zoxide
 ```
+
+Watch this video for a quick demo showcase 👇
+
+<iframe width="480" height="270" src="https://www.youtube.com/embed/2OHrTQVlRMg?si=ty6XNzzHYQAW4Qe5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+**More optional utils:**
+
+- Fast, user-friendly `find` : [**`fd`**](https://github.com/sharkdp/fd)
+- Multiple Runtime version manager : [**`asdf`**](https://asdf-vm.com/)
+- Run arbitrary commands on file change : [**`entr`**](https://github.com/clibs/entr)
+- Fix previous command : [**thefuck**](https://github.com/nvbn/thefuck)
+- Midnight Commander, a visual file manager : [**`mc`**](https://github.com/MidnightCommander/mc)
 
 ---

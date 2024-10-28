@@ -55,8 +55,11 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 ## Some Fedora quirks
 
 - The **Text Editor** is `gnome-text-editor` instead of `gedit`
+
 - The **Picture-in-Picture** mode doesn't work on Firefox in Fedora as Wayland doesn't support it. Use the [PiP on Top](https://extensions.gnome.org/extension/4691/pip-on-top/) GNOME Shell extension to overcome it
+
 - Use two fingers on touchpad for [Right-click](https://discussion.fedoraproject.org/t/right-click-of-touchpad-does-not-working/70181)
+
 - For C++, neither **GCC** nor **Clang** comes installed with Fedora. Follow [Fedora developer docs](https://developer.fedoraproject.org/tech/languages/c/cpp_installation.html) to install. Use `g++` and `clang++` while compiling
 
   ```sh
@@ -64,7 +67,10 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
   ```
 
 - Java comes installed as `openjdk-17`. Not that it has **JRE** NOT **JDK** (`java` command works but `javac` isn't found)
+
 - Python (`python3`, `python`) is already installed; but NOT `pip`. You can install as `python3-pip` package
+
+- Save AppImages in `~/Applications/` folder
 
 > Development variants of packages have `-devel` suffix for RedHat-based distributions and `-dev` suffix for Debian-based distributions. Refer [this post](https://stackoverflow.com/a/55579478)
 
@@ -87,7 +93,7 @@ dnf history userinstalled
 # Search over available packages
 dnf search jdk
 
-# Get details about a package
+# Get details about a package such as name, version, summary etc.
 dnf info java-17-openjdk-fastdebug
 
 # Remove package(s)

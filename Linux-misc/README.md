@@ -1,4 +1,4 @@
-# Linux misc.
+# Linux misc. <img alt="Linux" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/506px-Tux.svg.png" width="27">
 
 ## Time-sync
 
@@ -35,7 +35,9 @@ I use Cloudflare DNS. Their IP addresses for their DNS as per [their page](https
 | `1.1.1.1` | `2606:4700:4700::1111` |
 | `1.0.0.1` | `2606:4700:4700::1001` |
 
-You can set these on your computer and or router
+You can set these on your computer and or on your router
+
+View your set DNS settings: `resolvectl status`
 
 ---
 
@@ -67,6 +69,20 @@ You can set these on your computer and or router
 
 - Make sure the mountpoint folders (like `/mnt/old-pc-hdd`) exist before writing the entries in the `fstab` file. If not existing, create them via `mkdir`
 - After you're done editing the `fstab` file, run `sudo systemctl daemon-reload` to load those changes
+
+---
+
+## Symbolic links
+
+Note that the `TARGET` can be a file or even a directory
+
+```sh
+# Creating a symbolic link (fails if symlink exists already)
+ln -s TARGET LINKNAME
+
+# Create/update a symbolic link
+ln -sf TARGET LINKNAME
+```
 
 ---
 

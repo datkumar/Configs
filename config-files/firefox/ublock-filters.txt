@@ -32,3 +32,6 @@ law.stackexchange.com##.vertical-align-content.ot-wo-title.ot-bottom-left.otFloa
 
 ! https://math.stackexchange.com
 math.stackexchange.com##.vertical-align-content.ot-wo-title.ot-bottom-left.otFloatingRoundedCorner
+
+! Oct 28, 2024 https://go.dev
+go.dev##.Cookie-notice--visible.js-cookieNotice.Cookie-notice

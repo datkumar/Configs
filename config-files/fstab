@@ -14,8 +14,8 @@
 #
 # Main System partitions
 UUID=0e2e535a-4d52-49b2-8ba1-942627a28c25   /                       btrfs   subvol=root,compress=zstd:1     0 0
-UUID=39b8d54d-a8e2-4491-80df-d4220b4575d0   /boot                   ext4    defaults                        1 2
-UUID=0B17-8D2A          	                  /boot/efi               vfat    umask=0077,shortname=winnt      0 2
+UUID=39b8d54d-a8e2-4491-80df-d4220b4575d0   /boot                   ext4    defaults        1 2
+UUID=0B17-8D2A          	                /boot/efi               vfat    umask=0077,shortname=winnt      0 2
 UUID=0e2e535a-4d52-49b2-8ba1-942627a28c25   /home                   btrfs   subvol=home,compress=zstd:1     0 0
 #
 # Extra partitions to mount

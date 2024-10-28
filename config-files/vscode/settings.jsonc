@@ -55,7 +55,6 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "markdown-preview-enhanced.previewTheme": "github-dark.css",
   "markdownlint.config": {
     "no-inline-html": false
   },
@@ -72,7 +71,9 @@
     "**/app/**/layout.tsx": "${dirname} - Layout",
     "**/app/**/loading.tsx": "${dirname} - Skeleton",
     // Astro project
-    "**/pages/**/index.astro": "${dirname} - Page"
+    "**/pages/**/index.astro": "${dirname} - Page",
+    // Folder-wise READMEs
+    "**/README.md": "${dirname} - README"
   },
   // Integrated Terminal's color customization (same colors as alacritty config)
   "workbench.colorCustomizations": {
@@ -99,6 +100,8 @@
     "terminal.ansiBrightCyan": "#3cede4",
     "terminal.ansiBrightWhite": "#ffffff"
   },
-  "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
-  "markdown-preview-enhanced.mermaidTheme": "dark"
+  "markdown-preview-enhanced.mermaidTheme": "dark",
+  "markdown-preview-enhanced.enablePreviewZenMode": true,
+  "markdown-preview-enhanced.previewTheme": "one-dark.css",
+  "markdown-preview-enhanced.codeBlockTheme": "github-dark.css"
 }

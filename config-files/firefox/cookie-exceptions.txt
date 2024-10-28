@@ -4,7 +4,6 @@ https://chatgpt.com
 https://github.com         
 https://mail.google.com    
 https://stackoverflow.com  
-https://docs.flutter.dev   
 https://www.reddit.com     
 https://x.com              
 https://www.linkedin.com   
@@ -23,5 +22,4 @@ https://hashnode.com
 https://hackernoon.com     
 https://dart.dev           
 https://nextjs.org         
-https://pub.dev            
 https://api.flutter.dev    

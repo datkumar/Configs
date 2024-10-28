@@ -31,11 +31,6 @@ gnome-extensions list --enabled >$DEST/gnome-shell-extensions.txt
 # VLC settings
 cp ~/.config/vlc/vlcrc $DEST
 
-# Fonts
-mkdir -p $DEST/fonts
-ls ~/.fonts >$DEST/fonts/font-names.txt
-ls ~/.var/app/org.gnome.FontManager/data/fonts/Google\ Fonts >$DEST/fonts/font-names-google.txt
-
 # -------------- VSCode --------------
 mkdir -p $DEST/vscode
 
@@ -50,6 +45,16 @@ cp ~/.config/Code/User/keybindings.json $DEST/vscode/keybindings.jsonc
 
 # Snippets (Optional. Mine are empty)
 # cp ~/.config/Code/User/snippets $DEST/vscode/snippets/
+
+# -------------- Fonts --------------
+
+mkdir -p $DEST/fonts
+
+# ls ~/.fonts >$DEST/fonts/font-names.txt
+# Exclude the 'GoogleFonts' symlinked folder in output
+find ~/.fonts -mindepth 1 -maxdepth 1 -type d ! -name 'GoogleFonts' -printf '%f\n' >$DEST/fonts/font-names.txt
+
+ls ~/.var/app/org.gnome.FontManager/data/fonts/Google\ Fonts >$DEST/fonts/font-names-google.txt
 
 # -------------- Firefox --------------
 mkdir -p $DEST/firefox
@@ -90,6 +95,10 @@ mkdir -p $DEST/android-studio
 cp -r ~/.config/Google/AndroidStudio* $DEST/android-studio/
 
 # -------------- Manually export --------------
+
+touch $DEST/firefox/tabliss.json
+touch $DEST/firefox/ublock-filters.txt
+
 echo "Need to manually export these configs:"
 echo "  - Tabliss settings"
 echo "  - UBlock filters"
