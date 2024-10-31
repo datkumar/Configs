@@ -1,4 +1,4 @@
-# Fedora <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fedora_icon_%282021%29.svg/2089px-Fedora_icon_%282021%29.svg.png' width="30">
+# Fedora <img alt="Fedora" src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Fedora_icon_%282021%29.svg/2089px-Fedora_icon_%282021%29.svg.png' height="25">
 
 ## Post-Install steps for Fedora
 
@@ -9,7 +9,7 @@ Refer below TechHut video:
 ### DNF
 
 - `dnf` is the package manager for Fedora. On a fresh install, DNF might seem slow
-- Edit options in the `/etc/dnf/dnf.conf` file to make it faster. You can refer [my DNF config](../config-files/dnf.conf) file as well as the [DNF Configuration docs](https://dnf.readthedocs.io/en/latest/conf_ref.html) to see all available options
+- Edit options in the `/etc/dnf/dnf.conf` file to make it faster. You can refer [my DNF config](https://github.com/datkumar/Configs/blob/main/config-files/dnf.conf) file as well as the [DNF Configuration docs](https://dnf.readthedocs.io/en/latest/conf_ref.html) to see all available options
 
 ### RPM Fusion
 

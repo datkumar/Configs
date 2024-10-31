@@ -78,12 +78,13 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# Java
+#export JAVA_HOME=/usr/lib/jvm/java-23-openjdk-23.0.0.0.37-1.rolling.fc40.x86_64-fastdebug
+
 # Flutter, Android
 export PATH=$PATH:$HOME/FlutterSdk/flutter/bin
-# maybe needed?
-#export PATH=$PATH:$HOME/.local/share/JetBrains/Toolbox/apps/android-studio/bin
-#export PATH=$PATH:$HOME/Android/Sdk/platform-tools
-#export JAVA_HOME=/usr/lib/jvm/java-23-openjdk-23.0.0.0.37-1.rolling.fc40.x86_64-fastdebug
+export PATH=$PATH:$HOME/.local/share/JetBrains/Toolbox/apps/android-studio/bin
+export PATH=$PATH:$HOME/Android/Sdk/platform-tools
 
 # Golang
 export PATH=$PATH:/usr/local/go/bin

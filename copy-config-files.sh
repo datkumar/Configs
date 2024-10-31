@@ -38,7 +38,7 @@ mkdir -p $DEST/vscode
 cp ~/.config/Code/User/settings.json $DEST/vscode/settings.jsonc
 
 # List of names of extensions
-ls ~/.vscode/extensions >$DEST/vscode/extensions.txt
+code --list-extensions >$DEST/vscode/extensions.txt
 
 # Keyboard shortcut customizations
 cp ~/.config/Code/User/keybindings.json $DEST/vscode/keybindings.jsonc

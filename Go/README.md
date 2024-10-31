@@ -1,4 +1,4 @@
-# [Go](./Go/README.md) <img alt="Go" src='https://www.svgrepo.com/show/373635/go-gopher.svg' height="27">
+# [Go](./Go/README.md) <img alt="Go" src='https://www.svgrepo.com/show/373635/go-gopher.svg' height="25">
 
 ## Installation
 

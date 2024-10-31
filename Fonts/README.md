@@ -2,13 +2,13 @@
 
 Installing Fonts in Linux: [article](https://itsfoss.com/install-fonts-ubuntu/)
 
-Install [Font Manager](https://github.com/FontManager/font-manager) from the Software Store
+Install [**Font Manager**](https://github.com/FontManager/font-manager) from the Software Store
 
-| Font type                               | Location                                                    |
-| --------------------------------------- | ----------------------------------------------------------- |
-| User fonts                              | `~/.fonts/` or `~/.local/share/fonts/`                      |
-| System fonts                            | `/usr/local/share/fonts/`                                   |
-| Google Fonts downloaded by Font Manager | `~/.var/app/org.gnome.FontManager/data/fonts/Google\ Fonts` |
+| Font type                       | Location                                                    |
+| ------------------------------- | ----------------------------------------------------------- |
+| User fonts                      | `~/.fonts/` or `~/.local/share/fonts/`                      |
+| System fonts                    | `/usr/local/share/fonts/`                                   |
+| Google Fonts (via Font Manager) | `~/.var/app/org.gnome.FontManager/data/fonts/Google\ Fonts` |
 
 In some cases, the Google Fonts downloaded by Font Manager aren't detected by the application, so you can symlink that directory within your user fonts location:
 
@@ -28,7 +28,7 @@ List installed fonts:
 fc-list | sort -f
 ```
 
-You can see name of my downloaded [User fonts list](../config-files/fonts/font-names.txt) as well as [Google fonts list](../config-files/fonts/font-names-google.txt)
+You can see name of my downloaded [User fonts list](https://github.com/datkumar/Configs/blob/main/config-files/fonts/font-names.txt) as well as [Google fonts list](https://github.com/datkumar/Configs/blob/main/config-files/fonts/font-names-google.txt)
 
 ## NerdFonts
 
@@ -36,4 +36,4 @@ You can see name of my downloaded [User fonts list](../config-files/fonts/font-n
 
 You can [preview programming fonts](https://www.programmingfonts.org) as well as [download Nerd fonts](https://www.nerdfonts.com/font-downloads)
 
-Another popular repository is [**Powerline fonts**](https://github.com/powerline/fonts)
+Another popular repository is [Powerline fonts](https://github.com/powerline/fonts)

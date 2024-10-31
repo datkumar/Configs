@@ -41,10 +41,6 @@
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
   },
-  // Change this based on whether Tailwind/Vanilla-CSS is being used
-  "files.associations": {
-    "*.css": "postcss"
-  },
   "[shellscript][ignore][dotenv]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
@@ -55,8 +51,17 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  // Markdown
   "markdownlint.config": {
     "no-inline-html": false
+  },
+  "markdown-preview-enhanced.mermaidTheme": "dark",
+  "markdown-preview-enhanced.enablePreviewZenMode": true,
+  "markdown-preview-enhanced.previewTheme": "one-dark.css",
+  "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
+  // Change this based on whether Tailwind/Vanilla-CSS is being used
+  "files.associations": {
+    "*.css": "postcss"
   },
   // Projects
   "projectManager.git.baseFolders": ["~/Desktop/Dev"],
@@ -99,9 +104,5 @@
     "terminal.ansiBrightMagenta": "#c00a7a",
     "terminal.ansiBrightCyan": "#3cede4",
     "terminal.ansiBrightWhite": "#ffffff"
-  },
-  "markdown-preview-enhanced.mermaidTheme": "dark",
-  "markdown-preview-enhanced.enablePreviewZenMode": true,
-  "markdown-preview-enhanced.previewTheme": "one-dark.css",
-  "markdown-preview-enhanced.codeBlockTheme": "github-dark.css"
+  }
 }

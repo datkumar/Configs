@@ -1,4 +1,4 @@
-# Firefox <img alt="Firefox" src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/1200px-Firefox_logo%2C_2019.svg.png' width="27">
+# Firefox <img alt="Firefox" src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/1200px-Firefox_logo%2C_2019.svg.png' height="25">
 
 ## Firefox browser settings
 
@@ -50,11 +50,11 @@ Refer [this post](https://support.mozilla.org/en-US/kb/profiles-where-firefox-st
 
 #### Extensions
 
-I've stored [my list of Firefox extensions](../config-files/firefox/extensions.txt) that you can download from the [add-ons page](https://addons.mozilla.org/en-US/firefox/extensions/)
+I've stored [my list of Firefox extensions](https://github.com/datkumar/Configs/blob/main/config-files/firefox/extensions.txt) that you can download from the [add-ons page](https://addons.mozilla.org/en-US/firefox/extensions/)
 
 #### Bookmarks
 
-I've exported [my list of bookmarks](../config-files/firefox/bookmarks.html) as an HTML file. To enable bookmarks being saved as HTML file, visit `about:config` in search bar and set the `browser.bookmarks.autoExportHTML` property to `true`
+I've exported [my list of bookmarks](https://github.com/datkumar/Configs/blob/main/config-files/firefox/bookmarks.html) as an HTML file. To enable bookmarks being saved as HTML file, visit `about:config` in search bar and set the `browser.bookmarks.autoExportHTML` property to `true`
 
 #### Tabs
 
@@ -62,14 +62,14 @@ I use the [Simple Tab Groups](https://addons.mozilla.org/en-US/firefox/addon/sim
 
 ### Cookie exceptions
 
-I've stored [my list of cookie-exceptions](../config-files/firefox/cookie-exceptions.txt) stating site whose cookies aren't being deleted when browser closes
+I've stored [my list of cookie-exceptions](https://github.com/datkumar/Configs/blob/main/config-files/firefox/cookie-exceptions.txt) stating site whose cookies aren't being deleted when browser closes
 
 #### Manual exports
 
 Some settings have to be manually export such as you can see:
 
-- [My UBlock Origin filters](../config-files/firefox/ublock-filters.txt)
-- [Tabliss settings](../config-files/firefox/tabliss.json)
+- [My UBlock Origin filters](https://github.com/datkumar/Configs/blob/main/config-files/firefox/ublock-filters.txt)
+- [Tabliss settings](https://github.com/datkumar/Configs/blob/main/config-files/firefox/tabliss.json)
 
 #### Shortcuts
 
@@ -77,7 +77,7 @@ It's handy to know a few of the Firefox [Keyboard shortcuts](https://support.moz
 
 ---
 
-## Firefox Developer Edition <img alt="Firefox Developer Edition" src='https://upload.wikimedia.org/wikipedia/commons/3/30/Firefox_Developer_Edition_logo%2C_2019.svg' width="27">
+## Firefox Developer Edition <img alt="Firefox Developer Edition" src='https://upload.wikimedia.org/wikipedia/commons/3/30/Firefox_Developer_Edition_logo%2C_2019.svg' width="22">
 
 - Download Tarball from [their site](https://www.mozilla.org/en-US/firefox/developer/)
 
@@ -126,7 +126,7 @@ It's handy to know a few of the Firefox [Keyboard shortcuts](https://support.moz
 
 ---
 
-## Tor Browser <img  alt="Tor browser" src='https://styleguide.torproject.org/static/images/tor-browser/stable/stable.svg' width="27">
+## Tor Browser <img  alt="Tor browser" src='https://styleguide.torproject.org/static/images/tor-browser/stable/stable.svg' height="25">
 
 - Download tarball from [their site](https://www.torproject.org/download/)
 

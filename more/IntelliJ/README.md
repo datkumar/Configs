@@ -1,4 +1,4 @@
-# [IntelliJ](./IntelliJ/README.md)&ensp;<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/1200px-IntelliJ_IDEA_Icon.svg.png' width="27">
+# [IntelliJ](./IntelliJ/README.md)&ensp;<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/1200px-IntelliJ_IDEA_Icon.svg.png' height="25">
 
 > [Article for IntelliJ on Ubuntu](https://medium.com/geekculture/install-intellij-idea-android-sdk-flutter-sdk-on-ubuntu-20-04-108a14068668)
 

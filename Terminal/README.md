@@ -1,4 +1,4 @@
-# Terminal setup <img alt="Terminal" src='https://upload.wikimedia.org/wikipedia/commons/d/da/GNOME_Terminal_icon_2019.svg' width="27">
+# Terminal setup <img alt="Terminal" src='https://upload.wikimedia.org/wikipedia/commons/d/da/GNOME_Terminal_icon_2019.svg' height="25">
 
 The default shell is `sh` that is symlinked to `bash` in most Linux systems
 
@@ -93,7 +93,7 @@ Make sure to include them in the `plugins=(...)` array inside `~/.zshrc` file
 
 The starting default OMZ profile is available at `~/.oh-my-zsh/templates/zshrc.zsh-template`
 
-You can refer [my `~/.zshrc` shell config file](../config-files/.zshrc)
+You can refer [my `~/.zshrc` shell config file](https://github.com/datkumar/Configs/blob/main/config-files/.zshrc)
 
 ---
 
@@ -170,7 +170,7 @@ Referring from the [build instructions for Linux](https://github.com/alacritty/a
 
 - Add a keyboard shortcut to launch `alacritty` command instead of your usual terminal. My default terminal for Fedora was `gnome-terminal` command
 
-- Your Alacritty settings are kept in `~/.alacritty.toml` config file (create one if it doesn't exist) so edit it to personalize your terminal. You can refer [my `.alacritty.toml` file](../config-files/.alacritty.toml) as well as their [Configuration page](https://alacritty.org/config-alacritty.html) for more options
+- Your Alacritty settings are kept in `~/.alacritty.toml` config file (create one if it doesn't exist) so edit it to personalize your terminal. You can refer [my `.alacritty.toml` file](https://github.com/datkumar/Configs/blob/main/config-files/.alacritty.toml) as well as their [Configuration page](https://alacritty.org/config-alacritty.html) for more options
 
 ---
 

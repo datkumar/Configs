@@ -229,7 +229,7 @@
       <i c="9" l="1729438273881" />
     </e>
     <e n="ShowSettings">
-      <i c="47" l="1729502497272" />
+      <i c="50" l="1730316313102" />
     </e>
     <e n="Stop">
       <i c="48" l="1729508283633" />
@@ -365,6 +365,9 @@
     </e>
     <e n="com.intellij.ui.ScrollingUtil$ListMoveDownAction">
       <i c="1" l="1729441241642" />
+    </e>
+    <e n="com.intellij.ui.components.BasicOptionButtonUI$ActionDelegate">
+      <i c="2" l="1730316250277" />
     </e>
     <e n="editRunConfigurations">
       <i c="1" l="1729435982411" />

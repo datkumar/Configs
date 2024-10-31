@@ -1,4 +1,4 @@
-# Linux misc. <img alt="Linux" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/506px-Tux.svg.png" width="27">
+# Linux misc. <img alt="Linux" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/506px-Tux.svg.png" height="25">
 
 ## Time-sync
 
@@ -55,7 +55,7 @@ View your set DNS settings: `resolvectl status`
   lsblk -o NAME,TYPE,FSTYPE,FSVER,SIZE,FSUSED,LABEL,UUID,MOUNTPOINT
   ```
 
-- The format for each entry as below. You can refer [my fstab file](../config-files/fstab) too
+- The format for each entry as below. You can refer [my fstab file](https://github.com/datkumar/Configs/blob/main/config-files/fstab) too
 
   ```txt
   HardwareID  MountPointDirectory  FileSystem  MountOptions  dump  fsck
