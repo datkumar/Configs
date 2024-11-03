@@ -1,9 +1,6 @@
 Recursive
-CascadiaCode
-CodeNewRoman
 Hack
 Gohu
-FiraCode
 SF-Pro-display
 gilroy-bold
 addiction
@@ -18,6 +15,8 @@ itc-american-typewriter
 jmh_typewriter
 optima-cufonfonts
 cmu-concrete
-GeistMono
-Geist
-0xProto
+0xProto_2_201
+CascadiaCode-2404.23
+CodeNewRoman
+GeistMono-1.4.01
+Geist-v1.4.01

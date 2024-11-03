@@ -69,6 +69,7 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="/home/kumar/.local/share/fnm:$PATH"
   eval "`fnm env`"
 fi
+# fnm end
 
 # pnpm (auto-generated)
 export PNPM_HOME="/home/kumar/.local/share/pnpm"
@@ -94,6 +95,7 @@ export PATH=$PATH:'/home/kumar/.luarocks/bin:/usr/local/bin:/usr/local/sbin:/usr
 export LUA_PATH='/usr/local/share/lua/5.4/?.lua;/usr/share/lua/5.4/?.lua;/usr/share/lua/5.4/?/init.lua;/usr/lib64/lua/5.4/?.lua;/usr/lib64/lua/5.4/?/init.lua;./?.lua;./?/init.lua;/home/kumar/.luarocks/share/lua/5.4/?.lua;/home/kumar/.luarocks/share/lua/5.4/?/init.lua;/usr/local/share/lua/5.4/?/init.lua'
 export LUA_CPATH='/usr/lib64/lua/5.4/?.so;/usr/lib64/lua/5.4/loadall.so;./?.so;/home/kumar/.luarocks/lib/lua/5.4/?.so;/usr/local/lib/lua/5.4/?.so'
 
+
 # ----------------------- User config --------------
 
 # Personal aliases, overriding those provided by OMZ libs, plugins, and themes. 
@@ -104,7 +106,7 @@ export LUA_CPATH='/usr/lib64/lua/5.4/?.so;/usr/lib64/lua/5.4/loadall.so;./?.so;/
 # For a full list of active aliases, run `alias`.
 alias cls="clear"
 alias refreshenv="exec $(which $SHELL)"
-alias gedit="gnome-text-editor" # Fedora has gnome-text editor instead of Gedit
+alias gedit="gnome-text-editor" # The bundled text editor with GNOME isn't GEdit
 alias zshconfig="gedit ~/.zshrc"
 
 alias cat="bat"
@@ -154,4 +156,5 @@ zstyle ':completion:*' menu select
 # Adds directory to Zsh’s search path for custom functions
 fpath+=~/.zsh_functions
 
-
+# fnm completions for Zsh
+eval "$(fnm env --use-on-cd --shell zsh)"

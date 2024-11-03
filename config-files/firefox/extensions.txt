@@ -5,6 +5,8 @@ Enhancer for YouTube™ by null
 WhatFont by null
 Tabliss by null
 Simple Tab Groups by Drive4ik
+VisBug by null
+Bitwarden Password Manager by Bitwarden Inc.
 Form Autofill by null
 Picture-In-Picture by null
 Firefox Screenshots by Mozilla <screenshots-feedback@mozilla.com>
@@ -15,6 +17,3 @@ Add-ons Search Detection by null
 Light by Mozilla
 Dark by Mozilla
 Firefox Alpenglow by null
-VisBug by null
-Web Compatibility Interventions by null
-Bitwarden Password Manager by Bitwarden Inc.

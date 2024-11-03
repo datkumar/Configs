@@ -168,7 +168,7 @@ Referring from the [build instructions for Linux](https://github.com/alacritty/a
   exec $(which $SHELL)
   ```
 
-- Add a keyboard shortcut to launch `alacritty` command instead of your usual terminal. My default terminal for Fedora was `gnome-terminal` command
+- Add a custom keyboard shortcut (I set it as `Super + T`) to launch `alacritty` command instead of the usual terminal command (was `gnome-terminal` in Fedora)
 
 - Your Alacritty settings are kept in `~/.alacritty.toml` config file (create one if it doesn't exist) so edit it to personalize your terminal. You can refer [my `.alacritty.toml` file](https://github.com/datkumar/Configs/blob/main/config-files/.alacritty.toml) as well as their [Configuration page](https://alacritty.org/config-alacritty.html) for more options
 

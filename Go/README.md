@@ -42,7 +42,7 @@ First, download the binary release tarball for Linux from [their downloads page]
 
 ### Installation via package manager
 
-Most likely, there exists a some package of the Go languaeg within the repositories of your package manager for your Linux distro. These may not be the latest Go version but are recent enough and tested to work weell on your distro. For my Fedora distro, i referred the [Fedora Developer portal page](https://developer.fedoraproject.org/tech/languages/go/go-installation.html) for installing Go via Fedora's package manager `dnf`:
+Most likely, there exists a some package of the Go language within the repositories of your package manager for your Linux distro. These may not be the latest Go version but are recent enough and tested to work well on your distro. For my Fedora distro, I referred the [Fedora Developer portal page](https://developer.fedoraproject.org/tech/languages/go/go-installation.html) for installing Go via Fedora's package manager `dnf`:
 
 ```sh
 sudo dnf install golang

@@ -76,19 +76,19 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 ## Common DNF commands
 
+> Fedora recently upgraded `dnf` to version `dnf5` in Fedora 41 release
+
 Enter `dnf -h` for all available commands
 
 ```sh
 # Install package(s)
 sudo dnf install package1 package2
 
-# Update all packages (also select best mirror and `yes` for prompts)
-sudo dnf up --best -y
+# Update all packages
+sudo dnf up
 
 # List all installed packages (grep over it to search something specific)
-dnf list installed
-# List all manually-installed packages
-dnf history userinstalled
+dnf list --installed
 
 # Search over available packages
 dnf search jdk
@@ -100,7 +100,9 @@ dnf info java-17-openjdk-fastdebug
 sudo dnf remove package1 package2
 
 # Clear DNF cache (any of these two below)
-sudo dnf clean dbcache
+sudo dnf clean all
+# Rebuild dnf cache
+sudo dnf makecache
 ```
 
 ### DNF repositories
@@ -131,19 +133,19 @@ flatpak info md.obsidian.Obsidian
 flatpak uninstall package1
 ```
 
-## My packages to install
+## My `dnf` packages to install
 
 ```sh
 sudo dnf install -y \
 wget curl git gcc-c++ make cmake openssl \
 gnome-tweaks grub-customizer \
-tmux zsh lua lua-devel neovim  \
+tmux zsh lua lua-devel neovim python3-neovim \
 fastfetch btop htop nmap ddcutil dmidecode piper hwinfo info \
 fzf bat jq eza ripgrep zoxide \
 google-chrome-stable vlc
 ```
 
-### My Flatpak apps
+### My Flatpak apps to install
 
 ```sh
 flatpak install \
@@ -160,5 +162,4 @@ com.jgraph.drawio.desktop
 - [**Fedora Quick Docs**](https://docs.fedoraproject.org/en-US/quick-docs/)
   - [Using the DNF software package manager](https://docs.fedoraproject.org/en-US/quick-docs/dnf/)
   - [APT-like commands for DNF](https://docs.fedoraproject.org/en-US/quick-docs/dnf-vs-apt/)
-  - [Package management guide](https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/package-management/DNF/)
 - **Fedora Developer Docs**: [Languages & Databases](https://developer.fedoraproject.org/tech.html) , [Tools](https://developer.fedoraproject.org/tools.html)

@@ -24,7 +24,7 @@ The most convenient way to install and manage JetBrains IDEs like Android Studio
 
 - Install the `Dart` and `Flutter` plugins available for Android Studio and restart the IDE
 
-- If you wish to be able to launch Android Studio from terminal via `studio` as well as the platform tools like `adb`, `fastboot` etc., add them to your **PATH** in the Shell profile file (`~/.zshrc` or `~/.bashrc`):
+- If you wish to be able to launch Android Studio from terminal via `studio` as well as the platform tools like `adb`, `fastboot` etc., add them to your `PATH` in the Shell profile file (`~/.zshrc` or `~/.bashrc`):
 
   ```sh
   export PATH=$PATH:$HOME/.local/share/JetBrains/Toolbox/apps/android-studio/bin
@@ -37,13 +37,13 @@ The most convenient way to install and manage JetBrains IDEs like Android Studio
 
 Following the official [Flutter Linux installation docs](https://docs.flutter.dev/get-started/install/linux/android):
 
-- Install the [`Flutter`](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter) extension in VSCode. It will prompt you to locate the Flutter SDK. Since you don't have an existing Flutter SDK, select `Download SDK`. You can set the install location to something like `~/FlutterSdk`.
+- Install the [`Flutter`](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter) extension in VSCode. It will prompt you to locate the Flutter SDK. Since you don't have an existing Flutter SDK, select `Download SDK`. You can set the install location to something like `~/FlutterSdk`
 
 - Now, the latest Flutter SDK will be downloaded into `~/FlutterSdk/flutter/` folder.
 
-  - If you want a specific Flutter SDK version, you'll have to download it from their [SDK Archive](https://docs.flutter.dev/release/archive) and extract it into desired location via `tar -cJf flutter_linux*.tar.xz YOUR_LOCATION`
+  - If you want a specific Flutter SDK version, you'll have to download it from their [SDK Archive](https://docs.flutter.dev/release/archive) and extract it into desired location via `tar -cJf ~/Downloads/flutter_linux*.tar.xz YOUR_LOCATION`
 
-- Add the location of **Flutter SDK's binaries** (like `flutter`, `dart`) to your **PATH** by adding these lines in your Shell config file (`~/.zshrc` or `~/.bashrc`):
+- Add the location of **Flutter SDK's binaries** (like `flutter`, `dart`) to your `PATH` by adding these lines in your Shell config file (`~/.zshrc` or `~/.bashrc`):
 
   ```sh
   export PATH=$PATH:$HOME/FlutterSdk/flutter/bin
@@ -144,13 +144,15 @@ Following the official [Flutter Linux installation docs](https://docs.flutter.de
 
 Linux-based systems support virtual machine acceleration via **KVM** (Kernel-based VM) package. Referring the official Android Developer docs to [Configure hardware acceleration for the Android Emulator](https://developer.android.com/studio/run/emulator-acceleration?utm_source=android-studio)
 
-The [Configure VM acceleration on Linux](https://developer.android.com/studio/run/emulator-acceleration?utm_source=android-studio#vm-linux) on the Android Docs only shows how to do it for Ubuntu/Debian based distros. You can also refer Ubuntu's [KVM installation docs](https://help.ubuntu.com/community/KVM/Installation)
+The [Configure VM acceleration on Linux](https://developer.android.com/studio/run/emulator-acceleration?utm_source=android-studio#vm-linux) section on the only mentions how to do it for Ubuntu/Debian based distros. You can also refer Ubuntu's [KVM installation docs](https://help.ubuntu.com/community/KVM/Installation)
 
 However, for **Fedora** in my case, I'm referring the [Fedora Quick Docs page for Virtualization](https://docs.fedoraproject.org/en-US/quick-docs/virtualization-getting-started/):
 
 - Check that your CPU supports virtualization:
 
   ```sh
+  # Check "Virtualization" section of output. Mine said "AMD-V"
+  lscpu
   # It should print a bunch of flags
   grep -E '^flags.*(vmx|svm)' /proc/cpuinfo
   ```
