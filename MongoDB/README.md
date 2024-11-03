@@ -116,29 +116,27 @@ For installing on MongoDB Community Edition on **Fedora** we'll refer their [Red
   sudo dnf install mongodb-org
   ```
 
-  When you enter open `mongosh`, the output would like below:
+  When you enter open `mongosh`, the output would like below. Enter `help` to know commands and press `Ctrl d` to exit
 
-  ```txt
-  Current Mongosh Log ID: 67254482d59e272c2c6b128b
-  Connecting to:    mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.3
-  Using MongoDB:    8.0.3
-  Using Mongosh:    2.3.3
+```txt
+Current Mongosh Log ID: 67254482d59e272c2c6b128b
+Connecting to:    mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.3
+Using MongoDB:    8.0.3
+Using Mongosh:    2.3.3
 
-  For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
 
-  ------
-    The server generated these startup warnings when booting
-    2024-11-02T02:41:47.410+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
-    2024-11-02T02:41:47.410+05:30: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
-    2024-11-02T02:41:47.410+05:30: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
-    2024-11-02T02:41:47.410+05:30: We suggest setting the contents of sysfsFile to 0.
-    2024-11-02T02:41:47.410+05:30: We suggest setting swappiness to 0 or 1, as swapping can cause performance problems.
-  ------
+------
+  The server generated these startup warnings when booting
+  2024-11-02T02:41:47.410+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+  2024-11-02T02:41:47.410+05:30: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
+  2024-11-02T02:41:47.410+05:30: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
+  2024-11-02T02:41:47.410+05:30: We suggest setting the contents of sysfsFile to 0.
+  2024-11-02T02:41:47.410+05:30: We suggest setting swappiness to 0 or 1, as swapping can cause performance problems.
+------
 
-  test>
-  ```
-
-Enter `help` to know commands and press `Ctrl d` to exit
+test>
+```
 
 - Configure **Access Control**:
 
