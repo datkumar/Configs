@@ -144,9 +144,7 @@ Following the official [Flutter Linux installation docs](https://docs.flutter.de
 
 Linux-based systems support virtual machine acceleration via **KVM** (Kernel-based VM) package. Referring the official Android Developer docs to [Configure hardware acceleration for the Android Emulator](https://developer.android.com/studio/run/emulator-acceleration?utm_source=android-studio)
 
-The [Configure VM acceleration on Linux](https://developer.android.com/studio/run/emulator-acceleration?utm_source=android-studio#vm-linux) section on the only mentions how to do it for Ubuntu/Debian based distros. You can also refer Ubuntu's [KVM installation docs](https://help.ubuntu.com/community/KVM/Installation)
-
-However, for **Fedora** in my case, I'm referring the [Fedora Quick Docs page for Virtualization](https://docs.fedoraproject.org/en-US/quick-docs/virtualization-getting-started/):
+The [Configure VM acceleration on Linux](https://developer.android.com/studio/run/emulator-acceleration?utm_source=android-studio#vm-linux) section only mentions how to do it for Ubuntu/Debian based distros. You can also refer Ubuntu's [KVM installation docs](https://help.ubuntu.com/community/KVM/Installation). However, for **Fedora** in my case, I'm referring the [Fedora Quick Docs page for Virtualization](https://docs.fedoraproject.org/en-US/quick-docs/virtualization-getting-started/):
 
 - Check that your CPU supports virtualization:
 
@@ -182,7 +180,7 @@ However, for **Fedora** in my case, I'm referring the [Fedora Quick Docs page fo
     virt-top
   ```
 
-- To install the mandatory, default, and optional packages:
+- To install the mandatory, default and optional packages:
 
   ```sh
   sudo dnf group install --with-optional virtualization

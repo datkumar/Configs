@@ -36,6 +36,7 @@ sudo dnf group install Multimedia
 
 # FFMPEG full
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+sudo dnf install ffmpegthumbnailer
 
 # Hardware codecs with AMD (mesa)
 sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld
@@ -66,7 +67,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
   sudo dnf install -y gcc-c++   # or clang
   ```
 
-- Java comes installed as `openjdk-17`. Not that it has **JRE** NOT **JDK** (`java` command works but `javac` isn't found)
+- Java comes installed as `openjdk-17`. Note that it has **JRE** NOT **JDK** (`java` command works but `javac` isn't found)
 
 - Python (`python3`, `python`) is already installed; but NOT `pip`. You can install as `python3-pip` package
 

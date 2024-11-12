@@ -5,6 +5,6 @@ appindicatorsupport@rgcjonas.gmail.com
 bluetooth-quick-connect@bjarosze.gmail.com
 just-perfection-desktop@just-perfection
 pip-on-top@rafostar.github.com
-netspeed@alynx.one
 ding@rastersoft.com
 background-logo@fedorahosted.org
+netspeedsimplified@prateekmedia.extension

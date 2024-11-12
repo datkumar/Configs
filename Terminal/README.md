@@ -22,7 +22,7 @@ Referred from: [OMZ GitHub guide](https://github.com/ohmyzsh/ohmyzsh/wiki/Instal
   chsh -s $(which zsh)
   ```
 
-- Reboot the system. Open the terminal, it will it opens the **setup wizard** asking for multiple options to configure ZSH. In the wizard, select options as per your preference. These will be saved in your Shell config file i.e. `~/.zshrc`
+- Reboot the system. Open the terminal, it opens the **setup wizard** asking for multiple options to configure ZSH. In the wizard, select options as per your preference. These will be saved in your Shell config file i.e. `~/.zshrc`
 
 - Ensure your shell being loaded is zsh whenever you open terminal
 

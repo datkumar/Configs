@@ -106,7 +106,7 @@ Run `psql --help` to know available options
 
 - Set Admin password:
 
-  ```sql
+  ```sh
   postgres=# \password postgres
   Enter new password for user "postgres":
   Enter it again:
@@ -146,7 +146,7 @@ Run `psql --help` to know available options
   psql my_db
   ```
 
-  The **ident** auth automatically matches Unix usernames with Postgres usernames. See the `/var/lib/pgsql/17/data/pg_ident.conf` file
+  The **ident** auth automatically matches UNIX usernames with Postgres usernames. See the `/var/lib/pgsql/17/data/pg_ident.conf` file
 
 - List Databases:
 
@@ -185,7 +185,7 @@ Run `psql --help` to know available options
 
 - Connect to another database:
 
-  ```sql
+  ```sh
   my_db=# \c postgres
   You are now connected to database "postgres" as user "kumar".
   ```

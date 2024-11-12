@@ -4,7 +4,7 @@
 
 Following their [instructions for Fedora](https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions). Refer that page for your respective Linux distro
 
-- Install key and yum repository
+- Install key and `yum` repository
 
   ```sh
   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc

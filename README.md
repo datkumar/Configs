@@ -2,7 +2,7 @@
 
 My main PC is set up as **dual-boot** with Windows and [Fedora Workstation](https://fedoraproject.org/workstation/) distribution of Linux on two separate drives. So most of my configs are centred around Fedora
 
-I've automated the process of copying _most_ of my config files via the [`copy-config-files.sh`](https://raw.githubusercontent.com/datkumar/Configs/refs/heads/main/copy-config-files.sh) bash script. Open terminal in this folder and run it periodically to backup config files:
+I've automated the process of copying _most_ of my config files via the [`copy-config-files.sh`](https://github.com/datkumar/Configs/blob/main/copy-config-files.sh) bash script. Open terminal in the cloned repo folder and run the script periodically to backup config files:
 
 ```sh
 # Give it permission to execute (only needed to run once)
@@ -30,6 +30,8 @@ chmod +x ./copy-config-files.sh
 ### [Browser](./Browser/README.md)&ensp;<img alt="Firefox" src='https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg' height="20">
 
 ### [Terminal](./Terminal/README.md) <img alt="Terminal" src='https://upload.wikimedia.org/wikipedia/commons/d/da/GNOME_Terminal_icon_2019.svg' height="20">
+
+### [Tmux](./Tmux/README.md) <img alt="Tmux" src="https://raw.githubusercontent.com/tmux/tmux/c8677d3272b69587d8c4e7e5ef9da405e552e8ae/logo/tmux-logomark.svg" height="20">
 
 ### [Fonts 🔤](./Fonts/README.md)
 

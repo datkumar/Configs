@@ -13,7 +13,7 @@ sudo dnf install -y neovim python3-neovim
 
 ---
 
-## Lua setup
+## Lua setup <img alt="Lua" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Lua-Logo.svg"  height="20">
 
 For LazyVim, we need to set up `lua` and `luarocks` (the package manager for Lua modules)
 
