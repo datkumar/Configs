@@ -93,7 +93,7 @@ Make sure to include them in the `plugins=(...)` array inside `~/.zshrc` file
 
 The starting default OMZ profile is available at `~/.oh-my-zsh/templates/zshrc.zsh-template`
 
-You can refer [my `~/.zshrc` shell config file](https://github.com/datkumar/Configs/blob/main/config-files/.zshrc)
+You can refer [my `.zshrc` file](https://github.com/datkumar/Configs/blob/main/config-files/.zshrc)
 
 ---
 

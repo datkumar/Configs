@@ -138,7 +138,7 @@ flatpak uninstall package1
 
 ```sh
 sudo dnf install -y \
-wget curl git gcc-c++ make cmake openssl \
+wget curl git gcc-c++ make cmake openssl zip unzip \
 gnome-tweaks grub-customizer \
 tmux zsh lua lua-devel neovim python3-neovim \
 fastfetch btop htop nmap ddcutil dmidecode piper hwinfo info \

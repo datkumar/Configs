@@ -1,0 +1,16 @@
+[
+	{
+		"name": "Configs",
+		"rootPath": "vscode-remote://wsl+ubuntu/home/kumar-wsl/Projects/Configs",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "code-journal",
+		"rootPath": "vscode-remote://wsl+Ubuntu/home/kumar-wsl/Projects/code-journal",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	}
+]

@@ -54,3 +54,38 @@ I save all the `.zip` font downloads into `~/Downloads/Font-Downloads/` folder. 
 mkdir -p ~/.fonts
 for fontzip in ~/Downloads/Font-Downloads/*.zip; do unzip -qo $fontzip -d ~/.fonts/$(basename $fontzip .zip); done
 ```
+
+---
+
+## Installing Fonts in Windows
+
+- Download the zips from respective sources and place all in `Font-Download` folder within your Downloads
+
+- In windows, System fonts are stored in `C:\Windows\Fonts` and User fonts in `C:\Users\kumar\AppData\Local\Microsoft\Windows\Fonts` (note that User fonts folder might not exist)
+
+- So the tweaked script to extract contents of zips into respective folders in User fonts folder is as following. Run it in git-bash terminal:
+
+  ```bash
+  mkdir -p ~/AppData/Local/Microsoft/Windows/Fonts
+  for fontzip in ~/Downloads/Font-Downloads/*.zip; do unzip -qo $fontzip -d ~/AppData/Local/Microsoft/Windows/Fonts/$(basename $fontzip .zip); done
+  ```
+
+- To register fonts in Windows, open PowerShell as Admin and run below commands. It recursively traverses your Fonts folder and registers all `.ttf` and `.otf` font files under **Windows Registry** keys:
+
+  ```powershell
+  # Register TrueType Font (.ttf) files. Press Enter to continue
+  Get-ChildItem -Recurse "$env:LOCALAPPDATA\Microsoft\Windows\Fonts" -Filter *.ttf | ForEach-Object {
+    $fontPath = $_.FullName
+    $fontName = $_.BaseName
+    reg add "HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "$fontName (TrueType)" /t REG_SZ /d "$fontPath" /f
+  }
+
+  # Register OpenType Font (.otf) files. Press Enter to continue
+  Get-ChildItem -Recurse "$env:LOCALAPPDATA\Microsoft\Windows\Fonts" -Filter *.otf | ForEach-Object {
+    $fontPath = $_.FullName
+    $fontName = $_.BaseName
+    reg add "HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "$fontName (OpenType)" /t REG_SZ /d "$fontPath" /f
+  }
+  ```
+
+- Restart computer. Then check in `Fonts` in Control Panel
