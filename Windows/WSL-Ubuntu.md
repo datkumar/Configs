@@ -19,23 +19,22 @@ As per Microsoft's [WSL install guide](https://learn.microsoft.com/en-us/windows
 
 ## Post-install steps
 
-- Edit the `.bashrc` and paste config contents such as [my `.bashrc`](https://github.com/datkumar/Configs/blob/main/Windows/config-files/.zshrc)
+- Edit the `.bashrc` and paste config contents such as [my `.bashrc`](https://github.com/datkumar/Configs/blob/main/Windows/config-files/.bashrc)
 
 - Install packages: [fastfetch](https://github.com/fastfetch-cli/fastfetch#installation), [`build-essential`](https://itsfoss.com/build-essential-ubuntu/)
 
-```sh
-sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
-sudo apt update
+  ```sh
+  sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
+  sudo apt update
 
-sudo apt install \
-wget curl git tmux zip unzip build-essential \
-fzf bat jq eza ripgrep zoxide \
-htop fastfetch hwinfo
-```
+  sudo apt install \
+  wget curl git tmux zip unzip build-essential \
+  fzf bat jq eza ripgrep zoxide \
+  htop fastfetch hwinfo
+  ```
 
-The `build-essential` contains a list of packages that are required to create a Debian package (deb) as dependencies. These packages are `libc`, `gcc`, `g++`, `make`, `dpkg-dev` etc.
+  The `build-essential` contains a list of packages dependencies that are required to create a Debian package (`.deb`) . These packages are `libc`, `gcc`, `g++`, `make`, `dpkg-dev` etc.
 
-See output of `lsblk` to know your distro is mounted at `/mnt/wslg/distro`
-Type `exit` to close WSL Ubuntu session
+- Type `exit` to close WSL Ubuntu session
 
-Your usual local Windows files in `C` drive are available at `/mnt/c`
+- See output of `lsblk` to know your distro is mounted at `/mnt/wslg/distro`. Your usual local Windows files in `C` drive are available at `/mnt/c`
