@@ -1,0 +1,82 @@
+{
+  "telemetry.telemetryLevel": "error",
+  // Workbench
+  "window.titleBarStyle": "custom",
+  "window.customTitleBarVisibility": "auto",
+  "workbench.startupEditor": "none",
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "default",
+  "workbench.colorTheme": "Bearded Theme HC Midnight Void",
+  "workbench.iconTheme": "vscode-icons",
+  // Editor
+  "editor.mouseWheelZoom": true,
+  "editor.fontFamily": "'Fira Code', monospace",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  // Terminal
+  "terminal.integrated.fontFamily": "'CodeNewRoman Nerd Font Mono', monospace",
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.drawBoldTextInBrightColors": true,
+  // Formatting
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.useEditorConfig": true,
+  "prettier.trailingComma": "es5",
+  "editor.detectIndentation": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.comments.insertSpace": true,
+  "cSpell.diagnosticLevel": "Hint",
+  "[c][cpp][makefile]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "[shellscript][ignore][dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[java]": {},
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Markdown
+  "markdownlint.config": {
+    "no-inline-html": false
+  },
+  "markdown-preview-enhanced.mermaidTheme": "dark",
+  "markdown-preview-enhanced.enablePreviewZenMode": true,
+  "markdown-preview-enhanced.previewTheme": "one-dark.css",
+  "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
+  // Change this based on whether Tailwind/Vanilla-CSS is being used
+  "files.associations": {
+    "*.css": "postcss"
+  },
+  // Projects
+  "projectManager.git.baseFolders": ["~/Desktop/Dev"],
+  "git.autofetch": true,
+  "git.autorefresh": true,
+  // Custom labels for project files
+  "workbench.editor.customLabels.enabled": true,
+  "workbench.editor.customLabels.patterns": {
+    // NextJs project
+    "**/app/**/page.tsx": "${dirname} - Page",
+    "**/app/**/route.ts": "${dirname} - Endpoint",
+    "**/app/**/layout.tsx": "${dirname} - Layout",
+    "**/app/**/loading.tsx": "${dirname} - Skeleton",
+    // Astro project
+    "**/pages/**/index.astro": "${dirname} - Page",
+    // Folder-wise READMEs
+    "**/README.md": "${dirname} - README"
+  },
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
+}

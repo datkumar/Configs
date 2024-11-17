@@ -1,0 +1,12 @@
+Extensions installed on WSL: Ubuntu:
+astro-build.astro-vscode
+davidanson.vscode-markdownlint
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+foxundermoon.shell-format
+gruntfuggly.todo-tree
+ms-vscode.cpptools
+shd101wyy.markdown-preview-enhanced
+streetsidesoftware.code-spell-checker
+visualstudioexptteam.intellicode-api-usage-examples
+yoavbls.pretty-ts-errors

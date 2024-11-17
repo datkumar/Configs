@@ -71,7 +71,16 @@ You can also refer [my git config](https://github.com/datkumar/Configs/blob/main
   ssh -vT git@github.com
   ```
 
-  Also try cloning any GitHub repo via the SSH method url: `git@github.com:USERNAME/REPONAME.git`
+  In the output:
+
+  ```txt
+  ...
+  Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+  ...
+  Hi datkumar! You've successfully authenticated, but GitHub does not provide shell access.
+  ```
+
+Also try cloning any GitHub repo via the SSH method url: `git@github.com:USERNAME/REPONAME.git`
 
 **References**:
 
