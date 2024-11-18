@@ -1,6 +1,7 @@
 {
   "dart.flutterSdkPath": "/home/kumar/FlutterSdk/flutter",
   "telemetry.telemetryLevel": "error",
+  "cSpell.diagnosticLevel": "Hint",
   // Workbench
   "window.titleBarStyle": "custom",
   "window.customTitleBarVisibility": "auto",
@@ -11,11 +12,11 @@
   "workbench.iconTheme": "vscode-icons",
   // Editor
   "editor.mouseWheelZoom": true,
-  "editor.fontFamily": "0xProto Nerd Font",
+  "editor.fontFamily": "'0xProto', monospace",
   "editor.fontLigatures": true,
   "editor.minimap.enabled": false,
   // Terminal
-  "terminal.integrated.fontFamily": "Geist Mono",
+  "terminal.integrated.fontFamily": "'CodeNewRoman Nerd Font Mono', monospace",
   "terminal.integrated.fontSize": 12,
   "terminal.external.linuxExec": "alacritty",
   "terminal.integrated.drawBoldTextInBrightColors": true,
@@ -26,15 +27,24 @@
   "prettier.useEditorConfig": true,
   "prettier.trailingComma": "es5",
   "editor.detectIndentation": true,
-  "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.comments.insertSpace": true,
-  "cSpell.diagnosticLevel": "Hint",
+  // File type specific settings
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[makefile]": {
+    "editor.insertSpaces": false
+  },
   "[c][cpp][makefile]": {
     "editor.defaultFormatter": "ms-vscode.cpptools",
-    "editor.insertSpaces": false,
     "editor.tabSize": 4
   },
+  "C_Cpp.clang_format_style": "file",
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  // "C_Cpp.vcFormat.indent.caseLabels": true,
+  // "C_Cpp.vcFormat.indent.preserveComments": true,
+  // "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyFunction": true,
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
@@ -104,8 +114,5 @@
     "terminal.ansiBrightMagenta": "#c00a7a",
     "terminal.ansiBrightCyan": "#3cede4",
     "terminal.ansiBrightWhite": "#ffffff"
-  },
-  "[properties]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
   }
 }

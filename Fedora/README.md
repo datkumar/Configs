@@ -87,6 +87,7 @@ sudo dnf install package1 package2
 
 # Update all packages
 sudo dnf up
+sudo dnf up --refresh --best
 
 # List all installed packages (grep over it to search something specific)
 dnf list --installed
@@ -138,7 +139,7 @@ flatpak uninstall package1
 
 ```sh
 sudo dnf install -y \
-wget curl git gcc-c++ make cmake openssl zip unzip \
+wget curl git gcc-c++ clang clang-tools-extra make cmake openssl zip unzip \
 gnome-tweaks grub-customizer \
 tmux zsh lua lua-devel neovim python3-neovim \
 fastfetch btop htop nmap ddcutil dmidecode piper hwinfo info \

@@ -84,8 +84,10 @@ esac
 
 # Flutter, Android
 export PATH=$PATH:$HOME/FlutterSdk/flutter/bin
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$HOME/.local/share/JetBrains/Toolbox/apps/android-studio/bin
-export PATH=$PATH:$HOME/Android/Sdk/platform-tools
 
 # Golang
 export PATH=$PATH:/usr/local/go/bin
@@ -158,3 +160,6 @@ fpath+=~/.zsh_functions
 
 # fnm completions for Zsh
 eval "$(fnm env --use-on-cd --shell zsh)"
+
+# Setup zoxide in on zsh
+eval "$(zoxide init zsh)"

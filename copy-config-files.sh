@@ -31,7 +31,7 @@ gnome-extensions list --enabled >$DEST/gnome-shell-extensions.txt
 # VLC settings
 cp ~/.config/vlc/vlcrc $DEST
 
-# -------------- VSCode --------------
+# -------------- VS Code --------------
 mkdir -p $DEST/vscode
 
 # User settings
@@ -45,6 +45,12 @@ cp ~/.config/Code/User/keybindings.json $DEST/vscode/keybindings.jsonc
 
 # Snippets (Optional. Mine are empty)
 # cp ~/.config/Code/User/snippets $DEST/vscode/snippets/
+
+# C/C++ Formatting:
+mkdir -p $DEST/cpp
+cp ~/Desktop/Dev/code-journal/.playground/cpp/.clang-format $DEST/cpp/.clang-format
+clang-format --style=Google --dump-config >$DEST/cpp/.clang-format-google
+clang-format --style=LLVM --dump-config >$DEST/cpp/.clang-format-llvm
 
 # -------------- Fonts --------------
 
