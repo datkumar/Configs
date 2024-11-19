@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
 DEST=./config-files
-# Delete old backup folder (if exists)
-rm -rf $DEST
-# Create a new one
+# Create the destination folder if it doesn't exist
 mkdir -p $DEST
 
 # DNF config
@@ -71,8 +69,9 @@ firefoxProfileFolder=$HOME/.mozilla/firefox/40rdv56b.default-release-17281205122
 # Firefox extensions i.e add-ons:
 jq -r '.addons[] | select(.defaultLocale != null) | "\(.defaultLocale.name) by \(.defaultLocale.creator)"' $firefoxProfileFolder/extensions.json >$DEST/firefox/extensions.txt
 
-# Firefox Bookmarks:
-# Bookmarks backup (assuming non-empty)
+# Firefox Bookmarks latest backup:
+# Delete previous saved backup file
+rm $DEST/firefox/bookmarks-*
 bookmarkBackups=$firefoxProfileFolder/bookmarkbackups
 latestBookmarkBackup=$(ls -t $bookmarkBackups/*.jsonlz4 | head -n 1)
 cp $latestBookmarkBackup $DEST/firefox/
@@ -92,6 +91,8 @@ if [[ $? -ne 0 ]]; then
 fi
 
 # Simple Tab Groups (latest backup of open tabs):
+# Delete previous saved backup file
+rm $DEST/firefox/auto-stg-backup*.json
 latestStgFolder=$(ls -d ~/Downloads/STG-backups-* | sort -V | tail -n 1)
 latestStgBackup=$(ls "$latestStgFolder"/auto-stg-backup-day-of-month-*@drive4ik.json | sort -V | tail -n 1)
 cp $latestStgBackup $DEST/firefox/
@@ -102,8 +103,8 @@ cp -r ~/.config/Google/AndroidStudio* $DEST/android-studio/
 
 # -------------- Manually export --------------
 
-touch $DEST/firefox/tabliss.json
-touch $DEST/firefox/ublock-filters.txt
+# touch $DEST/firefox/tabliss.json
+# touch $DEST/firefox/ublock-filters.txt
 
 echo "Need to manually export these configs:"
 echo "  - Tabliss settings"
