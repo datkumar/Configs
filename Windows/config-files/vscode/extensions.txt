@@ -6,7 +6,9 @@ esbenp.prettier-vscode
 foxundermoon.shell-format
 gruntfuggly.todo-tree
 ms-vscode.cpptools
+naumovs.color-highlight
 shd101wyy.markdown-preview-enhanced
 streetsidesoftware.code-spell-checker
+tamasfe.even-better-toml
 visualstudioexptteam.intellicode-api-usage-examples
 yoavbls.pretty-ts-errors

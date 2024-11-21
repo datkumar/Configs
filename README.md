@@ -67,4 +67,6 @@ chmod +x ./copy-config-files.sh
 
 <!-- ### [Anaconda, Python](./Anaconda_Python/README.md)&ensp;<img alt="Anaconda" src='https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png' height="20"> -->
 
-### [Windows](./Windows/README.md)&ensp;<img alt="Windows" src="https://upload.wikimedia.org/wikipedia/commons/8/87/Windows_logo_-_2021.svg" height="20">
+---
+
+## [Windows](./Windows/README.md)&ensp;<img alt="Windows" src="https://upload.wikimedia.org/wikipedia/commons/8/87/Windows_logo_-_2021.svg" height="20">

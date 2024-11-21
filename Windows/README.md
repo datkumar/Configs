@@ -2,4 +2,4 @@
 
 ## [Post-install steps](./Post-install.md)
 
-## [WSL Ubuntu setup](./WSL-Ubuntu.md)
+## [WSL Ubuntu setup](./WSL-Ubuntu.md) <img alt="Ubuntu" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/UbuntuCoF.svg" height="22">

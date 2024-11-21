@@ -6,14 +6,22 @@ rm -rf $DEST
 # Create a new one
 mkdir -p $DEST
 
-# WSL Ubuntu Bash config
-cp ~/.bashrc $DEST
+# NOTE: This script is being run in WSL Project folder
+# So, WSL home is `~` and Windows native home is `/mnt/c/Users/kumar`
+# -------------------------------
 
-# Tmux config
-#cp ~/.tmux.conf $DEST
+# Bash config file:
+cp ~/.bashrc $DEST/.bashrc-wsl
+cp /mnt/c/Users/kumar/.bash_profile $DEST/.bash_profile-native
 
 # Git global config
 cp ~/.gitconfig $DEST
+
+# Tmux config
+cp ~/.tmux.conf $DEST
+
+# Alacritty config
+cp /mnt/c/Users/kumar/AppData/Roaming/alacritty/alacritty.toml $DEST
 
 # -------------- VSCode --------------
 mkdir -p $DEST/vscode
@@ -30,11 +38,7 @@ cp /mnt/c/Users/kumar/AppData/Roaming/Code/User/keybindings.json $DEST/vscode/ke
 # Projects (WSL base folder not assignable)
 cp /mnt/c/Users/kumar/AppData/Roaming/Code/User/globalStorage/alefragnani.project-manager/projects.json $DEST/vscode/projects.json
 
-# Snippets (Optional. Mine are empty)
-# cp ~/.config/Code/User/snippets $DEST/vscode/snippets/
-
-# -------------- Fonts --------------
+# -------------- My scripts --------------
+cp -r ~/scripts $DEST
 
 # -------------- Firefox --------------
-
-# -------------- Manually export --------------

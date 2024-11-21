@@ -53,17 +53,16 @@ As per [this](https://youtu.be/SW6rAv3WcvY?si=yA2ReUeLCh355MnS) video:
 
 Browse winget packages at: [winget.run](https://winget.run/), [winstall.app](https://winstall.app/)
 
-My Programs are: [Firefox](https://winget.run/pkg/Mozilla/Firefox), [VS Code](https://winget.run/pkg/Microsoft/VisualStudioCode), [Git](https://git-scm.com/downloads/win), [VLC](https://winget.run/pkg/VideoLAN/VLC), [fastfetch](https://github.com/fastfetch-cli/fastfetch?tab=readme-ov-file#windows), [Notepad++](https://winget.run/pkg/Notepad++/Notepad++)
-
-Installation commands (run Terminal as Admin):
+My `winget` programs are installed as (run Terminal as Admin):
 
 ```sh
-winget install -e --id Mozilla.Firefox
 winget install -e --id Microsoft.VisualStudioCode
-winget install --id Git.Git -e --source winget
-winget install fastfetch
+winget install -e --id Mozilla.Firefox
+winget install -e --id Google.Chrome
+winget install -e --id Git.Git
 winget install -e --id VideoLAN.VLC
 winget install -e --id Notepad++.Notepad++
+winget install fastfetch
 ```
 
 Updating packages: `winget upgrade --all`
