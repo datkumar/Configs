@@ -6,7 +6,7 @@ TERM = "alacritty"
 decorations     = "Full"
 dynamic_padding = false
 dynamic_title   = true
-opacity         = 0.95
+opacity         = 0.93
 startup_mode    = "Windowed"
 title           = "Alacritty"
 
@@ -58,9 +58,9 @@ y = 1   # line-spacing
 
 # Default colors
 [colors.primary]
-background = "#191b27"
+background = "#0d0e1f"
 foreground = "#cad3f5"
-dim_foreground = "#8087a2"
+# dim_foreground = "#8087a2"
 bright_foreground = "#cad3f5"
 
 # Cursor colors
@@ -81,7 +81,7 @@ white = "#d3dbd5"
 
 # Bright colors
 [colors.bright]
-black = "#191b28"
+black = "#616269"
 red = "#dc6275"
 green = "#07e60e"
 yellow = "#e2dc33"

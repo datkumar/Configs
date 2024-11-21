@@ -51,6 +51,8 @@ View your set DNS settings: `resolvectl status`
   ```sh
   # List available partitions along with the filesystem type
   lsblk -f
+  # View available columns
+  lsblk --list-columns
   # List specified columns information about the partitions available
   lsblk -o NAME,TYPE,FSTYPE,FSVER,SIZE,FSUSED,LABEL,UUID,MOUNTPOINT
   ```

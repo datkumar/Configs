@@ -89,8 +89,9 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$HOME/.local/share/JetBrains/Toolbox/apps/android-studio/bin
 
-# Golang
+# Add Go binaries to PATH
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin
 
 # Lua, LuaRocks
 export PATH=$PATH:'/home/kumar/.luarocks/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin'
@@ -110,6 +111,7 @@ alias cls="clear"
 alias refreshenv="exec $(which $SHELL)"
 alias gedit="gnome-text-editor" # The bundled text editor with GNOME isn't GEdit
 alias zshconfig="gedit ~/.zshrc"
+alias diskinfo="lsblk -o NAME,TYPE,FSTYPE,FSVER,SIZE,FSUSED,LABEL,UUID,MOUNTPOINT,MODE"
 
 alias cat="bat"
 alias ls="eza"
