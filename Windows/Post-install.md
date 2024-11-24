@@ -62,6 +62,7 @@ winget install -e --id Google.Chrome
 winget install -e --id Git.Git
 winget install -e --id VideoLAN.VLC
 winget install -e --id Notepad++.Notepad++
+winget install -e --id JGraph.Draw
 winget install fastfetch
 ```
 

@@ -2,7 +2,6 @@
 working_directory="C:\\Users\\kumar"
 # live_config_reload = true
 
-
 [window]
 decorations     = "Full"
 dynamic_padding = false
@@ -12,8 +11,8 @@ startup_mode    = "Windowed"
 title           = "Alacritty"
 
 [window.dimensions]
-columns = 170
-lines   = 40
+columns = 130
+lines   = 35
 
 [window.padding]
 x = 8
@@ -25,7 +24,7 @@ multiplier = 5
 
 [font]
 builtin_box_drawing = false
-size                = 11
+size                = 10
 
 [font.normal]
 family = "CodeNewRoman Nerd Font Mono"

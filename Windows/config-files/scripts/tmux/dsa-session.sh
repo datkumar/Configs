@@ -40,10 +40,11 @@ if [ $? != 0 ]; then
     # Run commands within certain panes for this window
     tmux send-keys -t $SESSION:$WINDOW_2.1 "nano input.txt" C-m
     tmux send-keys -t $SESSION:$WINDOW_2.2 "watch -n 1 cat output.txt" C-m
-fi
 
-# Select the second window (cpp) as the current window
-tmux select-window -t $SESSION:1
+    # Set the currently active window and pane
+    tmux select-window -t $SESSION:1
+    tmux select-pane -t $SESSION:$WINDOW_1.0
+fi
 
 # Attach to the session
 tmux attach -t $SESSION

@@ -42,7 +42,7 @@ code --list-extensions >$DEST/vscode/extensions.txt
 cp ~/.config/Code/User/keybindings.json $DEST/vscode/keybindings.jsonc
 
 # Snippets (Optional. Mine are empty)
-# cp ~/.config/Code/User/snippets $DEST/vscode/snippets/
+cp -r ~/.config/Code/User/snippets $DEST/vscode/snippets/
 
 # C/C++ Formatting:
 mkdir -p $DEST/cpp

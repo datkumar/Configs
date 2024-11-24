@@ -30,10 +30,15 @@ mkdir -p $DEST/vscode
 cp /mnt/c/Users/kumar/AppData/Roaming/Code/User/settings.json $DEST/vscode/settings.jsonc
 
 # List of names of extensions
-code --list-extensions >$DEST/vscode/extensions.txt
+# VSCode extensions for WSL stored in: ~/.vscode-server/extensions
+# VSCode extensions for Windows stored in: %USERPROFILE%\.vscode\extensions
+# code --list-extensions >$DEST/vscode/extensions.txt
 
 # Keyboard shortcut customizations
-cp /mnt/c/Users/kumar/AppData/Roaming/Code/User/keybindings.json $DEST/vscode/keybindings.jsonc
+#cp /mnt/c/Users/kumar/AppData/Roaming/Code/User/keybindings.json $DEST/vscode/keybindings.jsonc
+
+# Snippets (Optional. Mine are empty)
+cp -r /mnt/c/Users/kumar/AppData/Roaming/Code/User/snippets $DEST/vscode/snippets/
 
 # Projects (WSL base folder not assignable)
 cp /mnt/c/Users/kumar/AppData/Roaming/Code/User/globalStorage/alefragnani.project-manager/projects.json $DEST/vscode/projects.json
