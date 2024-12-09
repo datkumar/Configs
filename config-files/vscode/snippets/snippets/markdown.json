@@ -1,0 +1,29 @@
+{
+	"Concepts content placeholder": {
+		"prefix": "concept-entry",
+		"body": [
+			"---",
+			"title: ${1:MyTitle}",
+			"tags: [${2:js}]",
+			"---",
+			"",
+			"<!-- TODO: Write content -->"
+		],
+		"description": "Concepts content placeholder"
+	},
+	"DSA problem placeholder": {
+		"prefix": "dsa-entry",
+		"body": [
+			"---",
+			"title: ${1:ProblemName}",
+			"level: [${2:1}]",
+			"links: [${3:https://leetcode.com/problems}]",
+			"ds: [${4:array}]",
+			"techniques: [${5:hashing}]",
+			"---",
+			"",
+			"<!-- TODO: Write content -->"
+		],
+		"description": "DSA problem placeholder"
+	}
+}

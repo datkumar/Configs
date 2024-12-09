@@ -61,6 +61,12 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[snippets]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
   // Markdown
   "markdownlint.config": {
     "no-inline-html": false
@@ -71,10 +77,10 @@
   "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
   // Change this based on whether Tailwind/Vanilla-CSS is being used
   "files.associations": {
-    "*.css": "postcss"
+    // "*.css": "postcss"
   },
   // Projects
-  "projectManager.git.baseFolders": ["~/Desktop/Dev"],
+  "projectManager.git.baseFolders": ["~/Desktop/Dev", "~/Desktop/Dev-learn"],
   "git.autofetch": true,
   "git.autorefresh": true,
   // Custom labels for project files
@@ -86,7 +92,8 @@
     "**/app/**/layout.tsx": "${dirname} - Layout",
     "**/app/**/loading.tsx": "${dirname} - Skeleton",
     // Astro project
-    "**/pages/**/index.astro": "${dirname} - Page",
+    "**/pages/**/index.astro": "${dirname} - HomePage",
+    "**/pages/**/**.astro": "${dirname} - page",
     // Folder-wise READMEs
     "**/README.md": "${dirname} - README"
   },

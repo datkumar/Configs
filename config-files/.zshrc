@@ -111,7 +111,7 @@ alias cls="clear"
 alias refreshenv="exec $(which $SHELL)"
 alias gedit="gnome-text-editor" # The bundled text editor with GNOME isn't GEdit
 alias zshconfig="gedit ~/.zshrc"
-alias diskinfo="lsblk -o NAME,TYPE,FSTYPE,FSVER,SIZE,FSUSED,LABEL,UUID,MOUNTPOINT,MODE"
+alias diskinfo="lsblk -o NAME,MOUNTPOINTS,TYPE,FSTYPE,FSVER,SIZE,FSUSED,FSAVAIL,MODEL,LABEL,UUID"
 
 alias cat="bat"
 alias ls="eza"

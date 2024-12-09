@@ -141,10 +141,20 @@ flatpak uninstall package1
 sudo dnf install -y \
 wget curl git gcc-c++ clang clang-tools-extra make cmake openssl zip unzip \
 gnome-tweaks grub-customizer \
-tmux zsh lua lua-devel neovim python3-neovim \
+tmux zsh lua lua-devel neovim python3-neovim xxd \
 fastfetch btop htop nmap ddcutil dmidecode piper hwinfo info \
 fzf bat jq eza ripgrep zoxide \
 google-chrome-stable vlc
+```
+
+More programs:
+
+[onefetch](https://github.com/o2sh/onefetch), [showmethkey](https://github.com/AlynxZhou/showmethekey)
+
+```sh
+sudo dnf copr enable varlad/onefetch
+sudo dnf copr enable pesader/showmethekey
+sudo dnf install onefetch showmethekey
 ```
 
 ### My Flatpak apps to install

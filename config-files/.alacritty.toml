@@ -27,24 +27,24 @@ builtin_box_drawing = false
 size                = 11
 
 [font.normal]
-family = "CodeNewRoman Nerd Font Mono"
-style  = "Regular"
+style   = "Regular"
+family  = "CodeNewRoman Nerd Font Mono" 
 
 [font.bold]
-family = "CodeNewRoman Nerd Font Mono"
 style  = "Bold"
+#family = "CodeNewRoman Nerd Font Mono"
 
 [font.italic]
-family = "CodeNewRoman Nerd Font Mono"
 style  = "Italic"
-
-# [font.glyph_offset]
-# x = 0
-# y = 0
+family = "CodeNewRoman Nerd Font Mono"
 
 # [font.bold_italic]
 # family = "..."
 # style  = "..."
+
+# [font.glyph_offset]
+# x = 0
+# y = 0
 
 [font.offset]
 x = 0   # letter-spacing

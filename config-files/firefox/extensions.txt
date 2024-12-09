@@ -3,10 +3,11 @@ WhatFont by null
 Tabliss by null
 Simple Tab Groups by Drive4ik
 VisBug by null
-Bitwarden Password Manager by Bitwarden Inc.
 Dark Reader by Alexander Shutau
-Enhancer for YouTube™ by null
 uBlock Origin by Raymond Hill & contributors
+Bitwarden Password Manager by Bitwarden Inc.
+Stylus by null
+Enhancer for YouTube™ by null
 Form Autofill by null
 Picture-In-Picture by null
 Firefox Screenshots by Mozilla <screenshots-feedback@mozilla.com>

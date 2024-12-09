@@ -24,6 +24,34 @@ Referring the [First-Time Git Setup](https://git-scm.com/book/en/v2/Getting-Star
 
 You can also refer [my git config](https://github.com/datkumar/Configs/blob/main/config-files/.gitconfig)
 
+### More about Git config
+
+The local config is in the `.git/` folder of your project repository. To make changes to local config, just remove the `--global` flag (or you can pass the `--local` flag to be more explicit). You can have multiple lines setting the same variable in the config file; the last i.e. lowest line setting the variable is the final value of that variable
+
+```sh
+# Add a variable value
+git config --add someSection.someKey "someValue"
+# List config
+git config --list
+# Get value of specific variable
+git config --get someSection.someKey
+# Remove the variable
+git config --unset someSection.someKey
+# Remove all lines setting the variable
+git config --unset-all someSection.someKey
+# Remove an entire section
+git config --remove-section someSection
+```
+
+In total there are 4 levels where the Git config can be stored. For the same variable name, the higher-precedence one replaces the lower-precedence one. The locations are as mentioned below, in increasing order of specificity (and thereby precedence). :
+
+1. **System-wide** config: Stored as `/etc/gitconfig`, it's for ALL USERS on your system
+2. **Global** config: Stored as `~/.gitconfig`, it is the global config for ALL REPOS of THAT USER
+3. **Local** config: Stored as `.git/config` in your project repository, it' defined for that SPECIFIC REPO
+4. **Worktree** config: Stored at `.git/config.worktree` it's defined for that PART of the project repo
+
+> In most cases, you'll just be using the Global config for all your projects and sometime maybes the Local config
+
 ## GitHub SSH setup
 
 - Generate new key pair (passing parameters: type `-t` and comment `-C`):

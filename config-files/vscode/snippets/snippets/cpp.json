@@ -1,0 +1,15 @@
+{
+	"C++ starter boilerplate": {
+		"prefix": "starter",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"",
+			"int main () {",
+			"    ${1:cout << \"lessgo\" << endl;}",
+			"    return 0;",
+			"}"
+		],
+		"description": "C++ starter boilerplate"
+	}
+}

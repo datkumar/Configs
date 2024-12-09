@@ -44,6 +44,9 @@ cp ~/.config/Code/User/keybindings.json $DEST/vscode/keybindings.jsonc
 # Snippets (Optional. Mine are empty)
 cp -r ~/.config/Code/User/snippets $DEST/vscode/snippets/
 
+# Project Manager locations
+cp ~/.config/Code/User/globalStorage/alefragnani.project-manager/projects_cache_git.json $DEST/vscode/projects_cache_git.json
+
 # C/C++ Formatting:
 mkdir -p $DEST/cpp
 cp ~/Desktop/Dev/code-journal/.playground/cpp/.clang-format $DEST/cpp/.clang-format

@@ -7,5 +7,10 @@
   {
     "key": "alt+n",
     "command": "explorer.newFile"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "-emojisense.quickEmojitext",
+    "when": "editorTextFocus"
   }
 ]
