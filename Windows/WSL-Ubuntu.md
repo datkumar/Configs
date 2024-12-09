@@ -68,3 +68,9 @@ Note the different Windows native and WSL home folders
   mkdir -p ~/AppData/Roaming/alacritty
   touch ~/AppData/Roaming/alacritty/alacritty.toml
   ```
+
+## Dev-softwares
+
+- Download the archive file into Windows Downloads folder
+- Open Terminal inside that folder, and enter `wsl`
+- Now follow the rest of the steps of Linux guide inside your WSL considering this folder location

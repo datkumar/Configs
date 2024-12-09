@@ -38,7 +38,7 @@ cp /mnt/c/Users/kumar/AppData/Roaming/Code/User/settings.json $DEST/vscode/setti
 #cp /mnt/c/Users/kumar/AppData/Roaming/Code/User/keybindings.json $DEST/vscode/keybindings.jsonc
 
 # Snippets (Optional. Mine are empty)
-cp -r /mnt/c/Users/kumar/AppData/Roaming/Code/User/snippets $DEST/vscode/snippets/
+cp -r /mnt/c/Users/kumar/AppData/Roaming/Code/User/snippets/ $DEST/vscode/snippets/
 
 # Projects (WSL base folder not assignable)
 cp /mnt/c/Users/kumar/AppData/Roaming/Code/User/globalStorage/alefragnani.project-manager/projects.json $DEST/vscode/projects.json

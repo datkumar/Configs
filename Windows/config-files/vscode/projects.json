@@ -12,5 +12,12 @@
 		"paths": [],
 		"tags": [],
 		"enabled": true
+	},
+	{
+		"name": "kitchen-docs",
+		"rootPath": "vscode-remote://wsl+Ubuntu/home/kumar-wsl/Projects/kitchen-docs",
+		"paths": [],
+		"tags": [],
+		"enabled": true
 	}
 ]

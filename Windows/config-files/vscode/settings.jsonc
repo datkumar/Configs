@@ -57,7 +57,7 @@
   "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
   // Change this based on whether Tailwind/Vanilla-CSS is being used
   "files.associations": {
-    "*.css": "postcss"
+    // "*.css": "postcss"
   },
   // Projects
   "projectManager.git.baseFolders": ["~/Desktop/Dev"],
@@ -72,7 +72,7 @@
     "**/app/**/layout.tsx": "${dirname} - Layout",
     "**/app/**/loading.tsx": "${dirname} - Skeleton",
     // Astro project
-    "**/pages/**/index.astro": "${dirname} - Page",
+    "**/pages/**/index.astro": "${dirname} - Homepage",
     // Folder-wise READMEs
     "**/README.md": "${dirname} - README"
   },

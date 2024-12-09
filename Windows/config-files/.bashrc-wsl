@@ -141,6 +141,8 @@ export BAT_THEME_LIGHT="ansi"
 
 # PATH additions:
 export PATH=$PATH:$HOME/.local/bin
+# Go:
+export PATH=$PATH:/usr/local/go/bin
 
 # Aliases:
 alias cls=clear
