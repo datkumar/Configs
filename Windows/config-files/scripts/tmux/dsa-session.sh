@@ -20,11 +20,11 @@ if [ $? != 0 ]; then
     # Create new named session (dsa) and with named window (server) at given directory
     tmux new-session -d -s $SESSION -n $WINDOW_0 -c $START_DIR
     # Run command to start server within this window
-    tmux send-keys -t $SESSION:$WINDOW_0 "pnpm dev-local" C-m
+    tmux send-keys -t $SESSION:$WINDOW_0 "pnpm dev" C-m
 
     # Create new window (cpp) at given subdirectory
     tmux new-window -t $SESSION -n $WINDOW_1 -c $START_DIR/.playground/cpp
-    # Split this window horizontally then vertically into 3 panes
+    # Split this window vertically into 2 panes
     tmux split-window -h -c $START_DIR/.playground/cpp -t $SESSION:$WINDOW_1
     tmux split-window -v -c $START_DIR/.playground/cpp -t $SESSION:$WINDOW_1.1
     # Run commands within each pane for this window
