@@ -30,6 +30,9 @@
     <e n="ChooseRuntime">
       <i c="2" d="2" l="1729453922090" k="1729453922090" />
     </e>
+    <e n="CloseAllEditors">
+      <i c="1" l="1734765170870" />
+    </e>
     <e n="CodeCompletion">
       <i c="168" l="1729504450833" />
     </e>
@@ -183,6 +186,9 @@
     <e n="QuickJavaDoc">
       <i c="1" l="1729228009359" />
     </e>
+    <e n="RecentFiles">
+      <i c="1" l="1734765170938" />
+    </e>
     <e n="RedesignedRunConfigurationSelector">
       <i c="4" l="1729443393953" />
     </e>
@@ -196,7 +202,7 @@
       <i c="2" l="1729498888090" />
     </e>
     <e n="Run">
-      <i c="98" l="1729508295529" />
+      <i c="101" l="1734772592386" />
     </e>
     <e n="RunAnything">
       <i c="2" l="1729452475655" />
@@ -217,7 +223,7 @@
       <i c="1" l="1729410463348" />
     </e>
     <e n="SettingsEntryPoint">
-      <i c="21" l="1729495647959" />
+      <i c="22" l="1734772500179" />
     </e>
     <e n="ShowIntentionActions">
       <i c="95" l="1729508279486" />
@@ -229,10 +235,10 @@
       <i c="9" l="1729438273881" />
     </e>
     <e n="ShowSettings">
-      <i c="50" l="1730316313102" />
+      <i c="51" l="1734772496023" />
     </e>
     <e n="Stop">
-      <i c="48" l="1729508283633" />
+      <i c="50" l="1734773671765" />
     </e>
     <e n="Switcher">
       <i c="6" l="1729284093598" />
@@ -266,6 +272,9 @@
     </e>
     <e n="WelcomeScreen.CreateNewProject">
       <i c="1" l="1728205279543" />
+    </e>
+    <e n="WelcomeScreen.Plugins">
+      <i c="1" l="1734772503374" />
     </e>
     <e n="WelcomeScreen.RunAndroidSdkManager">
       <i c="1" l="1728205697078" />
@@ -313,7 +322,7 @@
       <i c="1" l="1729453817215" />
     </e>
     <e n="com.intellij.notification.NotificationAction$Simple">
-      <i c="14" l="1729510521526" />
+      <i c="15" l="1734765091972" />
     </e>
     <e n="com.intellij.openapi.actionSystem.EmptyAction">
       <i c="5" l="1729284093662" />
@@ -346,7 +355,7 @@
       <i c="2" l="1729507293013" />
     </e>
     <e n="com.intellij.openapi.wm.impl.SquareAnActionButton">
-      <i c="117" l="1729510489769" />
+      <i c="121" l="1734772576043" />
     </e>
     <e n="com.intellij.openapi.wm.impl.customFrameDecorations.header.toolbar.MainMenuButton$ShowMenuAction">
       <i c="10" l="1729495811268" />
@@ -361,7 +370,7 @@
       <i c="3" l="1729453717857" />
     </e>
     <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
-      <i c="30" l="1729508741169" />
+      <i c="31" l="1734765168015" />
     </e>
     <e n="com.intellij.ui.ScrollingUtil$ListMoveDownAction">
       <i c="1" l="1729441241642" />
@@ -388,7 +397,7 @@
       <i c="15" l="1729502545807" />
     </e>
     <e n="io.flutter.actions.RestartFlutterDaemonAction">
-      <i c="15" l="1729502433167" />
+      <i c="17" l="1734772574122" />
     </e>
   </component>
 </application>

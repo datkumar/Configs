@@ -165,3 +165,4 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 
 # Setup zoxide in on zsh
 eval "$(zoxide init zsh)"
+. "/home/kumar/.deno/env"

@@ -26,6 +26,18 @@
       "fontSize": 20
     }
   },
+  "widget/MT3sg-aiA4SF": {
+    "id": "MT3sg-aiA4SF",
+    "key": "widget/links",
+    "order": 1,
+    "display": {
+      "position": "middleCentre",
+      "fontFamily": "Product Sans",
+      "fontWeight": 400,
+      "colour": "#ffffff",
+      "fontSize": 28
+    }
+  },
   "data/MT3sg-aiA4SF": {
     "columns": 3,
     "links": [
@@ -52,22 +64,11 @@
         "name": "WhatsApp",
         "icon": "message-circle"
       },
-      { "url": "https://drive.google.com", "name": "Drive", "icon": "inbox" }
+      { "url": "https://drive.google.com", "name": "Drive", "icon": "inbox" },
+      { "url": "https://www.udemy.com/", "name": "Udemy", "icon": "_favicon" }
     ],
     "visible": true,
     "linkOpenStyle": false
-  },
-  "widget/MT3sg-aiA4SF": {
-    "id": "MT3sg-aiA4SF",
-    "key": "widget/links",
-    "order": 1,
-    "display": {
-      "position": "middleCentre",
-      "fontFamily": "Product Sans",
-      "fontWeight": 400,
-      "colour": "#ffffff",
-      "fontSize": 28
-    }
   },
   "focus": false,
   "locale": "en",

@@ -8,7 +8,6 @@ trebuchet-ms-2
 optima
 google-sans
 helvetica-neue-5-cufonfonts
-bookman
 fantasque-sans-mono
 futura
 itc-american-typewriter
@@ -20,3 +19,6 @@ CascadiaCode-2404.23
 CodeNewRoman
 GeistMono-1.4.01
 Geist-v1.4.01
+Constantia-Font-1
+bookman
+P22-Mackinac

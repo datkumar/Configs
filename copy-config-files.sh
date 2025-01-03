@@ -42,7 +42,7 @@ code --list-extensions >$DEST/vscode/extensions.txt
 cp ~/.config/Code/User/keybindings.json $DEST/vscode/keybindings.jsonc
 
 # Snippets (Optional. Mine are empty)
-cp -r ~/.config/Code/User/snippets/ $DEST/vscode/snippets/
+cp -r ~/.config/Code/User/snippets $DEST/vscode/
 
 # Project Manager locations
 cp ~/.config/Code/User/globalStorage/alefragnani.project-manager/projects_cache_git.json $DEST/vscode/projects_cache_git.json

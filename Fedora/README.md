@@ -143,7 +143,7 @@ wget curl git gcc-c++ clang clang-tools-extra make cmake openssl zip unzip \
 gnome-tweaks grub-customizer \
 tmux zsh lua lua-devel neovim python3-neovim xxd \
 fastfetch btop htop nmap ddcutil dmidecode piper hwinfo info \
-fzf bat jq eza ripgrep zoxide \
+fzf bat jq eza ripgrep zoxide gnome-epub-thumbnailer \
 google-chrome-stable vlc
 ```
 
@@ -165,7 +165,9 @@ org.gnome.FontManager \
 com.mattjakeman.ExtensionManager \
 md.obsidian.Obsidian \
 com.discordapp.Discord \
-com.jgraph.drawio.desktop
+com.jgraph.drawio.desktop \
+com.github.johnfactotum.Foliate \
+io.github.seadve.Kooha
 ```
 
 ## Fedora Resources

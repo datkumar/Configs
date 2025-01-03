@@ -121,5 +121,6 @@
     "terminal.ansiBrightMagenta": "#c00a7a",
     "terminal.ansiBrightCyan": "#3cede4",
     "terminal.ansiBrightWhite": "#ffffff"
-  }
+  },
+  "vsicons.dontShowNewVersionMessage": true
 }

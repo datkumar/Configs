@@ -658,7 +658,7 @@
 [freetype] # Freetype2 font renderer
 
 # Font (string)
-freetype-font=Geist
+freetype-font=Helvetica Neue
 
 # Monospace Font (string)
 freetype-monofont=Courier 10 Pitch
@@ -3737,7 +3737,7 @@ qt-privacy-ask=0
 #osd=1
 
 # Text rendering module (string)
-#text-renderer=
+text-renderer=any
 
 # Use subtitle file (string)
 #sub-file=
