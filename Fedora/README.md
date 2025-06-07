@@ -22,7 +22,7 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 # On Fedora, the default is openh264, so we have to explicitly enable
 sudo dnf config-manager --enable fedora-cisco-openh264
 
-sudo dnf group update core
+sudo dnf update @core
 ```
 
 ### Multimedia codecs
@@ -32,6 +32,7 @@ sudo dnf group update core
 
 ```sh
 # Install additional multimedia plugins
+sudo dnf group info Multimedia
 sudo dnf group install Multimedia
 
 # FFMPEG full
@@ -139,12 +140,11 @@ flatpak uninstall package1
 
 ```sh
 sudo dnf install -y \
-wget curl git gcc-c++ clang clang-tools-extra make cmake openssl zip unzip \
-gnome-tweaks grub-customizer \
-tmux zsh lua lua-devel neovim python3-neovim xxd \
-fastfetch btop htop nmap ddcutil dmidecode piper hwinfo info \
-fzf bat jq eza ripgrep zoxide gnome-epub-thumbnailer \
-google-chrome-stable vlc
+wget curl git gcc-c++ clang clang-tools-extra make cmake zip unzip pkg-config \
+fastfetch btop htop hwinfo info tmux zsh lua lua-devel neovim python3-neovim \
+fzf bat jq eza ripgrep zoxide nmap ddcutil dmidecode piper \
+gnome-epub-thumbnailer xxd pdftk texlive-scheme-full texlive-chktex texstudio openssl openssl-devel \
+vlc google-chrome-stable gnome-tweaks grub-customizer
 ```
 
 More programs:
@@ -160,10 +160,11 @@ sudo dnf install onefetch showmethekey
 ### My Flatpak apps to install
 
 ```sh
-flatpak install \
+flatpak install -y \
 org.gnome.FontManager \
 com.mattjakeman.ExtensionManager \
 md.obsidian.Obsidian \
+com.usebruno.Bruno \
 com.discordapp.Discord \
 com.jgraph.drawio.desktop \
 com.github.johnfactotum.Foliate \

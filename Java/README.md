@@ -59,14 +59,27 @@ I'm on Fedora 40 where the package manager is `dnf`. You would be installing you
 
   On Ubuntu, there are lesser packages and the one you want to install is typically named like `openjdk-17-jdk` for the whole JDK toolset
 
+  > **Note**: Since **Fedora 42**, the `Adoptium` repository has been added in place of the OpenJDK packages. Those JDKs are now available within the Eclipse `temurin` repository and you
+
+  ```
+  temurin-11-jdk.x86_64: Eclipse Temurin 11 JDK
+  temurin-17-jdk.x86_64: Eclipse Temurin 17 JDK
+  temurin-21-jdk.x86_64: Eclipse Temurin 21 JDK
+  temurin-23-jdk.x86_64: Eclipse Temurin 23 JDK
+  temurin-24-jdk.x86_64: Eclipse Temurin 24 JDK
+  temurin-8-jdk.x86_64: Eclipse Temurin 8 JDK
+  ```
+
 - Install your desired OpenJDK package from that list
 
   ```sh
   # Installing the latest OpenJDK with optimized debugging
   sudo dnf install java-latest-openjdk-devel-fastdebug
 
-  # Installing a specific version like OpenJDK 17
+  # Installing a specific version like OpenJDK 17 (BEFORE Fedora 42)
   sudo dnf install java-17-openjdk-devel
+  # Same, but AFTER Fedora 42
+  sudo dnf install temurin-17-jdk
   ```
 
 - Verify installation by checking `java` and `javac` commands are found

@@ -1,0 +1,10 @@
+<application>
+  <component name="LafManager">
+    <lafs-to-previous-schemes>
+      <laf-to-scheme laf="21ca03bb-36f6-41f0-990e-7a22d6d7b90b" scheme="_@user_Solarized Dark" />
+      <laf-to-scheme laf="ExperimentalDark" scheme="_@user_Catppuccin Mocha" />
+      <laf-to-scheme laf="ExperimentalLight" scheme="_@user_Catppuccin Latte" />
+      <laf-to-scheme laf="ExperimentalLightWithLightHeader" scheme="_@user_Catppuccin Latte" />
+    </lafs-to-previous-schemes>
+  </component>
+</application>

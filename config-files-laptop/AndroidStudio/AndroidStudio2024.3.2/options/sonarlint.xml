@@ -1,0 +1,41 @@
+<application>
+  <component name="SonarLintGlobalSettings">
+    <option name="focusOnNewCode" value="true" />
+    <option name="rulesByKey">
+      <map>
+        <entry key="kotlin:S108">
+          <value>
+            <Rule active="false" key="kotlin:S108" />
+          </value>
+        </entry>
+        <entry key="kotlin:S3776">
+          <value>
+            <Rule active="false" key="kotlin:S3776" />
+          </value>
+        </entry>
+        <entry key="kotlin:S4144">
+          <value>
+            <Rule active="false" key="kotlin:S4144" />
+          </value>
+        </entry>
+        <entry key="kotlin:S6524">
+          <value>
+            <Rule active="false" key="kotlin:S6524" />
+          </value>
+        </entry>
+        <entry key="kotlin:S6615">
+          <value>
+            <Rule active="false" key="kotlin:S6615" />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <rules>
+      <Rule active="false" key="kotlin:S6615" />
+      <Rule active="false" key="kotlin:S4144" />
+      <Rule active="false" key="kotlin:S108" />
+      <Rule active="false" key="kotlin:S3776" />
+      <Rule active="false" key="kotlin:S6524" />
+    </rules>
+  </component>
+</application>
