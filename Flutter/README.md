@@ -15,7 +15,16 @@ The most convenient way to install and manage JetBrains IDEs like Android Studio
   tar xf ~/Downloads/jetbrains-toolbox*.tar.gz -C ~/Applications
   ```
 
-- Go to the `~/Applications` folder from File Explorer. Double click on the `jetbrains-toolbox` AppImage file. Accept terms and select `Android Studio` to install. It should automatically download, install, configure Android Studio IDE as well as create a Desktop entry. The JetBrains Toolbox app installs IDEs in the `~/.local/share/JetBrains/Toolbox/apps/` folder
+- Go to the location where you extracted Toolbox AppImage folder and run the `jetbrains-toolbox` AppImage:
+
+  > On Ubuntu, you might need to [install FUSE to run AppImage](https://askubuntu.com/a/1451171): `sudo apt install libfuse2`
+
+  ```sh
+  cd ~/Applications
+  ./jetbrains-toolbox
+  ```
+
+- Accept terms and select `Android Studio` to install it. It should automatically download, install, configure Android Studio IDE as well as create a Desktop entry. The JetBrains Toolbox app installs IDEs in the `~/.local/share/JetBrains/Toolbox/apps/` folder
 
 - The wizard will install: **Android SDK**, **Android Platform**, Android Virtual Device (**AVD**)
 
@@ -37,11 +46,11 @@ The most convenient way to install and manage JetBrains IDEs like Android Studio
 
 Following the official [Flutter Linux installation docs](https://docs.flutter.dev/get-started/install/linux/android):
 
-- Install the [`Flutter`](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter) extension in VSCode. It will prompt you to locate the Flutter SDK. Since you don't have an existing Flutter SDK, select `Download SDK`. You can set the install location to something like `~/FlutterSdk`
+- Install the [`Flutter`](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter) extension in VSCode. Then, from Command Pallete (`Ctrl Shift P`), select `Flutter: New Project`. It will prompt you to locate the Flutter SDK. Since you don't have an existing Flutter SDK, select `Download SDK`. You can set the install location to something like `~/FlutterSdk`. The latest Flutter SDK will be cloned into `~/FlutterSdk/flutter/` folder.
 
-- Now, the latest Flutter SDK will be downloaded into `~/FlutterSdk/flutter/` folder.
+  - If that doesn't work, just download the Flutter SDK zip from the [`Download and Install`](https://docs.flutter.dev/get-started/install/linux/android#175-tab-panel) section and extract it's contents into your desired location as `tar -cJf ~/Downloads/flutter_linux*.tar.xz YOUR_LOCATION`
 
-  - If you want a specific Flutter SDK version, you'll have to download it from their [SDK Archive](https://docs.flutter.dev/release/archive) and extract it into desired location via `tar -cJf ~/Downloads/flutter_linux*.tar.xz YOUR_LOCATION`
+  - If you want a specific Flutter SDK version, you'll have to download it from their [SDK Archive](https://docs.flutter.dev/release/archive) and extract it into desired location
 
 - Add the location of **Flutter SDK's binaries** (like `flutter`, `dart`) to your `PATH` by adding these lines in your Shell config file (`~/.zshrc` or `~/.bashrc`):
 
@@ -49,23 +58,24 @@ Following the official [Flutter Linux installation docs](https://docs.flutter.de
   export PATH=$PATH:$HOME/FlutterSdk/flutter/bin
   ```
 
-  Now restart your shell: `exec $(which $SHELL)`
+  Then, restart your shell: `exec $(which $SHELL)`
 
 - Install the **Linux toolchain** packages:
 
   ```sh
   # For Ubuntu/Debian (apt):
   sudo apt-get update -y && sudo apt-get upgrade -y;
-  sudo apt-get install -y curl git zip unzip xz-utils \
-    clang cmake ninja-build pkg-config libgtk-3-dev libglu1-mesa \
-    libc6:amd64 libstdc++6:amd64 libbz2-1.0:amd64 libncurses5:amd64
-
+  sudo apt install -y \
+   curl git unzip xz-utils zip \
+   libglu1-mesa libc6:amd64 libstdc++6:amd64 lib32z1 libbz2-1.0:amd64 \
+   ninja-build pkg-config libgtk-3-dev mesa-utils
 
   # Equivalent packages for Fedora (dnf):
   sudo dnf up -y
-  sudo dnf install -y curl git zip unzip xz-devel \
-    clang cmake ninja-build pkgconf-pkg-config gtk3-devel mesa-libGLU \
-    glibc libstdc++ bzip2-libs ncurses-libs
+  sudo dnf install -y \
+   curl git zip unzip xz-devel \
+   clang cmake ninja-build pkgconf-pkg-config gtk3-devel mesa-libGLU \
+   glibc libstdc++ bzip2-libs ncurses-libs
   ```
 
 - Install the **latest Android `cmdline-tools`**:
@@ -148,6 +158,8 @@ The [Configure VM acceleration on Linux](https://developer.android.com/studio/ru
 
 - Check that your CPU supports virtualization:
 
+  On Ubuntu:
+
   ```sh
   # Check "Virtualization" section of output. Mine said "AMD-V"
   lscpu
@@ -157,33 +169,50 @@ The [Configure VM acceleration on Linux](https://developer.android.com/studio/ru
 
 - View available packages in the `virtualization` package group:
 
+  - For **Fedora**:
+
+    ```sh
+    dnf groupinfo virtualization
+    ```
+
+    It's output would contain:
+
+    ```txt
+    Group: Virtualization
+    Description: These packages provide a graphical virtualization environment.
+    Mandatory Packages:
+      virt-install
+    Default Packages:
+      libvirt-daemon-config-network
+      libvirt-daemon-kvm
+      qemu-kvm
+      virt-manager
+      virt-viewer
+    Optional Packages:
+      guestfs-tools
+      python3-libguestfs
+      virt-top
+    ```
+
+- For **Ubuntu**:
+
   ```sh
-  dnf groupinfo virtualization
+  sudo apt install cpu-checker
+  # Output should say /dev/kvm exists
+  kvm-ok
+
+  # Output should be more than 1
+  egrep -c '(vmx|svm)' /proc/cpuinfo
   ```
 
-  It's output would contain:
-
-  ```txt
-  Group: Virtualization
-  Description: These packages provide a graphical virtualization environment.
-  Mandatory Packages:
-    virt-install
-  Default Packages:
-    libvirt-daemon-config-network
-    libvirt-daemon-kvm
-    qemu-kvm
-    virt-manager
-    virt-viewer
-  Optional Packages:
-    guestfs-tools
-    python3-libguestfs
-    virt-top
-  ```
-
-- To install the mandatory, default and optional packages:
+- To install the mandatory, default and optional KVM packages:
 
   ```sh
+  # For Fedora (dnf)
   sudo dnf group install --with-optional virtualization
+
+  # For Ubuntu (apt)
+  sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
   ```
 
 - Start and enable the `libvirtd` service to load on boot:

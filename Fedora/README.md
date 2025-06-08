@@ -139,35 +139,40 @@ flatpak uninstall package1
 ## My `dnf` packages to install
 
 ```sh
+sudo dnf up --best --refresh -y
 sudo dnf install -y \
-wget curl git gcc-c++ clang clang-tools-extra make cmake zip unzip pkg-config \
-fastfetch btop htop hwinfo info tmux zsh lua lua-devel neovim python3-neovim \
-fzf bat jq eza ripgrep zoxide nmap ddcutil dmidecode piper \
-gnome-epub-thumbnailer xxd pdftk texlive-scheme-full texlive-chktex texstudio openssl openssl-devel \
-vlc google-chrome-stable gnome-tweaks grub-customizer
+ wget curl git tmux gcc-c++ clang clang-tools-extra make cmake zip unzip pkg-config \
+ fastfetch btop htop hwinfo info zsh lua lua-devel neovim python3-neovim \
+ fzf bat jq eza ripgrep zoxide nmap ddcutil dmidecode piper \
+ gnome-epub-thumbnailer xxd pdftk texlive-scheme-full texlive-chktex texstudio openssl openssl-devel \
+ vlc google-chrome-stable gnome-tweaks grub-customizer
 ```
 
-More programs:
-
-[onefetch](https://github.com/o2sh/onefetch), [showmethkey](https://github.com/AlynxZhou/showmethekey)
+**More programs**: [onefetch](https://github.com/o2sh/onefetch/wiki/Installation), [showmethkey](https://github.com/AlynxZhou/showmethekey), [font-manager](https://github.com/FontManager/font-manager)
 
 ```sh
+# Add Copr of repositories of those packages
+sudo dnf copr enable jerrycasiano/FontManager
 sudo dnf copr enable varlad/onefetch
 sudo dnf copr enable pesader/showmethekey
-sudo dnf install onefetch showmethekey
+
+# Install packages from those added repositories
+sudo dnf install -y font-manager onefetch showmethekey
 ```
+
+[Copr](https://copr.fedorainfracloud.org/) (Cool Other Package Repo) is a Fedora build system, similar to Launchpad for Ubuntu, where contributors and devs publish extra or experimental software. They are used for installing non-official or newer software that’s not in Fedora’s main repos.
 
 ### My Flatpak apps to install
 
 ```sh
 flatpak install -y \
-org.gnome.FontManager \
-com.mattjakeman.ExtensionManager \
+com.obsproject.Studio \
 md.obsidian.Obsidian \
 com.usebruno.Bruno \
 com.discordapp.Discord \
 com.jgraph.drawio.desktop \
 com.github.johnfactotum.Foliate \
+com.mattjakeman.ExtensionManager \
 io.github.seadve.Kooha
 ```
 

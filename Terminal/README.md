@@ -9,15 +9,22 @@ Referred from: [OMZ GitHub guide](https://github.com/ohmyzsh/ohmyzsh/wiki/Instal
 - Install the `zsh` shell via your package manager
 
   ```sh
-  sudo dnf update
+  # Fedora (dnf)
   sudo dnf install -y zsh
+
+  # Ubuntu (apt)
+  sudo apt install -y zsh
   ```
 
-- Make `zsh` as your default shell (If the `chsh` command isn't found, run `sudo dnf install -y util-linux-user`)
+- Make `zsh` as your default shell. If the `chsh` command isn't found, run:
+
+  - For Fedora: `sudo dnf install -y util-linux-user`)
+  - For Ubuntu: ``
 
   ```sh
   # List all available shells
-  chsh -l
+  cat /etc/shells
+
   # Make 'zsh' the default shell
   chsh -s $(which zsh)
   ```
@@ -47,20 +54,7 @@ Themes: [OMZ themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes) , [Extended
 
 > Ensure at least one **powerline or nerd font** is installed to support special characters or glyphs in your theme. Refer my [Fonts Guide](../Fonts/README.md)
 
-<!-- [Irenapova blogpost (zsh,omz,powerlevel10k)](https://irenapopova.com/blog/zsh%20shell-post/) -->
-
 Another new shell prompt alternative is [**Starship**](https://starship.rs/)
-
-<!-- ## Gnome-Terminal Color Schemes
-
-> Basic Profile:
-
-- Size: `120` col x `35` row
-- Font: `CodeNewRoman`
-- Theme: `Gnome dark`
-- Colors: `Tango`
-
-Themes: [hyper-snazzy (creates new profile)](https://github.com/tobark/hyper-snazzy-gnome-terminal) , [Gogh](https://gogh-co.github.io/Gogh/) -->
 
 ---
 
@@ -116,10 +110,14 @@ Referring from the [build instructions for Linux](https://github.com/alacritty/a
   git clone git@github.com:alacritty/alacritty.git
   ```
 
-- Install the required dependencies as per your distro. Mine is Fedora(`dnf`) but you can refer their [Dependencies](https://github.com/alacritty/alacritty/blob/master/INSTALL.md#dependencies) section for your respective distro
+- Install the required dependencies as per your distro by referring their [Dependencies](https://github.com/alacritty/alacritty/blob/master/INSTALL.md#dependencies) section
 
   ```sh
+  # Fedora (dnf)
   sudo dnf install cmake freetype-devel fontconfig-devel libxcb-devel libxkbcommon-devel g++ scdoc
+
+  # Ubuntu (apt)
+  sudo apt install cmake g++ pkg-config libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
   ```
 
 - Build application from the source code. The built binary should be at `target/release/alacritty`
@@ -136,6 +134,16 @@ Referring from the [build instructions for Linux](https://github.com/alacritty/a
   sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
   sudo desktop-file-install extra/linux/Alacritty.desktop
   sudo update-desktop-database
+  ```
+
+- Install alacritty terminfo (if you want to keep `TERM = "alacritty"`) in your Alacritty config (`~/.alacritty.toml`)
+
+  ```sh
+  # Go into "extra" inside the cloned repo folder
+  cd ~/alacritty/extra
+
+  # Add the terminfo
+  tic -x alacritty.info
   ```
 
 - Add manuals i.e. `man` pages:
@@ -168,7 +176,7 @@ Referring from the [build instructions for Linux](https://github.com/alacritty/a
   exec $(which $SHELL)
   ```
 
-- Add a custom keyboard shortcut (I set it as `Super + T`) to launch `alacritty` command instead of the usual terminal command (was `gnome-terminal` in Fedora)
+- Add a custom keyboard shortcut (I set it as `Super + T`) to launch `alacritty` command instead of the usual terminal command
 
 - Your Alacritty settings are kept in `~/.alacritty.toml` config file (create one if it doesn't exist) so edit it to personalize your terminal. You can refer [my `.alacritty.toml` file](https://github.com/datkumar/Configs/blob/main/config-files/.alacritty.toml) as well as their [Configuration page](https://alacritty.org/config-alacritty.html) for more options
 
@@ -185,10 +193,14 @@ Referring from the [build instructions for Linux](https://github.com/alacritty/a
 | [**ripgrep**](https://github.com/BurntSushi/ripgrep) (**`rg`**) | Regex `grep`  |
 | [**zoxide**](https://github.com/ajeetdsouza/zoxide) (**`z`**)   | Smarter `cd`  |
 
-Install those utils via your package manager (For Fedora, it's `dnf`)
+Install those utils via your package manager:
 
 ```sh
+# Fedora (dnf)
 sudo dnf install -y fzf bat jq eza ripgrep zoxide
+
+# Ubuntu (apt)
+sudo apt install -y fzf bat jq eza ripgrep zoxide
 ```
 
 Watch this video for a quick demo showcase 👇

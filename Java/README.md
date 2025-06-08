@@ -5,11 +5,6 @@
 On some Linux distros, Java comes installed by default; however it is **just the JRE and not the JDK**. You can verify this as `java` command is found but the `javac` command is NOT found.
 
 ```sh
-java  # would show manual of arguments
-javac # would give not found error if JDK not installed
-```
-
-```sh
 java --version  # OR "java -version" for older java
 javac --version
 ```
@@ -28,61 +23,164 @@ find /usr/lib/jvm -name javac
 
 ## Installing an OpenJDK
 
-I'm on Fedora 40 where the package manager is `dnf`. You would be installing your desired OpenJDK via your respective Linux distro's package manager (like `apt` for Ubuntu/Debian):
+I'm on Fedora where the package manager is `dnf`. You would be installing your desired OpenJDK via your respective Linux distro's package manager (like `apt` for Ubuntu/Debian):
 
-- Search available JDKs to install:
+- Search available OpenJDK packages to install:
 
   ```sh
-  dnf search jdk
+  # Search available packages:
+  dnf search openjdk
+
+  # To know more about a specific package:
+  dnf info java-latest-openjdk-devel-fastdebug
   ```
 
-  You would get a list of packages available to install having various Java versions as well as the variant suffix in the package. The `headless` variants usually just include the **JRE**. To install the full JDK with all the necessary tools for Java development, we need the development variant of the package, usually containing the `-devel` term suffix in the name for `dnf`. Here's a list of few package variant names for Java 17 OpenJDK from the `dnf` output:
+  <details>
+  <summary>
+  Here's my list of packages output for <code>dnf search openjdk</code> (as of Jun 2025):
+  </summary>
 
-  ```txt
-  java-17-openjdk.x86_64 : OpenJDK 17 Runtime Environment
-  java-17-openjdk-devel.x86_64 : OpenJDK 17 Development Environment
-  java-17-openjdk-devel-fastdebug.x86_64 : OpenJDK 17 Development Environment optimised with full debugging on
-  java-17-openjdk-devel-slowdebug.x86_64 : OpenJDK 17 Development Environment unoptimised with full debugging on
-  java-17-openjdk-fastdebug.x86_64 : OpenJDK 17 Runtime Environment optimised with full debugging on
-  java-17-openjdk-headless.x86_64 : OpenJDK 17 Headless Runtime Environment
-  java-17-openjdk-headless-fastdebug.x86_64 : OpenJDK 17 Runtime Environment optimised with full debugging on
-  java-17-openjdk-headless-slowdebug.x86_64 : OpenJDK 17 Runtime Environment unoptimised with full debugging on
-  java-17-openjdk-javadoc.x86_64 : OpenJDK 17 API documentation
-  java-17-openjdk-portable.x86_64 : OpenJDK 17 Runtime Environment portable edition
-  java-17-openjdk-portable-devel.x86_64 : OpenJDK 17 Development Environment portable edition
-  java-17-openjdk-portable-sources.x86_64 : OpenJDK 17 full patched sources of portable JDK
-  java-17-openjdk-slowdebug.x86_64 : OpenJDK 17 Runtime Environment unoptimised with full debugging on
-  java-17-openjdk-src.x86_64 : OpenJDK 17 Source Bundle
-  java-17-openjdk-src-fastdebug.x86_64 : OpenJDK 17 Source Bundle for packages with debugging on and optimisation
-  java-17-openjdk-src-slowdebug.x86_64 : OpenJDK 17 Source Bundle for packages with debugging on and no optimisation
+  ```sh
+  Matched fields: name, summary
+  ant-openjdk21.noarch: ant binding for openjdk21
+  java-21-openjdk.x86_64: OpenJDK 21 Runtime Environment
+  java-21-openjdk-demo.x86_64: OpenJDK 21 Demos
+  java-21-openjdk-demo-fastdebug.x86_64: OpenJDK 21 Demos optimised with full debugging on
+  java-21-openjdk-demo-slowdebug.x86_64: OpenJDK 21 Demos unoptimised with full debugging on
+  java-21-openjdk-devel.x86_64: OpenJDK 21 Development Environment
+  java-21-openjdk-devel-fastdebug.x86_64: OpenJDK 21 Development Environment optimised with full debugging on
+  java-21-openjdk-devel-slowdebug.x86_64: OpenJDK 21 Development Environment unoptimised with full debugging on
+  java-21-openjdk-fastdebug.x86_64: OpenJDK 21 Runtime Environment optimised with full debugging on
+  java-21-openjdk-headless.x86_64: OpenJDK 21 Headless Runtime Environment
+  java-21-openjdk-headless-fastdebug.x86_64: OpenJDK 21 Runtime Environment optimised with full debugging on
+  java-21-openjdk-headless-slowdebug.x86_64: OpenJDK 21 Runtime Environment unoptimised with full debugging on
+  java-21-openjdk-javadoc.x86_64: OpenJDK 21 API documentation
+  java-21-openjdk-javadoc-zip.x86_64: OpenJDK 21 API documentation compressed in a single archive
+  java-21-openjdk-jmods.x86_64: JMods for OpenJDK 21
+  java-21-openjdk-jmods-fastdebug.x86_64: JMods for OpenJDK 21 optimised with full debugging on
+  java-21-openjdk-jmods-slowdebug.x86_64: JMods for OpenJDK 21 unoptimised with full debugging on
+  java-21-openjdk-portable.x86_64: OpenJDK 21 Runtime Environment portable edition
+  java-21-openjdk-portable-devel.x86_64: OpenJDK 21 Development Environment portable edition
+  java-21-openjdk-portable-devel-fastdebug.x86_64: OpenJDK 21 Runtime and Development Environment portable edition optimised with full debugging on
+  java-21-openjdk-portable-devel-slowdebug.x86_64: OpenJDK 21 Runtime and Development Environment portable edition unoptimised with full debugging on
+  java-21-openjdk-portable-docs.x86_64: OpenJDK 21 API documentation
+  java-21-openjdk-portable-fastdebug.x86_64: OpenJDK 21 Runtime Environment portable edition optimised with full debugging on
+  java-21-openjdk-portable-misc.x86_64: OpenJDK 21 miscellany
+  java-21-openjdk-portable-slowdebug.x86_64: OpenJDK 21 Runtime Environment portable edition unoptimised with full debugging on
+  java-21-openjdk-portable-sources.x86_64: OpenJDK 21 full patched sources of portable JDK
+  java-21-openjdk-portable-static-libs.x86_64: OpenJDK 21 libraries for static linking - portable edition
+  java-21-openjdk-portable-static-libs-fastdebug.x86_64: OpenJDK 21 libraries for static linking - portable edition optimised with full debugging on
+  java-21-openjdk-portable-static-libs-slowdebug.x86_64: OpenJDK 21 libraries for static linking - portable edition unoptimised with full debugging on
+  java-21-openjdk-portable-unstripped.x86_64: The OpenJDK 21 runtime environment.
+  java-21-openjdk-slowdebug.x86_64: OpenJDK 21 Runtime Environment unoptimised with full debugging on
+  java-21-openjdk-src.x86_64: OpenJDK 21 Source Bundle
+  java-21-openjdk-src-fastdebug.x86_64: OpenJDK 21 Source Bundle for packages with debugging on and optimisation
+  java-21-openjdk-src-slowdebug.x86_64: OpenJDK 21 Source Bundle for packages with debugging on and no optimisation
+  java-21-openjdk-static-libs.x86_64: OpenJDK 21 libraries for static linking
+  java-21-openjdk-static-libs-fastdebug.x86_64: OpenJDK 21 libraries for static linking optimised with full debugging on
+  java-21-openjdk-static-libs-slowdebug.x86_64: OpenJDK 21 libraries for static linking unoptimised with full debugging on
+  java-latest-openjdk.x86_64: OpenJDK 24 Runtime Environment
+  java-latest-openjdk-demo.x86_64: OpenJDK 24 Demos
+  java-latest-openjdk-demo-fastdebug.x86_64: OpenJDK 24 Demos optimised with full debugging on
+  java-latest-openjdk-demo-slowdebug.x86_64: OpenJDK 24 Demos unoptimised with full debugging on
+  java-latest-openjdk-devel.x86_64: OpenJDK 24 Development Environment
+  java-latest-openjdk-devel-fastdebug.x86_64: OpenJDK 24 Development Environment optimised with full debugging on
+  java-latest-openjdk-devel-slowdebug.x86_64: OpenJDK 24 Development Environment unoptimised with full debugging on
+  java-latest-openjdk-fastdebug.x86_64: OpenJDK 24 Runtime Environment optimised with full debugging on
+  java-latest-openjdk-headless.x86_64: OpenJDK 24 Headless Runtime Environment
+  java-latest-openjdk-headless-fastdebug.x86_64: OpenJDK 24 Runtime Environment optimised with full debugging on
+  java-latest-openjdk-headless-slowdebug.x86_64: OpenJDK 24 Runtime Environment unoptimised with full debugging on
+  java-latest-openjdk-javadoc.x86_64: OpenJDK 24 API documentation
+  java-latest-openjdk-javadoc-zip.x86_64: OpenJDK 24 API documentation compressed in a single archive
+  java-latest-openjdk-jmods.x86_64: JMods for OpenJDK 24
+  java-latest-openjdk-jmods-fastdebug.x86_64: JMods for OpenJDK 24 optimised with full debugging on
+  java-latest-openjdk-jmods-slowdebug.x86_64: JMods for OpenJDK 24 unoptimised with full debugging on
+  java-latest-openjdk-portable.x86_64: OpenJDK 24 Runtime Environment portable edition
+  java-latest-openjdk-portable-devel.x86_64: OpenJDK 24 Development Environment portable edition
+  java-latest-openjdk-portable-devel-fastdebug.x86_64: OpenJDK 24 Runtime and Development Environment portable edition optimised with full debugging on
+  java-latest-openjdk-portable-devel-slowdebug.x86_64: OpenJDK 24 Runtime and Development Environment portable edition unoptimised with full debugging on
+  java-latest-openjdk-portable-docs.x86_64: OpenJDK 24 API documentation
+  java-latest-openjdk-portable-fastdebug.x86_64: OpenJDK 24 Runtime Environment portable edition optimised with full debugging on
+  java-latest-openjdk-portable-misc.x86_64: OpenJDK 24 miscellany
+  java-latest-openjdk-portable-slowdebug.x86_64: OpenJDK 24 Runtime Environment portable edition unoptimised with full debugging on
+  java-latest-openjdk-portable-sources.x86_64: OpenJDK 24 full patched sources of portable JDK
+  java-latest-openjdk-portable-static-libs.x86_64: OpenJDK 24 libraries for static linking - portable edition
+  java-latest-openjdk-portable-static-libs-fastdebug.x86_64: OpenJDK 24 libraries for static linking - portable edition optimised with full debugging on
+  java-latest-openjdk-portable-static-libs-slowdebug.x86_64: OpenJDK 24 libraries for static linking - portable edition unoptimised with full debugging on
+  java-latest-openjdk-portable-unstripped.x86_64: The OpenJDK 24 runtime environment.
+  java-latest-openjdk-slowdebug.x86_64: OpenJDK 24 Runtime Environment unoptimised with full debugging on
+  java-latest-openjdk-src.x86_64: OpenJDK 24 Source Bundle
+  java-latest-openjdk-src-fastdebug.x86_64: OpenJDK 24 Source Bundle for packages with debugging on and optimisation
+  java-latest-openjdk-src-slowdebug.x86_64: OpenJDK 24 Source Bundle for packages with debugging on and no optimisation
+  java-latest-openjdk-static-libs.x86_64: OpenJDK 24 libraries for static linking
+  java-latest-openjdk-static-libs-fastdebug.x86_64: OpenJDK 24 libraries for static linking optimised with full debugging on
+  java-latest-openjdk-static-libs-slowdebug.x86_64: OpenJDK 24 libraries for static linking unoptimised with full debugging on
+  maven-openjdk21.noarch: maven binding for openjdk21
+  openjdk-asmtools-javadoc.noarch: Javadoc for openjdk-asmtools
+  openjdk-asmtools7-javadoc.noarch: Javadoc for openjdk-asmtools7
+  xmvn-toolchain-openjdk21.noarch: xmvn-minimal binding for openjdk21
+  Matched fields: name
+  javapackages-local-openjdk21.noarch: Non-essential macros and scripts for Java packaging support
+  maven-local-openjdk21.noarch: Macros and scripts for Maven packaging support
+  openjdk-asmtools.noarch: Set of tools used to assemble / disassemble proper and improper Java .class files
+  openjdk-asmtools7.noarch: Set of tools used to assemble / disassemble proper and improper Java .class files for JDK version 11 and lesser
   ```
 
-  On Ubuntu, there are lesser packages and the one you want to install is typically named like `openjdk-17-jdk` for the whole JDK toolset
+  </details>
 
-  > **Note**: Since **Fedora 42**, the `Adoptium` repository has been added in place of the OpenJDK packages. Those JDKs are now available within the Eclipse `temurin` repository and you
+  - On Ubuntu, there are lesser packages and the one you want to install is typically named like `openjdk-17-jdk` for the whole JDK toolset
 
-  ```
-  temurin-11-jdk.x86_64: Eclipse Temurin 11 JDK
-  temurin-17-jdk.x86_64: Eclipse Temurin 17 JDK
-  temurin-21-jdk.x86_64: Eclipse Temurin 21 JDK
-  temurin-23-jdk.x86_64: Eclipse Temurin 23 JDK
-  temurin-24-jdk.x86_64: Eclipse Temurin 24 JDK
-  temurin-8-jdk.x86_64: Eclipse Temurin 8 JDK
-  ```
+  - You would get a list of packages available to install having various Java versions as well as the variant suffix in the package. The `headless` variants usually just include the **JRE**. To install the full JDK with all the necessary tools for Java development, we need the development variant of the package, usually containing the `-devel` term suffix in the name for `dnf`.
 
-- Install your desired OpenJDK package from that list
+- Install your desired OpenJDK package from the packages list:
 
   ```sh
   # Installing the latest OpenJDK with optimized debugging
   sudo dnf install java-latest-openjdk-devel-fastdebug
 
-  # Installing a specific version like OpenJDK 17 (BEFORE Fedora 42)
+  # Installing a specific version like OpenJDK 17
+  # BEFORE Fedora 42:
   sudo dnf install java-17-openjdk-devel
-  # Same, but AFTER Fedora 42
+  # AFTER Fedora 42:
   sudo dnf install temurin-17-jdk
   ```
 
 - Verify installation by checking `java` and `javac` commands are found
+
+> Since **Fedora 42**, the [`Adoptium`](https://adoptium.net) repository has been added to replace the older OpenJDK packages. Those JDKs are now available within the Eclipse `temurin` repository. Follow their [Fedora Instructions](https://adoptium.net/installation/linux/#_centosrhelfedora_instructions) to add `temurin` repo and install it's older JDKs:
+
+- Add the `temurin` repo:
+
+  ```sh
+  sudo tee /etc/yum.repos.d/adoptium.repo > /dev/null <<'EOF'
+  [Adoptium]
+  name=Adoptium
+  baseurl=https://packages.adoptium.net/artifactory/rpm/fedora/\$releasever/\$basearch
+  enabled=1
+  gpgcheck=1
+  gpgkey=https://packages.adoptium.net/artifactory/api/gpg/key/public
+  EOF
+  ```
+
+- Verify the `temurin-*` packages are now available via `dnf search temurin`:
+
+  ```txt
+  Matched fields: name, summary
+  temurin-11-jdk.x86_64: Eclipse Temurin 11 JDK
+  temurin-11-jre.x86_64: Eclipse Temurin 11 JRE
+  temurin-17-jdk.x86_64: Eclipse Temurin 17 JDK
+  temurin-17-jre.x86_64: Eclipse Temurin 17 JRE
+  temurin-21-jdk.x86_64: Eclipse Temurin 21 JDK
+  temurin-21-jre.x86_64: Eclipse Temurin 21 JRE
+  temurin-23-jdk.x86_64: Eclipse Temurin 23 JDK
+  temurin-23-jre.x86_64: Eclipse Temurin 23 JRE
+  temurin-24-jdk.x86_64: Eclipse Temurin 24 JDK
+  temurin-24-jre.x86_64: Eclipse Temurin 24 JRE
+  temurin-8-jdk.x86_64: Eclipse Temurin 8 JDK
+  temurin-8-jre.x86_64: Eclipse Temurin 8 JRE
+  Matched fields: name
+  adoptium-temurin-java-repository.noarch: Fedora package repository files for yum and dnf along with gpg public keys
+  ```
 
 ## Installing an Oracle JDK
 

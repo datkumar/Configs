@@ -7,8 +7,11 @@ From the [Linux section of their Installation](https://github.com/neovim/neovim/
 To install NeoVim on Fedora:
 
 ```sh
-# Replace "dnf" with "apt" for Ubuntu/Debian
+# Fedora (dnf)
 sudo dnf install -y neovim python3-neovim
+
+# Ubuntu (apt)
+sudo apt install -y neovim
 ```
 
 ---
@@ -50,9 +53,15 @@ Following the [LuaRocks install guide](https://luarocks.org/#quick-start):
 - Download the tarball. Extract it's contents and `cd` into that folder:
 
   ```sh
-  wget https://luarocks.org/releases/luarocks-3.11.1.tar.gz
-  tar zxpf luarocks-3.11.1.tar.gz
-  cd luarocks-3.11.1
+  # Download the zip in 
+  cd ~/Downloads
+  wget https://luarocks.org/releases/luarocks-3.12.0.tar.gz
+  
+  # Extract into your desired home location
+  tar -zxpf luarocks-*.tar.gz -C ~/
+
+  # Go into the extracted folder location
+  cd ~/luarocks-3.12.0
   ```
 
 - Run the configuration script:
@@ -112,7 +121,7 @@ Following the [LuaRocks install guide](https://luarocks.org/#quick-start):
   > require "socket"
   ```
 
-  The output should look something like: `table: 0x5584a1343f70	/usr/local/share/lua/5.4/socket.lua`. Press `Ctrl d` to exit the `lua` interpreter
+  The output should look something like: `table: 0x5584a1343f70 /usr/local/share/lua/5.4/socket.lua`. Press `Ctrl d` to exit the `lua` interpreter
 
   - If you get error like `module 'socket' not found`, you need to add various paths to your Shell. Note down the output of `luarocks path`
 

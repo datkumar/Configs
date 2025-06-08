@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# DEST=./config-files-pc
-DEST=./config-files-laptop
+# DEST=./config-files-fedora-pc
+DEST=./config-files-ubuntu-laptop
 
 # Create the destination folder if it doesn't exist
 mkdir -p $DEST

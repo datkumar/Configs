@@ -70,7 +70,7 @@ fnm uninstall 22
 - As per the [pnpm Installation](https://pnpm.io/installation) page. to install `pnpm` on POSIX systems:
 
   ```sh
-  wget -qO- https://get.pnpm.io/install.sh | sh -
+  curl -fsSL https://get.pnpm.io/install.sh | sh -
   ```
 
 - View your Shell profile file (`~/.zshrc` or `~/.bashrc`). It would've added the `pnpm` installation location to your `PATH` as:
