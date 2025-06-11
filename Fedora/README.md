@@ -165,15 +165,15 @@ sudo dnf install -y font-manager onefetch showmethekey
 ### My Flatpak apps to install
 
 ```sh
-flatpak install -y \
-com.obsproject.Studio \
-md.obsidian.Obsidian \
-com.usebruno.Bruno \
-com.discordapp.Discord \
-com.jgraph.drawio.desktop \
-com.github.johnfactotum.Foliate \
-com.mattjakeman.ExtensionManager \
-io.github.seadve.Kooha
+flatpak install --assumeyes flathub \
+  com.obsproject.Studio \
+  md.obsidian.Obsidian \
+  com.usebruno.Bruno \
+  com.discordapp.Discord \
+  com.jgraph.drawio.desktop \
+  com.github.johnfactotum.Foliate \
+  com.mattjakeman.ExtensionManager \
+  io.github.seadve.Kooha
 ```
 
 ## Fedora Resources

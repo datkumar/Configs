@@ -46,10 +46,11 @@ sudo apt install -y obs-studio fastfetch onefetch font-manager grub-customizer
 Snap does not allow multiple package names to install in same line
 
 ```sh
-sudo snap install pdftk
+sudo snap install libreoffice
 sudo snap install obsidian --classic
-sudo snap install bruno
-sudo snap install foliate
-sudo snap install discord
 sudo snap install drawio
+sudo snap install foliate
+sudo snap install bruno
+sudo snap install discord
+sudo snap install pdftk
 ```
