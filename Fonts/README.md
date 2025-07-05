@@ -6,9 +6,9 @@ Install [**Font Manager**](https://github.com/FontManager/font-manager)
 
 | Font type                       | Location                                                                                            |
 | ------------------------------- | --------------------------------------------------------------------------------------------------- |
-| User fonts                      | `~/.fonts/` or `~/.local/share/fonts/`                                                              |
+| User fonts                      | `~/.local/share/fonts/` or `~/.fonts/` or                                                           |
 | System fonts                    | `/usr/local/share/fonts/`                                                                           |
-| Google Fonts (via Font Manager) | `~/.var/app/org.gnome.FontManager/data/fonts/Google\ Fonts` or `~/.local/share/fonts/Google\ Fonts` |
+| Google Fonts (via Font Manager) | `~/.local/share/fonts/Google\ Fonts` or `~/.var/app/org.gnome.FontManager/data/fonts/Google\ Fonts` |
 
 In some cases, the Google Fonts downloaded by Font Manager aren't detected by the application, so you can symlink that directory within your user fonts location:
 
@@ -42,14 +42,17 @@ Another popular repository is [**Powerline fonts**](https://github.com/powerline
 
 ## My favorite programming fonts
 
-|              Font              | Installation                                                                                                                    |
-| :----------------------------: | ------------------------------------------------------------------------------------------------------------------------------- |
-|          **0xProto**           | Download [latest release](https://github.com/0xType/0xProto/releases/) zip from their Github                                    |
-|      **Geist** by Vercel       | Download `Geist` and `GeistMono` [latest release](https://github.com/vercel/geist-font/releases/) zips from their Github        |
-|          **FiraCode**          | Refer their [Linux install guide](https://github.com/tonsky/FiraCode/wiki/Linux-instructions#installing-with-a-package-manager) |
-|        **CodeNewRoman**        | [NerdFont Downloads](https://www.nerdfonts.com/font-downloads)                                                                  |
+> The [Symbols Nerd Font](https://www.nerdfonts.com/font-downloads) is a useful font containing just the patched symbols that you can use as a **fallback** along with your existing non-patched fonts also
+
+| Font                           | Installation                                                                                                                    |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| **0xProto**                    | Download [latest release](https://github.com/0xType/0xProto/releases/) zip from their Github                                    |
+| **Geist** by Vercel            | Download `Geist` and `GeistMono` [latest release](https://github.com/vercel/geist-font/releases/) zips from their Github        |
+| **FiraCode**                   | Refer their [Linux install guide](https://github.com/tonsky/FiraCode/wiki/Linux-instructions#installing-with-a-package-manager) |
+| **CodeNewRoman**               | [NerdFont Downloads](https://www.nerdfonts.com/font-downloads)                                                                  |
 | **Cascadia Code** by Microsoft | Download [latest release](https://github.com/microsoft/cascadia-code/releases) zip from their Github                            |
-|          **Adwaita**           | Download latest release from their [Gitlab](https://gitlab.gnome.org/GNOME/adwaita-fonts)                                       |
+| **Adwaita**                    | Download latest release from their [Gitlab](https://gitlab.gnome.org/GNOME/adwaita-fonts)                                       |
+| **Jetbrains Mono**             | Download from [Jetbrains website](https://www.jetbrains.com/lp/mono/)                                                           |
 
 I save all the `.zip` font downloads into `~/Downloads/Font-Downloads/` folder. Then, extract them all at once in `~/.fonts/` into their respective folders via:
 

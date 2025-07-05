@@ -1,0 +1,19 @@
+{
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Bearded Theme HC Midnight Void",
+    "workbench.iconTheme": "vscode-icons",
+    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+    "editor.mouseWheelZoom": true,
+    "editor.fontFamily": "'0xProto', 'Symbols Nerd Font', monospace",
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.formatOnSave": true,
+    "dart.flutterSdkPath": "/home/kumar/FlutterSdk/flutter",
+    "git.autofetch": true,
+    "workbench.sideBar.location": "right",
+    "projectManager.git.baseFolders": [
+        "~/Desktop/Dev"
+    ],
+    "editor.linkedEditing": true
+}

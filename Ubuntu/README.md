@@ -2,12 +2,7 @@
 
 ## My list of packages
 
-IDK:
-
-```sh
-sudo apt update && sudo apt install -y \
-grub-customizer
-```
+<!-- grub-customizer ? -->
 
 ### Present in `apt` repos
 
@@ -16,8 +11,9 @@ sudo add-apt-repository universe
 sudo apt update && sudo apt upgrade -y
 
 sudo apt install -y \
- wget curl git tmux g++ clang clang-tools make cmake zip unzip pkg-config libfuse2 \
- lua5.4 liblua5.4-dev neovim texlive-full chktex texstudio libssl-dev \
+ wget curl git g++ clang clang-tools clang-format clang-tidy make cmake zip unzip  \
+ tmux libfuse2 pkg-config  libssl-dev \
+ lua5.4 liblua5.4-dev neovim texlive-full chktex texstudio  \
  btop htop hwinfo info zsh scdoc fzf bat jq eza ripgrep zoxide xxd \
  gnome-tweaks nmap ddcutil dmidecode piper gnome-epub-thumbnailer vlc
 ```
@@ -26,7 +22,8 @@ sudo apt install -y \
 
 A [PPA](https://launchpad.net/ubuntu/+ppas) (Personal Package Archive) is a repository hosted on Launchpad (Ubuntu’s platform) where developers or contributors can publish software packages. They are used for getting newer versions of software or software not in official Ubuntu repos.
 
-My PPA list:[fastfetch](https://github.com/fastfetch-cli/fastfetch), [onefetch](https://github.com/o2sh/onefetch/wiki/Installation), [font-manager](https://github.com/FontManager/font-manager), [grub-customizer](https://launchpad.net/~danielrichter2007/+archive/ubuntu/grub-customizer)
+**My PPA list**:
+[fastfetch](https://github.com/fastfetch-cli/fastfetch), [onefetch](https://github.com/o2sh/onefetch/wiki/Installation), [font-manager](https://github.com/FontManager/font-manager), [grub-customizer](https://launchpad.net/~danielrichter2007/+archive/ubuntu/grub-customizer), [OBS](https://obsproject.com/download)
 
 ```sh
 # Add PPA repositories of those packages

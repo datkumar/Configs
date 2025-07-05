@@ -1,0 +1,9 @@
+JetBrainsMono-2.304
+adwaita-sans
+CodeNewRoman
+adwaita-mono
+GeistMono
+NerdFontsSymbolsOnly
+Geist
+0xProto_2_500
+CascadiaCode-2407.24

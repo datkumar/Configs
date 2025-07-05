@@ -2,11 +2,20 @@
 
 ## Time-sync
 
-In a **dual-boot** system, if your Windows and Linux systems show different times where only one of them is correct, run the below command to sync them. Refer [this article](https://itsfoss.com/wrong-time-dual-boot/) and [this post](https://askubuntu.com/questions/169376/clock-time-is-off-on-dual-boot) for more info
+In a **dual-boot** system, Windows assumes the hardware clock (RTC) is in local time.
+Linux assumes the hardware clock is in UTC by default. This mismatch causes your system time to shift incorrectly every time you reboot into the other OS.
 
-```sh
-timedatectl set-local-rtc 1 --adjust-system-clock
-```
+- Keep Linux like this (default):
+
+  ```sh
+  timedatectl set-local-rtc 0 --adjust-system-clock
+  ```
+
+- Fix Windows to use UTC. Run this in CMD as admin
+
+  ```sh
+  reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /t REG_DWORD /d 1
+  ```
 
 ## Static IP reservation
 
