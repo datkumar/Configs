@@ -1,0 +1,9 @@
+prompt=Search applications
+width=650
+height=420
+allow_images=true
+image_size=40
+insensitive=true
+mode=drun,run
+columns=1
+lines=7

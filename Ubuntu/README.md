@@ -1,4 +1,4 @@
-# Ubuntu Post-install
+# Ubuntu <img alt="Fedora" src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/UbuntuCoF.svg/512px-UbuntuCoF.svg.png' height="25">
 
 ## My list of packages
 
@@ -23,7 +23,8 @@ sudo apt install -y \
 A [PPA](https://launchpad.net/ubuntu/+ppas) (Personal Package Archive) is a repository hosted on Launchpad (Ubuntu’s platform) where developers or contributors can publish software packages. They are used for getting newer versions of software or software not in official Ubuntu repos.
 
 **My PPA list**:
-[fastfetch](https://github.com/fastfetch-cli/fastfetch), [onefetch](https://github.com/o2sh/onefetch/wiki/Installation), [font-manager](https://github.com/FontManager/font-manager), [grub-customizer](https://launchpad.net/~danielrichter2007/+archive/ubuntu/grub-customizer), [OBS](https://obsproject.com/download)
+
+<!-- [fastfetch](https://github.com/fastfetch-cli/fastfetch), [onefetch](https://github.com/o2sh/onefetch/wiki/Installation), [font-manager](https://github.com/FontManager/font-manager), [grub-customizer](https://launchpad.net/~danielrichter2007/+archive/ubuntu/grub-customizer), [OBS](https://obsproject.com/download) -->
 
 ```sh
 # Add PPA repositories of those packages

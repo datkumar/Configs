@@ -4,33 +4,30 @@ Installing Fonts in Linux: [article](https://itsfoss.com/install-fonts-ubuntu/)
 
 Install [**Font Manager**](https://github.com/FontManager/font-manager)
 
-| Font type                       | Location                                                                                            |
-| ------------------------------- | --------------------------------------------------------------------------------------------------- |
-| User fonts                      | `~/.local/share/fonts/` or `~/.fonts/` or                                                           |
-| System fonts                    | `/usr/local/share/fonts/`                                                                           |
-| Google Fonts (via Font Manager) | `~/.local/share/fonts/Google\ Fonts` or `~/.var/app/org.gnome.FontManager/data/fonts/Google\ Fonts` |
+| Font type                       | Location                                           |
+| ------------------------------- | -------------------------------------------------- |
+| User fonts                      | `~/.local/share/fonts/` (preferred) or `~/.fonts/` |
+| System fonts                    | `/usr/local/share/fonts/`                          |
+| Google Fonts (via Font Manager) | `~/.local/share/fonts/Google\ Fonts`               |
 
-In some cases, the Google Fonts downloaded by Font Manager aren't detected by the application, so you can symlink that directory within your user fonts location:
+In some cases, the Google Fonts downloaded by Font Manager aren't detected by the application, so you can symlink that directory within your user fonts location
 
-```sh
-ln -s ~/.local/share/fonts/Google\ Fonts ~/.fonts/GoogleFonts
-# OR
-ln -s ~/.var/app/org.gnome.FontManager/data/fonts/Google\ Fonts ~/.fonts/GoogleFonts
-```
+- Updating the font-cache:
 
-Updating the font-cache (add `-v` for verbose output):
+  ```sh
+  # Can add "-v" for verbose ouyput
+  fc-cache -f
+  ```
 
-```sh
-fc-cache -f
-```
+- List installed fonts:
 
-List installed fonts:
+  ```sh
+  fc-list | sort -f
 
-```sh
-fc-list | sort -f
-```
+  fc-list | grep -i 0xProto
+  ```
 
-You can see name of my downloaded [User fonts list](https://github.com/datkumar/Configs/blob/main/config-files/fonts/font-names.txt) as well as [Google fonts list](https://github.com/datkumar/Configs/blob/main/config-files/fonts/font-names-google.txt)
+You can see the list of my manually downloaded fonts in the `font-names.txt` file and the Google fonts in `font-names-google.txt` file
 
 ## NerdFonts
 
@@ -40,7 +37,7 @@ You can [preview programming fonts](https://www.programmingfonts.org) as well as
 
 Another popular repository is [**Powerline fonts**](https://github.com/powerline/fonts)
 
-## My favorite programming fonts
+## My favorite system fonts
 
 > The [Symbols Nerd Font](https://www.nerdfonts.com/font-downloads) is a useful font containing just the patched symbols that you can use as a **fallback** along with your existing non-patched fonts also
 

@@ -50,11 +50,11 @@ Refer [this post](https://support.mozilla.org/en-US/kb/profiles-where-firefox-st
 
 #### Extensions
 
-I've stored [my list of Firefox extensions](https://github.com/datkumar/Configs/blob/main/config-files/firefox/extensions.txt) that you can download from the [add-ons page](https://addons.mozilla.org/en-US/firefox/extensions/)
+I've stored my list of Firefox extensions in `extensions.txt` file that you can download from the [add-ons page](https://addons.mozilla.org/en-US/firefox/extensions/)
 
 #### Bookmarks
 
-I've exported [my list of bookmarks](https://github.com/datkumar/Configs/blob/main/config-files/firefox/bookmarks.html) as an HTML file. To enable bookmarks being saved as HTML file, visit `about:config` in search bar and set the `browser.bookmarks.autoExportHTML` property to `true`
+I've exported my list of bookmarks in `bookmarks.html` as an HTML file. To enable bookmarks being saved as HTML file, visit `about:config` in search bar and set the `browser.bookmarks.autoExportHTML` property to `true`
 
 #### Tabs
 
@@ -62,14 +62,14 @@ I use the [Simple Tab Groups](https://addons.mozilla.org/en-US/firefox/addon/sim
 
 ### Cookie exceptions
 
-I've stored [my list of cookie-exceptions](https://github.com/datkumar/Configs/blob/main/config-files/firefox/cookie-exceptions.txt) stating site whose cookies aren't being deleted when browser closes
+I've stored my list of cookie-exceptions in `cookie-exceptions.txt` file stating site whose cookies aren't being deleted when browser closes
 
 #### Manual exports
 
 Some settings have to be manually export such as you can see:
 
-- [My UBlock Origin filters](https://github.com/datkumar/Configs/blob/main/config-files/firefox/ublock-filters.txt)
-- [Tabliss settings](https://github.com/datkumar/Configs/blob/main/config-files/firefox/tabliss.json)
+- UBlock Origin filtersare in the `ublock-filters.txt` file
+- Tabliss settings settings in the `tabliss.json` file
 
 #### Shortcuts
 

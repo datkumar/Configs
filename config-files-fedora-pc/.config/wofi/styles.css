@@ -1,0 +1,104 @@
+/* Notes below regarding the purpose of each setting is true to the best of my knowledge. */
+
+* {
+    font-family: JetBrains Mono, Cantarell, sans-serif;
+    font-size: 14px;
+}
+
+
+window {
+	margin: 15px;
+	border: none;
+	border-radius: 15px;
+	background-color: rgba(31, 31, 31, 0.85); /* translucent background */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+	/* border: 3px solid green;  */
+	/* background-color: #1f1f1f; */
+}
+
+#outer-box {
+	margin: 10px; /* margin between the outer edges of the main window and its contents inside */
+	border-radius: 15px;
+	background-color: transparent;
+	/* border: none; border around all the internal window components */
+	/* background-color: #1f1f1f; background color of entire inner window */
+}
+
+#input {
+	margin: 10px; /* how much padding there is around the input box */
+	padding: 10px;
+	border-radius: 12px;
+	background-color: rgba(69, 62, 61, 0.85);
+	font-size: 16px;
+	/* border: none; border around the input box */
+	/* background-color: #453e3d; background color of the text input box itself */
+	color: white; /* text color as you type inside the input box */
+}
+
+#inner-box {
+	margin: 5px;
+	border-radius: 12px;
+	background-color: rgba(31, 31, 31, 0.8);
+
+	/* border: none; horizontal bar that appears above the search results */
+	/* background-color: #1f1f1f; background color behind the search results */
+	/* color: #ffffff; text color of each search result */
+}
+
+#scroll {
+	margin: 5px;
+	border: none;
+	background-color: transparent;
+
+	/* border: 2px solid #1f1f1f; */
+	/* background-color: #1f1f1f; background color behind the search slider */
+}
+
+
+#text {
+	padding: 8px 12px;
+    margin: 6px;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    font-size: 15px;
+
+	/* border: none; border around each individual item within the search results */
+	/* background-color: trans; background behind each individual item within the search results */
+	/* color: ffffff; */
+}
+
+
+
+#entry {
+    margin-left: 8px;
+    padding-left: 8px;
+    border-radius: 8px;
+}
+
+#entry:selected {
+    background-color: rgba(80, 80, 80, 0.8);
+}
+
+#img {
+    margin-right: 10px;
+}
+
+/* Fix left alignment when arrow is present */
+#entry > image:first-child {
+    margin-right: 8px;
+    min-width: 12px;
+}
+
+#input > image.left {
+    -gtk-icon-transform: scaleX(0); /* Hides the icon inside input box */
+}
+
+
+/* Remove the search icon */
+/* #input > image.left {
+        -gtk-icon-transform:scaleX(0);
+}
+ */
+
+

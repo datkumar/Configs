@@ -9,7 +9,7 @@ Refer below TechHut video:
 ### DNF
 
 - `dnf` is the package manager for Fedora. On a fresh install, DNF might seem slow
-- Edit options in the `/etc/dnf/dnf.conf` file to make it faster. You can refer [my DNF config](https://github.com/datkumar/Configs/blob/main/config-files/dnf.conf) file as well as the [DNF Configuration docs](https://dnf.readthedocs.io/en/latest/conf_ref.html) to see all available options
+- Edit options in the `/etc/dnf/dnf.conf` file to make it faster. You can refer my DNF configin the `dnf.conf` file as well as the [DNF Configuration docs](https://dnf.readthedocs.io/en/latest/conf_ref.html) to see all available options
 
 ### RPM Fusion
 
@@ -148,7 +148,9 @@ sudo dnf install -y \
  vlc google-chrome-stable gnome-tweaks grub-customizer
 ```
 
-**More programs**: [onefetch](https://github.com/o2sh/onefetch/wiki/Installation), [showmethkey](https://github.com/AlynxZhou/showmethekey), [font-manager](https://github.com/FontManager/font-manager)
+**More programs**:
+
+ <!-- [onefetch](https://github.com/o2sh/onefetch/wiki/Installation), [showmethkey](https://github.com/AlynxZhou/showmethekey), [font-manager](https://github.com/FontManager/font-manager) -->
 
 ```sh
 # Add Copr of repositories of those packages

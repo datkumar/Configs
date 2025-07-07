@@ -66,7 +66,7 @@ View your set DNS settings: `resolvectl status`
   lsblk -o NAME,TYPE,FSTYPE,FSVER,SIZE,FSUSED,LABEL,UUID,MOUNTPOINT
   ```
 
-- The format for each entry as below. You can refer [my fstab file](https://github.com/datkumar/Configs/blob/main/config-files/fstab) too
+- The format for each entry as below. You can refer my `fstab` file too
 
   ```txt
   HardwareID  MountPointDirectory  FileSystem  MountOptions  dump  fsck
@@ -104,17 +104,15 @@ Laptop has buttons to increase/decrease brightness but no such option for monito
 ```sh
 # See how your monitor details
 ddcutil detect
-
 # See available VCP control codes
 ddcutil capabilities
 
-# Get Brightness details (my VCP code for it was 10)
-# It shows current value and range of valuees allowed too
+# Get Brightness details (my code for it was 10)
+# It shows current value and range of values allowed too
 ddcutil getvcp 10
 
 # Set brightness to a certain value
 ddcutil setvcp 10 33
-
 # Relatively increment/decrement brightness
 ddcutil setvcp 10 + 5
 ddcutil setvcp 10 - 5
@@ -129,7 +127,7 @@ alias bright++="ddcutil setvcp 10 + 5"
 alias bright--="ddcutil setvcp 10 - 5"
 
 # Set brightness to zero after 7PM
-if [[ $(date +"%H") -ge 19 ]] then
+if [[ $(date +"%H") -ge 19 ]]; then
   set-brightness 0
 fi
 ```

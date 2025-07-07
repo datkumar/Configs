@@ -1,0 +1,24 @@
+BasedOnStyle: Google
+UseTab: Never
+TabWidth: 4
+IndentWidth: 4
+ColumnLimit: 110
+BreakBeforeBraces: Attach
+AllowShortFunctionsOnASingleLine: Inline
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+IndentCaseLabels: true
+AccessModifierOffset: -2
+SpaceBeforeParens: Custom
+SpaceBeforeParensOptions:
+  AfterControlStatements: true
+  AfterFunctionDefinitionName: true
+# Testing below:
+
+#AlignAfterOpenBracket: Align
+
+# DerivePointerAlignment: false
+# PointerAlignment: Right # Node *ptr1, *ptr2;
+# ReferenceAlignment: Right # func(vector<int> &nums) { .. }
+# SpaceAroundPointerQualifiers: Before
+# BreakTemplateDeclarations: Yes

@@ -5,13 +5,18 @@
 - Install `sway` via your package manager. The `sway` package would come with useful dependencies such as: `swaybg`, `sway-wallpapers`/`sway-backgrounds`, `swayidle`, `swaylock`, `wmenu`, `foot` etc. Install additional helpful packages with it:
 
 ```sh
-# Fedora:
-sudo dnf install sway waybar wofi swaylock swayidle
+# FEDORA:
+sudo dnf copr enable erikreider/SwayNotificationCenter
+sudo dnf install sway waybar wofi swaylock swayidle swayimg SwayNotificationCenter \
+  wireplumber pipewire-libs pulseaudio-libs pavucontrol playerctl \
+  blueman brightnessctl wlsunset wev grim slurp wl-clipboard
+# GTK alternative apps
+sudo dnf install nemo qalculate-gtk
 
-# Ubuntu:
-sudo apt install sway waybar wofi swaylock swayidle swayimg \
+# UBUNTU
+sudo apt install sway waybar wofi swaylock swayidle swayimg sway-notification-center \
   wireplumber pipewire-audio-client-libraries pulseaudio-utils pavucontrol playerctl \
-  blueman brightnessctl grim slurp wl-clipboard fonts-font-awesome mako-notifier
+  blueman brightnessctl wev grim slurp wl-clipboard fonts-font-awesome
 # GTK alternative apps
 sudo apt install nemo qalculate-gtk
 ```
@@ -25,9 +30,8 @@ The config files are placed in `$XDG_CONFIG_HOME/` i.e. `~/.config/` as:
 - [**Swaynag**](https://man.archlinux.org/man/swaynag.5.en): `swaynag/config`
 
 - [**SwayNC**](https://github.com/ErikReider/SwayNotificationCenter?tab=readme-ov-file#ubuntu) for Notification center: `swaync/config.json`, `swaync/configSchema.json`, `swaync/style.css` (copy from `/etc`)
-<!-- - [**Mako**](https://github.com/emersion/mako) for Notifications: `~/.config/mako/config` -->
 
-- [**Waybar**](https://github.com/Alexays/Waybar/wiki/Configuration) for Topbar: `waybar/config`, `waybar/styles.css` (copy from `/etc`)
+- [**Waybar**](https://github.com/Alexays/Waybar/wiki/Configuration) for Topbar: `waybar/config` or `waybar.config.jsonc`, `waybar/styles.css` (copy from `/etc`)
 
 - [**Wofi**](https://man.archlinux.org/man/wofi.1.en) for Launcher: `wofi/config`, `wofi/styles.css`
 
@@ -52,11 +56,13 @@ Create rest of the files and start editing
 
 ### Sway config file
 
+Some suggested changes within the `~/.config/sway/config` file
+
 - Set Terminal
 
   ```sh
   # Your preferred terminal emulator
-  set $term alacritty
+  set $term wezterm
   ```
 
 - Set `wofi` as the Application Launcher
@@ -66,7 +72,7 @@ Create rest of the files and start editing
   set $menu wofi --show drun
   ```
 
-- Set Waybar as the Status Bar. Comment out the exising `bar{ ... }` block and write:
+- Set Waybar as the Status Bar. Comment out the existing `bar{ ... }` block and write:
 
   ```sh
   # Status Bar:

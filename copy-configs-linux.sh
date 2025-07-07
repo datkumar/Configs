@@ -6,8 +6,8 @@ set -euo pipefail
 # ----------------------------------------
 # Sources and Destinations:
 
-# D=./config-files-fedora-pc
-D=./config-files-ubuntu-laptop
+D=./config-files-fedora-pc
+# D=./config-files-ubuntu-laptop
 #
 D_CFG="$D/.config"
 D_ETC="$D/etc"
@@ -20,8 +20,8 @@ S_LOC="$HOME/.local/share"
 # Create Destination folder locations
 mkdir -p "$D" "$D_CFG" "$D_ETC/"
 
-# # ----------------------------------------
-# # Fedora PC specific stuff:
+# ----------------------------------------
+# Fedora PC specific stuff:
 
 # # DNF config
 # cp "$S_ETC/dnf/dnf.conf" "$D_ETC/"

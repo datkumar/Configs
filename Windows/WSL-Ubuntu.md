@@ -27,7 +27,7 @@ Note the different Windows native and WSL home folders
 
 ## Post-install steps
 
-- Edit the `.bashrc` and paste config contents such as [my `.bashrc`](https://github.com/datkumar/Configs/blob/main/Windows/config-files/.bashrc)
+- Edit the `.bashrc` and paste config contents such as my `.bashrc` file
 
 - Install packages: [fastfetch](https://github.com/fastfetch-cli/fastfetch#installation), [`build-essential`](https://itsfoss.com/build-essential-ubuntu/)
 

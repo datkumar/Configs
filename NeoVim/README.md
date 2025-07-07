@@ -33,7 +33,7 @@ For LazyVim, we need to set up `lua` and `luarocks` (the package manager for Lua
   # The output should mention header files like: "/usr/include/lua.h", "/usr/include/lua.hpp"
   ```
 
-- If not installed, install it as below. Ubuntu command referred from [here](https://innovativeinnovation.github.io/ubuntu-setup/lua/)
+- If not installed, install it as below. Ubuntu command referred from [this site](https://innovativeinnovation.github.io/ubuntu-setup/lua/)
 
   ```sh
   # For Ubuntu/Debian (apt):
@@ -53,10 +53,10 @@ Following the [LuaRocks install guide](https://luarocks.org/#quick-start):
 - Download the tarball. Extract it's contents and `cd` into that folder:
 
   ```sh
-  # Download the zip in 
+  # Download the zip in
   cd ~/Downloads
   wget https://luarocks.org/releases/luarocks-3.12.0.tar.gz
-  
+
   # Extract into your desired home location
   tar -zxpf luarocks-*.tar.gz -C ~/
 
@@ -123,7 +123,13 @@ Following the [LuaRocks install guide](https://luarocks.org/#quick-start):
 
   The output should look something like: `table: 0x5584a1343f70 /usr/local/share/lua/5.4/socket.lua`. Press `Ctrl d` to exit the `lua` interpreter
 
-  - If you get error like `module 'socket' not found`, you need to add various paths to your Shell. Note down the output of `luarocks path`
+  - If you get error like `module 'socket' not found`, you need to add various paths to your Shell. Note down the output of `luarocks path`. Or for a better output:
+
+    ```sh
+    echo "$PATH"
+    echo "$LUA_PATH"
+    echo "$LUA_CPATH"
+    ```
 
   - Only append the `luarocks` specific entries to existing `PATH`. Copy `LUA_PATH`, `LUA_CPATH` as-it-is. So finally, the lines to add in your shell profile file (`~/.zshrc` or `~/.bashrc`) would be like:
 

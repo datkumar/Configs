@@ -6,7 +6,6 @@ Following their [instructions for Linux](https://code.visualstudio.com/docs/setu
 
 ### Fedora install
 
-
 ```sh
 # Install key and "yum" repository
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
@@ -38,11 +37,11 @@ To view a list of your VSCode extensions: `code --list-extensions`
 
 Preview a wide range of VSCode themes for your language at [vscodethemes.com](https://vscodethemes.com/)
 
-You can refer my list of VSCode files:
+You can refer my list of VSCode files within the `vscode/` folder:
 
-- My [`settings.json`](https://github.com/datkumar/Configs/blob/main/config-files/vscode/settings.jsonc)
-- My [list of extensions](https://github.com/datkumar/Configs/blob/main/config-files/vscode/extensions.txt)
-- My [`keybindings.json`](https://github.com/datkumar/Configs/blob/main/config-files/vscode/keybindings.jsonc)
+- Settings in `settings.json` file
+- list of extensions in `extensions.txt` file
+- Kayboard shortcuts in `keybindings.json` file
 
 ---
 

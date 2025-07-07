@@ -22,7 +22,7 @@ Referring the [First-Time Git Setup](https://git-scm.com/book/en/v2/Getting-Star
 
 - To verify, you can view your global git config as: `git config list --global`. Your global git config is stored in `~/.gitconfig` file
 
-You can also refer [my git config](https://github.com/datkumar/Configs/blob/main/config-files/.gitconfig)
+You can also refer my git config in the `.gitconfig` file
 
 ### More about Git config
 

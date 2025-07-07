@@ -1,16 +1,22 @@
 # Configs ⚙️
 
-My main PC is set up as **dual-boot** with Windows and [Fedora Workstation](https://fedoraproject.org/workstation/) distribution of Linux on two separate drives. So most of my configs are centred around Fedora
+My systems are set up as **dual-boot** with Windows and either [Fedora](https://fedoraproject.org/workstation/) or [Ubuntu](https://ubuntu.com/download/desktop) distributions of Linux on two separate drives. So most of my configs are centred around those
 
-I've automated the process of copying _most_ of my config files via the [`copy-config-files.sh`](https://github.com/datkumar/Configs/blob/main/copy-config-files.sh) bash script. Open terminal in the cloned repo folder and run the script periodically to backup config files:
+I've automated the process of copying _most_ of my config files via the [`copy-configs-linux.sh`](https://github.com/datkumar/Configs/blob/main/copy-configs-linux.sh) bash script. Open terminal in the cloned repo folder and run the script periodically to backup config files
 
 ```sh
 # Give it permission to execute (only needed to run once)
 chmod +x ./copy-config-files.sh
-
 # Run the script
 ./copy-config-files.sh
 ```
+
+<br>
+
+My config files are kept in following folders:
+
+- `config-files-fedora-pc/` for my PC having Fedora on it
+- `config-files-ubuntu-laptop/` for my Laptop having Ubuntu on it
 
 <!-- File-types okay to link as relative urls: .txt, .html, .json, .conf -->
 <!-- For other files, use any of these two url formats: -->
@@ -23,27 +29,27 @@ chmod +x ./copy-config-files.sh
 
 ### [Fedora](./Fedora/README.md)&ensp;<img alt="Fedora" src='https://upload.wikimedia.org/wikipedia/commons/4/41/Fedora_icon_%282021%29.svg' height="20">
 
+### [Ubuntu](./Ubuntu/README.md)&ensp;<img alt="Fedora" src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/UbuntuCoF.svg/512px-UbuntuCoF.svg.png' height="20">
+
+### [Terminal](./Terminal/README.md) <img alt="Terminal" src="https://wezterm.org/favicon.svg" height="20">
+
+### [Sway](./Sway/README.md) <img alt="Tmux" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Sway_Tree.svg/1024px-Sway_Tree.svg.png" height="20">
+
 ### [GNOME](./GNOME/README.md)&ensp;<img alt="GNOME" src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Gnomelogo-footprint.svg/833px-Gnomelogo-footprint.svg.png' height="20">
 
 ### [Linux misc.](./Linux-misc/README.md)&ensp;<img alt="Linux" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/506px-Tux.svg.png" height="20">
 
 ### [Browser](./Browser/README.md)&ensp;<img alt="Firefox" src='https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg' height="20">
 
-### [Terminal](./Terminal/README.md) <img alt="Terminal" src='https://upload.wikimedia.org/wikipedia/commons/9/90/Alacritty_logo.svg' height="20">
+### [Git-GitHub](./Git-GitHub/README.md)&ensp;<img alt="Git" src='https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg' height="20">
 
 ### [Tmux](./Tmux/README.md) <img alt="Tmux" src="https://raw.githubusercontent.com/tmux/tmux/c8677d3272b69587d8c4e7e5ef9da405e552e8ae/logo/tmux-logomark.svg" height="20">
 
-### [Sway](./Sway/README.md) <img alt="Tmux" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Sway_Tree.svg/1024px-Sway_Tree.svg.png" height="20">
-
 ### [Fonts 🔤](./Fonts/README.md)
-
-<!-- ### [Firmware](./Firmware/README.md)  -->
 
 ---
 
-## Development
-
-### [Git-GitHub](./Git-GitHub/README.md)&ensp;<img alt="Git" src='https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg' height="20">
+## Development stuff
 
 ### [VSCode](./VSCode/README.md)&ensp;<img alt="VSCode" src='https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg' height="20">
 

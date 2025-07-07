@@ -4,6 +4,8 @@ The default shell is `sh` that is symlinked to `bash` in most Linux systems
 
 > Ensure at least one **Powerline or Nerd Font** is installed to support special characters or glyphs in your theme. Refer my [Fonts Guide](../Fonts/README.md)
 
+---
+
 ## Shell: ZSH <img alt="ZSH" src="https://raw.githubusercontent.com/Zsh-art/logo/refs/heads/main/svg/color_logomark.svg" width="25" >
 
 <!-- Referred from: [OMZ GitHub guide](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) , [Fedora Magazine page](https://fedoramagazine.org/set-zsh-fedora-system/) , [Tecmint article](https://www.tecmint.com/install-zsh-shell-in-fedora/) -->
@@ -35,6 +37,8 @@ The default shell is `sh` that is symlinked to `bash` in most Linux systems
   # The output should be: /usr/bin/zsh
   ```
 
+<br>
+
 Instead of just one `.zshrc` file, you can separate your ZSH config into these files:
 
 | Config file   | Purpose                                                                                                                                                        |
@@ -43,7 +47,9 @@ Instead of just one `.zshrc` file, you can separate your ZSH config into these f
 | `~/.zshrc`    | Loaded in non-login interactive shell, such as when you open the terminal. Used to store aliases, shell prompt, load plugins or functions, some UI tweaks etc. |
 | `~/.zprofile` | Loaded only ONCE per session in your login shell. Used for session setup (like example SSH stuff), starting services etc.                                      |
 
-You can refer my [`.zshrc`](https://github.com/datkumar/Configs/blob/main/config-files/.zshrc) config file
+You can refer my `.zshrc` and `.zshenv` config files
+
+<br>
 
 ### ZSH Plugins (manual updates)
 
@@ -53,55 +59,71 @@ You can refer my [`.zshrc`](https://github.com/datkumar/Configs/blob/main/config
 
   ```sh
   mkdir -p ~/.zsh_plugins
-
-  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh_plugins/zsh-autosuggestions
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh_plugins/zsh-syntax-highlighting
+  # Download the plugin repos
+  git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh_plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh_plugins/zsh-syntax-highlighting
+  git clone https://github.com/zsh-users/zsh-completions.git ~/.zsh_plugins/zsh-completions
   ```
-
-<!-- ## Oh-My-Zsh (OMZ) <img alt="Oh-My-ZSH" src="https://ohmyz.sh/img/ohmyzsh-original-logo.svg" width="25">
-
-It provides many plugins, themes etc for ZSH
-
-**OMZ Install**:
-
-As per the [OMZ Website](https://ohmyz.sh/) and [OMZ GitHub](https://github.com/ohmyzsh/ohmyzsh/)
-
-```sh
-sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-```
-
-Themes: [OMZ themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes) , [Extended themes](https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes), [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
 ---
 
-### OMZ Plugins
+## Terminal Emulator: WezTerm <img alt="WezTerm" src="https://wezterm.org/favicon.svg" width="25" >
 
-- First see if that plugin is present in the [list of plugins available for OMZ](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
-- Else, you'll need to put them inside in the `$ZSH_CUSTOM/plugins` folder. The `ZSH_CUSTOM` variable is by default `~/.oh-my-zsh/custom`
-- Finally specify your plugins for zsh to load as `plugins=(git dnf ...)` in the `~/.zshrc` file
+[WezTerm](https://wezterm.org/index.html) is my preferred [GPU-accelerated terminal emulator](https://www.howtogeek.com/what-is-gpu-acceleration-in-linux-terminals/). Other popular options are [Alacritty](https://alacritty.org/), [Kitty](https://sw.kovidgoyal.net/kitty/) or [Ghostty](https://ghostty.org/)
 
-To view all set aliases at once just enter `alias` in terminal
+Following the [Linux install](https://wezterm.org/install/linux.html) instructions:
 
-More ZSH utils: [blog](https://safjan.com/top-popular-zsh-plugins-on-github-2023/)
+- Install `wezterm` for your distro:
 
-#### ZSH Auto-suggestions and Syntax-highlighting
+  ```sh
+  # Fedora (copr recommended):
+  sudo dnf copr enable wezfurlong/wezterm-nightly
+  sudo dnf install wezterm
 
-> These are't included by OMZ
+  # Ubuntu (configure apt):
+  curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
+  echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
+  sudo chmod 644 /usr/share/keyrings/wezterm-fury.gpg
+  sudo apt update
+  sudo apt install wezterm
+  ```
 
-Installation instructions: [**zsh-autosuggestions**](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh) , [**zsh-syntax-highlighting**](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
+- WezTerm uses the Lua for configuration in the `~/.wezterm.lua` config file, so create it and paste following starter contents
 
-Below commands clone the two repos into `$ZSH_CUSTOM/plugins/`
+  ```lua
+  -- Pull in the wezterm API
+  local wezterm = require 'wezterm'
 
-```sh
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
+  -- This will hold the configuration.
+  local config = wezterm.config_builder()
 
-Make sure to include them in the `plugins=(...)` array inside `~/.zshrc` file
+  -- Changing the initial geometry for new windows:
+  config.initial_cols = 120
+  config.initial_rows = 28
 
-The starting default OMZ profile is available at `~/.oh-my-zsh/templates/zshrc.zsh-template`
+  -- Changing the font size and color scheme.
+  config.font_size = 10
+  config.color_scheme = 'AdventureTime'
 
--->
+  -- Finally, return the configuration to wezterm:
+  return config
+  ```
+
+- Sometimes, you might need to install the terminfo file for Wezterm for supporting all it's new features:
+
+  ```sh
+  cd ~
+  # Download latest terminfo from GitHub (check that URL exists)
+  curl -LO https://raw.githubusercontent.com/wez/wezterm/main/termwiz/data/wezterm.terminfo
+  # Compile and install it for your user
+  tic -x ~/wezterm.terminfo
+  # Now, you can remove the downloaded terminfo file
+  rm ~/wezterm.terminfo
+  ```
+
+  It is installed as `~/.terminfo/w/wezterm`
+
+- Refer my `~/.wezterm.lua` config file and their [Configuration page](https://wezterm.org/config/files.html) for more info
 
 ---
 
@@ -138,148 +160,13 @@ The starting default OMZ profile is available at `~/.oh-my-zsh/templates/zshrc.z
   disabled = true
   ```
 
-  You can refer their [Configuration page](https://starship.rs/config/) and my [`starship.toml`](https://github.com/datkumar/Configs/blob/main/config-files/.zshrc) file
+  You can refer my `starship.toml` file and their [Configuration page](https://starship.rs/config/) for more info
 
 ---
 
-## Terminal Emulator: WezTerm <img alt="WezTerm" src="https://raw.githubusercontent.com/wezterm/wezterm/refs/heads/main/assets/icon/wezterm-icon.svg" width="25" >
+## CLI Utils
 
-It is my preferred GPU-accelerated terminal emulator. Other popular options are [Alacritty](https://alacritty.org/) and [Kitty](https://sw.kovidgoyal.net/kitty/)
-
-Following their [Linux install](https://wezterm.org/install/linux.html) instructions:
-
-- Install `wezterm` for your distro:
-
-  ```sh
-  # Fedora (copr recommended):
-  sudo dnf copr enable wezfurlong/wezterm-nightly
-  sudo dnf install wezterm
-
-  # Ubuntu (configure apt):
-  curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
-  echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
-  sudo chmod 644 /usr/share/keyrings/wezterm-fury.gpg
-  sudo apt update
-  sudo apt install wezterm
-  ```
-
-- WezTerm uses the Lua language syntax for configuration in the `~/.wezterm.lua` config file, so create it and paste following starter contents
-
-  ```lua
-  -- Pull in the wezterm API
-  local wezterm = require 'wezterm'
-
-  -- This will hold the configuration.
-  local config = wezterm.config_builder()
-
-  -- Changing the initial geometry for new windows:
-  config.initial_cols = 120
-  config.initial_rows = 28
-
-  -- Changing the font size and color scheme.
-  config.font_size = 10
-  config.color_scheme = 'AdventureTime'
-
-  -- Finally, return the configuration to wezterm:
-  return config
-  ```
-
-- Refer their [Configuration page](https://wezterm.org/config/files.html) and my [`~/.wezterm.lua`](https://github.com/datkumar/Configs/blob/main/config-files/.zshrc) config file for more options
-
-<!-- ## Alacritty <img alt="Alacritty" src='https://upload.wikimedia.org/wikipedia/commons/9/90/Alacritty_logo.svg' width="25">
-
-It is a modern cross-platform terminal emulator written in Rust that utilizes your GPU
-
-Referring from the [build instructions for Linux](https://github.com/alacritty/alacritty/blob/master/INSTALL.md) from [their site](https://alacritty.org/)
-
-- Make sure Rust is installed. Refer [my Rust installation page](../Rust/README.md). Then, update `rustup` to latest stable version:
-
-  ```sh
-  rustup override set stable
-  rustup update stable
-  ```
-
-- Clone the Alacritty source code:
-
-  ```sh
-  git clone git@github.com:alacritty/alacritty.git
-  ```
-
-- Install the required dependencies as per your distro by referring their [Dependencies](https://github.com/alacritty/alacritty/blob/master/INSTALL.md#dependencies) section
-
-  ```sh
-  # Fedora (dnf)
-  sudo dnf install cmake freetype-devel fontconfig-devel libxcb-devel libxkbcommon-devel g++ scdoc
-
-  # Ubuntu (apt)
-  sudo apt install cmake g++ pkg-config libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
-  ```
-
-- Build application from the source code. The built binary should be at `target/release/alacritty`
-
-  ```sh
-  cd alacritty
-  cargo build --release
-  ```
-
-- Create desktop entry for the application:
-
-  ```sh
-  sudo cp target/release/alacritty /usr/local/bin
-  sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
-  sudo desktop-file-install extra/linux/Alacritty.desktop
-  sudo update-desktop-database
-  ```
-
-- Install alacritty terminfo (if you want to keep `TERM = "alacritty"`) in your Alacritty config (`~/.alacritty.toml`)
-
-  ```sh
-  # Go into "extra" inside the cloned repo folder
-  cd ~/alacritty/extra
-
-  # Add the terminfo
-  tic -x alacritty.info
-  ```
-
-- Add manuals i.e. `man` pages:
-
-  ```sh
-  sudo mkdir -p /usr/local/share/man/man1
-  sudo mkdir -p /usr/local/share/man/man5
-  scdoc < extra/man/alacritty.1.scd | gzip -c | sudo tee /usr/local/share/man/man1/alacritty.1.gz > /dev/null
-  scdoc < extra/man/alacritty-msg.1.scd | gzip -c | sudo tee /usr/local/share/man/man1/alacritty-msg.1.gz > /dev/null
-  scdoc < extra/man/alacritty.5.scd | gzip -c | sudo tee /usr/local/share/man/man5/alacritty.5.gz > /dev/null
-  scdoc < extra/man/alacritty-bindings.5.scd | gzip -c | sudo tee /usr/local/share/man/man5/alacritty-bindings.5.gz > /dev/null
-  ```
-
-- Add completions for your shell. Mine is `zsh` but you can refer their [Shell completions](https://github.com/alacritty/alacritty/blob/master/INSTALL.md#shell-completions) section for your respective shell
-
-  ```sh
-  mkdir -p ~/.zsh_functions
-  cp extra/completions/_alacritty ~/.zsh_functions/_alacritty
-  ```
-
-  Then, add this line at the end of your shell config file (`~/.zshrc`):
-
-  ```sh
-  fpath+=~/.zsh_functions
-  ```
-
-- Reload shell:
-
-  ```sh
-  exec $(which $SHELL)
-  ```
-
-- Add a custom keyboard shortcut (I set it as `Super + T`) to launch `alacritty` command instead of the usual terminal command
-
-- Your Alacritty settings are kept in `~/.alacritty.toml` config file (create one if it doesn't exist) so edit it to personalize your terminal. You can refer [my `.alacritty.toml` file](https://github.com/datkumar/Configs/blob/main/config-files/.alacritty.toml) as well as their [Configuration page](https://alacritty.org/config-alacritty.html) for more options -->
-
----
-
-## CLI Utilities
-
-| _Package_                                                       | _Description_ |
+| Package                                                         | Description   |
 | --------------------------------------------------------------- | ------------- |
 | [**`fzf`**](https://github.com/junegunn/fzf)                    | Fuzzy finder  |
 | [**`bat`**](https://github.com/sharkdp/bat)                     | Colored `cat` |
@@ -307,7 +194,6 @@ Watch this video for a quick demo showcase 👇
 - Fast, user-friendly `find` : [**`fd`**](https://github.com/sharkdp/fd)
 - Multiple Runtime version manager : [**`asdf`**](https://asdf-vm.com/)
 - Run arbitrary commands on file change : [**`entr`**](https://github.com/clibs/entr)
-- Fix previous command : [**thefuck**](https://github.com/nvbn/thefuck)
 - Midnight Commander, a visual file manager : [**`mc`**](https://github.com/MidnightCommander/mc)
 
 ---
