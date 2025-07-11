@@ -6,7 +6,7 @@ The default shell is `sh` that is symlinked to `bash` in most Linux distros
 
 ---
 
-## Shell: ZSH <img alt="ZSH" src="/assets/zsh.svg" height="25" >
+## Shell: ZSH <img alt="ZSH" src="../assets/zsh.svg" height="25" >
 
 <!-- Referred from: [OMZ GitHub guide](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) , [Fedora Magazine page](https://fedoramagazine.org/set-zsh-fedora-system/) , [Tecmint article](https://www.tecmint.com/install-zsh-shell-in-fedora/) -->
 

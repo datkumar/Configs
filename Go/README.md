@@ -1,4 +1,4 @@
-# [Go](./Go/README.md) <img alt="Go" src="/assets/go.svg" height="28">
+# [Go](./Go/README.md) <img alt="Go" src="../assets/go.svg" height="28">
 
 ## Installation
 

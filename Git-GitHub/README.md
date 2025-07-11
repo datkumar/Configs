@@ -151,6 +151,7 @@ git add .
 git commit -m "your message"
 git push origin DEV
 
+
 # Create a PR from DEV → MAIN
 # Squash and Merge (cleans up commit history)
 
@@ -158,6 +159,10 @@ git push origin DEV
 git switch DEV
 git fetch origin
 git rebase origin/MAIN
-# Below command only needed if rebase rewrote history:
+#
+# If rebase rewrote DEV's history, your local branch will now differ from origin/DEV
+# VSCode and `git status` may show "diverged" (such as 1 ahead, 1 behind)
+# This is because rebasing rewrites commit hashes, even if content is identical
+# To resolve this and sync your local DEV with origin/DEV, overwrite the remote with:
 git push --force-with-lease origin DEV
 ```

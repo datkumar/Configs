@@ -1,4 +1,4 @@
-# MongoDB <img alt="MongoDB" src="/assets/mongodb.svg" height="28">
+# MongoDB <img alt="MongoDB" src="../assets/mongodb.svg" height="28">
 
 Refer their [Install MongoDB Community Edition on Linux](https://www.mongodb.com/docs/manual/administration/install-on-linux/) page for installation instructions of your Linux distro
 
