@@ -1,4 +1,4 @@
-# Java <img alt="Java" src="/assets/java.svg" height="28">
+# Java <img alt="Java" src="../assets/java.svg" height="28">
 
 ## Check existing Java installation
 
@@ -21,7 +21,7 @@ find /usr/lib/jvm -name java
 find /usr/lib/jvm -name javac
 ```
 
-## Installing an OpenJDK&ensp;<img alt="OpenJDK" src="/assets/openjdk.png" height="25">
+## Installing an OpenJDK&ensp;<img alt="OpenJDK" src="../assets/openjdk.png" height="25">
 
 I'm on Fedora where the package manager is `dnf`. You would be installing your desired OpenJDK via your respective Linux distro's package manager (like `apt` for Ubuntu/Debian):
 

@@ -1,4 +1,4 @@
-# VSCode <img alt="VSCode" src="/assets/vscode.svg" height="28">
+# VSCode <img alt="VSCode" src="../assets/vscode.svg" height="28">
 
 ## Installation
 

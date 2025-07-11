@@ -27,7 +27,7 @@ My config files are kept in following folders:
 
 ## System setup
 
-### [Fedora](./Fedora/README.md)&ensp;<img alt="Fedora" src="./assets/flutter.svg" height="20">
+### [Fedora](./Fedora/README.md)&ensp;<img alt="Fedora" src="./assets/fedora.svg" height="20">
 
 ### [Ubuntu](./Ubuntu/README.md)&ensp;<img alt="Fedora" src="./assets/ubuntu.svg" height="20">
 

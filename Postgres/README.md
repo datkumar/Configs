@@ -1,4 +1,4 @@
-# PostgreSQL <img alt="PostgreSQL" src="/assets/postgres.svg" height="28">
+# PostgreSQL <img alt="PostgreSQL" src="../assets/postgres.svg" height="28">
 
 Go to the [Postgres Linux downloads page](https://www.postgresql.org/download/linux/) and follow instructions as per your Linux distro and postgres versions
 
@@ -279,7 +279,7 @@ Following the [pgAdmin download guide for RPM](https://www.pgadmin.org/download/
 
 ---
 
-## Install DBeaver
+## Install DBeaver <img alt="DBeaver" src="../assets/dbeaver.svg" height="28">
 
 DBeaver supports all popular SQL databases. It's a free cross-platform database tool for everyone working with data (devs, admins, analysts etc)
 
