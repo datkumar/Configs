@@ -1,4 +1,4 @@
-# Git-GitHub <img alt="Git" src="/assets/git.svg" height="28">
+# Git-GitHub <img alt="Git" src="../assets/git.svg" height="28">
 
 ## Install `git`
 
@@ -116,13 +116,7 @@ Also try cloning any GitHub repo via the SSH method url: `git@github.com:USERNAM
 - [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
 - [Generating your SSH Public Key](https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key#_generate_ssh_key)
 
-<!-- ---
-
-`git config --global pull.rebase true`
-
----
-
-## Removing old SSH Identity:
+### Removing old SSH Identity
 
 SSH identities are stored in `~/.ssh` folder and SSH manages these identities
 
@@ -130,8 +124,40 @@ SSH identities are stored in `~/.ssh` folder and SSH manages these identities
 - To **remove all** existing SSH identites: `ssh-add -D`
 - To remove a specific identity, delete the private key and the associated `.pub` file of that identity in `~/.ssh` folder
 
+<!-- ---
+
+`git config --global pull.rebase true`
+
 ---
 
 > For error `git: fatal: Could not read from remote repository`. Refer [this post](https://stackoverflow.com/questions/13509293/git-fatal-could-not-read-from-remote-repository)
 
 --- -->
+
+---
+
+## The usual development workflow
+
+Let's call the derived child branch you're working on as `DEV` and the base branch you're syncing it with as `MAIN`
+
+```sh
+# Before starting work, sync DEV with MAIN
+git switch DEV
+git fetch origin
+git rebase origin/MAIN
+
+# Do work, Commit and Push to your DEV
+git add .
+git commit -m "your message"
+git push origin DEV
+
+# Create a PR from DEV → MAIN
+# Squash and Merge (cleans up commit history)
+
+# After merge, sync DEV with updated MAIN
+git switch DEV
+git fetch origin
+git rebase origin/MAIN
+# Below command only needed if rebase rewrote history:
+git push --force-with-lease origin DEV
+```

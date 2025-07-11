@@ -1,4 +1,4 @@
-# Terminal setup <img alt="Terminal" src="/assets/zsh.svg" height="28">
+# Terminal setup <img alt="Terminal" src="../assets/wezterm.svg" height="28">
 
 The default shell is `sh` that is symlinked to `bash` in most Linux distros
 
@@ -67,7 +67,7 @@ You can refer my `.zshrc` and `.zshenv` config files
 
 ---
 
-## Terminal Emulator: WezTerm <img alt="WezTerm" src="/assets/wezterm.svg" height="25" >
+## Terminal Emulator: WezTerm <img alt="WezTerm" src="../assets/wezterm.svg" height="25" >
 
 [WezTerm](https://wezterm.org/index.html) is my preferred [GPU-accelerated terminal emulator](https://www.howtogeek.com/what-is-gpu-acceleration-in-linux-terminals/). Other popular options are [Alacritty](https://alacritty.org/), [Kitty](https://sw.kovidgoyal.net/kitty/) or [Ghostty](https://ghostty.org/)
 
@@ -127,7 +127,7 @@ Following the [Linux install](https://wezterm.org/install/linux.html) instructio
 
 ---
 
-## Shell prompt: Starship <img alt="Starship" src="/assets/starship.png" height="25">
+## Shell prompt: Starship <img alt="Starship" src="../assets/starship.png" height="25">
 
 - Install Starship by following their [install guide](https://starship.rs/guide/):
 

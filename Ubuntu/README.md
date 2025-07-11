@@ -1,4 +1,4 @@
-# Ubuntu <img alt="Ubuntu" src="/assets/ubuntu.svg" height="28">
+# Ubuntu <img alt="Ubuntu" src="../assets/ubuntu.svg" height="28">
 
 First, update existing packages:
 

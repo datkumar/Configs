@@ -8,7 +8,9 @@ config.term = "wezterm"
 
 -- Colors
 -- Browse Themes: https://wezterm.org/colorschemes/index.html
-config.color_scheme = "Apple System Colors"
+-- config.color_scheme = "Apple System Colors"
+-- config.color_scheme = 'Londontube (dark) (terminal.sexy)'
+config.color_scheme = 'Mathias (Gogh)'
 config.colors = {
   background = "#141414",
 }
@@ -23,7 +25,7 @@ config.window_padding = {
 }
 config.initial_cols = 170
 config.initial_rows = 40
-config.window_background_opacity = 0.95
+config.window_background_opacity = 0.97
 config.enable_scroll_bar = false
 config.adjust_window_size_when_changing_font_size = false
 config.window_close_confirmation = "NeverPrompt"
@@ -31,8 +33,8 @@ config.window_close_confirmation = "NeverPrompt"
 -- Fonts
 config.font = wezterm.font_with_fallback({
   "Geist Mono",
-  "Noto Color Emoji",               -- Fallback for emoji
-  "Symbols Nerd Font Mono",         -- Fallback for additional glyphs
+  "Symbols Nerd Font Mono",
+  "Noto Color Emoji",
 })
 config.font_size = 10
 config.line_height = 1
