@@ -1,4 +1,4 @@
-# Linux misc. <img alt="Linux" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/506px-Tux.svg.png" height="25">
+# Linux misc. <img alt="Linux" src="/assets/linux-tux.svg" height="28">
 
 ## Time-sync
 

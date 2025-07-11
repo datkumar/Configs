@@ -1,4 +1,4 @@
-# NeoVim <img alt="NeoVim" src='https://upload.wikimedia.org/wikipedia/commons/3/3a/Neovim-mark.svg' height="25">
+# NeoVim <img alt="NeoVim" src="/assets/neovim.svg" height="28">
 
 ## Install NeoVim
 
@@ -16,7 +16,7 @@ sudo apt install -y neovim
 
 ---
 
-## Lua setup <img alt="Lua" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Lua-Logo.svg"  height="20">
+## Lua setup <img alt="Lua" src="/assets/lua.svg"  height="25">
 
 For LazyVim, we need to set up `lua` and `luarocks` (the package manager for Lua modules)
 
@@ -141,7 +141,7 @@ Following the [LuaRocks install guide](https://luarocks.org/#quick-start):
 
 ---
 
-## LazyVim setup
+## LazyVim setup <img alt="LazyVim" src="/assets/lazyvim.svg"  height="25">
 
 As per the [LazyVim Installation docs](http://www.lazyvim.org/installation):
 

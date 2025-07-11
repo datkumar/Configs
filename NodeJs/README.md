@@ -1,4 +1,4 @@
-# Node.js <img alt="Node.js" src='https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg' height="25">
+# Node.js <img alt="Node.js" src="/assets/nodejs.svg" height="28">
 
 ## Install Node.js via `fnm`
 
@@ -63,7 +63,7 @@ fnm uninstall 22
 
 > We use `fnm` to install Node, and `pnpm` as the package manager for our projects
 
-## Install `pnpm`
+## Install `pnpm`&ensp;<img alt="Pnpm" src="/assets/pnpm.svg" height="25">
 
 [`pnpm`](https://pnpm.io/) is a fast, space-efficient package manager for Node. It re-uses packages across the `node_modules/` folders of all your packages with the help of **symlinks**. It also has a robust lockfile management mechanism making dependency resolution much better, leading to faster downloads and builds
 

@@ -1,6 +1,6 @@
-# Tmux <img alt="Tmux" src="https://raw.githubusercontent.com/tmux/tmux/c8677d3272b69587d8c4e7e5ef9da405e552e8ae/logo/tmux-logomark.svg" height="25">
+# Tmux <img alt="Tmux" src="/assets/tmux.svg" height="28">
 
-> To know the basics of using Tmux, refer [my blogpost](https://datkumar.hashnode.dev/tmux-a-multiverse-of-terminals)
+> To know the basics of using Tmux, refer [**my blogpost**](https://datkumar.hashnode.dev/tmux-a-multiverse-of-terminals)
 
 ## Installation
 

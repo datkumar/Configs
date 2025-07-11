@@ -1,4 +1,4 @@
-# Git-GitHub <img alt="Git" src='https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg' height="25">
+# Git-GitHub <img alt="Git" src="/assets/git.svg" height="28">
 
 ## Install `git`
 

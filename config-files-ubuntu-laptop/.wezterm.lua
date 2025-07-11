@@ -34,8 +34,8 @@ config.font = wezterm.font_with_fallback({
   "Noto Color Emoji",               -- Fallback for emoji
   "Symbols Nerd Font Mono",         -- Fallback for additional glyphs
 })
-config.font_size = 11.0
-config.line_height = 1.1
+config.font_size = 10
+config.line_height = 1
 
 -- Scrolling
 config.scrollback_lines = 12000

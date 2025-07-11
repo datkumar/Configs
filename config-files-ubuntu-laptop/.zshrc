@@ -60,6 +60,9 @@ source $HOME/.zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Zoxide (fast enough to load immediately)
 eval "$(zoxide init zsh)"
 
+# FNM (Fast Node Manager) init
+eval "$(fnm env)"
+
 # -------------------------------------------------------------
 # Completions
 # -------------------------------------------------------------
@@ -92,73 +95,4 @@ bindkey '\e[5C' forward-word
 # Optional: Benchmarking
 # -------------------------------------------------------------
 zmodload zsh/zprof
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# # -------------------------------------------------------------
-# # Prompt, Plugins, Completion, Key-binds
-# # -------------------------------------------------------------
-
-# # Initialize Starship prompt
-# eval "$(starship init zsh)"
-
-# # Source manually installed local ZSH Plugins:
-# source $HOME/.zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source $HOME/.zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-
-# # Key Bindings:
-# bindkey '\e[1;5D' backward-word  # Ctrl+Left (WezTerm)
-# bindkey '\e[1;5C' forward-word   # Ctrl+Right (WezTerm)
-# bindkey '\e[5D' backward-word    # Alt fallback
-# bindkey '\e[5C' forward-word
-
-# # Setup Completions:
-# # Load zsh-completions
-# fpath+=$HOME/.zsh_plugins/zsh-completions/src
-# # Compinstall metadata (if you might run `compinstall` again)
-# zstyle :compinstall filename "$HOME/.zshrc"
-# # Load completion system with caching
-# autoload -Uz compinit
-# if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh+24) ]]; then
-#   compinit -C
-# else
-#   compinit
-# fi
-# # Enables menu-based selection when using tab-completion
-# zstyle ':completion:*' menu select
-
-
-# # Lazy load Zoxide
-# _lazy_zoxide() {
-#   eval "$(zoxide init zsh)"
-#   unfunction _lazy_zoxide
-# }
-# add-zsh-hook precmd _lazy_zoxide
-
-# -------------------------------------------------------------
-# Optional:
-# -------------------------------------------------------------
-
-# Enable zprof to benchmark startup time
-# zmodload zsh/zprof
-
 

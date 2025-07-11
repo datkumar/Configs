@@ -1,8 +1,8 @@
-# Flutter, Android Studio&ensp;<img alt="Flutter" src='https://static-00.iconduck.com/assets.00/flutter-icon-1651x2048-ojswpayr.png' height="25">
+# Flutter, Android Studio&ensp;<img alt="Flutter" src="/assets/flutter.svg" height="28">
 
 > **Assuming you have Java set up**. If you haven't, you can refer the [Java setup](../Java/README.md) page
 
-## Installing Android Studio
+## Installing Android Studio <img alt="Android Studio" src="/assets/android-studio.svg" height="25">
 
 The most convenient way to install and manage JetBrains IDEs like Android Studio, IntelliJ is via their [**JetBrains Toolbox**](https://www.jetbrains.com/toolbox-app/) app. It makes it easier to update/downgrade versions of your various JetBrains IDEs as well as see all your projects for those IDEs in one place
 
@@ -42,7 +42,7 @@ The most convenient way to install and manage JetBrains IDEs like Android Studio
 
   After saving, restart your Shell to load changes: `exec $(which $SHELL)`
 
-## Installing Flutter
+## Installing Flutter <img alt="Flutter" src="/assets/flutter.svg" height="25">
 
 Following the official [Flutter Linux installation docs](https://docs.flutter.dev/get-started/install/linux/android):
 

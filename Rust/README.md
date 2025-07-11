@@ -1,4 +1,4 @@
-# Rust <img alt="Rust" src='https://rustacean.net/assets/rustacean-flat-happy.png' height="25">
+# Rust <img alt="Rust" src="/assets/rust.svg" height="28">
 
 ## Installation
 

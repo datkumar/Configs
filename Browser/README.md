@@ -1,4 +1,4 @@
-# Firefox <img alt="Firefox" src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/1200px-Firefox_logo%2C_2019.svg.png' height="25">
+# Firefox <img alt="Firefox" src="/assets/firefox.svg" height="28">
 
 ## Firefox browser settings
 
@@ -77,7 +77,7 @@ It's handy to know a few of the Firefox [Keyboard shortcuts](https://support.moz
 
 ---
 
-## Firefox Developer Edition <img alt="Firefox Developer Edition" src='https://upload.wikimedia.org/wikipedia/commons/3/30/Firefox_Developer_Edition_logo%2C_2019.svg' width="22">
+## Firefox Developer Edition <img alt="Firefox Developer Edition" src="/assets/firefox-dev.svg" height="25">
 
 - Download Tarball from [their site](https://www.mozilla.org/en-US/firefox/developer/)
 
@@ -126,7 +126,7 @@ It's handy to know a few of the Firefox [Keyboard shortcuts](https://support.moz
 
 ---
 
-## Tor Browser <img  alt="Tor browser" src='https://styleguide.torproject.org/static/images/tor-browser/stable/stable.svg' height="25">
+## Tor Browser <img alt="Tor browser" src="/assets/tor.svg" height="25">
 
 - Download tarball from [their site](https://www.torproject.org/download/)
 

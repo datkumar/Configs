@@ -3,6 +3,12 @@
 # Useful references: 
 # https://www.learnlinux.tv/how-i-set-up-the-sway-window-manager-on-debian-12/
 #
+#
+# -----------------------------------------
+# AUTOSTART
+# -----------------------------------------
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
 # -----------------------------------------
 # VARIABLES
 # -----------------------------------------
@@ -16,7 +22,7 @@ set $up k
 set $right l
 #
 # Screen lock command:
-set $screen_lock swaylock -f -i ~/Pictures/Wallpaper/lock-screen.jpg
+set $screen_lock swaylock -f -i ~/Pictures/Wallpaper/lock-screen.png
 #
 # Preferred terminal emulator
 set $term wezterm
@@ -31,38 +37,34 @@ include /etc/sway/config-vars.d/*
 # -----------------------------------------
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 #
-output * bg ~/Pictures/Wallpaper/home-screen.png fit
+output * bg ~/Pictures/Wallpaper/home-screen.jpg fill
 
 
 # -----------------------------------------
 # APPEARANCE
 # -----------------------------------------
 
-# Window Type               Border      Background  Text       Indicator   Child Border
-client.background           #2b2b2b
-client.focused              #205e45     #205e45     #f5ff38    #205e45     #205e45
-client.focused_inactive     #384040     #2e2e2e     #c2c2c2    #3a3a3a     #2e2e2e
-client.unfocused            #2a2a2a     #222222     #888888    #2a2a2a     #222222
-client.urgent               #ff5e5e     #ff5e5e     #ffffff    #ff5e5e     #ff5e5e
+# Window Title Font
+font pango:0xProto 10
 
-# Window Font
-font pango:Adwaita Sans 10.5
+# Window Type               Border      Background  Text        Indicator   Child Border
+client.background           #073824
+client.focused              #073824     #073824     #f5ff38     #384040     #073824
+client.focused_inactive     #384040     #2e2e2e     #c2c2c2     #3a3a3a     #2e2e2e
+client.unfocused            #2a2a2a     #222222     #888888     #2a2a2a     #222222
+client.urgent               #ff5e5e     #ff5e5e     #ffffff     #ff5e5e     #ff5e5e
 
-# Border styles
-# # default_border normal
-# default_border pixel 2
-# smart_borders on
-# for_window [floating] border normal
-# # smart_borders no_gaps
-
+# BORDERS AND GAPS:
+# To show Title of Window 
 default_border normal
-smart_borders no_gaps
-for_window [floating] border normal
-
+default_floating_border normal
 # Space between windows
 gaps inner 4
 # Space between windows and screen edge
-gaps outer 6
+gaps outer 2
+# Smartly hide borders and gaps when only one window present in workspace
+smart_gaps on
+smart_borders no_gaps
 
 # Rounded corners not supported :(
 
@@ -177,6 +179,11 @@ bindsym $mod+Shift+n exec swaync-client -c
 #
 # Workspaces:
 #
+    # Cycle through workspaces
+    bindsym $mod+Tab workspace next
+    bindsym $mod+Shift+Tab workspace prev
+
+
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2

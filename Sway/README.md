@@ -1,4 +1,4 @@
-# Sway
+# Sway <img alt="Sway" src="/assets/sway.svg" height="28">
 
 ## Installation
 
@@ -138,3 +138,18 @@ Some suggested changes within the `~/.config/sway/config` file
     ```
 
   - Log-out or reboot and test the `brightnessctl` command again
+
+- Screen-capture Trouble-shooting. The "Screen Capture" input option in OBS was not showing up in Ubuntu for me (although Fedora was working fine)
+
+  ```sh
+  sudo apt install obs-studio pipewire xdg-desktop-portal xdg-desktop-portal-wlr
+  mkdir -p ~/.config/xdg-desktop-portal/
+  nano ~/.config/xdg-desktop-portal/portals.conf
+  ```
+
+  Paste these contents and save file:
+
+  ```txt
+  [preferred]
+  default=xdg-desktop-portal-wlr
+  ```

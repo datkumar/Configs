@@ -1,12 +1,12 @@
-# Terminal setup <img alt="Terminal" src='https://upload.wikimedia.org/wikipedia/commons/d/da/GNOME_Terminal_icon_2019.svg' height="25">
+# Terminal setup <img alt="Terminal" src="/assets/zsh.svg" height="28">
 
-The default shell is `sh` that is symlinked to `bash` in most Linux systems
+The default shell is `sh` that is symlinked to `bash` in most Linux distros
 
 > Ensure at least one **Powerline or Nerd Font** is installed to support special characters or glyphs in your theme. Refer my [Fonts Guide](../Fonts/README.md)
 
 ---
 
-## Shell: ZSH <img alt="ZSH" src="https://raw.githubusercontent.com/Zsh-art/logo/refs/heads/main/svg/color_logomark.svg" width="25" >
+## Shell: ZSH <img alt="ZSH" src="/assets/zsh.svg" height="25" >
 
 <!-- Referred from: [OMZ GitHub guide](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) , [Fedora Magazine page](https://fedoramagazine.org/set-zsh-fedora-system/) , [Tecmint article](https://www.tecmint.com/install-zsh-shell-in-fedora/) -->
 
@@ -67,7 +67,7 @@ You can refer my `.zshrc` and `.zshenv` config files
 
 ---
 
-## Terminal Emulator: WezTerm <img alt="WezTerm" src="https://wezterm.org/favicon.svg" width="25" >
+## Terminal Emulator: WezTerm <img alt="WezTerm" src="/assets/wezterm.svg" height="25" >
 
 [WezTerm](https://wezterm.org/index.html) is my preferred [GPU-accelerated terminal emulator](https://www.howtogeek.com/what-is-gpu-acceleration-in-linux-terminals/). Other popular options are [Alacritty](https://alacritty.org/), [Kitty](https://sw.kovidgoyal.net/kitty/) or [Ghostty](https://ghostty.org/)
 
@@ -127,7 +127,7 @@ Following the [Linux install](https://wezterm.org/install/linux.html) instructio
 
 ---
 
-## Shell prompt: Starship <img alt="Starship" src="https://starship.rs/icon.png" width="25">
+## Shell prompt: Starship <img alt="Starship" src="/assets/starship.png" height="25">
 
 - Install Starship by following their [install guide](https://starship.rs/guide/):
 
@@ -164,7 +164,7 @@ Following the [Linux install](https://wezterm.org/install/linux.html) instructio
 
 ---
 
-## CLI Utils
+## Useful CLI Utils
 
 | Package                                                         | Description   |
 | --------------------------------------------------------------- | ------------- |
@@ -178,10 +178,9 @@ Following the [Linux install](https://wezterm.org/install/linux.html) instructio
 Install those utils via your package manager:
 
 ```sh
-# Fedora (dnf)
+# Fedora (dnf):
 sudo dnf install -y fzf bat jq eza ripgrep zoxide
-
-# Ubuntu (apt)
+# Ubuntu (apt):
 sudo apt install -y fzf bat jq eza ripgrep zoxide
 ```
 
@@ -195,5 +194,3 @@ Watch this video for a quick demo showcase 👇
 - Multiple Runtime version manager : [**`asdf`**](https://asdf-vm.com/)
 - Run arbitrary commands on file change : [**`entr`**](https://github.com/clibs/entr)
 - Midnight Commander, a visual file manager : [**`mc`**](https://github.com/MidnightCommander/mc)
-
----

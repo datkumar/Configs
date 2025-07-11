@@ -1,4 +1,4 @@
-# VSCode <img alt="VSCode" src='https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg' height="25">
+# VSCode <img alt="VSCode" src="/assets/vscode.svg" height="28">
 
 ## Installation
 

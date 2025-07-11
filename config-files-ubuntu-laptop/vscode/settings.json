@@ -1,19 +1,99 @@
 {
-    "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Bearded Theme HC Midnight Void",
-    "workbench.iconTheme": "vscode-icons",
-    "markdown-preview-enhanced.previewTheme": "github-dark.css",
-    "editor.mouseWheelZoom": true,
-    "editor.fontFamily": "'0xProto', 'Symbols Nerd Font', monospace",
-    "[markdown]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "editor.formatOnSave": true,
-    "dart.flutterSdkPath": "/home/kumar/FlutterSdk/flutter",
-    "git.autofetch": true,
-    "workbench.sideBar.location": "right",
-    "projectManager.git.baseFolders": [
-        "~/Desktop/Dev"
-    ],
-    "editor.linkedEditing": true
+  "telemetry.telemetryLevel": "error",
+  // Workbench
+  "workbench.startupEditor": "none",
+  "window.titleBarStyle": "custom",
+  "window.customTitleBarVisibility": "auto",
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "default",
+  "workbench.colorTheme": "Bearded Theme HC Midnight Void",
+  "workbench.iconTheme": "vscode-icons",
+  // Editor
+  "editor.fontFamily": "'0xProto','Symbols Nerd Font',monospace",
+  "editor.fontLigatures": true,
+  "editor.linkedEditing": true,
+  "editor.mouseWheelZoom": true,
+  "editor.minimap.enabled": false,
+  // Terminal
+  "terminal.integrated.fontFamily": "'CodeNewRoman Nerd Font Mono', monospace",
+  "terminal.integrated.fontSize": 12,
+  "terminal.external.linuxExec": "alacritty",
+  "terminal.integrated.drawBoldTextInBrightColors": true,
+  // Formatting
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.detectIndentation": true,
+  "editor.insertSpaces": true,
+  "editor.comments.insertSpace": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.useEditorConfig": true,
+  "prettier.trailingComma": "es5",
+  // File type specific settings
+  "[shellscript][ignore][dotenv][properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[makefile]": {
+    "editor.insertSpaces": false
+  },
+  "[c][cpp][makefile]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.tabSize": 4
+  },
+  "C_Cpp.clang_format_style": "file",
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  // Markdown
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "markdownlint.config": {
+    "no-inline-html": false
+  },
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
+  "markdown-preview-enhanced.mermaidTheme": "dark",
+  "markdown-preview-enhanced.enablePreviewZenMode": true,
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "redhat.telemetry.enabled": false,
+  "dart.flutterSdkPath": "/home/kumar/FlutterSdk/flutter",
+  "[snippets]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  //
+  "files.associations": {
+    // Change based on Tailwind/Vanilla-CSS is being used
+    // "*.css": "postcss"
+  },
+  // Projects
+  "projectManager.git.baseFolders": ["~/Desktop/Dev"],
+  //   "projectManager.git.baseFolders": ["~/Desktop/Dev", "~/Desktop/Dev-learn"],
+  "git.autofetch": true,
+  "git.autorefresh": true,
+  // Custom labels for project files
+  "workbench.editor.customLabels.enabled": true,
+  "workbench.editor.customLabels.patterns": {
+    // NextJs project
+    "**/app/**/page.tsx": "${dirname} - Page",
+    "**/app/**/route.ts": "${dirname} - Endpoint",
+    "**/app/**/layout.tsx": "${dirname} - Layout",
+    "**/app/**/loading.tsx": "${dirname} - Skeleton",
+    // Astro project
+    "**/pages/**/index.astro": "${dirname} - HomePage",
+    "**/pages/**/**.astro": "${dirname} - page",
+    // Folder-wise READMEs
+    "**/README.md": "${dirname} - README"
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+
+  "cSpell.diagnosticLevel": "Hint"
 }

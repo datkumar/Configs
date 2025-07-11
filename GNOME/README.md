@@ -1,4 +1,4 @@
-# GNOME <img alt="GNOME" src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Gnomelogo-footprint.svg/833px-Gnomelogo-footprint.svg.png' height="25">
+# GNOME <img alt="GNOME" src="/assets/gnome.svg" height="28">
 
 ## GNOME Shell Extensions
 
@@ -29,7 +29,6 @@ sudo dnf install adw-gtk3-theme
 # Ubuntu (apt)
 curl -s https://julianfairfax.codeberg.page/package-repo/pub.gpg | gpg --dearmor | sudo dd of=/usr/share/keyrings/julians-package-repo.gpg
 echo 'deb [ signed-by=/usr/share/keyrings/julians-package-repo.gpg ] https://julianfairfax.codeberg.page/package-repo/debs packages main' | sudo tee /etc/apt/sources.list.d/julians-package-repo.list
-
 ```
 
 Now set the them for Legacy applications to `Adw-gtk3-dark` under `Appearance` section in the `Tweaks` app

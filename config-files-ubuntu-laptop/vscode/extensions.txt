@@ -10,10 +10,13 @@ esbenp.prettier-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 foxundermoon.shell-format
+golang.go
 gruntfuggly.todo-tree
 ms-python.debugpy
 ms-python.python
 ms-python.vscode-pylance
+ms-vscode.cpptools
+redhat.java
 ritwickdey.liveserver
 shd101wyy.markdown-preview-enhanced
 streetsidesoftware.code-spell-checker

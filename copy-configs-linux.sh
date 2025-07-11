@@ -6,12 +6,31 @@ set -euo pipefail
 # ----------------------------------------
 # Sources and Destinations:
 
-D=./config-files-fedora-pc
-# D=./config-files-ubuntu-laptop
-#
+# Prompt for system type
+echo "Select system type:"
+echo "1) Fedora PC"
+echo "2) Ubuntu Laptop"
+read -rp "Enter 1 or 2: " system_choice
+
+# Set Destination root "D" based on prompt result
+case "$system_choice" in
+1)
+    D=./config-files-fedora-pc
+    ;;
+2)
+    D=./config-files-ubuntu-laptop
+    ;;
+*)
+    echo "Invalid selection. Exiting."
+    exit 1
+    ;;
+esac
+
+# Nested folders within Destination root
 D_CFG="$D/.config"
 D_ETC="$D/etc"
 
+# Sources folders:
 S="$HOME"
 S_CFG="$HOME/.config"
 S_ETC=/etc
@@ -29,12 +48,12 @@ mkdir -p "$D" "$D_CFG" "$D_ETC/"
 # # File-system Table (for mounting drives)
 # cp "$S_ETC/fstab" "$D_ETC/"
 
-# # ----------------------------------------
-# # GNOME specific stuff:
+# ----------------------------------------
+# GNOME specific stuff:
 
-# # List of Extensions
+# List of Extensions
 # gnome-extensions list --enabled >"$D/gnome-shell-extensions.txt"
-# # Looks within ~/.local/share/gnome-shell/extensions
+# Looks within ~/.local/share/gnome-shell/extensions
 
 # # ----------------------------------------
 

@@ -1,4 +1,4 @@
-# Java <img alt="Java" src='https://www.svgrepo.com/show/452234/java.svg' height="25">
+# Java <img alt="Java" src="/assets/java.svg" height="28">
 
 ## Check existing Java installation
 
@@ -21,7 +21,7 @@ find /usr/lib/jvm -name java
 find /usr/lib/jvm -name javac
 ```
 
-## Installing an OpenJDK
+## Installing an OpenJDK&ensp;<img alt="OpenJDK" src="/assets/openjdk.png" height="25">
 
 I'm on Fedora where the package manager is `dnf`. You would be installing your desired OpenJDK via your respective Linux distro's package manager (like `apt` for Ubuntu/Debian):
 
@@ -35,102 +35,102 @@ I'm on Fedora where the package manager is `dnf`. You would be installing your d
   dnf info java-latest-openjdk-devel-fastdebug
   ```
 
-  <details>
-  <summary>
-  Here's my list of packages output for <code>dnf search openjdk</code> (as of Jun 2025):
-  </summary>
+<details>
+<summary>
+Here's my list of packages output for <code>dnf search openjdk</code> (as of Jun 2025):
+</summary>
 
-  ```sh
-  Matched fields: name, summary
-  ant-openjdk21.noarch: ant binding for openjdk21
-  java-21-openjdk.x86_64: OpenJDK 21 Runtime Environment
-  java-21-openjdk-demo.x86_64: OpenJDK 21 Demos
-  java-21-openjdk-demo-fastdebug.x86_64: OpenJDK 21 Demos optimised with full debugging on
-  java-21-openjdk-demo-slowdebug.x86_64: OpenJDK 21 Demos unoptimised with full debugging on
-  java-21-openjdk-devel.x86_64: OpenJDK 21 Development Environment
-  java-21-openjdk-devel-fastdebug.x86_64: OpenJDK 21 Development Environment optimised with full debugging on
-  java-21-openjdk-devel-slowdebug.x86_64: OpenJDK 21 Development Environment unoptimised with full debugging on
-  java-21-openjdk-fastdebug.x86_64: OpenJDK 21 Runtime Environment optimised with full debugging on
-  java-21-openjdk-headless.x86_64: OpenJDK 21 Headless Runtime Environment
-  java-21-openjdk-headless-fastdebug.x86_64: OpenJDK 21 Runtime Environment optimised with full debugging on
-  java-21-openjdk-headless-slowdebug.x86_64: OpenJDK 21 Runtime Environment unoptimised with full debugging on
-  java-21-openjdk-javadoc.x86_64: OpenJDK 21 API documentation
-  java-21-openjdk-javadoc-zip.x86_64: OpenJDK 21 API documentation compressed in a single archive
-  java-21-openjdk-jmods.x86_64: JMods for OpenJDK 21
-  java-21-openjdk-jmods-fastdebug.x86_64: JMods for OpenJDK 21 optimised with full debugging on
-  java-21-openjdk-jmods-slowdebug.x86_64: JMods for OpenJDK 21 unoptimised with full debugging on
-  java-21-openjdk-portable.x86_64: OpenJDK 21 Runtime Environment portable edition
-  java-21-openjdk-portable-devel.x86_64: OpenJDK 21 Development Environment portable edition
-  java-21-openjdk-portable-devel-fastdebug.x86_64: OpenJDK 21 Runtime and Development Environment portable edition optimised with full debugging on
-  java-21-openjdk-portable-devel-slowdebug.x86_64: OpenJDK 21 Runtime and Development Environment portable edition unoptimised with full debugging on
-  java-21-openjdk-portable-docs.x86_64: OpenJDK 21 API documentation
-  java-21-openjdk-portable-fastdebug.x86_64: OpenJDK 21 Runtime Environment portable edition optimised with full debugging on
-  java-21-openjdk-portable-misc.x86_64: OpenJDK 21 miscellany
-  java-21-openjdk-portable-slowdebug.x86_64: OpenJDK 21 Runtime Environment portable edition unoptimised with full debugging on
-  java-21-openjdk-portable-sources.x86_64: OpenJDK 21 full patched sources of portable JDK
-  java-21-openjdk-portable-static-libs.x86_64: OpenJDK 21 libraries for static linking - portable edition
-  java-21-openjdk-portable-static-libs-fastdebug.x86_64: OpenJDK 21 libraries for static linking - portable edition optimised with full debugging on
-  java-21-openjdk-portable-static-libs-slowdebug.x86_64: OpenJDK 21 libraries for static linking - portable edition unoptimised with full debugging on
-  java-21-openjdk-portable-unstripped.x86_64: The OpenJDK 21 runtime environment.
-  java-21-openjdk-slowdebug.x86_64: OpenJDK 21 Runtime Environment unoptimised with full debugging on
-  java-21-openjdk-src.x86_64: OpenJDK 21 Source Bundle
-  java-21-openjdk-src-fastdebug.x86_64: OpenJDK 21 Source Bundle for packages with debugging on and optimisation
-  java-21-openjdk-src-slowdebug.x86_64: OpenJDK 21 Source Bundle for packages with debugging on and no optimisation
-  java-21-openjdk-static-libs.x86_64: OpenJDK 21 libraries for static linking
-  java-21-openjdk-static-libs-fastdebug.x86_64: OpenJDK 21 libraries for static linking optimised with full debugging on
-  java-21-openjdk-static-libs-slowdebug.x86_64: OpenJDK 21 libraries for static linking unoptimised with full debugging on
-  java-latest-openjdk.x86_64: OpenJDK 24 Runtime Environment
-  java-latest-openjdk-demo.x86_64: OpenJDK 24 Demos
-  java-latest-openjdk-demo-fastdebug.x86_64: OpenJDK 24 Demos optimised with full debugging on
-  java-latest-openjdk-demo-slowdebug.x86_64: OpenJDK 24 Demos unoptimised with full debugging on
-  java-latest-openjdk-devel.x86_64: OpenJDK 24 Development Environment
-  java-latest-openjdk-devel-fastdebug.x86_64: OpenJDK 24 Development Environment optimised with full debugging on
-  java-latest-openjdk-devel-slowdebug.x86_64: OpenJDK 24 Development Environment unoptimised with full debugging on
-  java-latest-openjdk-fastdebug.x86_64: OpenJDK 24 Runtime Environment optimised with full debugging on
-  java-latest-openjdk-headless.x86_64: OpenJDK 24 Headless Runtime Environment
-  java-latest-openjdk-headless-fastdebug.x86_64: OpenJDK 24 Runtime Environment optimised with full debugging on
-  java-latest-openjdk-headless-slowdebug.x86_64: OpenJDK 24 Runtime Environment unoptimised with full debugging on
-  java-latest-openjdk-javadoc.x86_64: OpenJDK 24 API documentation
-  java-latest-openjdk-javadoc-zip.x86_64: OpenJDK 24 API documentation compressed in a single archive
-  java-latest-openjdk-jmods.x86_64: JMods for OpenJDK 24
-  java-latest-openjdk-jmods-fastdebug.x86_64: JMods for OpenJDK 24 optimised with full debugging on
-  java-latest-openjdk-jmods-slowdebug.x86_64: JMods for OpenJDK 24 unoptimised with full debugging on
-  java-latest-openjdk-portable.x86_64: OpenJDK 24 Runtime Environment portable edition
-  java-latest-openjdk-portable-devel.x86_64: OpenJDK 24 Development Environment portable edition
-  java-latest-openjdk-portable-devel-fastdebug.x86_64: OpenJDK 24 Runtime and Development Environment portable edition optimised with full debugging on
-  java-latest-openjdk-portable-devel-slowdebug.x86_64: OpenJDK 24 Runtime and Development Environment portable edition unoptimised with full debugging on
-  java-latest-openjdk-portable-docs.x86_64: OpenJDK 24 API documentation
-  java-latest-openjdk-portable-fastdebug.x86_64: OpenJDK 24 Runtime Environment portable edition optimised with full debugging on
-  java-latest-openjdk-portable-misc.x86_64: OpenJDK 24 miscellany
-  java-latest-openjdk-portable-slowdebug.x86_64: OpenJDK 24 Runtime Environment portable edition unoptimised with full debugging on
-  java-latest-openjdk-portable-sources.x86_64: OpenJDK 24 full patched sources of portable JDK
-  java-latest-openjdk-portable-static-libs.x86_64: OpenJDK 24 libraries for static linking - portable edition
-  java-latest-openjdk-portable-static-libs-fastdebug.x86_64: OpenJDK 24 libraries for static linking - portable edition optimised with full debugging on
-  java-latest-openjdk-portable-static-libs-slowdebug.x86_64: OpenJDK 24 libraries for static linking - portable edition unoptimised with full debugging on
-  java-latest-openjdk-portable-unstripped.x86_64: The OpenJDK 24 runtime environment.
-  java-latest-openjdk-slowdebug.x86_64: OpenJDK 24 Runtime Environment unoptimised with full debugging on
-  java-latest-openjdk-src.x86_64: OpenJDK 24 Source Bundle
-  java-latest-openjdk-src-fastdebug.x86_64: OpenJDK 24 Source Bundle for packages with debugging on and optimisation
-  java-latest-openjdk-src-slowdebug.x86_64: OpenJDK 24 Source Bundle for packages with debugging on and no optimisation
-  java-latest-openjdk-static-libs.x86_64: OpenJDK 24 libraries for static linking
-  java-latest-openjdk-static-libs-fastdebug.x86_64: OpenJDK 24 libraries for static linking optimised with full debugging on
-  java-latest-openjdk-static-libs-slowdebug.x86_64: OpenJDK 24 libraries for static linking unoptimised with full debugging on
-  maven-openjdk21.noarch: maven binding for openjdk21
-  openjdk-asmtools-javadoc.noarch: Javadoc for openjdk-asmtools
-  openjdk-asmtools7-javadoc.noarch: Javadoc for openjdk-asmtools7
-  xmvn-toolchain-openjdk21.noarch: xmvn-minimal binding for openjdk21
-  Matched fields: name
-  javapackages-local-openjdk21.noarch: Non-essential macros and scripts for Java packaging support
-  maven-local-openjdk21.noarch: Macros and scripts for Maven packaging support
-  openjdk-asmtools.noarch: Set of tools used to assemble / disassemble proper and improper Java .class files
-  openjdk-asmtools7.noarch: Set of tools used to assemble / disassemble proper and improper Java .class files for JDK version 11 and lesser
-  ```
+```sh
+Matched fields: name, summary
+ant-openjdk21.noarch: ant binding for openjdk21
+java-21-openjdk.x86_64: OpenJDK 21 Runtime Environment
+java-21-openjdk-demo.x86_64: OpenJDK 21 Demos
+java-21-openjdk-demo-fastdebug.x86_64: OpenJDK 21 Demos optimised with full debugging on
+java-21-openjdk-demo-slowdebug.x86_64: OpenJDK 21 Demos unoptimised with full debugging on
+java-21-openjdk-devel.x86_64: OpenJDK 21 Development Environment
+java-21-openjdk-devel-fastdebug.x86_64: OpenJDK 21 Development Environment optimised with full debugging on
+java-21-openjdk-devel-slowdebug.x86_64: OpenJDK 21 Development Environment unoptimised with full debugging on
+java-21-openjdk-fastdebug.x86_64: OpenJDK 21 Runtime Environment optimised with full debugging on
+java-21-openjdk-headless.x86_64: OpenJDK 21 Headless Runtime Environment
+java-21-openjdk-headless-fastdebug.x86_64: OpenJDK 21 Runtime Environment optimised with full debugging on
+java-21-openjdk-headless-slowdebug.x86_64: OpenJDK 21 Runtime Environment unoptimised with full debugging on
+java-21-openjdk-javadoc.x86_64: OpenJDK 21 API documentation
+java-21-openjdk-javadoc-zip.x86_64: OpenJDK 21 API documentation compressed in a single archive
+java-21-openjdk-jmods.x86_64: JMods for OpenJDK 21
+java-21-openjdk-jmods-fastdebug.x86_64: JMods for OpenJDK 21 optimised with full debugging on
+java-21-openjdk-jmods-slowdebug.x86_64: JMods for OpenJDK 21 unoptimised with full debugging on
+java-21-openjdk-portable.x86_64: OpenJDK 21 Runtime Environment portable edition
+java-21-openjdk-portable-devel.x86_64: OpenJDK 21 Development Environment portable edition
+java-21-openjdk-portable-devel-fastdebug.x86_64: OpenJDK 21 Runtime and Development Environment portable edition optimised with full debugging on
+java-21-openjdk-portable-devel-slowdebug.x86_64: OpenJDK 21 Runtime and Development Environment portable edition unoptimised with full debugging on
+java-21-openjdk-portable-docs.x86_64: OpenJDK 21 API documentation
+java-21-openjdk-portable-fastdebug.x86_64: OpenJDK 21 Runtime Environment portable edition optimised with full debugging on
+java-21-openjdk-portable-misc.x86_64: OpenJDK 21 miscellany
+java-21-openjdk-portable-slowdebug.x86_64: OpenJDK 21 Runtime Environment portable edition unoptimised with full debugging on
+java-21-openjdk-portable-sources.x86_64: OpenJDK 21 full patched sources of portable JDK
+java-21-openjdk-portable-static-libs.x86_64: OpenJDK 21 libraries for static linking - portable edition
+java-21-openjdk-portable-static-libs-fastdebug.x86_64: OpenJDK 21 libraries for static linking - portable edition optimised with full debugging on
+java-21-openjdk-portable-static-libs-slowdebug.x86_64: OpenJDK 21 libraries for static linking - portable edition unoptimised with full debugging on
+java-21-openjdk-portable-unstripped.x86_64: The OpenJDK 21 runtime environment.
+java-21-openjdk-slowdebug.x86_64: OpenJDK 21 Runtime Environment unoptimised with full debugging on
+java-21-openjdk-src.x86_64: OpenJDK 21 Source Bundle
+java-21-openjdk-src-fastdebug.x86_64: OpenJDK 21 Source Bundle for packages with debugging on and optimisation
+java-21-openjdk-src-slowdebug.x86_64: OpenJDK 21 Source Bundle for packages with debugging on and no optimisation
+java-21-openjdk-static-libs.x86_64: OpenJDK 21 libraries for static linking
+java-21-openjdk-static-libs-fastdebug.x86_64: OpenJDK 21 libraries for static linking optimised with full debugging on
+java-21-openjdk-static-libs-slowdebug.x86_64: OpenJDK 21 libraries for static linking unoptimised with full debugging on
+java-latest-openjdk.x86_64: OpenJDK 24 Runtime Environment
+java-latest-openjdk-demo.x86_64: OpenJDK 24 Demos
+java-latest-openjdk-demo-fastdebug.x86_64: OpenJDK 24 Demos optimised with full debugging on
+java-latest-openjdk-demo-slowdebug.x86_64: OpenJDK 24 Demos unoptimised with full debugging on
+java-latest-openjdk-devel.x86_64: OpenJDK 24 Development Environment
+java-latest-openjdk-devel-fastdebug.x86_64: OpenJDK 24 Development Environment optimised with full debugging on
+java-latest-openjdk-devel-slowdebug.x86_64: OpenJDK 24 Development Environment unoptimised with full debugging on
+java-latest-openjdk-fastdebug.x86_64: OpenJDK 24 Runtime Environment optimised with full debugging on
+java-latest-openjdk-headless.x86_64: OpenJDK 24 Headless Runtime Environment
+java-latest-openjdk-headless-fastdebug.x86_64: OpenJDK 24 Runtime Environment optimised with full debugging on
+java-latest-openjdk-headless-slowdebug.x86_64: OpenJDK 24 Runtime Environment unoptimised with full debugging on
+java-latest-openjdk-javadoc.x86_64: OpenJDK 24 API documentation
+java-latest-openjdk-javadoc-zip.x86_64: OpenJDK 24 API documentation compressed in a single archive
+java-latest-openjdk-jmods.x86_64: JMods for OpenJDK 24
+java-latest-openjdk-jmods-fastdebug.x86_64: JMods for OpenJDK 24 optimised with full debugging on
+java-latest-openjdk-jmods-slowdebug.x86_64: JMods for OpenJDK 24 unoptimised with full debugging on
+java-latest-openjdk-portable.x86_64: OpenJDK 24 Runtime Environment portable edition
+java-latest-openjdk-portable-devel.x86_64: OpenJDK 24 Development Environment portable edition
+java-latest-openjdk-portable-devel-fastdebug.x86_64: OpenJDK 24 Runtime and Development Environment portable edition optimised with full debugging on
+java-latest-openjdk-portable-devel-slowdebug.x86_64: OpenJDK 24 Runtime and Development Environment portable edition unoptimised with full debugging on
+java-latest-openjdk-portable-docs.x86_64: OpenJDK 24 API documentation
+java-latest-openjdk-portable-fastdebug.x86_64: OpenJDK 24 Runtime Environment portable edition optimised with full debugging on
+java-latest-openjdk-portable-misc.x86_64: OpenJDK 24 miscellany
+java-latest-openjdk-portable-slowdebug.x86_64: OpenJDK 24 Runtime Environment portable edition unoptimised with full debugging on
+java-latest-openjdk-portable-sources.x86_64: OpenJDK 24 full patched sources of portable JDK
+java-latest-openjdk-portable-static-libs.x86_64: OpenJDK 24 libraries for static linking - portable edition
+java-latest-openjdk-portable-static-libs-fastdebug.x86_64: OpenJDK 24 libraries for static linking - portable edition optimised with full debugging on
+java-latest-openjdk-portable-static-libs-slowdebug.x86_64: OpenJDK 24 libraries for static linking - portable edition unoptimised with full debugging on
+java-latest-openjdk-portable-unstripped.x86_64: The OpenJDK 24 runtime environment.
+java-latest-openjdk-slowdebug.x86_64: OpenJDK 24 Runtime Environment unoptimised with full debugging on
+java-latest-openjdk-src.x86_64: OpenJDK 24 Source Bundle
+java-latest-openjdk-src-fastdebug.x86_64: OpenJDK 24 Source Bundle for packages with debugging on and optimisation
+java-latest-openjdk-src-slowdebug.x86_64: OpenJDK 24 Source Bundle for packages with debugging on and no optimisation
+java-latest-openjdk-static-libs.x86_64: OpenJDK 24 libraries for static linking
+java-latest-openjdk-static-libs-fastdebug.x86_64: OpenJDK 24 libraries for static linking optimised with full debugging on
+java-latest-openjdk-static-libs-slowdebug.x86_64: OpenJDK 24 libraries for static linking unoptimised with full debugging on
+maven-openjdk21.noarch: maven binding for openjdk21
+openjdk-asmtools-javadoc.noarch: Javadoc for openjdk-asmtools
+openjdk-asmtools7-javadoc.noarch: Javadoc for openjdk-asmtools7
+xmvn-toolchain-openjdk21.noarch: xmvn-minimal binding for openjdk21
+Matched fields: name
+javapackages-local-openjdk21.noarch: Non-essential macros and scripts for Java packaging support
+maven-local-openjdk21.noarch: Macros and scripts for Maven packaging support
+openjdk-asmtools.noarch: Set of tools used to assemble / disassemble proper and improper Java .class files
+openjdk-asmtools7.noarch: Set of tools used to assemble / disassemble proper and improper Java .class files for JDK version 11 and lesser
+```
 
-  </details>
+</details>
 
-  - On Ubuntu, there are lesser packages and the one you want to install is typically named like `openjdk-17-jdk` for the whole JDK toolset
+- On Ubuntu, there are lesser packages and the one you want to install is typically named like `openjdk-17-jdk` for the whole JDK toolset
 
-  - You would get a list of packages available to install having various Java versions as well as the variant suffix in the package. The `headless` variants usually just include the **JRE**. To install the full JDK with all the necessary tools for Java development, we need the development variant of the package, usually containing the `-devel` term suffix in the name for `dnf`.
+- You would get a list of packages available to install having various Java versions as well as the variant suffix in the package. The `headless` variants usually just include the **JRE**. To install the full JDK with all the necessary tools for Java development, we need the development variant of the package, usually containing the `-devel` term suffix in the name for `dnf`.
 
 - Install your desired OpenJDK package from the packages list:
 

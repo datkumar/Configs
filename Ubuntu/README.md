@@ -1,21 +1,31 @@
-# Ubuntu <img alt="Fedora" src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/UbuntuCoF.svg/512px-UbuntuCoF.svg.png' height="25">
+# Ubuntu <img alt="Ubuntu" src="/assets/ubuntu.svg" height="28">
 
-## My list of packages
+First, update existing packages:
 
-<!-- grub-customizer ? -->
+```sh
+# Update apt and snap packages
+sudo apt update && sudo apt upgrade -y
+sudo snap refresh
 
-### Present in `apt` repos
+# If Flatpaks installed, update them
+flatpak update
+```
+
+## My list of Packages
+
+### Packages of `apt` repos
 
 ```sh
 sudo add-apt-repository universe
 sudo apt update && sudo apt upgrade -y
 
 sudo apt install -y \
- wget curl git g++ clang clang-tools clang-format clang-tidy make cmake zip unzip  \
- tmux libfuse2 pkg-config  libssl-dev \
- lua5.4 liblua5.4-dev neovim texlive-full chktex texstudio  \
- btop htop hwinfo info zsh scdoc fzf bat jq eza ripgrep zoxide xxd \
- gnome-tweaks nmap ddcutil dmidecode piper gnome-epub-thumbnailer vlc
+  wget curl git g++ clang clang-tools clang-format clang-tidy make cmake zip unzip  \
+  tmux libfuse2 pkg-config libssl-dev vlc \
+  lua5.4 liblua5.4-dev neovim texlive-full chktex texstudio  \
+  btop htop hwinfo info zsh scdoc fzf bat jq eza ripgrep zoxide xxd \
+  gnome-epub-thumbnailer gnome-tweaks gnome-shell-extension-manager \
+  nmap ddcutil dmidecode piper
 ```
 
 ### PPA packages
@@ -28,7 +38,6 @@ A [PPA](https://launchpad.net/ubuntu/+ppas) (Personal Package Archive) is a repo
 
 ```sh
 # Add PPA repositories of those packages
-sudo add-apt-repository ppa:obsproject/obs-studio
 sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
 sudo add-apt-repository ppa:o2sh/onefetch
 sudo add-apt-repository ppa:font-manager/staging
@@ -36,19 +45,38 @@ sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 
 # Update system's repositories and install those packages
 sudo apt update
-sudo apt install -y obs-studio fastfetch onefetch font-manager grub-customizer
+sudo apt install -y fastfetch onefetch font-manager grub-customizer
 ```
 
 ### Snap Packages
 
-Snap does not allow multiple package names to install in same line
+<!-- Snap does not allow multiple package names to install in same line -->
 
 ```sh
-sudo snap install libreoffice
-sudo snap install obsidian --classic
-sudo snap install drawio
-sudo snap install foliate
-sudo snap install bruno
-sudo snap install discord
 sudo snap install pdftk
 ```
+
+### Flatpaks
+
+> I prefer Flatpaks over Snaps wherever possible
+
+- First install flatpak and set up flathub repository:
+
+  ```sh
+  sudo apt install flatpak
+  sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+  flatpak install flathub
+  ```
+
+- Then install all the flatpak apps:
+
+  ```sh
+  flatpak install --assumeyes \
+    org.libreoffice.LibreOffice \
+    com.jgraph.drawio.desktop \
+    com.obsproject.Studio \
+    com.github.johnfactotum.Foliate \
+    md.obsidian.Obsidian \
+    com.usebruno.Bruno \
+    com.discordapp.Discord
+  ```

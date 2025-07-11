@@ -5,6 +5,11 @@
 # Environment Variables and Paths
 # -------------------------------------------------------------
 
+# For Sway:
+export XDG_SESSION_TYPE=wayland
+export QT_QPA_PLATFORM=wayland
+
+
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PATH:$PNPM_HOME"
