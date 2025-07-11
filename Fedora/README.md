@@ -1,4 +1,4 @@
-# Fedora <img alt="Fedora" src="/assets/fedora.svg" height="28">
+# Fedora <img alt="Fedora" src="../assets/fedora.svg" height="28">
 
 ## Post-Install steps for Fedora
 

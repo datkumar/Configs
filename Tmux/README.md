@@ -1,4 +1,4 @@
-# Tmux <img alt="Tmux" src="/assets/tmux.svg" height="28">
+# Tmux <img alt="Tmux" src="../assets/tmux.svg" height="28">
 
 > To know the basics of using Tmux, refer [**my blogpost**](https://datkumar.hashnode.dev/tmux-a-multiverse-of-terminals)
 

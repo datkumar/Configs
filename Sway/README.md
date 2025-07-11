@@ -1,4 +1,4 @@
-# Sway <img alt="Sway" src="/assets/sway.svg" height="28">
+# Sway <img alt="Sway" src="../assets/sway.svg" height="28">
 
 ## Installation
 

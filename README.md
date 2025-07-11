@@ -27,23 +27,23 @@ My config files are kept in following folders:
 
 ## System setup
 
-### [Fedora](./Fedora/README.md)&ensp;<img alt="Fedora" src='https://upload.wikimedia.org/wikipedia/commons/4/41/Fedora_icon_%282021%29.svg' height="20">
+### [Fedora](./Fedora/README.md)&ensp;<img alt="Fedora" src="./assets/flutter.svg" height="20">
 
-### [Ubuntu](./Ubuntu/README.md)&ensp;<img alt="Fedora" src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/UbuntuCoF.svg/512px-UbuntuCoF.svg.png' height="20">
+### [Ubuntu](./Ubuntu/README.md)&ensp;<img alt="Fedora" src="./assets/ubuntu.svg" height="20">
 
-### [Terminal](./Terminal/README.md) <img alt="Terminal" src="https://wezterm.org/favicon.svg" height="20">
+### [Terminal](./Terminal/README.md)&ensp;<img alt="Terminal" src="./assets/wezterm.svg" height="20">
 
-### [Sway](./Sway/README.md) <img alt="Tmux" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Sway_Tree.svg/1024px-Sway_Tree.svg.png" height="20">
+### [Sway](./Sway/README.md)&ensp;<img alt="Sway" src="./assets/sway.svg" height="20">
 
-### [GNOME](./GNOME/README.md)&ensp;<img alt="GNOME" src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Gnomelogo-footprint.svg/833px-Gnomelogo-footprint.svg.png' height="20">
+### [GNOME](./GNOME/README.md)&ensp;<img alt="GNOME" src="./assets/gnome.svg" height="20">
 
-### [Linux misc.](./Linux-misc/README.md)&ensp;<img alt="Linux" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/506px-Tux.svg.png" height="20">
+### [Linux misc.](./Linux-misc/README.md)&ensp;<img alt="Linux" src="./assets/linux-tux.svg" height="20">
 
-### [Browser](./Browser/README.md)&ensp;<img alt="Firefox" src='https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg' height="20">
+### [Browser](./Browser/README.md)&ensp;<img alt="Firefox" src="./assets/firefox.svg" height="20">
 
-### [Git-GitHub](./Git-GitHub/README.md)&ensp;<img alt="Git" src='https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg' height="20">
+### [Git-GitHub](./Git-GitHub/README.md)&ensp;<img alt="Git" src="./assets/git.svg" height="20">
 
-### [Tmux](./Tmux/README.md) <img alt="Tmux" src="https://raw.githubusercontent.com/tmux/tmux/c8677d3272b69587d8c4e7e5ef9da405e552e8ae/logo/tmux-logomark.svg" height="20">
+### [Tmux](./Tmux/README.md)&ensp;<img alt="Tmux" src="./assets/tmux.svg" height="20">
 
 ### [Fonts 🔤](./Fonts/README.md)
 
@@ -51,23 +51,23 @@ My config files are kept in following folders:
 
 ## Development stuff
 
-### [VSCode](./VSCode/README.md)&ensp;<img alt="VSCode" src='https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg' height="20">
+### [VSCode](./VSCode/README.md)&ensp;<img alt="VSCode" src="./assets/vscode.svg" height="20">
 
-### [NeoVim](./NeoVim/README.md)&ensp;<img alt="NeoVim" src='https://upload.wikimedia.org/wikipedia/commons/3/3a/Neovim-mark.svg' height="20">
+### [NeoVim](./NeoVim/README.md)&ensp;<img alt="NeoVim" src="./assets/neovim.svg" height="20">
 
-### [Rust](./Rust/README.md)&ensp;<img alt="Rust" src='https://rustacean.net/assets/rustacean-flat-happy.png' height="20">
+### [Node.js](./NodeJs/README.md)&ensp;<img alt="Node.js" src="./assets/nodejs.svg" height="20">
 
-### [Go](./Go/README.md)&ensp;<img alt="Go" src='https://www.svgrepo.com/show/373635/go-gopher.svg' height="20">
+### [Java](./Java/README.md)&ensp;<img alt="Java" src="./assets/java.svg" height="20">
 
-### [Node.js](./NodeJs/README.md)&ensp;<img alt="Node.js" src='https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg' height="20">
+### [Flutter, Android Studio](./Flutter/README.md)&ensp;<img alt="Flutter" src="./assets/flutter.svg" height="20">
 
-### [Java](./Java/README.md)&ensp;<img alt="Java" src='https://www.svgrepo.com/show/452234/java.svg' height="20">
+### [Go](./Go/README.md)&ensp;<img alt="Go" src="./assets/go.svg" height="20">
 
-### [Flutter, Android Studio](./Flutter/README.md)&ensp;<img alt="Flutter" src='https://storage.googleapis.com/cms-storage-bucket/4fd5520fe28ebf839174.svg' height="20">
+### [Rust](./Rust/README.md)&ensp;<img alt="Rust" src="./assets/rust.svg" height="20">
 
-### [PostgreSQL](./Postgres/README.md)&ensp;<img alt="PostgreSQL" src='https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg' height="20">
+### [PostgreSQL](./Postgres/README.md)&ensp;<img alt="PostgreSQL" src="./assets/postgres.svg" height="20">
 
-### [MongoDB](./MongoDB/README.md)&ensp;<img alt="MongoDB"  src="https://www.svgrepo.com/show/373845/mongo.svg" height="20">
+### [MongoDB](./MongoDB/README.md)&ensp;<img alt="MongoDB" src="./assets/mongodb.svg" height="20">
 
 <!-- ### [IntelliJ](./IntelliJ/README.md)&ensp;<img alt="IntelliJ" src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/1200px-IntelliJ_IDEA_Icon.svg.png' height="20"> -->
 

@@ -1,4 +1,4 @@
-# GNOME <img alt="GNOME" src="/assets/gnome.svg" height="28">
+# GNOME <img alt="GNOME" src="../assets/gnome.svg" height="28">
 
 ## GNOME Shell Extensions
 
