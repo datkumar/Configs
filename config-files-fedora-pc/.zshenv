@@ -9,7 +9,6 @@ export PATH="$FNM_PATH:$PATH"
 #fi
 ## fnm end
 
-
 # pnpm
 export PNPM_HOME=$HOME/.local/share/pnpm
 export PATH=$PNPM_HOME:$PATH
@@ -20,7 +19,6 @@ export PATH=$PNPM_HOME:$PATH
 #  *) export PATH="$PNPM_HOME:$PATH" ;;
 #esac
 ## pnpm end
-
 
 # Deno
 #. "/home/kumar/.deno/env"
@@ -33,16 +31,13 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$HOME/.local/share/JetBrains/Toolbox/apps/android-studio/bin
 
-
 # Go binaries
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
 
-
 # Rust
 #. "$HOME/.cargo/env"
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
-
 
 # Lua, LuaRocks
 export PATH=$PATH:"$HOME/.luarocks/bin:/usr/local/bin"
@@ -56,3 +51,5 @@ else
     export EDITOR='gnome-text-editor'
 fi
 
+# For QT apps
+export QT_QPA_PLATFORMTHEME=qt5ct

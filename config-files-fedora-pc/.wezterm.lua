@@ -19,7 +19,7 @@ config.window_padding = {
   left = 10,
   right = 8,
   top = 8,
-  bottom = 20,
+  bottom = 23,
 }
 config.initial_cols = 170
 config.initial_rows = 40

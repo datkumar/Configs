@@ -8,17 +8,17 @@ set -euo pipefail
 
 # Prompt for system type
 echo "Select system type:"
-echo "1) Fedora PC"
-echo "2) Ubuntu Laptop"
+echo "1) Ubuntu Laptop"
+echo "2) Fedora PC"
 read -rp "Enter 1 or 2: " system_choice
 
 # Set Destination root "D" based on prompt result
 case "$system_choice" in
 1)
-    D=./config-files-fedora-pc
+    D=./config-files-ubuntu-laptop
     ;;
 2)
-    D=./config-files-ubuntu-laptop
+    D=./config-files-fedora-pc
     ;;
 *)
     echo "Invalid selection. Exiting."
@@ -144,13 +144,18 @@ cp "$S_VSC/globalStorage/alefragnani.project-manager/projects.json" "$D_VSC/proj
 cp "$S_VSC/globalStorage/alefragnani.project-manager/projects_cache_git.json" "$D_VSC/project-manager.json"
 
 # ----------------------------------------
-# C/C++ Formatting:
+# C/C++, Java
 
-mkdir -p "$D/cpp"
+mkdir -p "$D/cpp" "$D/java"
 
+# clang-format config
 clang-format --style=Google --dump-config >"$D/cpp/.clang-format-google"
 clang-format --style=LLVM --dump-config >"$D/cpp/.clang-format-llvm"
 cp "$S/Desktop/Dev/code-journal/.playground/cpp/.clang-format" "$D/cpp/.clang-format"
+
+# Makefiles
+cp "$S/Desktop/Dev/code-journal/.playground/cpp/Makefile" "$D/cpp/Makefile"
+cp "$S/Desktop/Dev/code-journal/.playground/java/Makefile" "$D/java/Makefile"
 
 # -----------------------------------------------------------------------------------------
 # TODO: CHECK REMAINING

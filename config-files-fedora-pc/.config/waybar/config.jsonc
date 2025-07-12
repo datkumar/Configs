@@ -26,8 +26,8 @@
     "memory",
     "cpu",
     "pulseaudio",
-    "custom/nightlight",
-    "custom/brightness"
+    "custom/brightness",
+    "custom/nightlight"
   ],
 
   "sway/workspaces": {
@@ -39,15 +39,38 @@
       "1": "󰈹",
       "2": "",
       "3": "",
-      "4": "",
+      "4": "󰈚",
+      "5": "",
+      "6": "",
       "urgent": "",
       "default": "󰓩"
     }
   },
 
   "clock": {
-    "format": "{:%d %b  %I:%M %p}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    "format": " {:%d/%m (%a)   %I:%M %p }",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#f0468d'><b>{}</b></span>",
+        "days": "<span color='#bfbfbb'><b>{}</b></span>",
+        "weeks": "<span color='#8debc1'>w{}</span>",
+        "weekdays": "<span color='#52aeeb'>{}</span>",
+        "today": "<span color='#fff129'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
   },
 
   "cpu": {
@@ -61,8 +84,10 @@
   },
 
   "memory": {
-    "format": " {}%",
+    "interval": 5,
+    "format": " {percentage}%",
     "tooltip": true,
+    "tooltip-format": "Memory:\t{used:.1f}G / {total:.1f}G\nSwap:\t{swapUsed:.1f}G / {swapTotal:.1f}G",
     "states": {
       "good": 0,
       "moderate": 50,
@@ -85,14 +110,16 @@
 
   "network": {
     "interval": 2,
+    "on-click": "nm-connection-editor",
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-    "format-wifi": "{icon} {essid}  <span color='#42e82c'>󰜮 {bandwidthDownBytes}</span>  <span color='#f28735'>󰜷 {bandwidthUpBytes}</span>",
-    "format-ethernet": "󰈀 Eth  <span color='#42e82c'>󰜮 {bandwidthDownBytes}</span>  <span color='#f28735'>󰜷 {bandwidthUpBytes}</span>",
-    "format-disconnected": " Disconnected",
-    "tooltip-format-wifi": "Wi-Fi: {essid}\nDownload: {bandwidthDownBytes}\nUpload: {bandwidthUpBytes}\nSignal: {signalStrength}%\nInterface: {ifname}\nIP: {ipaddr}",
-    "tooltip-format-ethernet": "Ethernet\nDownload: {bandwidthDownBytes}\nUpload: {bandwidthUpBytes}\nInterface: {ifname}\nIP: {ipaddr}",
-    "tooltip-format-disconnected": "No Network Connection",
-    "on-click": "nm-connection-editor"
+    "format": "<span color='#42e82c'> {bandwidthDownBytes}</span>  <span color='#f28735'> {bandwidthUpBytes}</span>",
+    "format-wifi": "{icon} {essid}  <span color='#42e82c'> {bandwidthDownBytes}</span>  <span color='#f28735'> {bandwidthUpBytes}</span>",
+    "format-ethernet": "󰈀 Eth  <span color='#42e82c'> {bandwidthDownBytes}</span>  <span color='#f28735'> {bandwidthUpBytes}</span>",
+    "format-disconnected": "<span color='#f2633f'> Disconnected</span>",
+    "tooltip-format": "Download Speed:\t{bandwidthDownBytes}\nUpload Speed:\t{bandwidthUpBytes}\nInterface name:\t{ifname}\nIP Address:\t{ipaddr}",
+    "tooltip-format-wifi": "Wi-Fi SSID:\t{essid}\nDownload Speed:\t{bandwidthDownBytes}\nUpload Speed:\t{bandwidthUpBytes}\nInterface name:\t{ifname}\nIP Address:\t{ipaddr}\nSig. Strength:\t{signalStrength}%",
+    "tooltip-format-ethernet": "Ethernet Connected 󰈀\nDownload Speed:\t{bandwidthDownBytes}\nUpload Speed:\t{bandwidthUpBytes}\nInterface name:\t{ifname}\nIP Address:\t{ipaddr}",
+    "tooltip-format-disconnected": "No Network Connection"
   },
 
   "custom/brightness": {
@@ -126,8 +153,8 @@
     "tooltip-format-off": "BT OFF",
     "tooltip-format-on": "BT ON. No device connected",
     "tooltip-format-connected": "BT Connected devices: \n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "- {device_alias} ({device_battery_percentage}%)",
-    "tooltip-format-no-controller": "No BT controller found.",
+    "tooltip-format-enumerate-connected": " - {device_alias} ({device_battery_percentage}%)",
+    "tooltip-format-no-controller": "No BT controller found",
     "on-click": "blueman-manager",
     "on-click-right": "$HOME/scripts/waybar/bt-toggle.sh"
   },
@@ -137,7 +164,6 @@
     "on-scroll-up": "$HOME/scripts/waybar/limit-vol-incr.sh",
     "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
     "on-click": "pavucontrol",
-
     "format-icons": {
       "headphone": "󰋋",
       "hands-free": "󰋋",
@@ -147,14 +173,11 @@
       "car": "",
       "default": ["", "", ""]
     },
-
     "format": "{icon} {volume}%{format_source}",
-
     "format-bluetooth": "{icon} {volume}%{format_source}",
     "format-bluetooth-muted": "󰂲{icon}{format_source}",
-    "format-muted": "{format_source}",
-
-    "format-source": " <span color='#f24646'>  {volume}%</span>", // space added before
+    "format-muted": " {format_source}",
+    "format-source": " <span color='#c95353'>  {volume}%</span>", // space added before
     "format-source-muted": "" // hide when off
   },
 
@@ -167,12 +190,10 @@
     "escape": true,
     "exec": "$HOME/scripts/waybar/mediaplayer.py 2> /dev/null",
     "max-length": 50,
-
     "format-icons": {
       // Optional: You can leave this empty or remove it entirely
       "default": ""
     },
-
     "on-click": "playerctl play-pause",
     "on-click-right": "playerctl next",
     "on-scroll-down": "playerctl previous",

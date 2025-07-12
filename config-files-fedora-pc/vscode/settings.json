@@ -122,5 +122,8 @@
   //   "terminal.ansiBrightWhite": "#ffffff"
   // },
   "vsicons.dontShowNewVersionMessage": true,
-  "dart.flutterSdkPath": "/home/kumar/FlutterSdk/flutter"
+  "dart.flutterSdkPath": "/home/kumar/FlutterSdk/flutter",
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  }
 }
