@@ -6,7 +6,7 @@
   "window.customTitleBarVisibility": "auto",
   "workbench.sideBar.location": "right",
   "workbench.activityBar.location": "default",
-  "workbench.colorTheme": "Bearded Theme HC Midnight Void",
+  "workbench.colorTheme": "Bearded Theme Vivid Black",
   "workbench.iconTheme": "vscode-icons",
   // Editor
   "editor.fontFamily": "'0xProto','Symbols Nerd Font',monospace",
@@ -23,7 +23,7 @@
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
   "editor.detectIndentation": true,
-  "editor.insertSpaces": true,
+  "editor.insertSpaces": false,
   "editor.comments.insertSpace": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.useEditorConfig": true,
@@ -35,6 +35,9 @@
   "[makefile]": {
     "editor.insertSpaces": false
   },
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  },
   "[c][cpp][makefile]": {
     "editor.defaultFormatter": "ms-vscode.cpptools",
     "editor.tabSize": 4
@@ -44,6 +47,10 @@
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
   },
@@ -93,7 +100,8 @@
     // Folder-wise READMEs
     "**/README.md": "${dirname} - README"
   },
+  // Other extensions
   "vsicons.dontShowNewVersionMessage": true,
-
-  "cSpell.diagnosticLevel": "Hint"
+  "cSpell.diagnosticLevel": "Hint",
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }

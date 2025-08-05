@@ -21,11 +21,11 @@ sudo apt update && sudo apt upgrade -y
 
 sudo apt install -y \
   wget curl git g++ clang clang-tools clang-format clang-tidy make cmake zip unzip  \
-  tmux libfuse2 pkg-config libssl-dev vlc \
+  tmux libfuse2 pkg-config libssl-dev vlc net-tools \
   lua5.4 liblua5.4-dev neovim texlive-full chktex texstudio  \
   btop htop hwinfo info zsh scdoc fzf bat jq eza ripgrep zoxide xxd \
   gnome-epub-thumbnailer gnome-tweaks gnome-shell-extension-manager \
-  nmap ddcutil dmidecode piper
+  nmap ddcutil dmidecode piper testdisk
 ```
 
 ### PPA packages

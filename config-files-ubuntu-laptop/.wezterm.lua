@@ -8,20 +8,20 @@ config.term = "wezterm"
 
 -- Colors
 -- Browse Themes: https://wezterm.org/colorschemes/index.html
--- config.color_scheme = "Apple System Colors"
+config.color_scheme = "Apple System Colors"
 -- config.color_scheme = 'Londontube (dark) (terminal.sexy)'
-config.color_scheme = 'Mathias (Gogh)'
+-- config.color_scheme = 'Mathias (Gogh)'
 config.colors = {
-  background = "#141414",
+	background = "#141414",
 }
 
 -- Window appearance
 config.window_decorations = "RESIZE"
 config.window_padding = {
-  left = 10,
-  right = 8,
-  top = 8,
-  bottom = 8,
+	left = 10,
+	right = 8,
+	top = 8,
+	bottom = 8,
 }
 config.initial_cols = 170
 config.initial_rows = 40
@@ -32,12 +32,12 @@ config.window_close_confirmation = "NeverPrompt"
 
 -- Fonts
 config.font = wezterm.font_with_fallback({
-  "Geist Mono",
-  "Symbols Nerd Font Mono",
-  "Noto Color Emoji",
+	"JetBrains Mono",
+	"Symbols Nerd Font Mono",
+	"Noto Color Emoji",
 })
 config.font_size = 10
-config.line_height = 1
+config.line_height = 1.1
 
 -- Scrolling
 config.scrollback_lines = 12000
@@ -51,16 +51,15 @@ config.force_reverse_video_cursor = false
 -- Bell
 config.audible_bell = "Disabled"
 config.visual_bell = {
-  fade_in_duration_ms = 0,
-  fade_out_duration_ms = 0,
-  target = "CursorColor",
+	fade_in_duration_ms = 0,
+	fade_out_duration_ms = 0,
+	target = "CursorColor",
 }
 
 -- Clipboard behavior
 config.selection_word_boundary = "semantic"
 
-
--- Key bindings 
+-- Key bindings
 -- config.keys = {
 -- }
 

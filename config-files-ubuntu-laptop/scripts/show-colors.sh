@@ -25,7 +25,6 @@ echo -e "\e[0m"
 
 
 
-
 echo -e "\nCategory: 6x6x6 Color Cube (colour16 - colour231)"
 echo "----------------------------------------------------"
 echo "Starts from colour16 and goes up to colour231."

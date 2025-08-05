@@ -23,9 +23,9 @@ setopt notify         # Job status notifications
 alias cls="clear"
 alias refreshenv="exec $SHELL"
 alias gedit="gnome-text-editor" # GNOME's bundled text editor isn't GEdit
-alias zshconfig="gedit $HOME/.zshrc"
 alias diskinfo="lsblk -o NAME,MOUNTPOINTS,TYPE,FSTYPE,FSVER,SIZE,FSUSED,FSAVAIL,MODEL,LABEL,UUID"
 alias cat="batcat" # bat command named 'batcat' in Ubuntu
+
 #
 alias ls="eza"
 alias la="eza -a"
@@ -41,15 +41,15 @@ export MANROFFOPT="-c"
 
 # Development aliases:
 # alias c="code"
+alias vi=nvim
 alias fr="flutter run"
 alias fc="flutter clean"
 #alias fvm-start="flutter pub global activate fvm"
-
+alias start-dev-venv="source $HOME/.venv-global/dev-tools/bin/activate"
 
 # -------------------------------------------------------------
 # Prompt and Plugins
 # -------------------------------------------------------------
-
 # Starship prompt (fast and light-weight)
 eval "$(starship init zsh)"
 
@@ -60,8 +60,17 @@ source $HOME/.zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Zoxide (fast enough to load immediately)
 eval "$(zoxide init zsh)"
 
-# FNM (Fast Node Manager) init
-eval "$(fnm env)"
+# -------------------------------------------------------------
+# SSH Agent Setup
+# -------------------------------------------------------------
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    # Start the ssh-agent
+    eval "$(ssh-agent -s)"
+    # Add default key. Will be prompted for your passphrase here, once per login
+    # The -q (quiet) flag suppresses output unless error.
+    ssh-add -q ~/.ssh/id_ed25519
+fi
+
 
 # -------------------------------------------------------------
 # Completions
@@ -94,5 +103,6 @@ bindkey '\e[5C' forward-word
 # -------------------------------------------------------------
 # Optional: Benchmarking
 # -------------------------------------------------------------
+# To check: zprof
 zmodload zsh/zprof
 

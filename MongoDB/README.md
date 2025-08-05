@@ -4,6 +4,8 @@ Refer their [Install MongoDB Community Edition on Linux](https://www.mongodb.com
 
 ## Install MongoDB Community Edition
 
+### Fedora-specific MongoDB install steps
+
 For installing on MongoDB Community Edition on **Fedora** we'll refer their [RedHat guide](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/)
 
 - Configure the `yum` repository by creating a `.repo` file, for example: `sudo nano /etc/yum.repos.d/mongodb-org-8.0.repo` and paste given contents inside it:
@@ -52,6 +54,40 @@ For installing on MongoDB Community Edition on **Fedora** we'll refer their [Red
   The SELinux policy is designed to work with the configuration that results from a standard MongoDB `.rpm` installation and makes [these assumptions](https://github.com/mongodb/mongodb-selinux/blob/master/README.md#standard-installation). It is designed for `mongod` servers and does not apply to other MongoDB daemons or tools such as `mongos`, `mongosh`
 
   To uninstall the policy, go to the directory where you downloaded the policy repository and run `sudo make uninstall`
+
+### Ubuntu-specific MongoDB install steps
+
+For installing on MongoDB Community Edition on **Ubuntu** we'll refer their [Ubuntu guide](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)
+
+- Import public key
+
+  ```sh
+  # Prerequisites
+  sudo apt-get install gnupg curl
+
+  # Import MongoDB public GPG key
+  curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \
+    sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
+    --dearmor
+  ```
+
+- Create a `.list` file for `apt` repositories and reload db
+
+  ```sh
+  # Create .list file
+  echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+
+  # Reload the local packages db
+  sudo apt-get update
+  ```
+
+- Install the latest stable release
+
+  ```sh
+  sudo apt-get install -y mongodb-org
+  ```
+
+### Verify MongoDB installation
 
 - To run MongoDB Community Edition, check your **Init System** and follow [the procedure](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/#procedure) accordingly accordingly:
 
@@ -102,41 +138,27 @@ For installing on MongoDB Community Edition on **Fedora** we'll refer their [Red
   Nov 02 15:21:19 fedora-pc mongod[12577]: {"t":{"$date":"2024-11-02T09:51:19.218Z"},"s":"I",  "c":"CONTROL",  "id":748>
   ```
 
-- Launch the mongo shell:
+- Launch the mongo shell as: `mongosh`. When you enter `mongosh`, the output would like below. Enter `help` to know commands and press `Ctrl d` to exit
 
-  ```sh
-  mongosh
+  ```txt
+  Current Mongosh Log ID: 67254482d59e272c2c6b128b
+  Connecting to:    mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.3
+  Using MongoDB:    8.0.3
+  Using Mongosh:    2.3.3
+
+  For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+  ------
+    The server generated these startup warnings when booting
+    2024-11-02T02:41:47.410+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+    2024-11-02T02:41:47.410+05:30: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
+    2024-11-02T02:41:47.410+05:30: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
+    2024-11-02T02:41:47.410+05:30: We suggest setting the contents of sysfsFile to 0.
+    2024-11-02T02:41:47.410+05:30: We suggest setting swappiness to 0 or 1, as swapping can cause performance problems.
+  ------
+
+  test>
   ```
-
-  If you get connection refused due stating some `openssl` configuration error, you might need to install openssl variant of the `mongosh` package as mentioned by [this answer](https://www.mongodb.com/community/forums/t/openssl-error-when-starting-mongosh/243323/2):
-
-  ```sh
-  sudo yum remove mongodb-mongosh
-  sudo yum install mongodb-mongosh-shared-openssl3
-  sudo dnf install mongodb-org
-  ```
-
-  When you enter open `mongosh`, the output would like below. Enter `help` to know commands and press `Ctrl d` to exit
-
-```txt
-Current Mongosh Log ID: 67254482d59e272c2c6b128b
-Connecting to:    mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.3
-Using MongoDB:    8.0.3
-Using Mongosh:    2.3.3
-
-For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
-
-------
-  The server generated these startup warnings when booting
-  2024-11-02T02:41:47.410+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
-  2024-11-02T02:41:47.410+05:30: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
-  2024-11-02T02:41:47.410+05:30: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
-  2024-11-02T02:41:47.410+05:30: We suggest setting the contents of sysfsFile to 0.
-  2024-11-02T02:41:47.410+05:30: We suggest setting swappiness to 0 or 1, as swapping can cause performance problems.
-------
-
-test>
-```
 
 - Configure **Access Control**:
 
@@ -160,17 +182,46 @@ test>
   admin>
   ```
 
-## Install MongoDB Compass
+**Troubleshooting**:
 
-As per [their docs](https://www.mongodb.com/docs/compass/current/install/), we'll download the `.rpm` package for Fedora
+If you get connection refused stating some `openssl` configuration error on Fedora, you might need to install openssl variant of the `mongosh` package as mentioned by [this answer](https://www.mongodb.com/community/forums/t/openssl-error-when-starting-mongosh/243323/2):
 
 ```sh
-# Download Compass
-wget https://downloads.mongodb.com/compass/mongodb-compass-1.44.5.x86_64.rpm
+sudo yum remove mongodb-mongosh
+sudo yum install mongodb-mongosh-shared-openssl3
+sudo dnf install mongodb-org
+```
 
-# Install Compass
+## Install MongoDB Compass
+
+As per [their docs](https://www.mongodb.com/docs/compass/current/install/), we'll download the `.rpm` package for Fedora OR the `.deb` package for Debian/Ubuntu
+
+```sh
+cd ~/Downloads
+
+# Fedora (.rpm) download and install
+wget https://downloads.mongodb.com/compass/mongodb-compass-1.44.5.x86_64.rpm
 sudo yum install mongodb-compass-1.44.5.x86_64.rpm
 
-# Launch Compass
+# Ubuntu (.deb) download and install
+wget https://downloads.mongodb.com/compass/mongodb-compass_1.46.6_amd64.deb
+sudo apt install ./mongodb-compass_1.46.6_amd64.deb
+
+# Launch MongoDB Compass
 mongodb-compass
 ```
+
+**Troubleshooting**:
+
+- **Credentials not being stored**: This can happen especially if you are on non-standard desktop environments such as Sway instead of GNOME. You'll have to copy and modify the `.desktop` application entry as:
+
+  ```sh
+  cp /usr/share/applications/mongodb-compass.desktop ~/.local/share/applications
+  nano ~/.local/share/applications/mongodb-compass.desktop
+  ```
+
+  Replace the `Exec` command's line with this:
+
+  ```sh
+  Exec=env XDG_CURRENT_DESKTOP="GNOME" mongodb-compass %U
+  ```

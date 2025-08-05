@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Stop on Errors
+# Exit on error, undefined vars, and failed piped commands for safer scripting
 set -euo pipefail
 
 # ----------------------------------------
@@ -36,8 +36,10 @@ S_CFG="$HOME/.config"
 S_ETC=/etc
 S_LOC="$HOME/.local/share"
 
+# Clean previous destination contents for starting a fresh copy
+rm -rf "$D/"
 # Create Destination folder locations
-mkdir -p "$D" "$D_CFG" "$D_ETC/"
+mkdir -p "$D/" "$D_CFG/" "$D_ETC/"
 
 # ----------------------------------------
 # Fedora PC specific stuff:
@@ -77,14 +79,16 @@ cp "$S/.gitconfig" "$D/"
 # Tmux
 cp "$S/.tmux.conf" "$D/"
 
-# NeoVim + LazyVim
-mkdir -p "$D_CFG/nvim"
-rsync -a "$S_CFG/nvim/" "$D_CFG/nvim/"
+# VLC
+cp "$S_CFG/vlc/vlcrc" "$D/"
 
-# SWAY:
+# ----------------------------------------
+# Sway Desktop:
+
 # Create folders
 mkdir -p "$D_CFG/sway" "$D_CFG/swaynag" "$D_CFG/swaync"
 mkdir -p "$D_CFG/waybar" "$D_CFG/wofi" "$D_CFG/wireplumber"
+
 # Copy Sway stuff to folders
 rsync -a "$S_CFG/sway/" "$D_CFG/sway/"
 rsync -a "$S_CFG/swaynag/" "$D_CFG/swaynag/"
@@ -103,22 +107,6 @@ DESKTOPS=/usr/share/applications
 cp "$DESKTOPS/org.gnome.Nautilus.desktop" "$D/"
 cp "$DESKTOPS/nemo.desktop" "$D/"
 
-# VLC
-cp "$S_CFG/vlc/vlcrc" "$D/"
-
-# ----------------------------------------
-# List of Fonts:
-
-mkdir -p "$D/fonts"
-
-S_FONT="$S_LOC/fonts"
-
-# Manually downloaded fonts
-find "$S_FONT" -mindepth 1 -maxdepth 1 -type d ! -name 'Google Fonts' -printf '%f\n' >"$D/fonts/font-names.txt"
-
-# Google fonts
-find "$S_FONT/Google Fonts" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' >"$D/fonts/font-names-google.txt"
-
 # ----------------------------------------
 # VS Code:
 
@@ -132,30 +120,52 @@ cp "$S_VSC/settings.json" "$D_VSC/settings.json"
 # List of Extensions
 code --list-extensions >"$D_VSC/extensions.txt"
 
-# Custom Keyboard Shortcuts (currently empty)
-# cp "$S_VSC/keybindings.json" "$D_VSC/keybindings.json"
+# Custom Keyboard Shortcuts (if exists)
+if [[ -f "$S_VSC/keybindings.json" ]]; then
+    cp "$S_VSC/keybindings.json" "$D_VSC/keybindings.json"
+fi
 
-# Language-wise Snippets
-mkdir -p "$D_VSC/snippets"
-rsync -a "$S_VSC/snippets" "$D_VSC/snippets/"
+# Language-wise Snippets (if exists)
+if [[ -d "$S_VSC/snippets" ]]; then
+    mkdir -p "$D_VSC/snippets"
+    rsync -a "$S_VSC/snippets/" "$D_VSC/snippets/"
+fi
 
 # Project Manager locations
 cp "$S_VSC/globalStorage/alefragnani.project-manager/projects.json" "$D_VSC/project-manager-fav.json"
 cp "$S_VSC/globalStorage/alefragnani.project-manager/projects_cache_git.json" "$D_VSC/project-manager.json"
 
 # ----------------------------------------
-# C/C++, Java
+# NeoVim:
 
-mkdir -p "$D/cpp" "$D/java"
+S_VIM="$S_CFG/nvim"
+D_VIM="$D_CFG/nvim"
+mkdir -p "$D_VIM" "$D_VIM/lua" 
 
-# clang-format config
+cp "$S_VIM/init.lua" "$D_VIM/init.lua"
+rsync -a "$S_VIM/lua/" "$D_VIM/lua/"
+
+# ----------------------------------------
+# C/C++ Formatting:
+
+mkdir -p "$D/cpp"
+
 clang-format --style=Google --dump-config >"$D/cpp/.clang-format-google"
 clang-format --style=LLVM --dump-config >"$D/cpp/.clang-format-llvm"
 cp "$S/Desktop/Dev/code-journal/.playground/cpp/.clang-format" "$D/cpp/.clang-format"
 
-# Makefiles
-cp "$S/Desktop/Dev/code-journal/.playground/cpp/Makefile" "$D/cpp/Makefile"
-cp "$S/Desktop/Dev/code-journal/.playground/java/Makefile" "$D/java/Makefile"
+# ----------------------------------------
+# Font-List:
+
+S_FONT="$S_LOC/fonts"
+mkdir -p "$D/fonts"
+
+# Manually downloaded fonts
+find "$S_FONT" -mindepth 1 -maxdepth 1 -type d ! -name 'Google Fonts' -printf '%f\n' >"$D/fonts/font-names.txt"
+# Google fonts
+find "$S_FONT/Google Fonts" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' >"$D/fonts/font-names-google.txt"
+
+
 
 # -----------------------------------------------------------------------------------------
 # TODO: CHECK REMAINING

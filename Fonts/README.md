@@ -49,7 +49,7 @@ Another popular repository is [**Powerline fonts**](https://github.com/powerline
 | **CodeNewRoman**               | [NerdFont Downloads](https://www.nerdfonts.com/font-downloads)                                                                  |
 | **Cascadia Code** by Microsoft | Download [latest release](https://github.com/microsoft/cascadia-code/releases) zip from their Github                            |
 | **Adwaita**                    | Download latest release from their [Gitlab](https://gitlab.gnome.org/GNOME/adwaita-fonts)                                       |
-| **Jetbrains Mono**             | Download from [Jetbrains website](https://www.jetbrains.com/lp/mono/)                                                           |
+| **JetBrains Mono**             | Download from [JetBrains website](https://www.jetbrains.com/lp/mono/)                                                           |
 
 I save all the `.zip` font downloads into `~/Downloads/Font-Downloads/` folder. Then, extract them all at once in `~/.fonts/` into their respective folders via:
 

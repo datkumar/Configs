@@ -1,266 +1,278 @@
 {
-    // Configuration wiki page: https://github.com/Alexays/Waybar/wiki/Configuration
-    // List of supported modules: https://man.archlinux.org/man/waybar.5.en 
-    
-    "layer": "top", 
-    "position": "top",
-    "height": 30,
+  // Configuration wiki page: https://github.com/Alexays/Waybar/wiki/Configuration
+  // List of supported modules: https://man.archlinux.org/man/waybar.5.en
 
-    // Gaps in between the different modules
-    // "spacing": 20,
-    
-    // Choose the order of the modules
-    "modules-left": [
-        "sway/workspaces",  
-        "custom/media",
-        "sway/mode", 
-        "sway/scratchpad" 
-    ],
-    "modules-center": [
-        "clock"
-    ],
-    "modules-right": [
-        "bluetooth", 
-        "network", 
-        "memory", 
-        "cpu", 
-        "pulseaudio",
-        "backlight",
-        "custom/nightlight", 
-        "battery"
-    ],
+  "layer": "top",
+  "position": "top",
 
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "warp-on-scroll": false,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "1": "󰈹",
-            "2": "",
-            "3": "",
-            "4": "󰈚",
-            "5": "",
-            "6": "",
-            "urgent": "",
-            "default": "󰓩"
-        }
-    },
-    
-    "clock": {
-        "format": "{:%d %b  %I:%M %p}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-    },
-    
-    "cpu": {
-        "format": " {usage}%",
-        "tooltip": true,
-        "states": {
-            "good": 0,
-            "moderate": 50,
-            "bad": 80
-        }
-    },
+  // minimum height 36 required
+  "height": 36,
 
-    "memory": {
-        "format": " {}%",
-        "tooltip": true,
-        "states": {
-            "good": 0,
-            "moderate": 50,
-            "bad": 80
-        }
-    },
-    
-    "battery": {
-        "states": {
-            "good": 75,
-            "warning": 40,
-            "critical": 20
-        },
-        "interval": 5, // coz it didn't update automatically on udev events
-        "format": "{icon} {capacity}%",
-        "format-charging": "{capacity}% 󰚥",
-        "format-plugged": "{capacity}% 󰚥",
-        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰂀", "󰂁", "󰂂", "󰁹"]
-    },
+  // Gaps in between the different modules
+  // "spacing": 20,
 
-    "network": {
-        "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ],
-        "format-wifi": "{icon} {essid}  <span color='#42e82c'>󰜮 {bandwidthDownBytes}</span>  <span color='#f28735'>󰜷 {bandwidthUpBytes}</span>",
-        "format-ethernet": "󰈀 Eth  <span color='#42e82c'>󰜮 {bandwidthDownBytes}</span>  <span color='#f28735'>󰜷 {bandwidthUpBytes}</span>",
-        "format-disconnected": " Disconnected",
-        "tooltip-format-wifi": "Wi-Fi: {essid}\nDownload: {bandwidthDownBytes}\nUpload: {bandwidthUpBytes}\nSignal: {signalStrength}%\nInterface: {ifname}\nIP: {ipaddr}",
-        "tooltip-format-ethernet": "Ethernet\nDownload: {bandwidthDownBytes}\nUpload: {bandwidthUpBytes}\nInterface: {ifname}\nIP: {ipaddr}",
-        "tooltip-format-disconnected": "No Network Connection",
-        "on-click": "nm-connection-editor"
-    },
+  // Choose the order of the modules
+  "modules-left": [
+    "sway/workspaces",
+    "custom/media",
+    "sway/mode",
+    "sway/scratchpad"
+  ],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "tray",
+    "bluetooth",
+    "network",
+    "memory",
+    "cpu",
+    "pulseaudio",
+    "backlight",
+    "custom/nightlight",
+    "battery"
+  ],
 
-
-    "backlight": {
-        // "device": "acpi_video1",
-        "scroll-step": 10, // %, can be a float
-        "format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
-    },
-
-    "custom/nightlight": {
-        "exec": "$HOME/scripts/night-light-status.sh",
-        "on-click": "$HOME/scripts/night-light-toggle.sh",
-        "return-type": "json",
-        "format": "{}",
-        "interval": 2,
-        "signal": 5 // SIGRTMIN+5 causes Waybar to update
-    },
-
-    "bluetooth": {
-        "format": " On",
-        "format-connected": " {device_alias:.12}{device_battery_percentage}%",
-        "format-disabled": " Off",
-        "tooltip": true,
-        "tooltip-format": "BT Status Unknown",
-        "tooltip-format-disabled": "BT Disabled",
-        "tooltip-format-off": "BT OFF",
-        "tooltip-format-on": "BT ON. No device connected",
-        "tooltip-format-connected": "BT Connected devices: \n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "- {device_alias} ({device_battery_percentage}%)",
-        "tooltip-format-no-controller": "No BT controller found.",
-        "on-click": "blueman-manager",
-        "on-click-right": "$HOME/scripts/bt-toggle.sh"
-    },
-
-    "pulseaudio": {
-        "scroll-step": 5, // %, can be a float
-        "on-scroll-up": "$HOME/scripts/limit-vol-incr.sh",
-        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
-        
-        "on-click": "pavucontrol",
-        
-        "format-icons": {
-            "headphone": "󰋋",
-            "hands-free": "󰋋",
-            "headset": "󰋋",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        
-        "format": "{icon} {volume}%{format_source}",
-
-        "format-bluetooth": "{icon} {volume}%{format_source}",
-        "format-bluetooth-muted": "󰂲{icon}{format_source}",
-        "format-muted": "{format_source}",
-        
-        "format-source": " <span color='#f24646'>  {volume}%</span>", // space added before
-        "format-source-muted": "" // hide when off
-    },
-
-
-    // Controlled via your script: $HOME/scripts/mediaplayer.py 
-    "custom/media": {
-        "interval": 2,
-        "format": "{}",
-        "tooltip": false,
-        "return-type": "json",
-        "escape": true,
-        "exec": "$HOME/scripts/mediaplayer.py 2> /dev/null", 
-        "max-length": 50,
-
-        "format-icons": {
-            // Optional: You can leave this empty or remove it entirely
-            "default": ""
-        },
-
-        "on-click": "playerctl play-pause",
-        "on-click-right": "playerctl next",
-        "on-scroll-down": "playerctl previous",
-        "on-scroll-up": "playerctl previous"
-    },
-
-
-
-    // ================ UNUSED MODULES IDK ================
-
-
-    // Shows current Sway mode (e.g., resize mode).
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-
-    // Shows how many windows are hidden in the scratchpad
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
-
-    // System tray for apps like Blueman, volume, notifications
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10
-    },
-    
-    // Shows thermal info
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
-    },
-   
-    // Shows Caps Lock, Num Lock, layout indicators
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-
-
-    // Music Player Daemon
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
-
-
-    // Indicates whether your screen blanking is paused (useful when watching videos)
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "1": "󰈹",
+      "2": "",
+      "3": "",
+      "4": "󰈚",
+      "5": "",
+      "6": "",
+      "urgent": "",
+      "default": "󰓩"
     }
-}
+  },
 
+  "clock": {
+    "format": " {:%d/%m (%a)   %I:%M %p }",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#f0468d'><b>{}</b></span>",
+        "days": "<span color='#bfbfbb'><b>{}</b></span>",
+        "weeks": "<span color='#8debc1'>w{}</span>",
+        "weekdays": "<span color='#52aeeb'>{}</span>",
+        "today": "<span color='#fff129'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": true,
+    "states": {
+      "good": 0,
+      "moderate": 50,
+      "bad": 80
+    }
+  },
+
+  "memory": {
+    "interval": 5,
+    "format": " {percentage}%",
+    "tooltip": true,
+    "tooltip-format": "Memory:\t{used:.1f}G / {total:.1f}G\nSwap:\t{swapUsed:.1f}G / {swapTotal:.1f}G",
+    "states": {
+      "good": 0,
+      "moderate": 50,
+      "bad": 80
+    }
+  },
+
+  "battery": {
+    "states": {
+      "good": 75,
+      "warning": 40,
+      "critical": 20
+    },
+    "interval": 5, // coz it didn't update automatically on udev events
+    "format": "{icon} {capacity}%",
+    "format-charging": "{capacity}% 󰚥",
+    "format-plugged": "{capacity}% 󰚥",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰂀", "󰂁", "󰂂", "󰁹"]
+  },
+
+  "network": {
+    "interval": 2,
+    "on-click": "nm-connection-editor",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format": "<span color='#42e82c'> {bandwidthDownBytes}</span>  <span color='#f28735'> {bandwidthUpBytes}</span>",
+    "format-wifi": "{icon} {essid}  <span color='#42e82c'> {bandwidthDownBytes}</span>  <span color='#f28735'> {bandwidthUpBytes}</span>",
+    "format-ethernet": "󰈀 Eth  <span color='#42e82c'> {bandwidthDownBytes}</span>  <span color='#f28735'> {bandwidthUpBytes}</span>",
+    "format-disconnected": "<span color='#f2633f'> Disconnected</span>",
+    "tooltip-format": "Download Speed:\t{bandwidthDownBytes}\nUpload Speed:\t{bandwidthUpBytes}\nInterface name:\t{ifname}\nIP Address:\t{ipaddr}",
+    "tooltip-format-wifi": "Wi-Fi SSID:\t{essid}\nDownload Speed:\t{bandwidthDownBytes}\nUpload Speed:\t{bandwidthUpBytes}\nInterface name:\t{ifname}\nIP Address:\t{ipaddr}\nSig. Strength:\t{signalStrength}%",
+    "tooltip-format-ethernet": "Ethernet Connected 󰈀\nDownload Speed:\t{bandwidthDownBytes}\nUpload Speed:\t{bandwidthUpBytes}\nInterface name:\t{ifname}\nIP Address:\t{ipaddr}",
+    "tooltip-format-disconnected": "No Network Connection"
+  },
+
+  "backlight": {
+    // "device": "acpi_video1",
+    "scroll-step": 10, // %, can be a float
+    "format": "{icon} {percent}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+
+  "custom/nightlight": {
+    "exec": "$HOME/scripts/waybar/night-light-status.sh",
+    "on-click": "$HOME/scripts/waybar/night-light-toggle.sh",
+    "return-type": "json",
+    "format": "{}",
+    "interval": 2,
+    "signal": 5 // SIGRTMIN+5 causes Waybar to update
+  },
+
+  "bluetooth": {
+    "format": " On",
+    "format-connected": " {device_alias:.13}{device_battery_percentage}%",
+    "format-disabled": " Off",
+    "tooltip": true,
+    "tooltip-format": "BT Status Unknown",
+    "tooltip-format-disabled": "BT Disabled",
+    "tooltip-format-off": "BT OFF",
+    "tooltip-format-on": "BT ON. No device connected",
+    "tooltip-format-connected": "BT Connected devices: \n{device_enumerate}",
+    "tooltip-format-enumerate-connected": " - {device_alias} ({device_battery_percentage}%)",
+    "tooltip-format-no-controller": "No BT controller found",
+    "on-click": "blueman-manager",
+    "on-click-right": "$HOME/scripts/waybar/bt-toggle.sh"
+  },
+
+  "pulseaudio": {
+    "scroll-step": 5, // %, can be a float
+    "on-scroll-up": "$HOME/scripts/waybar/limit-vol-incr.sh",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "on-click": "pavucontrol",
+    "format-icons": {
+      "headphone": "󰋋",
+      "hands-free": "󰋋",
+      "headset": "󰋋",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "format": "{icon} {volume}%{format_source}",
+    "format-bluetooth": "{icon} {volume}%{format_source}",
+    "format-bluetooth-muted": "󰂲{icon}{format_source}",
+    "format-muted": " {format_source}",
+    "format-source": " <span color='#c95353'>  {volume}%</span>", // space added before
+    "format-source-muted": "" // hide when off
+  },
+
+  // Controlled via your script: $HOME/scripts/waybar/mediaplayer.py
+  "custom/media": {
+    "interval": 2,
+    "format": "{}",
+    "tooltip": false,
+    "return-type": "json",
+    "escape": true,
+    "exec": "$HOME/scripts/waybar/mediaplayer.py 2> /dev/null",
+    "max-length": 50,
+    "format-icons": {
+      // Optional: You can leave this empty or remove it entirely
+      "default": ""
+    },
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "on-scroll-up": "playerctl previous"
+  },
+
+  // System tray for apps like Blueman, volume, notifications
+  "tray": {
+    // "icon-size": 21,
+    "spacing": 10
+  },
+
+  // ================ UNUSED MODULES IDK ================
+
+  // Shows current Sway mode (e.g., resize mode).
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+
+  // Shows how many windows are hidden in the scratchpad
+  "sway/scratchpad": {
+    "format": "{icon} {count}",
+    "show-empty": false,
+    "format-icons": ["", ""],
+    "tooltip": true,
+    "tooltip-format": "{app}: {title}"
+  },
+
+  // Shows thermal info
+  "temperature": {
+    // "thermal-zone": 2,
+    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    // "format-critical": "{temperatureC}°C {icon}",
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", ""]
+  },
+
+  // Shows Caps Lock, Num Lock, layout indicators
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    }
+  },
+
+  // Music Player Daemon
+  "mpd": {
+    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+    "format-disconnected": "Disconnected ",
+    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+    "unknown-tag": "N/A",
+    "interval": 2,
+    "consume-icons": {
+      "on": " "
+    },
+    "random-icons": {
+      "off": "<span color=\"#f53c3c\"></span> ",
+      "on": " "
+    },
+    "repeat-icons": {
+      "on": " "
+    },
+    "single-icons": {
+      "on": "1 "
+    },
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)"
+  },
+
+  // Indicates whether your screen blanking is paused (useful when watching videos)
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  }
+}

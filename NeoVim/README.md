@@ -1,21 +1,5 @@
 # NeoVim <img alt="NeoVim" src="../assets/neovim.svg" height="28">
 
-## Install NeoVim
-
-From the [Linux section of their Installation](https://github.com/neovim/neovim/blob/master/INSTALL.md#linux):
-
-To install NeoVim on Fedora:
-
-```sh
-# Fedora (dnf)
-sudo dnf install -y neovim python3-neovim
-
-# Ubuntu (apt)
-sudo apt install -y neovim
-```
-
----
-
 ## Lua setup <img alt="Lua" src="../assets/lua.svg"  height="25">
 
 For LazyVim, we need to set up `lua` and `luarocks` (the package manager for Lua modules)
@@ -141,7 +125,56 @@ Following the [LuaRocks install guide](https://luarocks.org/#quick-start):
 
 ---
 
-## LazyVim setup <img alt="LazyVim" src="../assets/lazyvim.svg"  height="25">
+## Install NeoVim <img alt="Lua" src="../assets/neovim.svg"  height="25">
+
+From the [Linux section of their Installation](https://github.com/neovim/neovim/blob/master/INSTALL.md#linux):
+
+You can install via **package manager** (might not be latest)
+
+```sh
+# Fedora (dnf)
+sudo dnf install -y neovim python3-neovim
+
+# Ubuntu (apt)
+sudo apt install -y neovim
+```
+
+OR
+
+### Build Neovim from source
+
+This is recommended if you want the **latest** updated version. As referred from their [`README` instructions](https://github.com/neovim/neovim/blob/master/BUILD.md):
+
+- Install pre-requisites:
+
+  ```sh
+  # For Debian/Ubuntu:
+  sudo apt-get install ninja-build gettext cmake curl build-essential
+  # For Fedora/RHEL
+  sudo dnf -y install ninja-build cmake gcc make gettext curl glibc-gconv-extra
+  ```
+
+- Download source code and build from latest stable branch:
+
+  ```sh
+  # Download source code:
+  cd ~
+  git clone https://github.com/neovim/neovim
+  cd neovim
+
+  # See available branches and choose the latest "release-*"
+  git branch -a
+  git switch release-0.11
+
+  # Build:
+  make CMAKE_BUILD_TYPE=RelWithDebInfo
+  # Install on Debian/Ubuntu:
+  cd build && cpack -G DEB && sudo dpkg -i nvim-linux-x86_64.deb
+  # Install on other distros:
+  sudo make install
+  ```
+
+## Install LazyVim <img alt="LazyVim" src="../assets/lazyvim.svg"  height="25">
 
 As per the [LazyVim Installation docs](http://www.lazyvim.org/installation):
 

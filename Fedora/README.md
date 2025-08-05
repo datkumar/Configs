@@ -145,7 +145,7 @@ sudo dnf install -y \
   fastfetch btop htop hwinfo info zsh lua lua-devel neovim python3-neovim \
   fzf bat jq eza ripgrep zoxide nmap ddcutil dmidecode piper \
   xxd pdftk texlive-scheme-full texlive-chktex texstudio openssl openssl-devel vlc google-chrome-stable \
-  gnome-epub-thumbnailer gnome-tweaks grub-customizer
+  gnome-epub-thumbnailer gnome-tweaks grub-customizer testdisk
 ```
 
 **More programs**:

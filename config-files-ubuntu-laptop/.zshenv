@@ -1,77 +1,16 @@
 # ~/.zshenv – for persistent env setup, loads even in scripts
 # Loads before login shells
 
-# -------------------------------------------------------------
-# Environment Variables and Paths
-# -------------------------------------------------------------
+# ---------------------------------------------
+#  System preferences
+# ---------------------------------------------
 
-# For Sway:
+# Set locale to English (US) with UTF-8 encoding
+export LANG=en_US.UTF-8
+
+# For Sway Compatibility:
 export XDG_SESSION_TYPE=wayland
 export QT_QPA_PLATFORM=wayland
-
-
-# pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
-export PATH="$PATH:$PNPM_HOME"
-
-# Go
-export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
-
-# Flutter & Android
-export PATH="$PATH:$HOME/FlutterSdk/flutter/bin"
-export PATH="$PATH:$HOME/Android/Sdk/platform-tools"
-export PATH="$PATH:$HOME/Android/Sdk/emulator"
-export PATH="$PATH:$HOME/.pub-cache/bin"
-export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/apps/android-studio/bin"
-export ANDROID_HOME="$HOME/Android/Sdk"
-
-# fnm (Fast Node Manager)
-export PATH="$HOME/.local/share/fnm:$PATH"
-
-# Deno
-[ -f "$HOME/.deno/env" ] && . "$HOME/.deno/env"
-
-# Rust
-[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
-
-
-
-# # Fast Node Manager (fnm)
-# export PATH="$HOME/.local/share/fnm:$PATH"
-# # Only switches node version when cd-ing into a project
-# eval "$(fnm env --use-on-cd --shell zsh)"  
-
-
-# # pnpm
-# export PNPM_HOME="$HOME/.local/share/pnpm"
-# [[ ":$PATH:" != *":$PNPM_HOME:"* ]] && export PATH="$PNPM_HOME:$PATH"
-
-
-# # Deno
-# . "$HOME/.deno/env"
-
-
-# # Go and it's binaries
-# export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
-
-
-# # Rust
-# [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
-
-
-# # Flutter, Android
-# export PATH=$PATH:$HOME/FlutterSdk/flutter/bin
-# export ANDROID_HOME=$HOME/Android/Sdk
-# export PATH=$PATH:$ANDROID_HOME/platform-tools
-# export PATH=$PATH:$ANDROID_HOME/emulator
-# export PATH=$PATH:$HOME/.local/share/JetBrains/Toolbox/apps/android-studio/bin
-# export PATH=$PATH:$HOME/.pub-cache/bin
-
-
-# # Lua, LuaRocks
-# #export PATH=$PATH:$HOME/.luarocks/bin
-# #export LUA_PATH='/usr/local/share/lua/5.4/?.lua;/usr/share/lua/5.4/?.lua;/usr/share/lua/5.4/?/init.lua;/usr/lib64/lua/5.4/?.lua;/usr/lib64/lua/5.4/?/init.lua;./?.lua;./?/init.lua;/home/kumar/.luarocks/share/lua/5.4/?.lua;/home/kumar/.luarocks/share/lua/5.4/?/init.lua;/usr/local/share/lua/5.4/?/init.lua'
-# #export LUA_CPATH='/usr/lib64/lua/5.4/?.so;/usr/lib64/lua/5.4/loadall.so;./?.so;/home/kumar/.luarocks/lib/lua/5.4/?.so;/usr/local/lib/lua/5.4/?.so'
 
 
 # Preferred Editor per environment
@@ -81,7 +20,56 @@ else
   export EDITOR='gnome-text-editor'
 fi
 
+# ---------------------------------------------
+#  Dev Stuff
+# ---------------------------------------------
+# Tool Version Managers & User-Specific Bins should generally come first
+# And after it, Language-Specific Environment Variables and their Binaries
+# Then the various SDKs
 
-# # If you want to manually set your language environment
-# # export LANG=en_US.UTF-8
+# fnm (Fast Node Manager) setup
+FNM_PATH="$HOME/.local/share/fnm"
+export PATH="$FNM_PATH:$PATH"
+# Init fnm
+eval "$(fnm env --use-on-cd --shell zsh)"
+fnm use --install-if-missing lts-latest
+
+
+# pnpm  
+export PNPM_HOME="$HOME/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm globally installed binaries (needs active Node.js version) 
+PNPM_GLOBAL_BIN_DIR="$(pnpm config get global-bin-dir)"
+export PATH="$PNPM_GLOBAL_BIN_DIR:$PATH"
+
+
+# Rust
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+
+# Deno
+[ -f "$HOME/.deno/env" ] && . "$HOME/.deno/env"
+
+
+# Go
+export GOROOT="/usr/local/go"
+export GOPATH="$HOME/go"
+export GOBIN="$GOPATH/bin"
+export GOPROXY="https://proxy.golang.org,direct"
+export PATH="$GOROOT/bin:$GOBIN:$PATH"
+
+
+# uv 'dev-tools' virtual environment's binaries
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env" 
+export PATH="$HOME/.venvs/dev-tools/bin:$PATH"
+
+
+# Android
+export ANDROID_HOME="$HOME/Android/Sdk"
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/apps/android-studio/bin"
+# Flutter
+export PATH="$PATH:$HOME/FlutterSdk/flutter/bin"
+export PATH="$PATH:$HOME/.pub-cache/bin"
+
 

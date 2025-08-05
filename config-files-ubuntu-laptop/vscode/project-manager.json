@@ -1,11 +1,11 @@
 [
 	{
-		"fullPath": "/home/kumar/Desktop/Dev/Configs",
-		"name": "Configs"
-	},
-	{
 		"fullPath": "/home/kumar/Desktop/Dev/code-journal",
 		"name": "code-journal"
+	},
+	{
+		"fullPath": "/home/kumar/Desktop/Dev/Configs",
+		"name": "Configs"
 	},
 	{
 		"fullPath": "/home/kumar/Desktop/Dev/datkumar.github.io",
@@ -16,15 +16,15 @@
 		"name": "datkumar"
 	},
 	{
+		"fullPath": "/home/kumar/Desktop/Dev/vocab-site",
+		"name": "vocab-site"
+	},
+	{
 		"fullPath": "/home/kumar/Desktop/Dev/kitchen-docs",
 		"name": "kitchen-docs"
 	},
 	{
 		"fullPath": "/home/kumar/Desktop/Dev/threadit",
 		"name": "threadit"
-	},
-	{
-		"fullPath": "/home/kumar/Desktop/Dev/vocab-site",
-		"name": "vocab-site"
 	}
 ]

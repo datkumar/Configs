@@ -63,6 +63,8 @@ fnm uninstall 22
 
 > We use `fnm` to install Node, and `pnpm` as the package manager for our projects
 
+---
+
 ## Install `pnpm`&ensp;<img alt="Pnpm" src="../assets/pnpm.svg" height="25">
 
 [`pnpm`](https://pnpm.io/) is a fast, space-efficient package manager for Node. It re-uses packages across the `node_modules/` folders of all your packages with the help of **symlinks**. It also has a robust lockfile management mechanism making dependency resolution much better, leading to faster downloads and builds
@@ -93,11 +95,20 @@ fnm uninstall 22
   pnpm
   ```
 
-### `npm` vs `pnpm` commands
+- My globally installed `npm` packages:
 
-| npm command                                       | pnpm equivalent                                 |
-| ------------------------------------------------- | ----------------------------------------------- |
-| `npm install` (all project packages)              | [`pnpm install`](https://pnpm.io/cli/install)   |
-| `npm install <package>` (also `-g` or `-D` flags) | [`pnpm add <package>`](https://pnpm.io/cli/add) |
-| `npm run <scriptname>`                            | [`pnpm <scriptname>`](https://pnpm.io/cli/run)  |
-| `npx <package>`                                   | [`pnpm dlx <package>`](https://pnpm.io/cli/dlx) |
+  ```sh
+  # Install npm packages globally
+  pnpm add -g typescript eslint prettier neovim tree-sitter-cli @mermaid-js/mermaid-cli pyright
+  # Verify by listing global packages
+  pnpm ls -g
+  ```
+
+- Handy `npm` vs `pnpm` commands
+
+  | npm command                                       | pnpm equivalent                                 |
+  | ------------------------------------------------- | ----------------------------------------------- |
+  | `npm install` (all project packages)              | [`pnpm install`](https://pnpm.io/cli/install)   |
+  | `npm install <package>` (also `-g` or `-D` flags) | [`pnpm add <package>`](https://pnpm.io/cli/add) |
+  | `npm run <scriptname>`                            | [`pnpm <scriptname>`](https://pnpm.io/cli/run)  |
+  | `npx <package>`                                   | [`pnpm dlx <package>`](https://pnpm.io/cli/dlx) |

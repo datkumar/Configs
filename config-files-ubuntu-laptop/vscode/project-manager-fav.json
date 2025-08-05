@@ -1,23 +1,37 @@
 [
-	{
-		"name": "Configs",
-		"rootPath": "/home/kumar/Desktop/Dev/Configs",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "code-journal",
-		"rootPath": "/home/kumar/Desktop/Dev/code-journal",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "portfolio-site",
-		"rootPath": "/home/kumar/Desktop/Dev/datkumar.github.io",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	}
+  {
+    "name": "Configs",
+    "rootPath": "/home/kumar/Desktop/Dev/Configs",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "code-journal",
+    "rootPath": "/home/kumar/Desktop/Dev/code-journal",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "portfolio-site",
+    "rootPath": "/home/kumar/Desktop/Dev/datkumar.github.io",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "vocab-site",
+    "rootPath": "/home/kumar/Desktop/Dev/vocab-site",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "nvim-config",
+    "rootPath": "/home/kumar/.config/nvim",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  }
 ]
