@@ -4,10 +4,8 @@
 
   "layer": "top",
   "position": "top",
-
   // minimum height 36 required
   "height": 36,
-
   // Gaps in between the different modules
   // "spacing": 20,
 
@@ -95,19 +93,6 @@
     }
   },
 
-  "battery": {
-    "states": {
-      "good": 75,
-      "warning": 40,
-      "critical": 20
-    },
-    "interval": 5, // coz it didn't update automatically on udev events
-    "format": "{icon} {capacity}%",
-    "format-charging": "{capacity}% 󰚥",
-    "format-plugged": "{capacity}% 󰚥",
-    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰂀", "󰂁", "󰂂", "󰁹"]
-  },
-
   "network": {
     "interval": 2,
     "on-click": "nm-connection-editor",
@@ -181,7 +166,7 @@
     "format-source-muted": "" // hide when off
   },
 
-  // Controlled via your script: $HOME/scripts/waybar/mediaplayer.py
+  // Controlled via script: $HOME/scripts/waybar/mediaplayer.py
   "custom/media": {
     "interval": 2,
     "format": "{}",

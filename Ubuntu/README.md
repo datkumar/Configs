@@ -18,14 +18,14 @@ flatpak update
 ```sh
 sudo add-apt-repository universe
 sudo apt update && sudo apt upgrade -y
-
 sudo apt install -y \
-  wget curl git g++ clang clang-tools clang-format clang-tidy make cmake zip unzip  \
-  tmux libfuse2 pkg-config libssl-dev vlc net-tools \
-  lua5.4 liblua5.4-dev neovim texlive-full chktex texstudio  \
-  btop htop hwinfo info zsh scdoc fzf bat jq eza ripgrep zoxide xxd \
-  gnome-epub-thumbnailer gnome-tweaks gnome-shell-extension-manager \
-  nmap ddcutil dmidecode piper testdisk
+  wget curl git zsh tmux cmake make zip unzip pkg-config \
+  build-essential clang clang-tools clang-format clang-tidy \
+  fzf fd-find bat jq eza ripgrep zoxide lua5.4 liblua5.4-dev neovim \
+  libfuse2 libssl-dev gnome-keyring seahorse testdisk \
+  btop htop hwinfo info xxd net-tools nmap ddcutil dmidecode piper \
+  texlive-full chktex texstudio scdoc \
+  gnome-epub-thumbnailer gnome-tweaks gnome-shell-extension-manager vlc
 ```
 
 ### PPA packages

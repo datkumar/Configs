@@ -141,11 +141,12 @@ flatpak uninstall package1
 ```sh
 sudo dnf up --best --refresh -y
 sudo dnf install -y \
-  wget curl git tmux gcc-c++ clang clang-tools-extra make cmake zip unzip pkg-config \
-  fastfetch btop htop hwinfo info zsh lua lua-devel neovim python3-neovim \
-  fzf bat jq eza ripgrep zoxide nmap ddcutil dmidecode piper \
-  xxd pdftk texlive-scheme-full texlive-chktex texstudio openssl openssl-devel vlc google-chrome-stable \
-  gnome-epub-thumbnailer gnome-tweaks grub-customizer testdisk
+  wget curl git zsh tmux gcc-c++ clang clang-tools-extra make cmake zip unzip pkg-config \
+  fzf fd-find bat jq eza ripgrep zoxide lua lua-devel neovim python3-neovim \
+  openssl openssl-devel gnome-keyring seahorse testdisk \
+  fastfetch btop htop hwinfo info xxd nmap ddcutil dmidecode piper \
+  pdftk texlive-scheme-full texlive-chktex texstudio \
+  gnome-epub-thumbnailer gnome-tweaks grub-customizer vlc google-chrome-stable
 ```
 
 **More programs**:
@@ -154,12 +155,13 @@ sudo dnf install -y \
 
 ```sh
 # Add Copr of repositories of those packages
+sudo dnf copr enable dejan/lazygit
 sudo dnf copr enable jerrycasiano/FontManager
 sudo dnf copr enable varlad/onefetch
 sudo dnf copr enable pesader/showmethekey
 
 # Install packages from those added repositories
-sudo dnf install -y font-manager onefetch showmethekey
+sudo dnf install -y lazygit font-manager onefetch showmethekey
 ```
 
 [Copr](https://copr.fedorainfracloud.org/) (Cool Other Package Repo) is a Fedora build system, similar to Launchpad for Ubuntu, where contributors and devs publish extra or experimental software. They are used for installing non-official or newer software that’s not in Fedora’s main repos.

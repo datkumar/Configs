@@ -23,27 +23,29 @@ setopt notify         # Job status notifications
 alias cls="clear"
 alias refreshenv="exec $SHELL"
 alias gedit="gnome-text-editor" # GNOME's bundled text editor isn't GEdit
-alias zshconfig="gedit $HOME/.zshrc"
 alias diskinfo="lsblk -o NAME,MOUNTPOINTS,TYPE,FSTYPE,FSVER,SIZE,FSUSED,FSAVAIL,MODEL,LABEL,UUID"
+
+# bat - Colored cat
 alias cat="bat"
-#
+# eza - Colored ls
 alias ls="eza"
 alias la="eza -a"
 alias ll="eza -alh"
 alias tree="eza --tree"
-
 # bat as a previewer for fzf
 alias fzf="fzf --preview 'bat --color=always --line-range=:500 {}' --preview-window '~3'"
-
 # Colorizing man pages
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 
+
 # Development aliases:
 # alias c="code"
+alias vi=nvim
 alias fr="flutter run"
 alias fc="flutter clean"
 #alias fvm-start="flutter pub global activate fvm"
+alias start-dev-venv="source $HOME/.venv-global/dev-tools/bin/activate"
 
 
 # Adjust Brightness of External Monitor 
@@ -59,7 +61,6 @@ fi
 # -------------------------------------------------------------
 # Prompt and Plugins
 # -------------------------------------------------------------
-
 # Starship prompt (fast and light-weight)
 eval "$(starship init zsh)"
 
@@ -101,4 +102,6 @@ bindkey '\e[5C' forward-word
 # -------------------------------------------------------------
 # Optional: Benchmarking
 # -------------------------------------------------------------
+# To check: zprof
 zmodload zsh/zprof
+

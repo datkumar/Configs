@@ -1,0 +1,16 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "alt+s",
+    "command": "workbench.action.files.saveAll"
+  },
+  {
+    "key": "alt+n",
+    "command": "explorer.newFile"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "-emojisense.quickEmojitext",
+    "when": "editorTextFocus"
+  }
+]

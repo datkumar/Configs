@@ -1,13 +1,13 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: Jetbrains Mono, Symbols Nerd Font, monospace;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
 }
 
 window#waybar {
-    background-color: #001025;
-    border-bottom: 2px solid rgba(0, 0, 12, 0.678);
+    background-color: rgba(2, 14, 22, 0.938);
+    border-bottom: 2px solid rgba(24, 24, 24, 0.877);
     color: white;
     opacity: 0.9;
     transition-property: background-color;
@@ -96,12 +96,10 @@ button:hover {
 }
 
 #clock,
-#battery,
 #cpu,
 #memory,
 #disk,
 #temperature,
-#backlight,
 #network,
 #pulseaudio,
 #wireplumber,
@@ -143,37 +141,11 @@ button:hover {
 }
 
 
-
-
-#battery {
-    color: white;
-}
-
-#battery.charging,
-#battery.plugged {
-    color: #00e30b;
-    /* background-color: #26A65B; */
-}
-
-#battery.warning:not(.charging) {
-    color: #e69773;
-}
-
 @keyframes blink {
     to {
         background-color: white;
         color: #f53c3c;
     }
-}
-
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: white;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
 label:focus {

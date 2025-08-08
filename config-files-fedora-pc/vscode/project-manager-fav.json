@@ -19,5 +19,19 @@
 		"paths": [],
 		"tags": [],
 		"enabled": true
+	},
+	{
+		"name": "home-dir",
+		"rootPath": "/home/kumar",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "nvim-config",
+		"rootPath": "/home/kumar/.config/nvim",
+		"paths": [],
+		"tags": [],
+		"enabled": true
 	}
 ]

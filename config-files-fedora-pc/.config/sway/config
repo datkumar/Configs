@@ -1,4 +1,5 @@
 # Read `man 5 sway` for a complete reference.
+
 # Useful references:
 # https://www.mankier.com/5/sway
 # https://wiki.archlinux.org/title/Sway
@@ -17,7 +18,8 @@ set $up k
 set $right l
 #
 # Screen lock command:
-set $screen_lock swaylock -f -i ~/Pictures/Wallpaper/lock-screen.jpg
+set $screen_lock swaylock -f -i ~/Pictures/Wallpaper/berserk-rest.jpg
+
 #
 # Preferred terminal emulator
 set $term wezterm
@@ -27,12 +29,6 @@ set $menu wofi --show drun
 #
 include /etc/sway/config-vars.d/*
 
-# -----------------------------------------
-# OUTPUT CONFIGURATION
-# -----------------------------------------
-# You can get the names of your outputs by running: swaymsg -t get_outputs
-#
-output * bg ~/Pictures/Wallpaper/home-screen.jpg fill
 
 # -----------------------------------------
 # APPEARANCE
@@ -53,7 +49,7 @@ client.urgent           #ff5e5e     #ff5e5e     #ffffff     #ff5e5e     #ff5e5e
 default_border normal
 default_floating_border normal
 # Space between windows
-gaps inner 4
+gaps inner 2
 # Space between windows and screen edge
 gaps outer 2
 # Smartly hide borders and gaps when only one window present in workspace
@@ -62,21 +58,14 @@ smart_borders no_gaps
 
 # Rounded corners not supported :(
 
+
 # -----------------------------------------
-# IDLE BEHAVIOR
+# OUTPUT CONFIGURATION
 # -----------------------------------------
-# Lock after 10 min
-# Keep lock screen showing till 20 min
-# Turn off display after 10 min
-# Suspend after 30 min
-# Resume display on any input
-# Lock screen before Suspend
-exec swayidle -w \
-    timeout 600 '$screen_lock' \
-    timeout 1200 'swaymsg "output * dpms off"' \
-    timeout 1800 'systemctl suspend' \
-    resume 'swaymsg "output * dpms on"' \
-    before-sleep '$screen_lock'
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+#
+output * bg ~/Pictures/Wallpaper/ice-mountain.jpg fill
+
 
 # -----------------------------------------
 # INPUT CONFIGURATION
@@ -92,6 +81,21 @@ exec swayidle -w \
 #     middle_emulation enabled
 #     scroll_method two_finger
 # }
+
+
+# -----------------------------------------
+# IDLE BEHAVIOR
+# -----------------------------------------
+# Locks screen after 1800s, Turns off display after 2400s
+# Suspend after 3600s, Resume display on any input 
+# Lock before Suspend
+exec swayidle -w \
+    timeout 1800 '$screen_lock' \
+    timeout 2400 'swaymsg "output * dpms off"' \
+    timeout 3600 'systemctl suspend' \
+    resume 'swaymsg "output * dpms on"' \
+    before-sleep '$screen_lock'
+
 
 # -----------------------------------------
 # KEY BINDINGS
@@ -136,23 +140,29 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioRaiseVolume exec "$HOME/scripts/waybar/limit-vol-incr.sh"
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+#
 # Mic mute toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 #
-# Laptop backlight Brightness adjust (using brightnessctl, targeting amdgpu_bl1)
-bindsym XF86MonBrightnessUp exec brightnessctl -d amdgpu_bl1 set +10%
-bindsym XF86MonBrightnessDown exec brightnessctl -d amdgpu_bl1 set 10%-
+## Laptop backlight Brightness adjust (using brightnessctl, targeting amdgpu_bl1)
+#bindsym XF86MonBrightnessUp exec brightnessctl -d amdgpu_bl1 set +10%
+#bindsym XF86MonBrightnessDown exec brightnessctl -d amdgpu_bl1 set 10%-
 #
 # Take Screenshot and copy it to Clipboard (grim + slurp + wl-clipboard)
 bindsym Print exec grim -g "$(slurp)" - | wl-copy
 
-# NOTIFICATIONS:
+
+# -----------------------------------------
+# NOTIFICATIONS
+# -----------------------------------------
 # Toggle Notification panel
 bindsym $mod+n exec swaync-client -t
 # Dismiss all notifications
 bindsym $mod+Shift+n exec swaync-client -c
 # Pop last notification
 bindsym $mod+Ctrl+n exec swaync-client -p
+
+
 
 # Moving around:
 #
@@ -177,9 +187,10 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-#
-# WORKSPACES:
-#
+
+# -----------------------------------------
+# WORKSPACES
+# -----------------------------------------
 # Cycle through workspaces
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
@@ -266,6 +277,18 @@ mode "resize"
 
 bindsym $mod+r mode "resize"
 
+
+# For 'showmethekey' to work with Sway
+for_window [app_id="showmethekey-gtk"]
+{
+  floating enable
+  sticky enable
+  #resize set 350px 100px
+  #move position 1560px 10px
+  border none
+}
+
+
 # -----------------------------------------
 # STATUS BAR - Waybar
 # -----------------------------------------
@@ -274,14 +297,28 @@ bar
     swaybar_command waybar
 }
 
+
 include /etc/sway/config.d/*
 
 # For Notification Center
 exec swaync
 
 # Apply Night-Light script each time Sway starts
-# exec_always "$HOME/scripts/waybar/night-light-startup.sh"
+#exec_always "$HOME/scripts/waybar/night-light-startup.sh"
 
-# Startup apps on specified workspaces
-exec swaymsg workspace 1
+# -----------------------------------------
+# STARTUP APPS
+# -----------------------------------------
+# Launch all apps without specifying workspace (open in current workspace).
 exec firefox
+# exec runs once on startup and exec_always is similar but runs on every config reload too
+#
+# Use 'assign' to move specific application windows to a predefined workspace
+# as soon as they are created. This is resilient to slow-loading apps.
+# 1: Firefox
+assign [app_id="firefox"] 1
+
+
+# Start the gnome-keyring daemon (for loading SSH identities)
+exec /usr/bin/gnome-keyring-daemon --start --components=ssh
+
